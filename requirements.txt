@@ -1,0 +1,3 @@
+minet==0.52.9
+pandas==1.2.4
+matplotlib==3.4.2
