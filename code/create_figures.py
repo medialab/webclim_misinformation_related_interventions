@@ -20,16 +20,15 @@ def save_figure(figure_name):
 
 def create_suspension_facebook_trump_figure():
 
-    df = import_data('crowdtangle_facebook_trump_2020_2021.csv')
+    df = import_data('crowdtangle_facebook_trump_2021-06-16.csv')
     df['date'] = pd.to_datetime(df['date'])
     serie_to_plot = df.resample('D', on='date')['date'].agg('count')
     serie_to_plot = serie_to_plot.append(pd.Series([0, 0], index=[pd.Timestamp(2021, 1, 7), pd.Timestamp(2021, 6, 8)]))
 
     plt.figure(figsize=(8, 3.5))
     plt.title(df.account_name.iloc[0])
-    plt.ylabel('Number of Facebook posts per day')
-
-    plt.plot(serie_to_plot)
+    plt.plot(serie_to_plot, color='royalblue', label='Number of Facebook posts per day')
+    plt.legend()
 
     ax = plt.subplot(111)
     ax.spines['right'].set_visible(False)

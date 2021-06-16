@@ -1,3 +1,7 @@
 #!/bin/bash
 
-minet ct posts --start-date 2020-01-01 --list-ids 1559721 > trump_2020_2021.csv
+LIST=$1
+TODAY_DATE=$(date +"%Y-%m-%d")
+
+minet ct posts --list-ids $LIST --start-date 2019-01-01 > \
+  "./data/crowdtangle_facebook_trump_${TODAY_DATE}.csv"
