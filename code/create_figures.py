@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import ural
 
 
 def import_data(file_name):
@@ -21,7 +22,7 @@ def save_figure(figure_name):
 def create_suspension_facebook_trump_figure():
 
     df = import_data('facebook_crowdtangle_trump_2021-06-21.csv')
-    
+
     df['date'] = pd.to_datetime(df['date'])
     serie_to_plot = df.resample('D', on='date')['date'].agg('count')
     serie_to_plot = serie_to_plot.append(pd.Series(
@@ -59,6 +60,77 @@ def create_suspension_facebook_trump_figure():
     save_figure('facebook_crowdtangle_trump.png')
 
 
+def arrange_plot(ax):
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.grid(axis="y")
+    plt.locator_params(axis='y', nbins=4)
+
+    plt.xlim(
+        np.datetime64(datetime.strptime('2019-01-01', '%Y-%m-%d')), 
+        np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
+    )
+    plt.xticks(
+        [np.datetime64('2019-06-30'), np.datetime64('2020-06-30'), np.datetime64('2021-04-30')],
+        ['2019', '2020', '2021'], fontsize='large'
+    )
+    ax.xaxis.set_tick_params(length=0)
+    plt.axvspan(np.datetime64('2020-01-01'), np.datetime64('2020-12-31'), 
+                ymin=0, ymax=200000, facecolor='k', alpha=0.05)
+
+    plt.plot([np.datetime64("2019-05-02"), np.datetime64("2019-05-02")], [0, 70], color='C3', linestyle='-.')
+    plt.text(np.datetime64(datetime.strptime("2019-05-02", '%Y-%m-%d') - timedelta(days=5)), 
+                71, "reduction", size='medium', color='C3', rotation=30)
+
+
+def create_facebook_crowdtangle_infowars_figure():
+
+    df = import_data('facebook_crowdtangle_infowars_2021-06-21.csv')
+
+    df['date'] = pd.to_datetime(df['date'])
+
+    df['reaction'] = df[[
+        "actual_like_count", "actual_favorite_count", "actual_love_count",
+        "actual_wow_count", "actual_haha_count", "actual_sad_count",
+        "actual_angry_count", "actual_thankful_count", "actual_care_count"
+    ]].sum(axis=1).astype(int)
+    df['share'] = df["actual_share_count"].astype(int)
+    df['comment'] = df["actual_comment_count"].astype(int)
+
+    df['link'] = df['link'].apply(lambda x: ural.normalize_url(str(x).strip()))
+    df['domain_name'] = df['link'].astype(str).apply(lambda x: ural.get_domain_name(x))
+    df = df[df['domain_name']=='infowars.com']
+
+    df = df[['date', 'link', 'reaction', 'share', 'comment']]
+
+    fig = plt.figure(figsize=(10, 6))
+    fig.suptitle('Facebook posts sharing an Infowars link (CrowdTangle)')
+    
+    ax = plt.subplot(211)
+    plt.plot(df.resample('D', on='date')['date'].agg('count'),
+        label='Number of Facebook posts per day', color='royalblue')
+    plt.legend()
+    arrange_plot(ax)
+    plt.ylim(0, 160)
+
+    ax = plt.subplot(212)
+    plt.plot(df.resample('D', on='date')['comment'].mean(),
+        label="Comments per post", color='cornflowerblue')
+    plt.plot(df.resample('D', on='date')['share'].mean(),
+        label="Shares per post", color='royalblue')
+    plt.plot(df.resample('D', on='date')['reaction'].mean(),
+        label="Reactions (likes, ...) per post", color='navy')
+    plt.legend()
+    arrange_plot(ax)
+    plt.ylim(0, 80)
+
+    plt.tight_layout()
+    save_figure(figure_name='facebook_crowdtangle_infowars.png')
+
+
 if __name__=="__main__":
 
-    create_suspension_facebook_trump_figure()
+    # create_suspension_facebook_trump_figure()
+    create_facebook_crowdtangle_infowars_figure()
