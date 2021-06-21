@@ -30,15 +30,13 @@ def create_suspension_facebook_trump_figure():
         index=[pd.Timestamp(2021, 1, 7), pd.Timestamp(2021, 6, 15)]
     ))
 
-    plt.figure(figsize=(8, 3.5))
+    plt.figure(figsize=(8, 3))
     plt.title(df.account_name.iloc[0])
     plt.plot(serie_to_plot, color='royalblue', label='Number of Facebook posts per day')
     plt.legend()
 
     ax = plt.subplot(111)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['top'].set_visible(False)
+    ax.set_frame_on(False)
     ax.grid(axis="y")
     plt.locator_params(axis='y', nbins=4)
 
@@ -46,6 +44,8 @@ def create_suspension_facebook_trump_figure():
         np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')), 
         np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
     )
+    plt.ylim(-1, 55)
+
     xticks = [np.datetime64('2020-01-01'), np.datetime64('2020-04-01'), 
               np.datetime64('2020-07-01'), np.datetime64('2020-10-01'),
               np.datetime64('2021-01-01'), np.datetime64('2021-04-01'),
@@ -80,7 +80,7 @@ def arrange_plot(ax):
     plt.axvspan(np.datetime64('2020-01-01'), np.datetime64('2020-12-31'), 
                 ymin=0, ymax=200000, facecolor='k', alpha=0.05)
 
-    plt.plot([np.datetime64("2019-05-02"), np.datetime64("2019-05-02")], [0, 70], color='C3', linestyle='-.')
+    plt.plot([np.datetime64("2019-05-02"), np.datetime64("2019-05-02")], [0, 70], color='C3', linestyle='--')
     plt.text(np.datetime64(datetime.strptime("2019-05-02", '%Y-%m-%d') - timedelta(days=5)), 
                 71, "reduction", size='medium', color='C3', rotation=30)
 
@@ -124,7 +124,7 @@ def create_facebook_crowdtangle_infowars_figure():
         label="Reactions (likes, ...) per post", color='navy')
     plt.legend()
     arrange_plot(ax)
-    plt.ylim(0, 80)
+    plt.ylim(0, 78)
 
     plt.tight_layout()
     save_figure(figure_name='facebook_crowdtangle_infowars.png')
@@ -132,5 +132,5 @@ def create_facebook_crowdtangle_infowars_figure():
 
 if __name__=="__main__":
 
-    # create_suspension_facebook_trump_figure()
+    create_suspension_facebook_trump_figure()
     create_facebook_crowdtangle_infowars_figure()
