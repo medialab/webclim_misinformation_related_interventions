@@ -27,7 +27,7 @@ All the collected data will be saved as CSV files in the `data` folder.
 To collect the Trump Facebook data:
 
 ```
-./code/collect_suspension_fb.sh 1559721
+./code/collect_facebook_crowdtangle_trump_data.sh 1559721
 ```
 
 ## Plot the figures

@@ -20,10 +20,14 @@ def save_figure(figure_name):
 
 def create_suspension_facebook_trump_figure():
 
-    df = import_data('crowdtangle_facebook_trump_2021-06-16.csv')
+    df = import_data('facebook_crowdtangle_trump_2021-06-21.csv')
+    
     df['date'] = pd.to_datetime(df['date'])
     serie_to_plot = df.resample('D', on='date')['date'].agg('count')
-    serie_to_plot = serie_to_plot.append(pd.Series([0, 0], index=[pd.Timestamp(2021, 1, 7), pd.Timestamp(2021, 6, 8)]))
+    serie_to_plot = serie_to_plot.append(pd.Series(
+        [0, 0], 
+        index=[pd.Timestamp(2021, 1, 7), pd.Timestamp(2021, 6, 15)]
+    ))
 
     plt.figure(figsize=(8, 3.5))
     plt.title(df.account_name.iloc[0])
@@ -39,20 +43,20 @@ def create_suspension_facebook_trump_figure():
 
     plt.xlim(
         np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')), 
-        np.datetime64(datetime.strptime('2021-06-10', '%Y-%m-%d'))
+        np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
     )
     xticks = [np.datetime64('2020-01-01'), np.datetime64('2020-04-01'), 
               np.datetime64('2020-07-01'), np.datetime64('2020-10-01'),
               np.datetime64('2021-01-01'), np.datetime64('2021-04-01'),
              ]
     plt.xticks(xticks, rotation=30, ha='right')
-    plt.axvspan(np.datetime64('2021-01-06'), np.datetime64('2021-06-08'), 
+    plt.axvspan(np.datetime64('2021-01-06'), np.datetime64('2021-06-15'), 
                 ymin=0, ymax=200000, facecolor='r', alpha=0.05)
 
-    plt.text(np.datetime64('2021-01-31'), 45, 'Suspension period', color='r')
+    plt.text(np.datetime64('2021-02-07'), 45, 'Suspension period', color='r')
 
     plt.tight_layout()
-    save_figure('suspension_facebook_trump.png')
+    save_figure('facebook_crowdtangle_trump.png')
 
 
 if __name__=="__main__":
