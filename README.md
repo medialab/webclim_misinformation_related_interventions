@@ -24,10 +24,16 @@ All the collected data will be saved as CSV files in the `data` folder.
 
 ### Facebook:
 
-To collect the Trump Facebook data:
+To collect the Trump Facebook data from CrowdTangle, run (the collection takes around 2 minutes):
 
 ```
 ./code/collect_facebook_crowdtangle_trump_data.sh 1559721
+```
+
+To collect the Infowars Facebook data from CrowdTangle, run (the collection takes around 30 minutes):
+
+```
+./code/collect_facebook_crowdtangle_infowars_data.sh
 ```
 
 ## Plot the figures
