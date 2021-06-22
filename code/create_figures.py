@@ -21,6 +21,8 @@ def save_figure(figure_name):
 
 def create_suspension_facebook_trump_figure():
 
+    print()
+
     df = import_data('facebook_crowdtangle_trump_2021-06-21.csv')
 
     df['date'] = pd.to_datetime(df['date'])
@@ -60,6 +62,46 @@ def create_suspension_facebook_trump_figure():
     save_figure('facebook_crowdtangle_trump.png')
 
 
+def clean_crowdtangle_data(df):
+
+    df['date'] = pd.to_datetime(df['date'])
+
+    df['reaction'] = df[[
+        "actual_like_count", "actual_favorite_count", "actual_love_count",
+        "actual_wow_count", "actual_haha_count", "actual_sad_count",
+        "actual_angry_count", "actual_thankful_count", "actual_care_count"
+    ]].sum(axis=1).astype(int)
+    df['share'] = df["actual_share_count"].astype(int)
+    df['comment'] = df["actual_comment_count"].astype(int)
+
+    df['link'] = df['link'].apply(lambda x: ural.normalize_url(str(x).strip()))
+    df['domain_name'] = df['link'].astype(str).apply(lambda x: ural.get_domain_name(x))
+    df = df[df['domain_name']=='infowars.com']
+
+    return df[['date', 'link', 'reaction', 'share', 'comment']]
+
+
+def calculate_percentage_change(before, after):
+    return int((after - before) * 100 / before)
+
+
+def print_the_percentage_changes(df, date='2019-05-02', period=60):
+
+    df_before = df[df['date'] < np.datetime64(date)]
+    df_before = df_before[df_before['date'] >= np.datetime64(datetime.strptime(date, '%Y-%m-%d') - timedelta(days=period))]
+
+    df_after = df[df['date'] > np.datetime64(date)]
+    df_after = df_after[df_after['date'] <= np.datetime64(datetime.strptime(date, '%Y-%m-%d') + timedelta(days=period))]
+
+    print('Drop after the', date, ': Reactions:',
+        calculate_percentage_change(df_before['reaction'].sum(), df_after['reaction'].sum())
+        , '%, Shares:',
+        calculate_percentage_change(df_before['share'].sum(), df_after['share'].sum()), 
+        '%, Comments:',
+        calculate_percentage_change(df_before['comment'].sum(), df_after['comment'].sum()),
+        '%.'
+    )
+
 def arrange_plot(ax):
 
     ax.spines['right'].set_visible(False)
@@ -87,23 +129,12 @@ def arrange_plot(ax):
 
 def create_facebook_crowdtangle_infowars_figure():
 
-    df = import_data('facebook_crowdtangle_infowars_2021-06-21.csv')
+    print()
 
-    df['date'] = pd.to_datetime(df['date'])
-
-    df['reaction'] = df[[
-        "actual_like_count", "actual_favorite_count", "actual_love_count",
-        "actual_wow_count", "actual_haha_count", "actual_sad_count",
-        "actual_angry_count", "actual_thankful_count", "actual_care_count"
-    ]].sum(axis=1).astype(int)
-    df['share'] = df["actual_share_count"].astype(int)
-    df['comment'] = df["actual_comment_count"].astype(int)
-
-    df['link'] = df['link'].apply(lambda x: ural.normalize_url(str(x).strip()))
-    df['domain_name'] = df['link'].astype(str).apply(lambda x: ural.get_domain_name(x))
-    df = df[df['domain_name']=='infowars.com']
-
-    df = df[['date', 'link', 'reaction', 'share', 'comment']]
+    df = import_data('facebook_crowdtangle_infowars_2021-06-22.csv')
+    df = clean_crowdtangle_data(df)
+    print('There are {} posts after removing the indirect links in the CrowdTangle Infowars date.'.format(len(df)))
+    print_the_percentage_changes(df, date='2019-05-02', period=60)
 
     fig = plt.figure(figsize=(10, 6))
     fig.suptitle('Facebook posts sharing an Infowars link (CrowdTangle)')
