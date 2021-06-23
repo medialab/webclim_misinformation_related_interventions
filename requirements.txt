@@ -2,3 +2,4 @@ minet==0.52.10
 pandas==1.2.4
 matplotlib==3.4.2
 google-api-python-client==1.12.8
+python-dotenv==0.18.0
