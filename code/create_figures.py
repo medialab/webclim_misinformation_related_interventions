@@ -148,7 +148,7 @@ def create_facebook_crowdtangle_infowars_figure():
 
     ax = plt.subplot(212)
     plt.plot(df.resample('D', on='date')['comment'].mean(),
-        label="Comments per post", color='cornflowerblue')
+        label="Comments per post", color='lightskyblue')
     plt.plot(df.resample('D', on='date')['share'].mean(),
         label="Shares per post", color='royalblue')
     plt.plot(df.resample('D', on='date')['reaction'].mean(),
