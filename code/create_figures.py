@@ -173,6 +173,10 @@ def create_facebook_buzzsumo_infowars_figure():
     print('There are {} Infowars articles for 2019 and 2020 in the Buzzsumo API.'.format(len(df)))
     print_the_percentage_changes(df, columns=['facebook_likes', 'facebook_shares', 'facebook_comments'])
 
+    print('There are {} Infowars articles collected from Buzzsumo between 2020-06-11 and 2020-07-11.'.format(
+        np.sum(df.resample('D', on='date')['date'].agg('count').loc['2020-06-11':'2020-07-11']))
+    )
+
     fig = plt.figure(figsize=(10, 4))
     plt.title('Facebook engagement for the Infowars articles (data from Buzzsumo)')
 
@@ -196,5 +200,5 @@ def create_facebook_buzzsumo_infowars_figure():
 if __name__=="__main__":
 
     # create_suspension_facebook_trump_figure()
-    create_facebook_crowdtangle_infowars_figure()
+    # create_facebook_crowdtangle_infowars_figure()
     create_facebook_buzzsumo_infowars_figure()
