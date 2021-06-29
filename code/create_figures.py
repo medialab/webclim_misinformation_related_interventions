@@ -19,6 +19,22 @@ def save_figure(figure_name):
     print("The '{}' figure is saved.".format(figure_name))
 
 
+def arrange_plot(ax, df):
+
+    ax.set_frame_on(False)
+    ax.grid(axis="y")
+    plt.locator_params(axis='y', nbins=4)
+
+    plt.xticks(
+        [np.datetime64('2019-06-30'), np.datetime64('2020-06-30'), np.datetime64('2021-04-30')],
+        ['2019', '2020', '2021'], fontsize='large'
+    )
+    ax.xaxis.set_tick_params(length=0)
+    plt.axvspan(np.datetime64('2020-01-01'), np.datetime64('2020-12-31'), 
+                ymin=0, ymax=200000, facecolor='k', alpha=0.05)
+    plt.xlim(np.min(df['date']), np.max(df['date']))
+
+
 def create_suspension_facebook_trump_figure():
 
     print()
@@ -32,31 +48,20 @@ def create_suspension_facebook_trump_figure():
         index=[pd.Timestamp(2021, 1, 7), pd.Timestamp(2021, 6, 15)]
     ))
 
-    plt.figure(figsize=(8, 3))
-    plt.title(df.account_name.iloc[0])
-    plt.plot(serie_to_plot, color='royalblue', label='Number of Facebook posts per day')
-    plt.legend()
+    plt.figure(figsize=(10, 4))
+    plt.title("'" + df.account_name.iloc[0] + "' Facebook page (data from CrowdTangle)")
 
     ax = plt.subplot(111)
-    ax.set_frame_on(False)
-    ax.grid(axis="y")
-    plt.locator_params(axis='y', nbins=4)
+    plt.plot(serie_to_plot, color='royalblue', label='Number of posts per day')
+    plt.legend()
 
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2021-01-07"), color='C3', linestyle='--')
     plt.xlim(
         np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')), 
         np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
     )
-    plt.ylim(-1, 55)
-
-    xticks = [np.datetime64('2020-01-01'), np.datetime64('2020-04-01'), 
-              np.datetime64('2020-07-01'), np.datetime64('2020-10-01'),
-              np.datetime64('2021-01-01'), np.datetime64('2021-04-01'),
-             ]
-    plt.xticks(xticks, rotation=30, ha='right')
-    plt.axvspan(np.datetime64('2021-01-06'), np.datetime64('2021-06-15'), 
-                ymin=0, ymax=200000, facecolor='r', alpha=0.05)
-
-    plt.text(np.datetime64('2021-02-07'), 45, 'Suspension period', color='r')
+    plt.ylim(0, 55)
 
     plt.tight_layout()
     save_figure('facebook_crowdtangle_trump.png')
@@ -102,30 +107,6 @@ def print_the_percentage_changes(df, date='2019-05-02', period=60):
         '%.'
     )
 
-def arrange_plot(ax):
-
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['top'].set_visible(False)
-    ax.grid(axis="y")
-    plt.locator_params(axis='y', nbins=4)
-
-    plt.xlim(
-        np.datetime64(datetime.strptime('2019-01-01', '%Y-%m-%d')), 
-        np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
-    )
-    plt.xticks(
-        [np.datetime64('2019-06-30'), np.datetime64('2020-06-30'), np.datetime64('2021-04-30')],
-        ['2019', '2020', '2021'], fontsize='large'
-    )
-    ax.xaxis.set_tick_params(length=0)
-    plt.axvspan(np.datetime64('2020-01-01'), np.datetime64('2020-12-31'), 
-                ymin=0, ymax=200000, facecolor='k', alpha=0.05)
-
-    plt.plot([np.datetime64("2019-05-02"), np.datetime64("2019-05-02")], [0, 70], color='C3', linestyle='--')
-    plt.text(np.datetime64(datetime.strptime("2019-05-02", '%Y-%m-%d') - timedelta(days=5)), 
-                71, "reduction", size='medium', color='C3', rotation=30)
-
 
 def create_facebook_crowdtangle_infowars_figure():
 
@@ -136,14 +117,17 @@ def create_facebook_crowdtangle_infowars_figure():
     print('There are {} posts after removing the indirect links in the CrowdTangle Infowars date.'.format(len(df)))
     print_the_percentage_changes(df, date='2019-05-02', period=60)
 
-    fig = plt.figure(figsize=(10, 8))
-    fig.suptitle('Facebook posts sharing an Infowars link (CrowdTangle)')
+    plt.figure(figsize=(10, 8))
     
     ax = plt.subplot(211)
+    plt.title('Facebook public posts sharing an Infowars link (data from CrowdTangle)')
+
     plt.plot(df.resample('D', on='date')['date'].agg('count'),
-        label='Number of Facebook posts per day', color='royalblue')
+        label='Number of posts per day', color='royalblue')
     plt.legend()
-    arrange_plot(ax)
+
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 160)
 
     ax = plt.subplot(212)
@@ -154,7 +138,9 @@ def create_facebook_crowdtangle_infowars_figure():
     plt.plot(df.resample('D', on='date')['reaction'].mean(),
         label="Reactions (likes, ...) per post", color='navy')
     plt.legend()
-    arrange_plot(ax)
+
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 78)
 
     plt.tight_layout()
@@ -188,9 +174,10 @@ def create_facebook_buzzsumo_infowars_figure():
 
     df = import_data('facebook_buzzsumo_infowars_2021-06-29.csv')
     df = clean_buzzsumo_data(df)
+    print('There are {} Infowars articles for 2019 and 2020 in the Buzzsumo API.'.format(len(df)))
 
     fig = plt.figure(figsize=(10, 4))
-    fig.suptitle('Facebook engagement for the Infowars articles (Buzzsumo)')
+    plt.title('Facebook engagement for the Infowars articles (data from Buzzsumo)')
 
     ax = plt.subplot(111)
     plt.plot(filter(df, 'facebook_comments'),
@@ -200,7 +187,9 @@ def create_facebook_buzzsumo_infowars_figure():
     plt.plot(filter(df, 'facebook_likes'),
         label="Reactions (likes, ...) per article", color='navy')
     plt.legend()
-    arrange_plot(ax)
+
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 3000)
 
     plt.tight_layout()
@@ -209,6 +198,6 @@ def create_facebook_buzzsumo_infowars_figure():
 
 if __name__=="__main__":
 
-    # create_suspension_facebook_trump_figure()
-    # create_facebook_crowdtangle_infowars_figure()
+    create_suspension_facebook_trump_figure()
+    create_facebook_crowdtangle_infowars_figure()
     create_facebook_buzzsumo_infowars_figure()

@@ -32,7 +32,7 @@ To collect the Trump Facebook data from CrowdTangle, run (the collection takes a
 ./code/collect_facebook_crowdtangle_trump_data.sh 1559721
 ```
 
-To collect the Infowars Facebook data from CrowdTangle, run (takes around 30 minutes):
+To collect the Infowars Facebook data from CrowdTangle, run (takes around 20 minutes):
 
 ```
 ./code/collect_facebook_crowdtangle_infowars_data.sh
