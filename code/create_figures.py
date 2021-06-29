@@ -87,10 +87,10 @@ def clean_crowdtangle_data(df):
 
 
 def calculate_percentage_change(before, after):
-    return int((after - before) * 100 / before)
+    return str(int((after - before) * 100 / before))
 
 
-def print_the_percentage_changes(df, date='2019-05-02', period=60):
+def print_the_percentage_changes(df, columns, date='2019-05-02', period=60):
 
     df_before = df[df['date'] < np.datetime64(date)]
     df_before = df_before[df_before['date'] >= np.datetime64(datetime.strptime(date, '%Y-%m-%d') - timedelta(days=period))]
@@ -98,14 +98,10 @@ def print_the_percentage_changes(df, date='2019-05-02', period=60):
     df_after = df[df['date'] > np.datetime64(date)]
     df_after = df_after[df_after['date'] <= np.datetime64(datetime.strptime(date, '%Y-%m-%d') + timedelta(days=period))]
 
-    print('Drop after the', date, ': Reactions:',
-        calculate_percentage_change(df_before['reaction'].sum(), df_after['reaction'].sum())
-        , '%, Shares:',
-        calculate_percentage_change(df_before['share'].sum(), df_after['share'].sum()), 
-        '%, Comments:',
-        calculate_percentage_change(df_before['comment'].sum(), df_after['comment'].sum()),
-        '%.'
-    )
+    text_to_print = 'Drop after the ' + date + ': '
+    for column in columns:
+        text_to_print += column + ': ' + calculate_percentage_change(df_before[column].sum(), df_after[column].sum()) + '%, '
+    print(text_to_print)
 
 
 def create_facebook_crowdtangle_infowars_figure():
@@ -115,7 +111,7 @@ def create_facebook_crowdtangle_infowars_figure():
     df = import_data('facebook_crowdtangle_infowars_2021-06-29.csv')
     df = clean_crowdtangle_data(df)
     print('There are {} posts after removing the indirect links in the CrowdTangle Infowars date.'.format(len(df)))
-    print_the_percentage_changes(df, date='2019-05-02', period=60)
+    print_the_percentage_changes(df, columns=['reaction', 'share', 'comment'])
 
     plt.figure(figsize=(10, 8))
     
@@ -175,6 +171,7 @@ def create_facebook_buzzsumo_infowars_figure():
     df = import_data('facebook_buzzsumo_infowars_2021-06-29.csv')
     df = clean_buzzsumo_data(df)
     print('There are {} Infowars articles for 2019 and 2020 in the Buzzsumo API.'.format(len(df)))
+    print_the_percentage_changes(df, columns=['facebook_likes', 'facebook_shares', 'facebook_comments'])
 
     fig = plt.figure(figsize=(10, 4))
     plt.title('Facebook engagement for the Infowars articles (data from Buzzsumo)')
@@ -198,6 +195,6 @@ def create_facebook_buzzsumo_infowars_figure():
 
 if __name__=="__main__":
 
-    create_suspension_facebook_trump_figure()
+    # create_suspension_facebook_trump_figure()
     create_facebook_crowdtangle_infowars_figure()
     create_facebook_buzzsumo_infowars_figure()
