@@ -131,12 +131,12 @@ def create_facebook_crowdtangle_infowars_figure():
 
     print()
 
-    df = import_data('facebook_crowdtangle_infowars_2021-06-22.csv')
+    df = import_data('facebook_crowdtangle_infowars_2021-06-29.csv')
     df = clean_crowdtangle_data(df)
     print('There are {} posts after removing the indirect links in the CrowdTangle Infowars date.'.format(len(df)))
     print_the_percentage_changes(df, date='2019-05-02', period=60)
 
-    fig = plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(10, 8))
     fig.suptitle('Facebook posts sharing an Infowars link (CrowdTangle)')
     
     ax = plt.subplot(211)
@@ -161,7 +161,54 @@ def create_facebook_crowdtangle_infowars_figure():
     save_figure(figure_name='facebook_crowdtangle_infowars.png')
 
 
+def clean_buzzsumo_data(df):
+
+    df['date'] = [datetime.fromtimestamp(x).date() for x in df['published_date']]
+    df['date'] = pd.to_datetime(df['date'])
+
+    df = df.drop_duplicates(subset=['url'])
+
+    return df
+
+
+def filter(df, column):
+    
+    s0 = df.resample('D', on='date')['date'].agg('count')
+    dates_to_filter = s0[s0 < 5].index
+    
+    s = df.resample('D', on='date')[column].mean()
+    s[s.index.isin(dates_to_filter)] = np.nan
+
+    return s
+
+
+def create_facebook_buzzsumo_infowars_figure():
+
+    print()
+
+    df = import_data('facebook_buzzsumo_infowars_2021-06-29.csv')
+    df = clean_buzzsumo_data(df)
+
+    fig = plt.figure(figsize=(10, 4))
+    fig.suptitle('Facebook engagement for the Infowars articles (Buzzsumo)')
+
+    ax = plt.subplot(111)
+    plt.plot(filter(df, 'facebook_comments'),
+        label="Comments per article", color='lightskyblue')
+    plt.plot(filter(df, 'facebook_shares'),
+        label="Shares per article", color='royalblue')
+    plt.plot(filter(df, 'facebook_likes'),
+        label="Reactions (likes, ...) per article", color='navy')
+    plt.legend()
+    arrange_plot(ax)
+    plt.ylim(0, 3000)
+
+    plt.tight_layout()
+    save_figure(figure_name='facebook_buzzsumo_infowars.png')    
+
+
 if __name__=="__main__":
 
-    create_suspension_facebook_trump_figure()
-    create_facebook_crowdtangle_infowars_figure()
+    # create_suspension_facebook_trump_figure()
+    # create_facebook_crowdtangle_infowars_figure()
+    create_facebook_buzzsumo_infowars_figure()
