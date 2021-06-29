@@ -10,6 +10,8 @@ To install the needed libraries, run in your terminal:
 pip install -r requirements.txt
 ```
 
+[Explain the .env file]
+
 ## Collect the data
 
 All the collected data will be saved as CSV files in the `data` folder.
@@ -30,10 +32,15 @@ To collect the Trump Facebook data from CrowdTangle, run (the collection takes a
 ./code/collect_facebook_crowdtangle_trump_data.sh 1559721
 ```
 
-To collect the Infowars Facebook data from CrowdTangle, run (the collection takes around 30 minutes):
+To collect the Infowars Facebook data from CrowdTangle, run (takes around 30 minutes):
 
 ```
 ./code/collect_facebook_crowdtangle_infowars_data.sh
+```
+
+To collect the Infowars Facebook data from Buzzsumo, run (takes around 4 min):
+```
+python code/collect_facebook_buzzsumo_infowars_data.py
 ```
 
 ## Plot the figures
