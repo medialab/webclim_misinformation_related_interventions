@@ -259,6 +259,7 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     plt.ylabel('View count')
     plt.xlabel('Date')
     plt.legend()
+    plt.tight_layout()
     save_figure(figure_name=fig_name)
 
 
@@ -289,6 +290,7 @@ def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_grap
     plt.ylabel('Video count')
     plt.xlabel('Date')
     plt.legend()
+    plt.tight_layout()
     save_figure(figure_name=fig_name)
 
 
