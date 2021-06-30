@@ -197,6 +197,7 @@ def create_facebook_buzzsumo_infowars_figure():
     plt.tight_layout()
     save_figure(figure_name='facebook_buzzsumo_infowars.png')
 
+
 def preprocess_youtube_data():
     oann = import_data('One America News Network_youtube_data.csv')
     tony_heller = import_data('Tony Heller_youtube_data.csv')
@@ -220,13 +221,10 @@ def preprocess_youtube_data():
     return oann,tony_heller
 
 
-
-
-def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword,fig_name):
+def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name):
     window_num = 1
 
     df_tlm_views = data.groupby(['published_at'])['view_counts'].sum().to_frame('view_counts')
-
     df_tlm_views = df_tlm_views.resample('D').sum().fillna(0).reset_index()
     df_tlm_vol_rolling_views = df_tlm_views.groupby(['published_at']).mean().rolling(window=window_num,
                                                                                      win_type='triang',
@@ -240,6 +238,7 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     fig, ax1 = plt.subplots(1, figsize=(15, 4))
     plt.locator_params(axis='y', nbins=4)
     plt.setp(ax1.get_xticklabels(), rotation=45)
+
     ax1.xaxis.set_tick_params(length=0)
     ax1.plot(df_tlm_vol_rolling_views['published_at'],
              df_tlm_vol_rolling_views['view_counts'],
@@ -249,7 +248,6 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     ax1.spines['right'].set_visible(False)
     ax1.spines['left'].set_visible(False)
     ax1.spines['top'].set_visible(False)
-
     ax1.grid(axis="y")
     ax1.xaxis.set_tick_params(length=0)
 
@@ -263,8 +261,7 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     save_figure(figure_name=fig_name)
 
 
-
-def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword,fig_name):
+def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name):
     window_num = 1
 
     df_tlm_vol = data.groupby(['published_at']).size().to_frame('size')
@@ -310,5 +307,5 @@ if __name__=="__main__":
 
     # create_suspension_facebook_trump_figure()
     # create_facebook_crowdtangle_infowars_figure()
-    #create_facebook_buzzsumo_infowars_figure()
+    create_facebook_buzzsumo_infowars_figure()
     create_youtube_graph()
