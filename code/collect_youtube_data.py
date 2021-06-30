@@ -6,7 +6,7 @@ import re
 import sys
 
 
-def get_channel_videos(channel_id,youtube):
+def get_channel_videos(channel_id, youtube):
     # get Uploads playlist id
     res = youtube.channels().list(id=channel_id,
                                   part='contentDetails').execute()
@@ -27,30 +27,31 @@ def get_channel_videos(channel_id,youtube):
             break
     return videos
 
+
 def timestamp(video):
     return (datetime.strptime(video['snippet']['publishedAt'], "%Y-%m-%dT%H:%M:%fZ")
             + timedelta(hours=5, minutes=30))
 
+
 def video_title(video):
     return video['snippet']['title']
+
 
 def video_id(video):
         return video['snippet']['resourceId']['videoId']
 
+
 def collect_data(API_key, channel_id):
     youtube = build('youtube', 'v3', developerKey=API_key)
-
-
     videos = get_channel_videos(channel_id,youtube)
-
     titles = [video_title(video) for video in videos]
 
     publish_timestamps = [timestamp(video) for video in videos]
     video_ids = [video_id(video) for video in videos]
     videos_df = pd.DataFrame({'Upload_date':publish_timestamps,'video_titles':titles,'video_id':video_ids})
-    videos_df = videos_df[videos_df['Upload_date']>'2019-01-01']
+    videos_df = videos_df[videos_df['Upload_date']>'2021-01-01']
     videos_ids_filtered = list(videos_df['video_id'])
-    data = pd.DataFrame([], columns=[ 'video_title', 'view_counts', 'likes', 'dislikes', 'comments', 'video_id',
+    data = pd.DataFrame([], columns=['video_title', 'view_counts', 'likes', 'dislikes', 'comments', 'video_id',
                                        'channel_name', 'channel_id', 'published_at', 'duration'])
     for i in videos_ids_filtered:
         video_data = get_data_video(i, youtube)
@@ -61,7 +62,7 @@ def collect_data(API_key, channel_id):
     data.to_csv(path)
 
 
-def get_data_video( vid_id,youtube):
+def get_data_video(vid_id, youtube):
         data = np.array([])
         vid_suff = vid_id
         request = youtube.videos().list(
@@ -73,7 +74,6 @@ def get_data_video( vid_id,youtube):
             # print(response)
 
             main_info = response['items'][0]['snippet']
-
             channel_name = main_info['channelTitle']
             video_title = main_info['title']
             channel_ids = main_info['channelId']
@@ -104,5 +104,7 @@ def get_data_video( vid_id,youtube):
         return data
 
 if __name__=="__main__":
-
-    collect_data(sys.argv[1],sys.argv[2])
+    # the list_is correspond to the id of channels [OANN, Tony Heller]
+    list_id = ['UCNbIDJNNgaRrXOD7VllIMRQ', 'UCprclkVrNPls7PR-nHhf1Ow']
+    for i in list_id:
+        collect_data(sys.argv[1],i)
