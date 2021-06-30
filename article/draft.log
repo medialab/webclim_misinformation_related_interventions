@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  30 JUN 2021 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  30 JUN 2021 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1184,10 +1184,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
 Package rerunfilecheck Info: File `draft.out' has not changed.
 (rerunfilecheck)             Checksum: 850FB8BE8753140995183AF2262EAF80;967.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
  ) 
 Here is how much of TeX's memory you used:
@@ -1289,7 +1285,7 @@ ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on draft.pdf (11 pages, 3040583 bytes).
+Output written on draft.pdf (11 pages, 3040665 bytes).
 PDF statistics:
  345 PDF objects out of 1000 (max. 8388607)
  288 compressed objects within 3 object streams
