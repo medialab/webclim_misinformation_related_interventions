@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{broniatowski}
+David~A. Broniatowski, Daniel Kerchner, Fouzia Farooq, Xiaolei Huang, Amelia~M.
+  Jamison, Mark Dredze, and Sandra~Crouse Quinn.
+\newblock Debunking the misinfodemic: Coronavirus social media contains more,
+  not less, credible content.
+\newblock {\em mimeo}, 2020.
+
+\bibitem{grinberg}
+Nir Grinberg, Kenneth Joseph, Lisa Friedland, Briony Swire-Thompson, and David
+  Lazer.
+\newblock Fake news on twitter during the 2016 u.s. presidential election.
+\newblock {\em Science}, 263(274), 2019.
+
+\bibitem{pew1}
+Adam Hughes and Stefan Wojicik.
+\newblock 10 facts about americans and twitter.
+\newblock {\em Pew Research Center}, 2019.
+
+\bibitem{lazer}
+David Lazer, Matthew Baum, Yochai Benkler, Adam Berinsky, Kelly Greenhill,
+  Filippo Menczer, Miriam Metzger, Brendan Nyhan, Gordon Pennycook, David
+  Rothschild, Michael Schudson, Steven Sloman, Cass Sunstein, Emily Thorson,
+  Duncan Watts, and Jonathan Zittrain.
+\newblock The science of fake news.
+\newblock {\em Science}, 359(6380), 2018.
+
+\bibitem{minet}
+Guillaume Plique, Pauline Breteau, Jules Farjas, H{\'e}lo{\"\i}se Th{\'e}ro,
+  and Jean Descamps.
+\newblock Minet, a webmining cli tool and library for python zenodo.
+  http://doi.org/10.5281/zenodo.4564399.
+\newblock 2019.
+
+\end{thebibliography}
