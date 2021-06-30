@@ -49,7 +49,7 @@ def collect_data(API_key, channel_id):
     publish_timestamps = [timestamp(video) for video in videos]
     video_ids = [video_id(video) for video in videos]
     videos_df = pd.DataFrame({'Upload_date':publish_timestamps,'video_titles':titles,'video_id':video_ids})
-    videos_df = videos_df[videos_df['Upload_date']>'2021-01-01']
+    videos_df = videos_df[videos_df['Upload_date']>'2019-01-01']
     videos_ids_filtered = list(videos_df['video_id'])
     data = pd.DataFrame([], columns=['video_title', 'view_counts', 'likes', 'dislikes', 'comments', 'video_id',
                                        'channel_name', 'channel_id', 'published_at', 'duration'])
