@@ -1,6 +1,5 @@
 import os
-from datetime import datetime, timedelta
-import datetime
+from datetime import datetime, timedelta, date
 
 import pandas as pd
 import numpy as np
@@ -22,6 +21,8 @@ def save_figure(figure_name):
 
 def arrange_plot(ax, df):
 
+    plt.legend()
+
     ax.set_frame_on(False)
     ax.grid(axis="y")
     plt.locator_params(axis='y', nbins=4)
@@ -36,7 +37,7 @@ def arrange_plot(ax, df):
     plt.xlim(np.min(df['date']), np.max(df['date']))
 
 
-def create_suspension_facebook_trump_figure():
+def create_facebook_trump_figure():
 
     print()
 
@@ -54,18 +55,48 @@ def create_suspension_facebook_trump_figure():
 
     ax = plt.subplot(111)
     plt.plot(serie_to_plot, color='royalblue', label='Number of posts per day')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2021-01-07"), color='C3', linestyle='--')
     plt.xlim(
         np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')), 
         np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
     )
-    plt.ylim(0, 55)
+    plt.ylim(-.3, 55)
 
     plt.tight_layout()
     save_figure('facebook_crowdtangle_trump.png')
+
+
+def create_buzzsumo_thebl_figure():
+
+    print()
+
+    df = import_data('facebook_buzzsumo_thebl_2021-07-01.csv')
+    df = clean_buzzsumo_data(df)
+
+    fig = plt.figure(figsize=(10, 8))
+    fig.suptitle('The Beauty of Life (data from Buzzsumo)')
+
+    ax = plt.subplot(211)
+    plt.plot(df.resample('D', on='date')['facebook_comments'].mean(),
+        label="Facebook comments per article", color='lightskyblue')
+    plt.plot(df.resample('D', on='date')['facebook_shares'].mean(),
+        label="Facebook shares per article", color='royalblue')
+    plt.plot(df.resample('D', on='date')['facebook_likes'].mean(),
+        label="Facebook reactions (likes, ...) per article", color='navy')
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-12-01"), color='C3', linestyle='--')
+    plt.ylim(-100, 10000)
+
+    ax = plt.subplot(212)
+    plt.plot(df.resample('D', on='date')['date'].agg('count'),
+            label='Number of articles published per day', color='grey')
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-12-01"), color='C3', linestyle='--')
+    plt.ylim(0, 80)
+
+    plt.tight_layout()
+    save_figure('facebook_buzzsumo_thebl.png')
 
 
 def clean_crowdtangle_data(df):
@@ -121,8 +152,6 @@ def create_facebook_crowdtangle_infowars_figure():
 
     plt.plot(df.resample('D', on='date')['date'].agg('count'),
         label='Number of posts per day', color='royalblue')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 160)
@@ -134,8 +163,6 @@ def create_facebook_crowdtangle_infowars_figure():
         label="Shares per post", color='royalblue')
     plt.plot(df.resample('D', on='date')['reaction'].mean(),
         label="Reactions (likes, ...) per post", color='navy')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 78)
@@ -188,8 +215,6 @@ def create_facebook_buzzsumo_infowars_figure():
         label="Shares per article", color='royalblue')
     plt.plot(filter(df, 'facebook_likes'),
         label="Reactions (likes, ...) per article", color='navy')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 3000)
@@ -293,19 +318,21 @@ def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_grap
 
 def create_youtube_graph():
     oann, tony_heller = preprocess_youtube_data()
-    plot_view_count_youtube(oann, '2020-11-25', '2020-12-01', datetime.date(2020, 11, 1), datetime.date(2021, 1, 1),
+    plot_view_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
                             2680000,'OANN_views_yt.png')
-    plot_view_count_youtube(tony_heller, '2020-09-29', '2020-10-05', datetime.date(2020, 9, 1),
-                            datetime.date(2020, 11, 15), 1500000,'Tony_Heller_views_yt.png')
-    plot_video_count_youtube(oann, '2020-11-25', '2020-12-01', datetime.date(2020, 11, 1), datetime.date(2021, 1, 1),
+    plot_view_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
+                            date(2020, 11, 15), 1500000,'Tony_Heller_views_yt.png')
+    plot_video_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
                              32,'OANN_videos_yt.png')
-    plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', datetime.date(2020, 9, 1),
-                             datetime.date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png')
+    plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
+                             date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png')
 
 
 if __name__=="__main__":
 
-    # create_suspension_facebook_trump_figure()
+    create_facebook_trump_figure()
+    create_buzzsumo_thebl_figure()
     # create_facebook_crowdtangle_infowars_figure()
-    create_facebook_buzzsumo_infowars_figure()
-    create_youtube_graph()
+    # create_facebook_buzzsumo_infowars_figure()
+
+    # create_youtube_graph()
