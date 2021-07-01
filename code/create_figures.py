@@ -332,7 +332,7 @@ if __name__=="__main__":
 
     create_facebook_trump_figure()
     create_buzzsumo_thebl_figure()
-    # create_facebook_crowdtangle_infowars_figure()
-    # create_facebook_buzzsumo_infowars_figure()
+    create_facebook_crowdtangle_infowars_figure()
+    create_facebook_buzzsumo_infowars_figure()
 
-    # create_youtube_graph()
+    create_youtube_graph()
