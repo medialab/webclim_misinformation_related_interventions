@@ -304,21 +304,25 @@ Twitter can take action against a tweet which violates the Twitter rules\footnot
 \smallskip
 
 %To illustrate we provide two examples linked to the Twitter accounts of the websites $globalresearch.ca$ and $off$-$guardian.org$. Both websites have several failed fact-checks according to \href{https://iffy.news}{iffy.news} - a website which provides a database of websites with low factual reporting levels.\footnote{For $globalresearch.ca$ see \href{https://mediabiasfactcheck.com/global-research/}{https://mediabiasfactcheck.com/global-research/} and for $off-guardian.org$ see \href{https://mediabiasfactcheck.com/offguardian/}{https://mediabiasfactcheck.com/offguardian/}.  }
-\begin{figure*}
+\begin{figure}
 \centering
-	\begin{multicols}{2}
-		\includegraphics[scale=0.2]{./img/globalresearch/sum_globalresearch.ca_6_months.jpg} 
-		\includegraphics[scale=0.2]{./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg}
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/globalresearch/sum_globalresearch.ca_6_months.jpg} 
+		\includegraphics[scale=0.35]{./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg}
 	\end{multicols}
-	\begin{multicols}{2}
-		\includegraphics[scale=0.2]{./img/globalresearch/tweet.png} 
-		\includegraphics[scale=0.2]{./img/globalresearch/warning.png}
-	\end{multicols}
-%\includegraphics[scale=0.3]{./img/globalresearch/sum_rolling_7_globalresearch.jpg} 
-%\includegraphics[scale=0.3]{./img/globalresearch/sum_rolling_7_globalresearchall_time.jpg}
 \caption{}
 \label{fig4}
-\end{figure*}
+\end{figure}
+
+\begin{figure}
+\centering	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/globalresearch/tweet.png} 
+		\includegraphics[scale=0.35]{./img/globalresearch/warning.png}
+	\end{multicols}
+\caption{}
+\label{fig4bis}
+\end{figure}
 
 The website $globalresearch.ca$ is linked to the Twitter account {$@CRG\_CRM$}; that was recently suspended.\footnote{We noticed the message about the account suspension on May 25, 2021. But to the best of our knowledge, no official communication by Twitter has announced the suspension nor the exact date at which it was implemented. Hence the account may have gotten suspended anytime between April 15, 2021 and May 25, 2021 (see the suspension screenshot in panel $(a)$ of figure \ref{fig3}). Furthermore, $globalresearch.ca$ has multiple failed fact-checks, see \href{https://mediabiasfactcheck.com/global-research/}{https://mediabiasfactcheck.com/global-research/}} When a user searches via the twitter search-box a url link of this website, no results appear as shown in the screenshot in panel $(b)$ of figure \ref{fig3}, taken on June 14, 2021. To further investigate the possible implementation of a reduced visibility measure, we search via the Twitter API for tweets, excluding retweets, containing the query {\it globalresearch.ca} from January 1, 2021 until June 10, 2021.  As shown in panel (a) in figure \ref{fig4}, we find a strictly positive number of tweets containing the URL link {\it globalresearch.ca} throughout May 2021 and the first week of June 2021. Hence, the visibility of tweets containing this URL link has been reduced because users can no longer access tweets containing the URL link {\it globalresearch.ca} via the search box. Nevertheless users are not restrained from posting tweets containing this URL, as shown in the screenshot in panel $(c)$
  of figure \ref{fig4}, found by taking the tweet ID of one of the collected tweets via the Twitter API. Furthermore, those collected Tweets have strictly positive engagement metrics as shown in panel $(b)$ of figure \ref{fig4}. Hence, the users who tweet articles from the {\it globalresearch.ca} website receive positive engagement from their own followers. Finally, when a user attempts to click on the URL link {\it globalresearch.ca} contained in the Tweet, a warning message appears and indicates that the link may be unsafe (see screenshot in panel (d) in figure \ref{fig4}). 

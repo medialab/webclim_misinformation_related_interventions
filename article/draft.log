@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  5 JUL 2021 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  5 JUL 2021 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1230,216 +1230,273 @@ File: ./img/tony/fig2_tony.png Graphic file (type png)
 Package pdftex.def Info: ./img/tony/fig2_tony.png  used on input line 245.
 (pdftex.def)             Requested size: 175.25609pt x 86.72466pt.
 [8 <./img/tony/fig1_tony.png> <./img/tony/fig2_tony.png>]
+Overfull \hbox (18.08217pt too wide) in paragraph at lines 278--278
+[][]\OT1/cmr/m/n/8 See []https://www.wired.com/story/facebook-bans-alex-jones-e
+xtremists/[] and []about.fb.com/news/2018/08/enforcing-
+ []
+
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 277.
+ I therefore use two columns instead on input line 283.
 
-<./img/infowars/fb_infowars_1.png, id=274, 605.26125pt x 244.915pt>
+<./img/infowars/fb_infowars_1.png, id=273, 605.26125pt x 244.915pt>
 File: ./img/infowars/fb_infowars_1.png Graphic file (type png)
 <use ./img/infowars/fb_infowars_1.png>
 Package pdftex.def Info: ./img/infowars/fb_infowars_1.png  used on input line 2
-78.
-(pdftex.def)             Requested size: 181.57976pt x 73.47505pt.
+84.
+(pdftex.def)             Requested size: 211.8446pt x 85.72153pt.
+
+Overfull \hbox (1.8423pt too wide) in paragraph at lines 284--285
+ [][] 
+ []
+
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 281.
+ I therefore use two columns instead on input line 287.
 
-<./img/infowars/fb_infowars_2.png, id=275, 601.24625pt x 229.85875pt>
+<./img/infowars/fb_infowars_2.png, id=274, 601.24625pt x 229.85875pt>
 File: ./img/infowars/fb_infowars_2.png Graphic file (type png)
 <use ./img/infowars/fb_infowars_2.png>
 Package pdftex.def Info: ./img/infowars/fb_infowars_2.png  used on input line 2
-82.
-(pdftex.def)             Requested size: 180.37526pt x 68.95815pt.
+88.
+(pdftex.def)             Requested size: 210.43933pt x 80.45175pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+[][]\OT1/cmr/m/n/8 The com-mand can be found here: []https://github.com/mediala
+b/truth-and-trust-online-
+ []
+
 [9]
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 301.
+ I therefore use two columns instead on input line 308.
 
-<./img/globalresearch_2021-06-14.png, id=288, 603.25375pt x 305.14pt>
+<./img/infowars/fb_infowars_3.png, id=292, 617.30624pt x 238.8925pt>
+File: ./img/infowars/fb_infowars_3.png Graphic file (type png)
+<use ./img/infowars/fb_infowars_3.png>
+Package pdftex.def Info: ./img/infowars/fb_infowars_3.png  used on input line 3
+09.
+(pdftex.def)             Requested size: 216.06041pt x 83.61362pt.
+
+Overfull \hbox (6.0581pt too wide) in paragraph at lines 309--310
+ [][] 
+ []
+
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 321.
+
+<./img/globalresearch_2021-06-14.png, id=293, 603.25375pt x 305.14pt>
 File: ./img/globalresearch_2021-06-14.png Graphic file (type png)
 <use ./img/globalresearch_2021-06-14.png>
 Package pdftex.def Info: ./img/globalresearch_2021-06-14.png  used on input lin
-e 302.
-(pdftex.def)             Requested size: 180.97751pt x 91.5427pt.
+e 322.
+(pdftex.def)             Requested size: 211.14197pt x 106.80058pt.
+
+Overfull \hbox (1.13966pt too wide) in paragraph at lines 322--323
+ [][] 
+ []
+
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 305.
+ I therefore use two columns instead on input line 325.
 
-<./img/globalresearch_14_06_2021_16pm_UTC.png, id=289, 601.24625pt x 304.13625p
+<./img/globalresearch_14_06_2021_16pm_UTC.png, id=294, 601.24625pt x 304.13625p
 t>
 File: ./img/globalresearch_14_06_2021_16pm_UTC.png Graphic file (type png)
 <use ./img/globalresearch_14_06_2021_16pm_UTC.png>
 Package pdftex.def Info: ./img/globalresearch_14_06_2021_16pm_UTC.png  used on 
-input line 306.
-(pdftex.def)             Requested size: 180.37526pt x 91.24158pt.
+input line 326.
+(pdftex.def)             Requested size: 210.43933pt x 106.44928pt.
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 320.
+ I therefore use two columns instead on input line 340.
 
-<./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=295, 600.2425pt x 
+<./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=300, 600.2425pt x 
 343.2825pt>
 File: ./img/globalresearch/sum_globalresearch.ca_6_months.jpg Graphic file (typ
 e jpg)
 <use ./img/globalresearch/sum_globalresearch.ca_6_months.jpg>
 Package pdftex.def Info: ./img/globalresearch/sum_globalresearch.ca_6_months.jp
-g  used on input line 321.
-(pdftex.def)             Requested size: 120.04637pt x 68.65527pt.
-<./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=296, 6
+g  used on input line 341.
+(pdftex.def)             Requested size: 210.08801pt x 120.15067pt.
+<./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=301, 6
 19.31375pt x 343.2825pt>
 File: ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg Graph
 ic file (type jpg)
 <use ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg>
 Package pdftex.def Info: ./img/globalresearch/engagement_sum_rolling_1_globalre
-search.ca.jpg  used on input line 322.
-(pdftex.def)             Requested size: 123.86055pt x 68.65527pt.
+search.ca.jpg  used on input line 342.
+(pdftex.def)             Requested size: 216.76306pt x 120.15067pt.
+
+Overfull \hbox (6.76076pt too wide) in paragraph at lines 341--343
+ [] 
+ []
+
+[10 <./img/infowars/fb_infowars_1.png> <./img/infowars/fb_infowars_2.png>]
+[11 <./img/infowars/fb_infowars_3.png> <./img/globalresearch_2021-06-14.png> <.
+/img/globalresearch_14_06_2021_16pm_UTC.png>] [12 <./img/globalresearch/sum_glo
+balresearch.ca_6_months.jpg> <./img/globalresearch/engagement_sum_rolling_1_glo
+balresearch.ca.jpg>]
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 325.
+ I therefore use two columns instead on input line 352.
 
-<./img/globalresearch/tweet.png, id=297, 608.2725pt x 341.275pt>
+<./img/globalresearch/tweet.png, id=334, 608.2725pt x 341.275pt>
 File: ./img/globalresearch/tweet.png Graphic file (type png)
 <use ./img/globalresearch/tweet.png>
-Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 326
+Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 353
 .
-(pdftex.def)             Requested size: 121.65234pt x 68.25378pt.
-<./img/globalresearch/warning.png, id=298, 602.25pt x 425.59pt>
+(pdftex.def)             Requested size: 212.89856pt x 119.44803pt.
+<./img/globalresearch/warning.png, id=335, 602.25pt x 425.59pt>
 File: ./img/globalresearch/warning.png Graphic file (type png)
 <use ./img/globalresearch/warning.png>
 Package pdftex.def Info: ./img/globalresearch/warning.png  used on input line 3
-27.
-(pdftex.def)             Requested size: 120.44786pt x 85.11649pt.
-[10 <./img/infowars/fb_infowars_1.png> <./img/infowars/fb_infowars_2.png>]
+54.
+(pdftex.def)             Requested size: 210.79065pt x 148.95872pt.
+
+Overfull \hbox (2.89626pt too wide) in paragraph at lines 353--355
+ [][] 
+ []
+
+
+Overfull \hbox (0.78835pt too wide) in paragraph at lines 353--355
+ [] 
+ []
+
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 361.
+ I therefore use two columns instead on input line 384.
 
-<./img/tweets/Capture_2021-06-30_2.png, id=319, 605.26125pt x 405.515pt>
+<./img/tweets/Capture_2021-06-30_2.png, id=336, 605.26125pt x 405.515pt>
 File: ./img/tweets/Capture_2021-06-30_2.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-06-30_2.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-06-30_2.png  used on input l
-ine 362.
+ine 385.
 (pdftex.def)             Requested size: 151.31493pt x 101.3785pt.
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 364.
+ I therefore use two columns instead on input line 387.
 
-<./img/tweets/Capture_2021-06-30.png, id=320, 601.24625pt x 462.72874pt>
+<./img/tweets/Capture_2021-06-30.png, id=337, 601.24625pt x 462.72874pt>
 File: ./img/tweets/Capture_2021-06-30.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-06-30.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-06-30.png  used on input lin
-e 365.
+e 388.
 (pdftex.def)             Requested size: 150.31119pt x 115.6819pt.
-[11 <./img/globalresearch_2021-06-14.png> <./img/globalresearch_14_06_2021_16pm
-_UTC.png>] [12 <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img
-/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg> <./img/globalre
-search/tweet.png> <./img/globalresearch/warning.png>] [13 <./img/tweets/Capture
-_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.png>]
-
-Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 383.
-
-<./img/tweets/Capture_2021-07-01.png, id=354, 605.26125pt x 462.72874pt>
-File: ./img/tweets/Capture_2021-07-01.png Graphic file (type png)
-<use ./img/tweets/Capture_2021-07-01.png>
-Package pdftex.def Info: ./img/tweets/Capture_2021-07-01.png  used on input lin
-e 384.
-(pdftex.def)             Requested size: 151.31493pt x 115.6819pt.
-
-Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 386.
-
-<./img/tweets/Capture_2021-07-01_2.png, id=355, 604.2575pt x 392.46625pt>
-File: ./img/tweets/Capture_2021-07-01_2.png Graphic file (type png)
-<use ./img/tweets/Capture_2021-07-01_2.png>
-Package pdftex.def Info: ./img/tweets/Capture_2021-07-01_2.png  used on input l
-ine 387.
-(pdftex.def)             Requested size: 151.064pt x 98.11632pt.
-
-Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 397.
-
-<./img/youtube_panels/yt_1.png, id=358, 1040.88875pt x 125.46875pt>
-File: ./img/youtube_panels/yt_1.png Graphic file (type png)
-<use ./img/youtube_panels/yt_1.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 398.
-
-(pdftex.def)             Requested size: 208.17406pt x 25.09329pt.
-
-Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 400.
-
-<./img/youtube_panels/yt_2.png, id=359, 1165.35374pt x 112.42pt>
-File: ./img/youtube_panels/yt_2.png Graphic file (type png)
-<use ./img/youtube_panels/yt_2.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 401.
-
-(pdftex.def)             Requested size: 233.06662pt x 22.4836pt.
-
-Overfull \hbox (23.06432pt too wide) in paragraph at lines 401--402
- [][] 
- []
-
-
-Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 403.
-
-<./img/youtube_panels/yt_3.png, id=360, 1169.36874pt x 103.38625pt>
-File: ./img/youtube_panels/yt_3.png Graphic file (type png)
-<use ./img/youtube_panels/yt_3.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 404.
-
-(pdftex.def)             Requested size: 233.8696pt x 20.67688pt.
-
-Overfull \hbox (23.8673pt too wide) in paragraph at lines 404--405
- [][] 
- []
-
+[13 <./img/globalresearch/tweet.png> <./img/globalresearch/warning.png>]
+[14 <./img/tweets/Capture_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.pn
+g>]
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
  I therefore use two columns instead on input line 406.
 
-<./img/youtube_panels/yt_4.png, id=361, 1178.4025pt x 70.2625pt>
-File: ./img/youtube_panels/yt_4.png Graphic file (type png)
-<use ./img/youtube_panels/yt_4.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 407.
+<./img/tweets/Capture_2021-07-01.png, id=366, 605.26125pt x 462.72874pt>
+File: ./img/tweets/Capture_2021-07-01.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-07-01.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-07-01.png  used on input lin
+e 407.
+(pdftex.def)             Requested size: 151.31493pt x 115.6819pt.
 
-(pdftex.def)             Requested size: 235.67632pt x 14.05225pt.
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 409.
 
-Overfull \hbox (25.67401pt too wide) in paragraph at lines 407--408
+<./img/tweets/Capture_2021-07-01_2.png, id=367, 604.2575pt x 392.46625pt>
+File: ./img/tweets/Capture_2021-07-01_2.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-07-01_2.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-07-01_2.png  used on input l
+ine 410.
+(pdftex.def)             Requested size: 151.064pt x 98.11632pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 420.
+
+<./img/youtube_panels/yt_1.png, id=370, 1040.88875pt x 125.46875pt>
+File: ./img/youtube_panels/yt_1.png Graphic file (type png)
+<use ./img/youtube_panels/yt_1.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 421.
+
+(pdftex.def)             Requested size: 208.17406pt x 25.09329pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 423.
+
+<./img/youtube_panels/yt_2.png, id=371, 1165.35374pt x 112.42pt>
+File: ./img/youtube_panels/yt_2.png Graphic file (type png)
+<use ./img/youtube_panels/yt_2.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 424.
+
+(pdftex.def)             Requested size: 233.06662pt x 22.4836pt.
+
+Overfull \hbox (23.06432pt too wide) in paragraph at lines 424--425
  [][] 
  []
 
-[14] [15 <./img/tweets/Capture_2021-07-01.png> <./img/tweets/Capture_2021-07-01
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 426.
+
+<./img/youtube_panels/yt_3.png, id=372, 1169.36874pt x 103.38625pt>
+File: ./img/youtube_panels/yt_3.png Graphic file (type png)
+<use ./img/youtube_panels/yt_3.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 427.
+
+(pdftex.def)             Requested size: 233.8696pt x 20.67688pt.
+
+Overfull \hbox (23.8673pt too wide) in paragraph at lines 427--428
+ [][] 
+ []
+
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 429.
+
+<./img/youtube_panels/yt_4.png, id=373, 1178.4025pt x 70.2625pt>
+File: ./img/youtube_panels/yt_4.png Graphic file (type png)
+<use ./img/youtube_panels/yt_4.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 430.
+
+(pdftex.def)             Requested size: 235.67632pt x 14.05225pt.
+
+Overfull \hbox (25.67401pt too wide) in paragraph at lines 430--431
+ [][] 
+ []
+
+[15] [16 <./img/tweets/Capture_2021-07-01.png> <./img/tweets/Capture_2021-07-01
 _2.png> <./img/youtube_panels/yt_1.png> <./img/youtube_panels/yt_2.png> <./img/
 youtube_panels/yt_3.png> <./img/youtube_panels/yt_4.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 420.
+               Default added (so using `tbp') on input line 443.
 
-[16]
-Overfull \hbox (9.16295pt too wide) in paragraph at lines 454--455
+[17]
+Overfull \hbox (9.16295pt too wide) in paragraph at lines 477--478
 [][]\OT1/cmr/m/n/10 https://misinforeview.hks.harvard.edu/article/tackling-misi
 nformation-what-researchers-could-
  []
 
-(./draft.bbl [17]) [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+(./draft.bbl [18]) [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 499.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 499.
  (./draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 499.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 499.
 Package rerunfilecheck Info: File `draft.out' has not changed.
 (rerunfilecheck)             Checksum: 5CFC85375CB2B50637CF81DE7BD1DE2E;1154.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 499.
  ) 
 Here is how much of TeX's memory you used:
- 25576 strings out of 480608
- 520813 string characters out of 5903631
- 794083 words of memory out of 5000000
- 40834 multiletter control sequences out of 15000+600000
+ 25588 strings out of 480608
+ 521078 string characters out of 5903631
+ 794809 words of memory out of 5000000
+ 40842 multiletter control sequences out of 15000+600000
  545810 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,14n,76p,2193b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,14n,76p,2320b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.38} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -1567,10 +1624,10 @@ ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on draft.pdf (18 pages, 3711521 bytes).
+Output written on draft.pdf (19 pages, 3759996 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
- 282 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 393 compressed objects within 4 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

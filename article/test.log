@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  4 JUL 2021 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  5 JUL 2021 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -876,6 +876,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--302
  []
 
 [6 <./img/infowars/fb_infowars_1.png> <./img/infowars/fb_infowars_2.png>]
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 309.
+
 <./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=220, 600.2425pt x 
 343.2825pt>
 File: ./img/globalresearch/sum_globalresearch.ca_6_months.jpg Graphic file (typ
@@ -883,254 +887,281 @@ e jpg)
 <use ./img/globalresearch/sum_globalresearch.ca_6_months.jpg>
 Package pdftex.def Info: ./img/globalresearch/sum_globalresearch.ca_6_months.jp
 g  used on input line 310.
-(pdftex.def)             Requested size: 120.04637pt x 68.65527pt.
+(pdftex.def)             Requested size: 210.08801pt x 120.15067pt.
 <./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=221, 6
 19.31375pt x 343.2825pt>
 File: ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg Graph
 ic file (type jpg)
 <use ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg>
 Package pdftex.def Info: ./img/globalresearch/engagement_sum_rolling_1_globalre
-search.ca.jpg  used on input line 313.
-(pdftex.def)             Requested size: 123.86055pt x 68.65527pt.
+search.ca.jpg  used on input line 311.
+(pdftex.def)             Requested size: 216.76306pt x 120.15067pt.
+
+Overfull \hbox (109.08087pt too wide) in paragraph at lines 310--312
+ [][] 
+ []
+
+
+Overfull \hbox (115.75592pt too wide) in paragraph at lines 310--312
+ [] 
+ []
+
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 319.
+
 <./img/globalresearch/tweet.png, id=222, 608.2725pt x 341.275pt>
 File: ./img/globalresearch/tweet.png Graphic file (type png)
 <use ./img/globalresearch/tweet.png>
-Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 316
+Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 320
 .
-(pdftex.def)             Requested size: 121.65234pt x 68.25378pt.
+(pdftex.def)             Requested size: 212.89856pt x 119.44803pt.
 <./img/globalresearch/warning.png, id=223, 602.25pt x 425.59pt>
 File: ./img/globalresearch/warning.png Graphic file (type png)
 <use ./img/globalresearch/warning.png>
 Package pdftex.def Info: ./img/globalresearch/warning.png  used on input line 3
-17.
-(pdftex.def)             Requested size: 120.44786pt x 85.11649pt.
+21.
+(pdftex.def)             Requested size: 210.79065pt x 148.95872pt.
 
+Overfull \hbox (111.89142pt too wide) in paragraph at lines 320--322
+ [][] 
+ []
+
+
+Overfull \hbox (109.78351pt too wide) in paragraph at lines 320--322
+ [] 
+ []
+
+[7 <./img/globalresearch_2021-06-14.png> <./img/globalresearch_14_06_2021_16pm_
+UTC.png> <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img/globa
+lresearch/engagement_sum_rolling_1_globalresearch.ca.jpg> <./img/globalresearch
+/tweet.png> <./img/globalresearch/warning.png>]
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 354.
+ I therefore use two columns instead on input line 356.
 
-<./img/tweets/Capture_2021-06-30_2.png, id=232, 605.26125pt x 405.515pt>
+<./img/tweets/Capture_2021-06-30_2.png, id=246, 605.26125pt x 405.515pt>
 File: ./img/tweets/Capture_2021-06-30_2.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-06-30_2.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-06-30_2.png  used on input l
-ine 355.
+ine 357.
 (pdftex.def)             Requested size: 151.31493pt x 101.3785pt.
 
-Overfull \hbox (50.30779pt too wide) in paragraph at lines 355--356
+Overfull \hbox (50.30779pt too wide) in paragraph at lines 357--358
  [][] 
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 357.
+ I therefore use two columns instead on input line 359.
 
-<./img/tweets/Capture_2021-06-30.png, id=233, 601.24625pt x 462.72874pt>
+<./img/tweets/Capture_2021-06-30.png, id=247, 601.24625pt x 462.72874pt>
 File: ./img/tweets/Capture_2021-06-30.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-06-30.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-06-30.png  used on input lin
-e 358.
+e 360.
 (pdftex.def)             Requested size: 150.31119pt x 115.6819pt.
 
-Overfull \hbox (49.30405pt too wide) in paragraph at lines 358--359
+Overfull \hbox (49.30405pt too wide) in paragraph at lines 360--361
  [][] 
  []
 
 
-Underfull \hbox (badness 2846) in paragraph at lines 360--360
+Underfull \hbox (badness 2846) in paragraph at lines 362--362
 \OT1/ptm/m/n/10 marked as False by a Fact-Checker, screen-shots
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 360--360
+Underfull \hbox (badness 1571) in paragraph at lines 362--362
 \OT1/ptm/m/n/10 taken on June 20, 2021. Panel (a): Tweet ID
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 [][][]\OT1/ptm/m/n/9 See No-tices on Twit-ter and what they mean:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
 [][]\OT1/ptm/m/n/9 https://help.twitter.com/en/rules-and-policies/notices-on-
  []
 
 
-Underfull \hbox (badness 3078) in paragraph at lines 364--366
+Underfull \hbox (badness 3078) in paragraph at lines 366--368
 \OT1/ptm/m/n/10.95 Alongside other so-cial net-work-ing plat-forms,
  []
 
-[7 <./img/globalresearch_2021-06-14.png> <./img/globalresearch_14_06_2021_16pm_
-UTC.png>] [8 <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img/g
-lobalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg> <./img/globalrese
-arch/tweet.png> <./img/globalresearch/warning.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+
+Underfull \vbox (badness 2503) has occurred while \output is active []
+
+ [8 <./img/tweets/Capture_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 373--373
 [][][]\OT1/ptm/m/n/9 See [][]https://developer.twitter.com/en/docs/twitter-
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 377.
+ I therefore use two columns instead on input line 379.
 
-<./img/tweets/Capture_2021-07-01.png, id=269, 605.26125pt x 462.72874pt>
+<./img/tweets/Capture_2021-07-01.png, id=274, 605.26125pt x 462.72874pt>
 File: ./img/tweets/Capture_2021-07-01.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-07-01.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-07-01.png  used on input lin
-e 378.
+e 380.
 (pdftex.def)             Requested size: 151.31493pt x 115.6819pt.
 
-Overfull \hbox (50.30779pt too wide) in paragraph at lines 378--379
+Overfull \hbox (50.30779pt too wide) in paragraph at lines 380--381
  [][] 
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 380.
+ I therefore use two columns instead on input line 382.
 
-<./img/tweets/Capture_2021-07-01_2.png, id=270, 604.2575pt x 392.46625pt>
+<./img/tweets/Capture_2021-07-01_2.png, id=275, 604.2575pt x 392.46625pt>
 File: ./img/tweets/Capture_2021-07-01_2.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-07-01_2.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-07-01_2.png  used on input l
-ine 381.
+ine 383.
 (pdftex.def)             Requested size: 151.064pt x 98.11632pt.
 
-Overfull \hbox (50.05685pt too wide) in paragraph at lines 381--382
+Overfull \hbox (50.05685pt too wide) in paragraph at lines 383--384
  [][] 
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 391.
+ I therefore use two columns instead on input line 393.
 
-<./img/youtube_panels/yt_1.png, id=273, 1040.88875pt x 125.46875pt>
+<./img/youtube_panels/yt_1.png, id=278, 1040.88875pt x 125.46875pt>
 File: ./img/youtube_panels/yt_1.png Graphic file (type png)
 <use ./img/youtube_panels/yt_1.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 392.
+Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 394.
 
 (pdftex.def)             Requested size: 208.17406pt x 25.09329pt.
 
-Overfull \hbox (107.16692pt too wide) in paragraph at lines 392--393
+Overfull \hbox (107.16692pt too wide) in paragraph at lines 394--395
  [][] 
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 394.
+ I therefore use two columns instead on input line 396.
 
-<./img/youtube_panels/yt_2.png, id=274, 1165.35374pt x 112.42pt>
+<./img/youtube_panels/yt_2.png, id=279, 1165.35374pt x 112.42pt>
 File: ./img/youtube_panels/yt_2.png Graphic file (type png)
 <use ./img/youtube_panels/yt_2.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 395.
+Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 397.
 
 (pdftex.def)             Requested size: 233.06662pt x 22.4836pt.
 
-Overfull \hbox (132.05948pt too wide) in paragraph at lines 395--396
+Overfull \hbox (132.05948pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 397.
+ I therefore use two columns instead on input line 399.
 
-<./img/youtube_panels/yt_3.png, id=275, 1169.36874pt x 103.38625pt>
+<./img/youtube_panels/yt_3.png, id=280, 1169.36874pt x 103.38625pt>
 File: ./img/youtube_panels/yt_3.png Graphic file (type png)
 <use ./img/youtube_panels/yt_3.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 398.
+Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 400.
 
 (pdftex.def)             Requested size: 233.8696pt x 20.67688pt.
 
-Overfull \hbox (132.86246pt too wide) in paragraph at lines 398--399
+Overfull \hbox (132.86246pt too wide) in paragraph at lines 400--401
  [][] 
  []
 
 
 Package multicol Warning: Using `1' columns doesn't seem a good idea.
- I therefore use two columns instead on input line 400.
+ I therefore use two columns instead on input line 402.
 
-<./img/youtube_panels/yt_4.png, id=276, 1178.4025pt x 70.2625pt>
+<./img/youtube_panels/yt_4.png, id=281, 1178.4025pt x 70.2625pt>
 File: ./img/youtube_panels/yt_4.png Graphic file (type png)
 <use ./img/youtube_panels/yt_4.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 401.
+Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 403.
 
 (pdftex.def)             Requested size: 235.67632pt x 14.05225pt.
 
-Overfull \hbox (134.66917pt too wide) in paragraph at lines 401--402
+Overfull \hbox (134.66917pt too wide) in paragraph at lines 403--404
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./img/tweets/Capture_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.pn
-g> <./img/tweets/Capture_2021-07-01.png> <./img/tweets/Capture_2021-07-01_2.png
-> <./img/youtube_panels/yt_1.png> <./img/youtube_panels/yt_2.png> <./img/youtub
-e_panels/yt_3.png> <./img/youtube_panels/yt_4.png>]
+ [9 <./img/tweets/Capture_2021-07-01.png> <./img/tweets/Capture_2021-07-01_2.pn
+g> <./img/youtube_panels/yt_1.png> <./img/youtube_panels/yt_2.png> <./img/youtu
+be_panels/yt_3.png> <./img/youtube_panels/yt_4.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 417.
+               Default added (so using `tbp') on input line 419.
 
 
-Overfull \hbox (145.40805pt too wide) in paragraph at lines 418--426
+Overfull \hbox (145.40805pt too wide) in paragraph at lines 420--428
 [][] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-37.
+39.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 6825) in paragraph at lines 437--438
+Underfull \hbox (badness 6825) in paragraph at lines 439--440
 []\OT1/ptm/m/n/10.95 For a pre-vi-ous re-search project[][][][][], we
  []
 
-[10]
-Underfull \hbox (badness 7186) in paragraph at lines 443--444
+
+Underfull \hbox (badness 7186) in paragraph at lines 445--446
 []\OT1/ptm/m/n/10.95 There are other ways to col-lect data
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 443--444
+Underfull \hbox (badness 3679) in paragraph at lines 445--446
 \OT1/ptm/m/n/10.95 from plat-forms, and be-sides Buz-zsumo,
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 443--444
+Underfull \hbox (badness 2012) in paragraph at lines 445--446
 \OT1/ptm/m/n/10.95 mul-ti-ple so-cial plat-forms. For ex-am-ple
  []
 
 
-Underfull \hbox (badness 3471) in paragraph at lines 443--444
+Underfull \hbox (badness 3471) in paragraph at lines 445--446
 \OT1/ptm/m/n/10.95 News-guard, blablabla... In this tweet,
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 443--444
+Underfull \hbox (badness 1342) in paragraph at lines 445--446
 \OT1/ptm/m/n/10.95 we can see the in-ter-face of XXX be-ing
  []
 
 
-Overfull \hbox (100.61797pt too wide) in paragraph at lines 443--444
+Overfull \hbox (100.61797pt too wide) in paragraph at lines 445--446
 \OT1/ptm/m/n/10.95 https://twitter.com/Shayan86/status/1394742784683298818/phot
 o/2 
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 451--452
+Underfull \hbox (badness 1448) in paragraph at lines 453--454
 \OT1/ptm/m/n/10.95 cite mis-in-for-ma-tion as the rea-son. E.g.
  []
 
 
-Overfull \hbox (40.02037pt too wide) in paragraph at lines 453--454
+Overfull \hbox (40.02037pt too wide) in paragraph at lines 455--456
 [][][]\OT1/ptm/m/n/10.95 https://misinforeview.hks.harvard.edu/article/tackling
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 \OT1/ptm/m/n/10.95 misinformation-what-researchers-could-do-
  []
 
-(./test.bbl
+[10] (./test.bbl
 Underfull \hbox (badness 1838) in paragraph at lines 11--15
 []\OT1/ptm/m/n/10 Nir Grin-berg, Ken-neth Joseph, Lisa Fried-land,
  []
@@ -1144,29 +1175,31 @@ Underfull \hbox (badness 1033) in paragraph at lines 17--22
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
-[11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 470.
+[11
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 470.
  (./test.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 468.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 470.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 470.
 Package rerunfilecheck Info: File `test.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 470.
  )
 (\end occurred when \iffalse on line 351 was incomplete) 
 Here is how much of TeX's memory you used:
- 7950 strings out of 480608
- 124355 string characters out of 5903631
- 404604 words of memory out of 5000000
- 23588 multiletter control sequences out of 15000+600000
+ 7952 strings out of 480608
+ 124381 string characters out of 5903631
+ 402637 words of memory out of 5000000
+ 23589 multiletter control sequences out of 15000+600000
  560207 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,14n,46p,1995b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,14n,46p,1995b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/202
 0/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fon
@@ -1177,10 +1210,10 @@ ype1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 /urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on test.pdf (11 pages, 3650937 bytes).
+Output written on test.pdf (11 pages, 3651163 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
