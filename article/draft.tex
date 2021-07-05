@@ -28,6 +28,7 @@
 \usepackage{subfig}
 \usepackage{multirow}
 \usepackage{cite}
+\usepackage{lscape}
 \usetikzlibrary{shapes,snakes}
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\diamond$}
@@ -238,11 +239,11 @@ may  have  a  good  impact  on  reducing  the  audience interest or reach to the
 \begin{figure}
 	\centering
 		\begin{multicols}{1}
-			\includegraphics[scale=0.3]{./img/tony/fig1_tony.png}
+			\includegraphics[scale=0.35]{./img/tony/fig1_tony.png}
 		\end{multicols}
 		
 		\begin{multicols}{1}
-			\includegraphics[scale=0.3]{./img/tony/fig2_tony.png}
+			\includegraphics[scale=0.35]{./img/tony/fig2_tony.png}
 		\end{multicols}
 	\caption{Panel (a): Number of Youtube videos uploaded each day by the Youtube channel {\it Tony Heller} between September 1, 2020 and November 15, 2020. Panel (b): accumulated view counts for videos uploaded by the same Youtube channel. The date corresponds to the videos’  publishing date. 
 }
@@ -251,11 +252,36 @@ may  have  a  good  impact  on  reducing  the  audience interest or reach to the
 
 \subsection{Blocking links}
 
-A third measure that main stream social media platforms can apply is to prevent users from sharing specific types of content, instead of deleting the content after posting, or users accounts. We will study here how the platforms prevent users from sharing urls coming from specific domain names.
+A third measure that mainstream social media platforms can apply is to prevent users from sharing specific types of content, instead of deleting the content after posting, or users accounts. We will show through examples how platforms prevent users from sharing urls coming from specific domain names.
 
 \subsubsection{Facebook}
 
-{\color{pink}The Beauty of life}
+In this section, we provide one case study of how Facebook can block a URL as part of its policy enforcement tools. The Beauty of life (\href{https://thebl.com/}{thebl.com/}) is a US-based media company that shares pro-Trump views and conspiracy theories such as QAnon.\footnote{ See \href{https://en.wikipedia.org/wiki/The\_Epoch\_Times\#Removal\_of\_The\_BL\_(The\_Beauty\_of\_Life)\_from\_Facebook}{https://en.wikipedia.org/wiki/The\_Epoch\_Times\#Removal\_of\_The\_BL\_(The\_Beauty\_of\_Life)\_from\_Facebook}.} Facebook has announced on December $20$, $2019$ that ``The BL is now banned from Facebook'' for coordinated inauthentic behavior\footnote{\href{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/}{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/}.}, which includes using fake accounts that misrepresent one's identity or using methods to artificially boost the popularity of content. Coordinated inauthentic behavior is a distinct phenomenon from disinformation according to Facebook, as ``most of the content shared by coordinated manipulation campaigns isn’t probably false”.\footnote{See: \href{https://about.fb.com/news/2019/10/inauthentic-behavior-policy-update/}{https://about.fb.com/news/2019/10/inauthentic-behavior-policy-update/}.}
+
+Nevertheless, for the case of the Beauty of Life, both misinformation and coordinated inauthentic behavior are interlinked, according to the fact-checking organization Snopes which had reported about The BL’s activity to Facebook and other various public articles.\footnote{\href{ https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{ https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, \href{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, \href{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}} It took Facebook five months to complete its investigation of The BL before taking action\footnote{See \href{https://www.businessinsider.com/facebook-bans-beauty-of-life-for-inauthentic-behavior-2019-12}{https://www.businessinsider.com/facebook-bans-beauty-of-life-for-inauthentic-behavior-2019-12}.} and Snopes ended its fact-checking partnership with them in February 2020.\footnote{See \href{https://www.snopes.com/2019/02/01/snopes-fb-partnership-ends/}{https://www.snopes.com/2019/02/01/snopes-fb-partnership-ends/}.}
+
+\begin{figure}
+	\centering
+	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/beautyoflife/fb_bl_1.png}
+	\end{multicols}
+	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/beautyoflife/fb_bl_2.png} 
+	\end{multicols}
+	
+	\caption{Articles from The Beauty of Life website (thebl.com) published between January 1, 2019 and June 15, 2021 and gathered from the Buzzsumo API. (Top) Facebook engagement metrics (average number of reactions, shares and comments per article). (Bottom) Number of articles published per day. The red line marks the date of December 1, 2019. }
+	\label{fb_bl}
+\end{figure}
+%BuzzSumo is a commercial content database that tracks the volume of user interactions with internet content on Facebook, Twitter, and other social media platforms. 
+
+To verify Facebook’s ban of The BL domain name, we first tested whether we could post a Facebook message containing a url from thebl.com. This turned out to be impossible. But such manual verification cannot inform us whether the ban applies indeed to all Facebook users and accounts (as we used only our own personal accounts), nor when it has started. To further investigate this policy, we collected data from Buzzsumo.\footnote{BuzzSumo is a commercial content database that tracks the volume of user interactions with internet content on Facebook, Twitter, and other social media platforms.} We used the ``/search/articles'' endpoint of the Buzzsumo API, to collect the engagement metrics $13$ $634$ articles crawled from the $thebl.com$ website between January $1$, $2019$ and June $15$, $2021$.\footnote{The command can be found in the following Github repository: \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_thebl\_data.py}{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_thebl\_data.py}.}
+
+The number of Facebook reactions, shares and comments dropped to zero for TheBL’s articles published after December $1$, $2019$ (see figure \ref{fb_bl} top panel), indicating the start of the ban. We can note that although the ban was communicated in an article published\footnote{See \href{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}.} on December $20$, $2019$, it seems to have actually started on December $1$, $2019$. The number of articles published per day was around $50$ until December $20$, $2019$. The this number decreased drastically to reach a {\color{pink} plateau} around $5$ to $10$ articles published per day (see figure \ref{fb_bl} bottom panel). The communication around the ban may have discouraged The Beauty of Life to proceed with their activity. Using Buzzsumo data, a global ban over sharing a thebl.com URL link on Facebook was ascertained. It started on December $1$, $2019$, and was still enforced in June 2021.
+
+
+
 
 \subsection{Reducing the visibility}
 
@@ -382,10 +408,10 @@ The website $globalresearch.ca$ is linked to the Twitter account {$@CRG\_CRM$}; 
 \begin{figure}
 \centering
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/tweets/Capture_2021-06-30_2.png}
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-06-30_2.png}
    	 \end{multicols}
 	\begin{multicols}{1} 
-		\includegraphics[scale=0.25]{./img/tweets/Capture_2021-06-30.png}
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-06-30.png}
 	\end{multicols}
 	\caption{Two tweets sharing the same URL link marked as False by a Fact-Checker, screenshots taken on June 20, 2021. Panel (a): Tweet ID \href{https://twitter.com/davidjcaron/status/1241088065462026242}{1241088065462026242} without a label. Panel (b): Tweet ID \href{https://twitter.com/reactiveIntent/status/1261876171584745472}{1261876171584745472} containing a label.}
 	\label{fig8}
@@ -485,6 +511,12 @@ Climate change & 5                                                              
 	\item Pas accès au ``reach" !  ranking not available. Fb nous a donné certaines données (les données Condor) et dedans on a le nombre de clicks par exemple
 	
 	\item ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this." \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{Newsroom}.
+	\item Researchers should be able to access the data of deleted accounts on the main platforms.
+
+	\item Currently the flag or notice banners data is not present in the platforms’ API datasource, and this prevents researchers and journalists from easily investigating that matter. They have to use or build a scraper to access the data.
+
+	\item Lack of transparency in the platforms’ communication that makes their policies harder to verify.
+
 \end{itemize}
 }
 
@@ -495,5 +527,25 @@ Climate change & 5                                                              
 \bibliographystyle{plain}
 
 \section{Appendix}
+
+
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+\multirow{3}{*}{Rules}                     & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://www.facebook.com/communitystandards/recentupdates/                         \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & https://help.twitter.com/en/rules-and-policies/twitter-rules                       \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/policies/community-guidelines/}{youtube.com/intl/en\_us/howyoutubeworks/policies/community-guidelines/} \\ \hline
+\multirow{3}{*}{Rules enforcement }         & \includegraphics[scale=0.05]{./img/fb_logo.png}  & https://transparency.fb.com/data/community-standards-enforcement/                  \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & https://transparency.twitter.com/en/reports/rules-enforcement.html                 \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & https://transparencyreport.google.com/youtube-policy/                              \\ \hline
+\multirow{3}{*}{Transparency center}       & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://transparency.fb.com/data/                                                  \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & https://transparency.twitter.com/en/reports.html                                   \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & https://transparencyreport.google.com/?hl=en                                       \\ \hline
+\multirow{3}{*}{Policy regarding Covid-19} & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://www.facebook.com/help/230764881494641/                                     \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & https://help.twitter.com/en/rules-and-policies/medical-misinformation-policy       \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & https://support.google.com/youtube/answer/9891785                                  \\ \hline
+\end{tabular}
+\end{table}
 
 \end{document}
