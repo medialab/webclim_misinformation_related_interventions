@@ -323,11 +323,6 @@ On May 2, 2019, Facebook announced they would prohibit users from sharing Infowa
 
 As CrowdTangle is tracking posts only from certain public groups and pages, we also used the ``/search/articles'' endpoint of the Buzzsumo API, to gather a richer Facebook dataset. We collected the engagement data for the $14$ $232$ articles crawled by Buzzsumo from the $Infowars$ website between January $1$, $2019$ and December $31$, $2020$.  \footnote{The command can be found here: \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_infowars\_data.py}{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_infowars\_data.py}.} We observe that the articles published after May $2$, $2019$ received less Facebook engagement than the ones published before (see figure \ref{infowars2}), with a percentage change of -$97\%$ for the reactions, -$59\%$ for the shares and -$97\%$ for the comments. An increase in engagement was also observed in $2020$. It reinforces the hypothesis that Facebook reduced the reach of posts sharing Infowars links only during a few months in $2019$.
 
-\smallskip
-
-{\color{pink} Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible.}
-
-
 \begin{figure}
 	\centering
 	
@@ -423,7 +418,7 @@ Alongside other social networking platforms, when the content of a tweet violate
 
 In this section, we take a deeper look at how labels and notices are introduced by Twitter, to indicate content which is inaccurate or false. To that end, we gathered a set of $3094$ URL links of articles which were marked as $False$ by Science Feedback, a fact-checking organization verifying the credibility of science-related viral information. As a second step, we collected (on June 30, 2021) via Minet Command line tool~\cite{minet} all the tweets that have shared a URL link which belongs to the set of $3094$ links marked as $False$. This data collection resulted in $323$ $938$ tweets, excluding retweets. Only $28$ tweets contained the label { ``Get the facts about COVID-19''}, $5$ tweets contained the label { ``Learn about US 2020 election security efforts''} and only $1$ had the following label {``This claim about election fraud is disputed''}. Furthermore, we noticed that the labeling rule might not be applied uniformly on a given set of tweets sharing the exact same URL link, among the set of collected tweets. More specifically, exactly $657$ tweets had shared a URL link redirecting to a video on Bitchute, entitled ``Important information on coronavirus 5G Kung Flu''. Among those $657$ tweets only $3$ contained the label ``Get the facts about COVID-19'' (see figure \ref{fig8}). This points towards the non-automation of the tweet labelling process and that it might be that only $3$ tweets got labelled after being reported by a user. 
 
-We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $2.97\%$ out of $323$ $938$ tweets containing a URL marked as False, have an interstitial ``potentially sensitive content''. In particular, many speak about COVID19 and do not contain a label to provide users with more context from authoritative sources. Figure \ref{fig_notice} provides an example of a tweet sharing a URL marked as False by a Fact-checker and which contains an interstitial ``potentially sensitive content''. We find 32 other tweets, among our set of collected tweets, who share the exact same URL link in our the previous example and among those 32 only 5 tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of the interstitials placement. 
+We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $2.97\%$ out of $323$ $938$ tweets containing a URL marked as False, have an interstitial ``potentially sensitive content''. In particular, many speak about COVID19 and do not contain a label to provide users with more context from authoritative sources. Figure \ref{fig_notice} provides an example of a tweet sharing a URL marked as False by a Fact-checker and which contains an interstitial ``potentially sensitive content''. We find 32 other Tweets, among our set of collected tweets, who share the exact same URL link as in the previous example. Among those 32 Tweets, only 5 tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of the interstitials placement. 
 
 Finally, to the best of our knowledge, when using the Twitter API v2, there is no field which indicates whether a tweet is labeled or not; while the interstitial ``possibly sensitive'' and ``withheld" are both Tweet fields that can be recovered\footnote{See \href{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}.} from the API. 
 
@@ -469,11 +464,11 @@ For climate change we only examined 18 misleading videos and we found 72\% of th
 \begin{table}[] 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-Category       & \begin{tabular}[c]{@{}c@{}}With information \\ panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Without Information \\ panel\end{tabular} & Total & \begin{tabular}[c]{@{}c@{}}IP\\ percentage\end{tabular} \\ \hline
-General Health & 0                                                                 & 11                                                                   & 11    & 0                                                       \\ \hline
+Category       & \begin{tabular}[c]{@{}c@{}}With \\ information \\ panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Without  \\\ information \\ panel\end{tabular} & Total & \begin{tabular}[c]{@{}c@{}}IP \% \end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}} General \\ Health \end{tabular} & 0                                                                 & 11                                                                   & 11    & 0                                                       \\ \hline
 Vaccine        & 21                                                                & 7                                                                    & 28    & 75                                                      \\ \hline
-COVID          & 73                                                                & 43                                                                   & 116   & 63                                                      \\ \hline
-Climate change & 5                                                                 & 13                                                                   & 18    & 28                                                      \\ \hline
+COVID19          & 73                                                                & 43                                                                   & 116   & 63                                                      \\ \hline
+\begin{tabular}[c]{@{}c@{}}  Climate \\ change \end{tabular} & 5                                                                 & 13                                                                   & 18    & 28                                                      \\ \hline
 \end{tabular}
 \caption{}
 \label{tab2}
@@ -483,6 +478,7 @@ Climate change & 5                                                              
 
 
 { \color{pink} 
+Sporadic points for the discussion, no structure yet. 
 
 \begin{itemize}
 
@@ -517,6 +513,7 @@ Climate change & 5                                                              
 
 	\item Lack of transparency in the platforms’ communication that makes their policies harder to verify.
 
+	\item Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible. 
 \end{itemize}
 }
 
