@@ -33,13 +33,18 @@ To collect the Trump Facebook data from CrowdTangle, run (the collection takes a
 ./code/collect_facebook_crowdtangle_trump_data.sh 1559721
 ```
 
-To collect the Infowars Facebook data from CrowdTangle, run (takes around 20 minutes):
+To collect the Beauty of Life Facebook data from Buzzsumo, run (~6 min):
+```
+python code/collect_facebook_buzzsumo_thebl_data.py
+```
+
+To collect the Infowars Facebook data from CrowdTangle, run (~20 min):
 
 ```
 ./code/collect_facebook_crowdtangle_infowars_data.sh
 ```
 
-To collect the Infowars Facebook data from Buzzsumo, run (takes around 4 min):
+To collect the Infowars Facebook data from Buzzsumo, run (~4 min):
 ```
 python code/collect_facebook_buzzsumo_infowars_data.py
 ```

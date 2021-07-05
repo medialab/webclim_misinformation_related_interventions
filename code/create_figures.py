@@ -1,5 +1,5 @@
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 import pandas as pd
 import numpy as np
@@ -21,6 +21,8 @@ def save_figure(figure_name):
 
 def arrange_plot(ax, df):
 
+    plt.legend()
+
     ax.set_frame_on(False)
     ax.grid(axis="y")
     plt.locator_params(axis='y', nbins=4)
@@ -35,7 +37,7 @@ def arrange_plot(ax, df):
     plt.xlim(np.min(df['date']), np.max(df['date']))
 
 
-def create_suspension_facebook_trump_figure():
+def create_facebook_trump_figure():
 
     print()
 
@@ -53,18 +55,48 @@ def create_suspension_facebook_trump_figure():
 
     ax = plt.subplot(111)
     plt.plot(serie_to_plot, color='royalblue', label='Number of posts per day')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2021-01-07"), color='C3', linestyle='--')
     plt.xlim(
         np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')), 
         np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
     )
-    plt.ylim(0, 55)
+    plt.ylim(-.3, 55)
 
     plt.tight_layout()
     save_figure('facebook_crowdtangle_trump.png')
+
+
+def create_buzzsumo_thebl_figure():
+
+    print()
+
+    df = import_data('facebook_buzzsumo_thebl_2021-07-01.csv')
+    df = clean_buzzsumo_data(df)
+
+    fig = plt.figure(figsize=(10, 8))
+    fig.suptitle('The Beauty of Life (data from Buzzsumo)')
+
+    ax = plt.subplot(211)
+    plt.plot(df.resample('D', on='date')['facebook_comments'].mean(),
+        label="Facebook comments per article", color='lightskyblue')
+    plt.plot(df.resample('D', on='date')['facebook_shares'].mean(),
+        label="Facebook shares per article", color='royalblue')
+    plt.plot(df.resample('D', on='date')['facebook_likes'].mean(),
+        label="Facebook reactions (likes, ...) per article", color='navy')
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-12-01"), color='C3', linestyle='--')
+    plt.ylim(-100, 10000)
+
+    ax = plt.subplot(212)
+    plt.plot(df.resample('D', on='date')['date'].agg('count'),
+            label='Number of articles published per day', color='grey')
+    arrange_plot(ax, df)
+    plt.axvline(np.datetime64("2019-12-01"), color='C3', linestyle='--')
+    plt.ylim(0, 80)
+
+    plt.tight_layout()
+    save_figure('facebook_buzzsumo_thebl.png')
 
 
 def clean_crowdtangle_data(df):
@@ -120,8 +152,6 @@ def create_facebook_crowdtangle_infowars_figure():
 
     plt.plot(df.resample('D', on='date')['date'].agg('count'),
         label='Number of posts per day', color='royalblue')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 160)
@@ -133,8 +163,6 @@ def create_facebook_crowdtangle_infowars_figure():
         label="Shares per post", color='royalblue')
     plt.plot(df.resample('D', on='date')['reaction'].mean(),
         label="Reactions (likes, ...) per post", color='navy')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 78)
@@ -187,18 +215,124 @@ def create_facebook_buzzsumo_infowars_figure():
         label="Shares per article", color='royalblue')
     plt.plot(filter(df, 'facebook_likes'),
         label="Reactions (likes, ...) per article", color='navy')
-    plt.legend()
-
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 3000)
 
     plt.tight_layout()
-    save_figure(figure_name='facebook_buzzsumo_infowars.png')    
+    save_figure(figure_name='facebook_buzzsumo_infowars.png')
+
+
+def preprocess_youtube_data():
+    oann = import_data('One America News Network_youtube_data.csv')
+    tony_heller = import_data('Tony Heller_youtube_data.csv')
+    list_df = [oann,tony_heller]
+    for df in list_df:
+        df['published_at'] = pd.to_datetime(df['published_at'])
+        df['published_at'] = pd.to_datetime(df['published_at'], format='%m/%d/%Y')
+        df['date'] = ''
+        for i in range(0, df.shape[0]):
+            df['date'].iloc[i] = df['published_at'].iloc[i].date()
+            if (df['comments'].iloc[i] == 'non'):
+                df['comments'].iloc[i] = 0
+            if (df['likes'].iloc[i] == 'non'):
+                df['likes'].iloc[i] = 0
+            if (df['dislikes'].iloc[i] == 'non'):
+                df['dislikes'].iloc[i] = 0
+        df['likes'] = df['likes'].astype('int64')
+        df['dislikes'] = df['dislikes'].astype('int64')
+        df['comments'] = df['comments'].astype('int64')
+        df['view_counts'] = df['view_counts'].astype('int64')
+    return oann,tony_heller
+
+
+def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name):
+    window_num = 1
+
+    df_tlm_views = data.groupby(['published_at'])['view_counts'].sum().to_frame('view_counts')
+    df_tlm_views = df_tlm_views.resample('D').sum().fillna(0).reset_index()
+    df_tlm_vol_rolling_views = df_tlm_views.groupby(['published_at']).mean().rolling(window=window_num,
+                                                                                     win_type='triang',
+                                                                                     center=True).mean()
+    df_tlm_vol_rolling_views['published_at'] = df_tlm_vol_rolling_views.index
+    df_tlm_vol = data.groupby(['published_at']).size().to_frame('size')
+    df_tlm_vol = df_tlm_vol.resample('D').sum().fillna(0).reset_index()
+    df_tlm_vol_rolling = df_tlm_vol.groupby(['published_at']).mean().rolling(window=window_num, win_type='triang',
+                                                                             center=True).mean()
+    df_tlm_vol_rolling['published_at'] = df_tlm_vol_rolling.index
+    fig, ax1 = plt.subplots(1, figsize=(15, 4))
+    plt.locator_params(axis='y', nbins=4)
+    plt.setp(ax1.get_xticklabels(), rotation=45)
+
+    ax1.xaxis.set_tick_params(length=0)
+    ax1.plot(df_tlm_vol_rolling_views['published_at'],
+             df_tlm_vol_rolling_views['view_counts'],
+             color='red', label='view count')
+    ax1.set_xlim([date_begin_graph, date_end_graph])
+    plt.setp(ax1.get_xticklabels(), rotation=45)
+    ax1.spines['right'].set_visible(False)
+    ax1.spines['left'].set_visible(False)
+    ax1.spines['top'].set_visible(False)
+    ax1.grid(axis="y")
+    ax1.xaxis.set_tick_params(length=0)
+
+    plt.axvspan(np.datetime64(date_begin_sus), np.datetime64(date_end_sus),
+                ymin=0, ymax=200000, facecolor='r', alpha=0.05)
+    ax1.text(np.datetime64(date_begin_sus), height_keyword, 'suspension', color='grey')
+    plt.ylabel('View count')
+    plt.xlabel('Date')
+    plt.legend()
+    plt.tight_layout()
+    save_figure(figure_name=fig_name)
+
+
+def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name):
+    window_num = 1
+
+    df_tlm_vol = data.groupby(['published_at']).size().to_frame('size')
+    df_tlm_vol = df_tlm_vol.resample('D').sum().fillna(0).reset_index()
+
+    df_tlm_vol_rolling = df_tlm_vol.groupby(['published_at']).mean().rolling(window=window_num, win_type='triang',
+                                                                             center=True).mean()
+    df_tlm_vol_rolling['published_at'] = df_tlm_vol_rolling.index
+    fig, ax1 = plt.subplots(1, figsize=(15, 4))
+    ax1.plot(df_tlm_vol['published_at'],
+             df_tlm_vol['size'],
+             color='red', label='Video Uploads')
+
+    ax1.set_xlim([date_begin_graph, date_end_graph])
+    plt.setp(ax1.get_xticklabels(), rotation=45)
+    ax1.spines['right'].set_visible(False)
+    ax1.spines['left'].set_visible(False)
+    ax1.spines['top'].set_visible(False)
+    ax1.grid(axis="y")
+    plt.axvspan(np.datetime64(date_begin_sus), np.datetime64(date_end_sus),
+                ymin=0, ymax=200000, facecolor='r', alpha=0.05)
+    ax1.text(np.datetime64(date_begin_sus), height_keyword, 'suspension', color='grey')
+    plt.ylabel('Video count')
+    plt.xlabel('Date')
+    plt.legend()
+    plt.tight_layout()
+    save_figure(figure_name=fig_name)
+
+
+def create_youtube_graph():
+    oann, tony_heller = preprocess_youtube_data()
+    plot_view_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
+                            2680000,'OANN_views_yt.png')
+    plot_view_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
+                            date(2020, 11, 15), 1500000,'Tony_Heller_views_yt.png')
+    plot_video_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
+                             32,'OANN_videos_yt.png')
+    plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
+                             date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png')
 
 
 if __name__=="__main__":
 
-    # create_suspension_facebook_trump_figure()
-    # create_facebook_crowdtangle_infowars_figure()
+    create_facebook_trump_figure()
+    create_buzzsumo_thebl_figure()
+    create_facebook_crowdtangle_infowars_figure()
     create_facebook_buzzsumo_infowars_figure()
+
+    create_youtube_graph()
