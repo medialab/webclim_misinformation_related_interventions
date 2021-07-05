@@ -63,11 +63,13 @@ Furthermore, MSMP are increasingly engaging in editorial tasks by implementing t
 
 \smallskip
 
-In this article, we focus on MSMP's policies and actions regarding content with low credibility or false information, commonly referred to as {\it Fake News}.\footnote{For an overview on the {\it concept} of {\it Fake News}, we refer the reader to the article The science of fake news by Lazer et al. (2018)~\cite{lazer}.} The {\it Fake News} phenomenon is still ill-defined by the academic community as it encompasses several combined features such as spreading inaccurate, false or misleading information, with or without the intention of influencing or manipulating a target pool of audience. The rise of social networking platforms over the last decade in terms of number of users worldwide and volume of content, has modified the information ecosystem in terms of production of information and its mediation. Many users can now produce and share content which includes news related information, without having to abide by strict editorial processes that ensure accuracy of information and reliability of sources. In particular, false or inaccurate content produced and shared on social networking platforms concerning the political life or public health may have a potentially harmful impact on the society, in the rare event that it goes viral. This gave rise to a set of heterogenous fact-checking policies across mainstream platforms.
+In this article, we focus on MSMP's policies and actions regarding content with low credibility or false information, commonly referred to as {\it Fake News}.\footnote{For an overview on the {\it concept} of {\it Fake News}, we refer the reader to the article The science of fake news by Lazer et al. (2018)~\cite{lazer}.} The {\it Fake News} phenomenon is still ill-defined by the academic community as it encompasses several combined features such as spreading inaccurate, false or misleading information, with or without the intention of influencing or manipulating a target pool of audience. The growth of social networking platforms over the last decade in terms of number of users worldwide and volume of content, has modified the information ecosystem in terms of production of information and its mediation. Many users can now produce and share content which includes news related information, without having to abide by strict editorial processes that ensure accuracy of information and reliability of sources. In particular, false or inaccurate content produced and shared on social networking platforms concerning the political life or public health may have a potentially harmful impact on the society, in the rare event that it goes viral. This gave rise to a set of heterogenous fact-checking policies across mainstream platforms.\footnote{For an overview of Facebook's third-party fact checking program see see \href{https://www.facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}{https://www.facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}. For an overview of Youtube's policy on fact-checking see:  }
  
 \smallskip
 
-During the COVID19 global health pandemic platforms have upgraded their guidelines to include a set of rules to tackle the propagation of potentially harmful content.\footnote{For Facebook, Twitter and Youtube see respectively the following updates: } As each platform is a private company, those {\it new} policies are not coordinated and are implemented in different ways across platforms. Such targeted policies show the willingness of MSMP to enhance the quality of the online conversation, but also sheds light on the lack of specific policies to tackle misinformation in general. {\color{pink} Say what they say they do + partnerships with fact-checkers + algorithms + community,  idea about academic community needs to be able to study this phenomenon and assess the impact of the policies, what effects they have etc.}
+During the COVID19 global health pandemic platforms have upgraded their guidelines to include a set of rules to tackle the propagation of potentially harmful content.\footnote{For Facebook, Twitter and Youtube see respectively the following updates: \href{https://support.google.com/youtube/answer/9891785}{https://support.google.com/youtube/answer/9891785}.} As each platform is a private company, those {\it new} policies are not coordinated and are implemented in different ways across platforms. Such targeted policies show the willingness of MSMP to enhance the quality of the online conversation, but also sheds light on the lack of specific policies to tackle misinformation in general. In particular, policies regarding misinformation are not part of the set of platform rules or community guidelines\footnote{As of July 2021.}. The 2019 report of the Facebook Data Transparency Advisory Group\footnote{See \href{https://law.yale.edu/yls-today/news/facebook-data-transparency-advisory-group-releases-final-report?fbclid=IwAR2xMZr5GdD1GaNpjsXR3\_yeeIR4H9iFASfrni5HKcJVAO5oWA52bvwcZxU}{https://law.yale.edu/yls-today/news/facebook-data-transparency-advisory-group-releases-final-report?fbclid=IwAR2xMZr5GdD1GaNpjsXR3\_yeeIR4H9iFASfrni5HKcJVAO5oWA52bvwcZxU}.} (DTAG) states clearly that ``{\it DTAG was not tasked with evaluating any of the following: (...) Facebook’s policies with respect to “fake news” or misinformation, as neither of these categories were counted as violations within the first two versions of the Community Standards Enforcement Report.}''. Facebook's strategy to tackle ``False News'' is three fold : Remove, Reduce, Inform. It is explained via a blog post on the facebook Newsroom.\footnote{See: \href{https://about.fb.com/news/2018/05/hard-questions-false-news/}{https://about.fb.com/news/2018/05/hard-questions-false-news/}.}. Similarly, Twitter communicates about actions related to misinformation via their Twitter Safety Blog/accout\footnote{See \href{https://blog.twitter.com/en\_us/authors.TwitterSafety}{https://blog.twitter.com/en\_us/authors.TwitterSafety}.}. 
+
+{\color{pink} Say what they say they do + partnerships with fact-checkers + algorithms + community,  idea about academic community needs to be able to study this phenomenon and assess the impact of the policies, what effects they have etc. Violations fall into other categories: deceptive practices, impersonation, hate speech. }
 
 \smallskip
 
@@ -77,62 +79,49 @@ In the present article, we will explain how to verify with data mining MSMP's ac
 
 %We do not aim for an exhaustive list of methods on how to investigate the platforms’ policies against misinformation, but rather to share the methods we currently know, and that we think can be useful to researchers or journalists interested in that question. We are aware that other APIs or databases can be useful on that matter, but we will only mention here the ones about which we have some experience.
 
-\bigskip
+%\bigskip
 
 %{\color{red} Policies not specific to misinformation, but to enforce laws + things already used for terrorism and hate speech. Intro or/and Discussion. accounts: hard to say suspension for which.} 
-
-%Content can be withheld in compliance to specific laws of each country, ex: ..;
 % Misinformation : which law ? not defined ! 
+
+%public content\\  insights tool \\ owned and operated by \\ Facebook. \\ \href{https://buzzsumo.com}{Buzzsumo}: commercial content \\ database
 
 \begin{table}[]
 \centering
-\begin{tabular}{|l|l|l|l}
+\begin{tabular}{|l|c|l|l|l}
 
 \hline
-&  \begin{tabular}[c]{@{}l@{}} Application Programming Interface (API)  \end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                            &    \multicolumn{1}{l|}{Web Scraping}                                                                                                                                                                   \\ \hline
-Facebook & \begin{tabular}[c]{@{}l@{}}\href{https://www.crowdtangle.com}{CrowdTangle}: public content insights tool \\ owned and operated by Facebook. \\ \href{https://buzzsumo.com}{Buzzsumo}: commercial content database  \end{tabular}                                                                                                                                                                                                               &      \multicolumn{1}{l|}{}    
+&  \begin{tabular}[c]{@{}l@{}} Application Programming \\ Interface (API)  \end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                            &    \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}} Web \\ Scraping \end{tabular}}                                                                                                                                                                 \\ \hline
+ \includegraphics[scale=0.05]{./img/fb_logo.png} & \begin{tabular}[c]{@{}l@{}}\href{https://www.crowdtangle.com}{CrowdTangle}  \\ \href{https://buzzsumo.com}{Buzzsumo} \end{tabular}                                                                                                                                                                                                               &      \multicolumn{1}{l|}{}    
 \\ \hline
-Twitter  &  \href{https://developer.twitter.com/en/docs/twitter-api/early-access}{Twitter API V2} & \multicolumn{1}{l|}{\href{https://github.com/medialab/minet/blob/master/docs/cli.md\#twitter-scrape}{Minet twitter scrape}}                                                                                                                                                                           \\ \hline
-Youtube  &  \href{https://developers.google.com/youtube/v3}{Youtube API V3}      &                                                                                                                            \multicolumn{1}{l|}{}                                                                                                                                                                           \\ \hline
+ \includegraphics[scale=0.007]{./img/tw_logo.png}  &  \href{https://developer.twitter.com/en/docs/twitter-api/early-access}{Twitter API V2} & \multicolumn{1}{l|}{\href{https://github.com/medialab/minet/blob/master/docs/cli.md\#twitter-scrape}{Minet tw scrape}}                                                                                                                                                                           \\ \hline
+ \includegraphics[scale=0.03]{./img/yt_logo.png}  &  \href{https://developers.google.com/youtube/v3}{Youtube API V3}      &                                                                                                                            \multicolumn{1}{l|}{}                                                                                                                                                                           \\ \hline
 \end{tabular}
 \caption{Data collection}
 \label{tab1}
 \end{table}
 
+
  %We We are aware that other APIs or databases can be useful on that matter, but we will only mention here the ones about which we have some experience.
-
 %CrowdTangle is a public insights tool owned and operated by Facebook, that exclusively tracks public content from Facebook public groups and pages. BuzzSumo is a commercial content database that tracks the volume of user interactions with internet content on Facebook, Twitter, and other social media platforms. 
-
-
 %Section 230 in the US + EU 
 %Pressure to moderate and mix-up of platforms with public square… 
 %Rôle dans la production/médiation : P-M-R 
 %Pourquoi faut-il vérifier leurs politiques ? D’une part parce que ce sont les plateformes elles-mêmes qui annoncent leurs effets. D’autre part beaucoup de choses indirectes. 
-%
 %Add disclaimer in a footnote early on in the document : document not meant to be an exhaustive overview of all the existing regulations and point to three or four main legal sources for exhaustive references. 
-
 %Such policies include the introduction of notices (Twitter, see link) or flags (Facebook, see…) to signal to users inaccurate or false content, the temporary or permanent suspension of accounts (Twitter) or pages (Facebook), reducing the visibility of posts or pages (Facebook), or blocking users from sharing specific URL links (see link). The objective of this article is twofold. First, we study the impact of a number of  implemented measures by mainstream platforms to tackle (mis)disinformation. 
 
 \section{Policies}
 
 \subsection{Temporary suspension and Permanent suspension}
 
-Main stream social media platforms such as Facebook, Twitter and Youtube, may suspend the account of a specific user when they deem that the platforms' rules have been violated. Account suspension can be temporary or permanent.\footnote{A list of notable Twitter temporary and permanent suspensions can be found on wikipedia: \href{https://en.wikipedia.org/wiki/Twitter_suspensions}{https://en.wikipedia.org/wiki/Twitter\_suspensions}.}  When the suspension is temporary the user is prohibited for a limited period of time from posting content on their account, but created content prior to suspension remains available to the user and their followers. However, when the suspension is permanent, in most cases, followers or subscribers have no longer access to the content prior to the suspension and the user can no longer use the account to create new content.  In what follows, we focus on the implementation of this policy by several platforms and provide simple examples to illustrate. 
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[scale=0.2]{./img/fig1.png}  \hfill \includegraphics[scale=0.2]{./img/crg.png} \hfill \includegraphics[scale=0.2]{./img/life.png} 
-%\caption{Screenshots taken on June 14, 2021 at 4pm UTC. }
-%\label{fig1}
-%\end{figure}
+Mainstream social media platforms may suspend the account of a specific user when they deem that the platforms' rules have been violated. Account suspension can be temporary or permanent.\footnote{A list of notable Twitter temporary and permanent suspensions can be found on wikipedia: \href{https://en.wikipedia.org/wiki/Twitter_suspensions}{https://en.wikipedia.org/wiki/Twitter\_suspensions}.}  When the suspension is temporary the user is prohibited for a limited period of time from posting content on their account, but created content prior to suspension remains available to the user and their followers. However, when the suspension is permanent, in most cases, followers or subscribers have no longer access to the content prior to the suspension and the user can no longer use the account to create new content.  In what follows, we focus on the implementation of this policy by several platforms and provide simple examples to illustrate. 
 
 \smallskip
 
 \subsubsection{Facebook}
 
-When an account is permanently suspended by Facebook, it disappears from the platform (so its data cannot be scrapped anymore), and its data also disappears from the CrowdTangle API.\footnote{CrowdTangle is a public insights tool owned and operated by Facebook, that exclusively tracks public content from Facebook public groups and pages.} 
-
-Interestingly, Facebook is regularly publishing a monthly {\it coordinated inauthentic behavior} report where it informs how many personal accounts, pages or groups were deleted and to which {\it deceptive network} they may have belonged.\footnote{See the April 2021 report for an example: \href{https://about.fb.com/news/2021/05/april-2021-coordinated-inauthentic-behavior-report/}{https://about.fb.com/news/2021/05/april-2021-coordinated-inauthentic-behavior-report/}} But as long as external persons do not have access to deleted accounts data, these reports cannot be verified by independent researchers or journalists.
+When an account is permanently suspended by Facebook, it disappears from the platform. That is,  the data can no longer be scrapped and it also disappears from the CrowdTangle API.\footnote{CrowdTangle is a public insights tool owned and operated by Facebook, that exclusively tracks public content from Facebook public groups and pages.} Facebook publishes on monthly basis a {\it coordinated inauthentic behavior} report, where it informs how many personal accounts, pages or groups were deleted and to which {\it deceptive network} they may have belonged.\footnote{See the April 2021 report for an example: \href{https://about.fb.com/news/2021/05/april-2021-coordinated-inauthentic-behavior-report/}{https://about.fb.com/news/2021/05/april-2021-coordinated-inauthentic-behavior-report/}} But as long as external persons do not have access to deleted accounts data, these reports cannot be verified by independent researchers or journalists.
 
 Facebook can also apply a temporary suspension, and in this case the data can often be collected and analyzed. For example, \href{https://www.facebook.com/DonaldTrump/}{Donald Trump’s official Facebook page}  has been suspended following the Capitol attack on January 6, 2021.\footnote{See \href{https://www.facebook.com/zuck/posts/10112681480907401}{https://www.facebook.com/zuck/posts/10112681480907401}} Nevertheless the page’s data is still present in the CrowdTangle API. Thus, after manually adding this page to the CrowdTangle dashboard, we collected the $6$ $083$ posts it had published between January $1$, $2020$ and June $15$, $2021$ using the {\it posts} endpoint.\footnote{ (see the endpoint documentation for more details: \href{https://github.com/CrowdTangle/API/wiki/Posts}{https://github.com/CrowdTangle/API/wiki/Posts}.} We used the minet command line tool \cite{minet} to collect data.\footnote{The exact command can be found : \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect_facebook_crowdtangle_trump_data.sh}{here}.} We can verify on figure \ref{fig1_fb} that the {\it Donald J. Trump} page has not published any content since January $6$, 2021, and that this behavior is not consistent with the page’s previous activity: an average of $16$ posts were published each day on Facebook before the suspension. 
 
@@ -148,28 +137,27 @@ Facebook can also apply a temporary suspension, and in this case the data can of
 
 \subsubsection{Twitter}
 
-{\color{red} N.B. Manual decision, not the automatic strike system}
+
 \begin{figure}
 \centering
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/lifesite.jpg} 
+		\includegraphics[scale=0.35]{./img/lifesite.jpg} 
 	\end{multicols}
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/lifesite_rolling_7_lifesite.jpg}
+		\includegraphics[scale=0.35]{./img/lifesite_rolling_7_lifesite.jpg}
 	\end{multicols}
 \caption{Panel (a): number of Tweets per day of the Twitter account $@Lifesite$ linked to the website lifesitenews.com from January, 2019 until April 2021. Panel (b): number of Tweets per day that have shared a lifesitenews.com URL link from January, 2019 until April 2021. }
 \label{fig2}
 \end{figure}
 
-In this section, we discuss one case of temporary suspension on Twitter.\footnote{See the official documentation on the Twitter's Help Center regarding account suspension: \href{https://help.twitter.com/en/managing-your-account/suspended-twitter-accounts}{https://help.twitter.com/en/managing-your-account/suspended-twitter-accounts }.} The Twitter account of the website lifesitenews.com has been suspended for at least two periods of time: from end of 2019 until fall 2020 for 308 days, then again since January 2021 for having violated Twitter Rules\footnote{See Lifesitenews's article discussing the reason for the suspension: \href{https://www.lifesitenews.com/news/lifesite-is-dumping-twitter-and-so-should-you}{https://www.lifesitenews.com/news/lifesite-is-dumping-twitter-and-so-should-you}. Twitter rules can be found at: \href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{https://help.twitter.com/en/rules-and-policies/twitter-rules}. }. In particular, this website has several failed fact-checks concerning the published articles, according to Iffy.news.\footnote{See \href{https://mediabiasfactcheck.com/life-site-news/}{https://mediabiasfactcheck.com/life-site-news/}}. We collected the activity (tweets, replies, quotes, retweets) on their Twitter account $@LifeSite$ via the Twitter API, using the historical search endpoint.\footnote{See the documentation: \href{https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all}{https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all}.} We then plotted the number of Tweets, Retweets, Quotes and Replies per day, as shown in panel $a$ of figure \ref{fig2}). The two periods of temporary suspension are clearly observed in the data as the user(s) of the account were not allowed to use the functionalities of the Twitter Platform. 
+%paragraph strike system + say following example is a manual decision. 
+Twitter has implemented a strike system as part of their Civi Integrity Policy\footnote{See \href{https://help.twitter.com/en/rules-and-policies/election-integrity-policy}{help.twitter.com/en/rules-and-policies/election-integrity-policy}} and their COVID19 misleading information policy.\footnote{See \href{https://help.twitter.com/en/rules-and-policies/medical-misinformation-policy}{help.twitter.com/en/rules-and-policies/medical-misinformation-policy} and \href{https://blog.twitter.com/en\_us/topics/company/2021/updates-to-our-work-on-covid-19-vaccine-misinformation}{blog.twitter.com/en\_us/topics/company/2021/updates-to-our-work-on-covid-19-vaccine-misinformation}} Violations of both policies can entail strikes, where two strikes lead to a 12-hour account lock and five or more strikes lead to permanent suspension from the platform. The 12-hour account lock is hard to observe in the data, especially for users who do not have an over the clock tweeting activity. In this section, we provide one example of a temporary suspension\footnote{See the official documentation on the Twitter's Help Center regarding account suspension: \href{https://help.twitter.com/en/managing-your-account/suspended-twitter-accounts}{https://help.twitter.com/en/managing-your-account/suspended-twitter-accounts }.} of a Twitter account, that seems to be the result of a manual decision concerning a Tweet which violated the rules. 
+
+The Twitter account of the website lifesitenews.com has been suspended for at least two periods of time: from end of 2019 until fall 2020 for 308 days, then again since January 2021 for having violated Twitter Rules\footnote{See Lifesitenews's article discussing the reason for the suspension: \href{https://www.lifesitenews.com/news/lifesite-is-dumping-twitter-and-so-should-you}{https://www.lifesitenews.com/news/lifesite-is-dumping-twitter-and-so-should-you}. Twitter rules can be found at: \href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{https://help.twitter.com/en/rules-and-policies/twitter-rules}. }. In particular, this website has several failed fact-checks concerning the published articles, according to Iffy.news.\footnote{See \href{https://mediabiasfactcheck.com/life-site-news/}{https://mediabiasfactcheck.com/life-site-news/}}. We collected the activity (tweets, replies, quotes, retweets) on their Twitter account $@LifeSite$ via the Twitter API, using the historical search endpoint.\footnote{See the documentation: \href{https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all}{https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all}.} We then plotted the number of Tweets, Retweets, Quotes and Replies per day, as shown in panel $a$ of figure \ref{fig2}). The two periods of temporary suspension are clearly observed in the data as the user(s) of the account were not allowed to use the functionalities of the Twitter Platform. 
 
 \smallskip
 
 To further assess the impact of this double temporary suspension, we collect via Minet Command Line Tool\cite{minet}, all the tweets that have shared during the same period a url link containing lifesitenews.com. Panel $(b)$ of figure \ref{fig2}, shows that during both periods of temporary suspension, other users still shared lifesitenews.com links and that the level was only slightly below the tweeting and retweeting levels prior to the first temporary suspension. More specifically, there was an average of 960 tweets (including retweets) per day over the first temporary suspension period of 308 days from December 9, 2019 until October 12, 2020, against an average of 977 tweets (including retweets) per day during the exact same period one year earlier. Finally, panel $(b)$ points towards the limitations of suspending an account to limit the spread of its content. 
-
-
-
-
 
 \subsubsection{Youtube}
 
@@ -180,10 +168,10 @@ In this section, we turn to the channel's temporary or permanent suspension poli
 \begin{figure}
 	\centering
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/oann/fig1_oann.png}
+		\includegraphics[scale=0.29]{./img/oann/fig1_oann.png}
 	\end{multicols}
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/oann/fig2_oann.png} 
+		\includegraphics[scale=0.3]{./img/oann/fig2_oann.png} 
 	\end{multicols}
 	\caption{panel (a): Number of Youtube videos uploaded each day by the youtube channel {\it One America news Network} November 1, 2020 and January 1, 2021. Panel (b): accumulated view counts for videos. The metrics correspond to the videos’  publishing date and the data is retrieved from the youtube API with the {\it playlists} and  {\it videos} endpoints. }
 	\label{fig1_oann}
@@ -193,18 +181,16 @@ First, we investigate the temporary suspension case of the Youtube Channel of {\
 
 \smallskip
 
-
-
 In addition, as shown in figure \ref{fig1_oann} when comparing the month before the suspension from 2020/10/24 to 2020/11/24 and one month after from 2020/12/01 to 2021/01/01 it was found that the view count decreased by -73\% and the videos uploaded by -55\%. Besides that, OANN decided to move officially to Rumble on March 17, 2021 as announced on their Twitter account (see figure \ref{fig2_oann}) and their upload activity on their Youtube channel is close to zero since that announcement. 
 
 \begin{figure}
 	\centering
 	\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/oann/fig3_oann.png}
+		\includegraphics[scale=0.32]{./img/oann/fig3_oann.png}
 	\end{multicols}
 	
 	\begin{multicols}{1}
-		\includegraphics[scale=0.3]{./img/tony/fig3_tony.png}
+		\includegraphics[scale=0.35]{./img/tony/fig3_tony.png}
 	\end{multicols}
 	
 	\caption{Panel (a): Tweet announcing moving to rumble by OANN (Twitter), Twitter ID \href{https://twitter.com/OANN/status/1372238828425998336}{1372238828425998336}. Panel (b): Tony Heller's tweet after getting suspended from Youtube, Twitter ID \href{https://twitter.com/Tony\_Heller/status/1310703852769796097}{1310703852769796097}.}
@@ -212,7 +198,6 @@ In addition, as shown in figure \ref{fig1_oann} when comparing the month before 
 \end{figure}
 
 \smallskip
-
 
 We now turn to our second example, the temporary suspension of the Youtube channel Tony Heller. This channel got its first strike after posting a video about an anti-covid-lockdown doctor getting arrested (see screenshot in figure \ref{fig2_oann}). The suspension period was for one week from September 29 until October 5. We applied the same methods as in the previous example for the data collection. Figure \ref{fig2_oann} shows the daily number of videos uploaded by the channel. The suspension period can be observed clearly in the historical data of the channel.  observing the reach of the audience 
 Figure 3: Tony heller tweet after getting suspended from youtube (Twitter)
@@ -222,26 +207,49 @@ may  have  a  good  impact  on  reducing  the  audience interest or reach to the
 \begin{figure}
 	\centering
 		\begin{multicols}{1}
-			\includegraphics[scale=0.3]{./img/tony/fig1_tony.png}
+			\includegraphics[scale=0.35]{./img/tony/fig1_tony.png}
 		\end{multicols}
 		
 		\begin{multicols}{1}
-			\includegraphics[scale=0.3]{./img/tony/fig2_tony.png}
+			\includegraphics[scale=0.35]{./img/tony/fig2_tony.png}
 		\end{multicols}
 	\caption{Panel (a): Number of Youtube videos uploaded each day by the Youtube channel {\it Tony Heller} between September 1, 2020 and November 15, 2020. Panel (b): accumulated view counts for videos uploaded by the same Youtube channel. The date corresponds to the videos’  publishing date. 
 }
 	\label{fig1_tony}
 \end{figure}
 
-
-
 \subsection{Blocking links}
 
-A third measure that main stream social media platforms can apply is to prevent users from sharing specific types of content, instead of deleting the content after posting, or users accounts. We will study here how the platforms prevent users from sharing urls coming from specific domain names.
+A third measure that mainstream social media platforms can apply is to prevent users from sharing specific types of content, instead of deleting the content after posting, or users accounts. We will show through examples how platforms prevent users from sharing urls coming from specific domain names.
 
 \subsubsection{Facebook}
 
-{\color{pink}The Beauty of life}
+In this section, we provide one case study of how Facebook can block a URL as part of its policy enforcement tools. The Beauty of life (\href{https://thebl.com/}{thebl.com/}) is a US-based media company that shares pro-Trump views and conspiracy theories such as QAnon.\footnote{ See \href{https://en.wikipedia.org/wiki/The\_Epoch\_Times\#Removal\_of\_The\_BL\_(The\_Beauty\_of\_Life)\_from\_Facebook}{wikipedia article}.} Facebook has announced on December $20$, $2019$ that ``The BL is now banned from Facebook'' for coordinated inauthentic behavior\footnote{\href{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/}{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/}.}, which includes using fake accounts that misrepresent one's identity or using methods to artificially boost the popularity of content. Coordinated inauthentic behavior is a distinct phenomenon from disinformation according to Facebook, as ``most of the content shared by coordinated manipulation campaigns isn’t probably false”.\footnote{See: \href{https://about.fb.com/news/2019/10/inauthentic-behavior-policy-update/}{https://about.fb.com/news/2019/10/inauthentic-behavior-policy-update/}.}
+
+Nevertheless, for the case of the Beauty of Life, both misinformation and coordinated inauthentic behavior are interlinked, according to the fact-checking organization Snopes which had reported about The BL’s activity to Facebook and other various public articles.\footnote{\href{ https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{ https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, \href{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, \href{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}} It took Facebook five months to complete its investigation of The BL before taking action\footnote{See \href{https://www.businessinsider.com/facebook-bans-beauty-of-life-for-inauthentic-behavior-2019-12}{https://www.businessinsider.com/facebook-bans-beauty-of-life-for-inauthentic-behavior-2019-12}.} and Snopes ended its fact-checking partnership with them in February 2020.\footnote{See \href{https://www.snopes.com/2019/02/01/snopes-fb-partnership-ends/}{https://www.snopes.com/2019/02/01/snopes-fb-partnership-ends/}.}
+
+\begin{figure}
+	\centering
+	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/beautyoflife/fb_bl_1.png}
+	\end{multicols}
+	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/beautyoflife/fb_bl_2.png} 
+	\end{multicols}
+	
+	\caption{Articles from The Beauty of Life website (thebl.com) published between January 1, 2019 and June 15, 2021 and gathered from the Buzzsumo API. (Top) Facebook engagement metrics (average number of reactions, shares and comments per article). (Bottom) Number of articles published per day. The red line marks the date of December 1, 2019. }
+	\label{fb_bl}
+\end{figure}
+%BuzzSumo is a commercial content database that tracks the volume of user interactions with internet content on Facebook, Twitter, and other social media platforms. 
+
+To verify Facebook’s ban of The BL domain name, we first tested whether we could post a Facebook message containing a url from thebl.com. This turned out to be impossible. But such manual verification cannot inform us whether the ban applies indeed to all Facebook users and accounts (as we used only our own personal accounts), nor when it has started. To further investigate this policy, we collected data from Buzzsumo.\footnote{BuzzSumo is a commercial content database that tracks the volume of user interactions with internet content on Facebook, Twitter, and other social media platforms.} We used the ``/search/articles'' endpoint of the Buzzsumo API, to collect the engagement metrics $13$ $634$ articles crawled from the $thebl.com$ website between January $1$, $2019$ and June $15$, $2021$.\footnote{The command can be found in the following Github repository: \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_thebl\_data.py}{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_thebl\_data.py}.}
+
+The number of Facebook reactions, shares and comments dropped to zero for TheBL’s articles published after December $1$, $2019$ (see figure \ref{fb_bl} top panel), indicating the start of the ban. We can note that although the ban was communicated in an article published\footnote{See \href{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}.} on December $20$, $2019$, it seems to have actually started on December $1$, $2019$. The number of articles published per day was around $50$ until December $20$, $2019$. The this number decreased drastically to reach a {\color{pink} plateau} around $5$ to $10$ articles published per day (see figure \ref{fb_bl} bottom panel). The communication around the ban may have discouraged The Beauty of Life to proceed with their activity. Using Buzzsumo data, a global ban over sharing a thebl.com URL link on Facebook was ascertained. It started on December $1$, $2019$, and was still enforced in June 2021.
+
+
+
 
 \subsection{Reducing the visibility}
 
@@ -249,53 +257,58 @@ Mainstream Social Media platforms can reduce the visibility of the content creat
 
 \subsubsection{Facebook}
 
-One of Facebook’s measures to regulate misinformation is to reduce the spread of misleading content through ranking. Facebook ranks each post and ad with a relevancy score, a high score leading to a high likelihood of the post or the ad appearing in someone’s newsfeed. Facebook can thus make a post or a whole account less visible by decreasing the rank of its content.\footnote{Lyons, T. (2018, May 22). The three-part recipe for cleaning up your news feed. Facebook Newsroom. \href{https://about.fb.com/news/2018/05/inside-feed-reduce-remove-inform/}{about.fb.com/news/2018/05/inside-feed-reduce-remove-inform/}.} Such {\it reduce} action should be visible in the engagement metrics of the posts: if a post reaches less users because of a lower ranking, it is less likely to receive likes, comments and shares.
+\begin{figure}
+	\centering
+	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/infowars/fb_infowars_1.png}
+	\end{multicols}
+	
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/infowars/fb_infowars_2.png} 
+	\end{multicols}
+	
+	\caption{Public Facebook posts sharing an Infowars link in $2019$ and $2020$ collected from the CrowdTangle API. The red line marks the date of May $2$, 2019, when Facebook has announced the ban regarding Infowars. (Top panel) Number of daily posts. (Bottom panel) Engagement metrics: average number of reactions, shares and comments per post. }
+	\label{infowars1}
+\end{figure}
 
-Owned by Alex Jones, Infowars is usually described as a misinformation website: it is on the Wikimedia global spam blacklist\footnote{See \href{https://meta.wikimedia.org/wiki/Spam\_blacklist}{meta.wikimedia.org/wiki/Spam\_blacklist}.}, was classified among websites that have posted deceptive content according to FactCheck.org\footnote{See \href{https://www.factcheck.org/2017/07/websites-post-fake-satirical-stories/}{https://www.factcheck.org/2017/07/websites-post-fake-satirical-stories/}.}, and its factual reporting has been rated {\it very low} by the Media Bias / Fact Check resource.\footnote{See the Iffy.news page: \href{https://mediabiasfactcheck.com/infowars-alex-jones/}{https://mediabiasfactcheck.com/infowars-alex-jones/}.} On May 2, 2019, Facebook announced they would prohibit users from sharing Infowars content unless they are explicitly condemning the material.\footnote{See \href{https://www.wired.com/story/facebook-bans-alex-jones-extremists/}{https://www.wired.com/story/facebook-bans-alex-jones-extremists/}.}
+One of Facebook’s measures to regulate misinformation is to reduce the spread of misleading content through their ranking system. Facebook ranks each post and/or ad by assigning to it a relevancy score, where a high score leads to a high likelihood of the post and/or the ad to appear on a user's newsfeed. Doing so, Facebook can make a post or a whole account less visible by decreasing the relevancy score of its content; this is precisely the $reduce$ measure.\footnote{Lyons, T. (2018, May 22). The three-part recipe for cleaning up your news feed. Facebook Newsroom. \href{https://about.fb.com/news/2018/05/inside-feed-reduce-remove-inform/}{about.fb.com/news/2018/05/inside-feed-reduce-remove-inform/}.} This measure can be verified by looking at the number of views (reach) of a post, but this metric is not available via the CrowdTangle API or on Buzzsumo. Hence we can indirectly investigate the $reduce$ measure by looking at the engagement metrics (likes, comments, shares) related to a given post; which are available via the CrowdTangle API and Buzzsumo. If a post reaches less users because it has a lower ranking, then it is less likely to receive likes, comments and shares, relative to a post with a higher ranking. 
 
-To verify the measure, we used the CrowdTangle API at the ‘/posts/search’ endpoint\footnote{see the documentation for more details: \href{https://github.com/CrowdTangle/API/wiki/Search}{github.com/CrowdTangle/API/wiki/Search}.} to collect the 37,242 Facebook public posts that shared a link containing ‘infowars.com’ and that were published between January 1, 2019 and December 31, 2020.\footnote{We found in the collected data some Facebook posts that did not directly share an Infowars link (but rather a YouTube or Facebook video containing an Infowars link in its description), thus we excluded such posts from our data to keep only the 27,721 posts directly sharing an Infowars link.} The command used can be found \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect_facebook_crowdtangle_infowars_data.sh}{here}.
+%phrase pas accès au reach, mais seulement les engagement metrics
+% Owned by Alex Jones, Infowars is usually described as a misinformation website: it is on the Wikimedia global spam blacklist\footnote{See \href{https://meta.wikimedia.org/wiki/Spam\_blacklist}{meta.wikimedia.org/wiki/Spam\_blacklist}.},
+%CrowdTangle and Buzzsumo provide access to the interaction metrics on content (engagement), but not to the number of views (or reach), therefore we can only verify the {\it reduce} measure indirectly through a decrease in engagement. If Facebook was reducing the reach of a content via a lower ranking, we would expect the content to be less likely to receive likes, comments and shares, relative to a post with a higher ranking.
 
-The number of public posts sharing an Infowars link remained globally stable in 2019 (Figure \ref{infowars1} top panel), thus Facebook’s announced ‘ban’ did not appear to prevent users from sharing an Infowars link. Interestingly a clear drop in engagement was observed on May 2, 2019 (Figure \ref{infowars1} bottom panel). The number of reactions per post decreased by -94\% when we compared the two months before and after May 2, 2019, the shares decreased by -96\%, and the comments by -93\%. 
+\smallskip
+
+To illustrate, we investigate the case of the website $Infowars$. This website appears in the Misinformation Directory of FactCheck.org, among other websites who have posted deceptive content\footnote{See \href{https://www.factcheck.org/2017/07/websites-post-fake-satirical-stories/}{https://www.factcheck.org/2017/07/websites-post-fake-satirical-stories/}.}. Furthermore, the factual reporting of $Infowars$ has been rated {\it very low} by the Media Bias / Fact Check resource of Iffy.news.\footnote{See the Iffy.news page: \href{https://mediabiasfactcheck.com/infowars-alex-jones/}{https://mediabiasfactcheck.com/infowars-alex-jones/}.} 
 
 \begin{figure}
 	\centering
 	
 	\begin{multicols}{1}
-		\includegraphics[scale=0.3]{./img/infowars/fb_infowars_1.png}
+		\includegraphics[scale=0.35]{./img/infowars/fb_infowars_3.png}
 	\end{multicols}
-	
-	\begin{multicols}{1}
-		\includegraphics[scale=0.3]{./img/infowars/fb_infowars_2.png} 
-	\end{multicols}
-	
-	\caption{Public Facebook posts sharing an Infowars link in 2019 and 2020 gathered from the CrowdTangle API. The red line marks the date of May 2, 2019, when Facebook has announced the ban regarding Infowars. (Top panel) Number of daily posts. (Bottom panel) Engagement metrics (average number of reactions, shares and comments per post). }
-	\label{infowars1}
+
+	\caption{Facebook engagement metrics (average number of reactions, shares and comments per article) for the Infowars articles published in $2019-2020$ and gathered from the Buzzsumo API. The red line marks the date of May $2$, $2019$, when Facebook has announced the ban regarding Infowars.}
+	\label{infowars2}
 \end{figure}
 
+On May 2, 2019, Facebook announced they would prohibit users from sharing Infowars content unless, they are explicitly condemning the material.\footnote{See \href{https://www.wired.com/story/facebook-bans-alex-jones-extremists/}{https://www.wired.com/story/facebook-bans-alex-jones-extremists/} and \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{about.fb.com/news/2018/08/enforcing-our-community-standards/}.} To verify the measure, we used the ``/posts/search'' endpoint\footnote{see the documentation for more details: \href{https://github.com/CrowdTangle/API/wiki/Search}{github.com/CrowdTangle/API/wiki/Search}.} of the CrowdTangle API, to collect $37$ $242$ Facebook public posts that had shared a URL link containing ``infowars.com'', published between January $1$, $2019$ and December $31$, $2020$.\footnote{We found in the collected data some Facebook posts that did not directly share an Infowars link (but rather a YouTube or Facebook video containing an Infowars link in its description), thus we excluded such posts from our data to keep only the $27$ $721$ posts directly sharing an Infowars link.} The command used can be found in the following Github repository: \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect_facebook_crowdtangle_infowars_data.sh}{link}. The number of public posts sharing an $Infowars$ link remained globally stable throughout $2019$ (see figure \ref{infowars1} top panel). Thus the measure announced by Facebook doesn't seem to have prevented users from sharing an $Infowars$ link. Nevertheless, a clear drop in engagement was observed on May 2, 2019 (see figure \ref{infowars1} bottom panel). The number of reactions, shares and comments per post have decreased respectively  by $-94\%$,  $-96\%$ and $-93\%$  when comparing the two months before and after May 2, 2019. This suggests the measure taken by Facebook in May $2019$, is not a ban per se, but rather a $reduce$ measure. This is because users could still post $Infowars$ links, but these posts generated less engagement. It should be noted that the engagement metrics increased again by the end of $2019$ / beginning of $2020$, suggesting that the $reduce$ measure may have been lifted a few months after its implementation.
 
-This would suggest that Facebook’s measure taken in May 2019 is actually not a ban, but would rather correspond to a ‘reduce’ action, as users could still post Infowars links, but these posts generated vastly less engagement. It should be noted that the engagement metrics increased again at the end of 2019 / beginning of 2020, suggesting that the reducing measure may have been lifted a few months after its implementation.
-
-As CrowdTangle is tracking posts only from certain public groups and pages, we also used the ‘/search/articles’ endpoint of the Buzzsumo API, to gather more complete Facebook data. We collected the engagement data for the 14,232 articles crawled by Buzzsumo from the Infowars website between January 1, 2019 and Decembre 31, 2020. The command can be found here.
-We observe that the articles published after May 2, 2019 received less Facebook engagement than the ones published before (Figure X5), with a percentage change of -97\% for the reactions, -59\% for the shares and -97\% for the comments. An increase in engagement was also observed in 2020. It reinforces the hypothesis that Facebook reduced the reach of posts sharing Infowars links during a few months in 2019.
-
-We found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes 20-30 articles per day, only 53 articles were collected in the 31-day period between June 11 to July 11, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible.
-
-
-
-
+As CrowdTangle is tracking posts only from certain public groups and pages, we also used the ``/search/articles'' endpoint of the Buzzsumo API, to gather a richer Facebook dataset. We collected the engagement data for the $14$ $232$ articles crawled by Buzzsumo from the $Infowars$ website between January $1$, $2019$ and December $31$, $2020$.  \footnote{The command can be found: \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_infowars\_data.py}{here}.} We observe that the articles published after May $2$, $2019$ received less Facebook engagement than the ones published before (see figure \ref{infowars2}), with a percentage change of -$97\%$ for the reactions, -$59\%$ for the shares and -$97\%$ for the comments. An increase in engagement was also observed in $2020$. It reinforces the hypothesis that Facebook reduced the reach of posts sharing Infowars links only during a few months in $2019$.
 
 \subsubsection{Twitter} 
 
 \begin{figure}
 	\centering
 		\begin{multicols}{1}	
-			\includegraphics[scale=0.3]{./img/globalresearch_2021-06-14.png}
+			\includegraphics[scale=0.35]{./img/globalresearch_2021-06-14.png}
 		\end{multicols}
 		
 		\begin{multicols}{1}
-			\includegraphics[scale=0.3]{./img/globalresearch_14_06_2021_16pm_UTC.png} 
+			\includegraphics[scale=0.35]{./img/globalresearch_14_06_2021_16pm_UTC.png} 
 		\end{multicols}
-		\caption{Screenshots taken on June 14, 2021. }
+		\caption{Screenshots taken on June 14, 2021. Top panel: screenshot that shows the account of $globalresearch.ca$ suspended on Twitter. Bottom panel: screenshot that shows that no results can be found when searching for $globalresearch.ca$.    }
 		\label{fig3}
 \end{figure}
 
@@ -304,30 +317,31 @@ Twitter can take action against a tweet which violates the Twitter rules\footnot
 \smallskip
 
 %To illustrate we provide two examples linked to the Twitter accounts of the websites $globalresearch.ca$ and $off$-$guardian.org$. Both websites have several failed fact-checks according to \href{https://iffy.news}{iffy.news} - a website which provides a database of websites with low factual reporting levels.\footnote{For $globalresearch.ca$ see \href{https://mediabiasfactcheck.com/global-research/}{https://mediabiasfactcheck.com/global-research/} and for $off-guardian.org$ see \href{https://mediabiasfactcheck.com/offguardian/}{https://mediabiasfactcheck.com/offguardian/}.  }
+
+The website $globalresearch.ca$ is linked to the Twitter account {$@CRG\_CRM$}; which was recently suspended.\footnote{We noticed the message about the account suspension on May 25, 2021. But to the best of our knowledge, no official communication by Twitter has announced the suspension nor the exact date at which it was implemented. Hence the account may have gotten suspended anytime between April 15, 2021 and May 25, 2021 (see the suspension screenshot in panel $(a)$ of figure \ref{fig3}). Furthermore, $globalresearch.ca$ has multiple failed fact-checks, see \href{https://mediabiasfactcheck.com/global-research/}{https://mediabiasfactcheck.com/global-research/}} When a user searches via the twitter search-box for any URL link of this website, no results appear as shown in the screenshot in panel $(b)$ of figure \ref{fig3}, taken on June $14$, $2021$. To further investigate the possible implementation of a reduced visibility measure, we search via the Twitter API for tweets, excluding retweets, containing the query {\it globalresearch.ca} from January $1$, $2021$ until June $10$, $2021$.  As shown in panel (a) in figure \ref{fig4}, we find a strictly positive number of tweets containing the URL link {\it globalresearch.ca} throughout May $2021$ and the first week of June $2021$. Hence, the visibility of tweets containing this URL link has been reduced because users can no longer access tweets containing the URL link {\it globalresearch.ca} via the search box. Nevertheless users are not restrained from posting tweets containing this URL, as shown in the screenshot in panel $(a)$ of figure \ref{fig4bis}, found by taking the tweet ID of one of the collected tweets via the Twitter API. Furthermore, those collected Tweets have strictly positive engagement metrics as shown in panel $(b)$ of figure \ref{fig4}. Hence, the users who tweet articles from the {\it globalresearch.ca} website receive tweet level engagement from their own followers. Finally, when a user attempts to click on the URL link {\it globalresearch.ca} contained in the Tweet, a warning message appears and indicates that the link may be unsafe (see screenshot in panel (b) in figure \ref{fig4bis}). 
 \begin{figure}
 \centering
 	\begin{multicols}{1}
 		\includegraphics[scale=0.35]{./img/globalresearch/sum_globalresearch.ca_6_months.jpg} 
-		\includegraphics[scale=0.35]{./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg}
 	\end{multicols}
-\caption{}
+	\begin{multicols}{1}
+		\includegraphics[scale=0.33]{./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg}
+	\end{multicols}
+\caption{Top panel: daily number of Tweets, excluding retweets, containing the query {\it globalresearch.ca} from January $1$, $2021$ until June $10$, $2021$. Bottom panel: engagement metrics of Tweets containing the query {\it globalresearch.ca} from January $1$, $2021$ until June $10$, $2021$. Data collected via the Twitter API v2 on June $16$, 2021.   }
 \label{fig4}
 \end{figure}
 
 \begin{figure}
 \centering	
 	\begin{multicols}{1}
-		\includegraphics[scale=0.35]{./img/globalresearch/tweet.png} 
-		\includegraphics[scale=0.35]{./img/globalresearch/warning.png}
+		\includegraphics[scale=0.3]{./img/globalresearch/tweet.png}
+	\end{multicols}
+	\begin{multicols}{1} 
+		\includegraphics[scale=0.3]{./img/globalresearch/warning.png}
 	\end{multicols}
 \caption{}
 \label{fig4bis}
 \end{figure}
-
-The website $globalresearch.ca$ is linked to the Twitter account {$@CRG\_CRM$}; that was recently suspended.\footnote{We noticed the message about the account suspension on May 25, 2021. But to the best of our knowledge, no official communication by Twitter has announced the suspension nor the exact date at which it was implemented. Hence the account may have gotten suspended anytime between April 15, 2021 and May 25, 2021 (see the suspension screenshot in panel $(a)$ of figure \ref{fig3}). Furthermore, $globalresearch.ca$ has multiple failed fact-checks, see \href{https://mediabiasfactcheck.com/global-research/}{https://mediabiasfactcheck.com/global-research/}} When a user searches via the twitter search-box a url link of this website, no results appear as shown in the screenshot in panel $(b)$ of figure \ref{fig3}, taken on June 14, 2021. To further investigate the possible implementation of a reduced visibility measure, we search via the Twitter API for tweets, excluding retweets, containing the query {\it globalresearch.ca} from January 1, 2021 until June 10, 2021.  As shown in panel (a) in figure \ref{fig4}, we find a strictly positive number of tweets containing the URL link {\it globalresearch.ca} throughout May 2021 and the first week of June 2021. Hence, the visibility of tweets containing this URL link has been reduced because users can no longer access tweets containing the URL link {\it globalresearch.ca} via the search box. Nevertheless users are not restrained from posting tweets containing this URL, as shown in the screenshot in panel $(c)$
- of figure \ref{fig4}, found by taking the tweet ID of one of the collected tweets via the Twitter API. Furthermore, those collected Tweets have strictly positive engagement metrics as shown in panel $(b)$ of figure \ref{fig4}. Hence, the users who tweet articles from the {\it globalresearch.ca} website receive positive engagement from their own followers. Finally, when a user attempts to click on the URL link {\it globalresearch.ca} contained in the Tweet, a warning message appears and indicates that the link may be unsafe (see screenshot in panel (d) in figure \ref{fig4}). 
-
-
 
 
 %We provide a second example with the website $off$-$guardian.org$. Unlike the previous example, the Twitter account linked to this website is not currently\footnote{The account can be accessed via the Twitter handle $@OffGuardian0$ and we verified on June 13, 2021 that the account is not suspended.} suspended. 
@@ -353,34 +367,33 @@ The website $globalresearch.ca$ is linked to the Twitter account {$@CRG\_CRM$}; 
 
 \begin{figure}
 \centering
-\begin{multicols}{1}
-\includegraphics[scale=0.25]{./img/tweets/Capture_2021-06-30_2.png}
-    \end{multicols}
-\begin{multicols}{1} 
-\includegraphics[scale=0.25]{./img/tweets/Capture_2021-06-30.png}
-\end{multicols}
-\caption{Two tweets sharing the same URL link marked as False by a Fact-Checker, screenshots taken on June 20, 2021. Panel (a): Tweet ID \href{https://twitter.com/davidjcaron/status/1241088065462026242}{1241088065462026242} without a label. Panel (b): Tweet ID \href{https://twitter.com/reactiveIntent/status/1261876171584745472}{1261876171584745472} containing a label.}
-\label{fig8}
+	\begin{multicols}{1}
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-06-30_2.png}
+   	 \end{multicols}
+	\begin{multicols}{1} 
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-06-30.png}
+	\end{multicols}
+	\caption{Two tweets sharing the same URL link marked as False by a Fact-Checker, screenshots taken on June 20, 2021. Panel (a): Tweet ID \href{https://twitter.com/davidjcaron/status/1241088065462026242}{1241088065462026242} without a label. Panel (b): Tweet ID \href{https://twitter.com/reactiveIntent/status/1261876171584745472}{1261876171584745472} containing a label.}
+	\label{fig8}
 \end{figure}
 
 Alongside other social networking platforms, when the content of a tweet violates the Twitter rules, a notice can be added to provide more context according to Twitter's Help Center.\footnote{See Notices on Twitter and what they mean: \href{https://help.twitter.com/en/rules-and-policies/notices-on-twitter}{https://help.twitter.com/en/rules-and-policies/notices-on-twitter}.} At the tweet level, notices take the form of a label or an interstitial. Labels are context specific (e.g. COVID19 or presidential elections) and  redirect users to a URL link to get more context. Interstitials are presented as a greyed box on top of a tweet, which indicate sensitive content, violations of Twitter rules, withheld tweets for violation of local laws or even tweets from suspended accounts. At the account level, notices can indicate whether an account has been temporarily or permanently suspended. 
+
 \smallskip
 
 In this section, we take a deeper look at how labels and notices are introduced by Twitter, to indicate content which is inaccurate or false. To that end, we gathered a set of $3094$ URL links of articles which were marked as $False$ by Science Feedback, a fact-checking organization verifying the credibility of science-related viral information. As a second step, we collected (on June 30, 2021) via Minet Command line tool~\cite{minet} all the tweets that have shared a URL link which belongs to the set of $3094$ links marked as $False$. This data collection resulted in $323$ $938$ tweets, excluding retweets. Only $28$ tweets contained the label { ``Get the facts about COVID-19''}, $5$ tweets contained the label { ``Learn about US 2020 election security efforts''} and only $1$ had the following label {``This claim about election fraud is disputed''}. Furthermore, we noticed that the labeling rule might not be applied uniformly on a given set of tweets sharing the exact same URL link, among the set of collected tweets. More specifically, exactly $657$ tweets had shared a URL link redirecting to a video on Bitchute, entitled ``Important information on coronavirus 5G Kung Flu''. Among those $657$ tweets only $3$ contained the label ``Get the facts about COVID-19'' (see figure \ref{fig8}). This points towards the non-automation of the tweet labelling process and that it might be that only $3$ tweets got labelled after being reported by a user. 
 
-We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $2.97\%$ out of $323$ $938$ tweets containing a URL marked as False, have an interstitial ``potentially sensitive content''. In particular, many speak about COVID19 and do not contain a label to provide users with more context from authoritative sources. Figure \ref{fig_notice} provides an example of a tweet sharing a URL marked as False by a Fact-checker and which contains an interstitial ``potentially sensitive content''. We find 32 other tweets, among our set of collected tweets, who share the exact same URL link in our the previous example and among those 32 only 5 tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of the interstitials placement. 
+We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $2.97\%$ out of $323$ $938$ tweets containing a URL marked as False, have an interstitial ``potentially sensitive content''. In particular, many speak about COVID19 and do not contain a label to provide users with more context from authoritative sources. Figure \ref{fig_notice} provides an example of a tweet sharing a URL marked as False by a Fact-checker and which contains an interstitial ``potentially sensitive content''. We find 32 other Tweets, among our set of collected tweets, who share the exact same URL link as in the previous example. Among those 32 Tweets, only 5 tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of the interstitials placement. 
 
 Finally, to the best of our knowledge, when using the Twitter API v2, there is no field which indicates whether a tweet is labeled or not; while the interstitial ``possibly sensitive'' and ``withheld" are both Tweet fields that can be recovered\footnote{See \href{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}.} from the API. 
-
-
 
 \begin{figure}
 	\centering
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/tweets/Capture_2021-07-01.png} 
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-07-01.png} 
 	\end{multicols}
 	\begin{multicols}{1}
-		\includegraphics[scale=0.25]{./img/tweets/Capture_2021-07-01_2.png}
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-07-01_2.png}
 	\end{multicols}
 	\caption{Tweet ID \href{https://twitter.com/mohsinmalvi19/status/1285866521533861888}{1285866521533861888}. Screenshots taken on July 1, 2021. }
 	\label{fig_notice}
@@ -406,43 +419,42 @@ Finally, to the best of our knowledge, when using the Twitter API v2, there is n
 	\label{fig9}
 \end{figure}
 
-Youtube may provide an information panel for videos with topics that are prone to misinformation like COVID19, moon landing, and climate change.\footnote{See the section ``Information panel giving topical context'' on Youtube Help, Google accessed on June 28, 2021: \href{https://support.google.com/youtube/answer/9004474?hl=en}{support.google.com/youtube/answer/9004474?hl=en}.} The information panel contains main information about the topic from independent third party partners. Youtube states that these panels exist regardless of the video point of view. In addition , these panels are not available in all languages and countries yet. (“Information panel giving topical context”)
+Youtube may provide an information panel for videos with topics that are prone to misinformation like COVID19, moon landing, and climate change.\footnote{See the section ``Information panel giving topical context'' on Youtube Help, Google accessed on June 28, 2021: \href{https://support.google.com/youtube/answer/9004474?hl=en}{support.google.com/youtube/answer/9004474?hl=en}.} Information panels provide ressources concerning a potentially controversial topic from independent third party partners or authoritative ressources. Youtube states that these panels exist regardless of the point of view expressed in a given video. In addition, these panels are not yet available in all languages and countries. %(“Information panel giving topical context”)
 
-Based on a video list (171 videos) checked by fact checkers and marked to have misinformation. We collected the information panels in each video by scrapping the content of the web and connecting to a US server. Four types of information panels were found in the list of visited videos. The first information panel gives info about COVID19 as in Fig \ref{fig9}, the second is about Vaccine as in Fig \ref{fig9} , the third is about Climate change as in Fig \ref{fig9} and last information panel showed on a COVID19 video about the US voting as in Fig \ref{fig9}.
+To further study the assignment of information panels to videos, we implemented the following exercice. We compiled a list of $171$ Youtube videos, checked by independent fact-checkers\footnote{Is it science Feedback ? if so add.} and marked as containing false or inaccurate information. We collected the information panels, when present, in each video by scrapping the content of the web and connecting to a US server. Four types of information panels were found in the list of visited videos as shown in figure\ref{fig9}:  information about COVID19, Vaccines, Climate change and US elections.
 
-We classified the list of videos examined for the information panel based on its content as in Table \ref{tab2}. The Table shows the number of videos with a panel in each category. For COVID and vaccine related videos more than half of the videos had a panel, nevertheless, we noticed that some videos get uploaded multiple times by different channels under different video titles but others didn’t even though the video was the same. In addition, we noticed for COVID when the video title doesn’t include keywords like (Testing, Pandemic, COVID, coronavirus) , the video wouldn’t have a panel associated with it, and in some cases when the video title have variations of word COVID like (C.O.V.I.D or Cv19) it wouldn’t include a panel either. Therefore, we suspect that youtube is automatically adding panels to the videos based on the video title not the content of the video since many of the videos that didn’t have a panel had the word COVID or coronavirus or vaccine mentioned in the video itself.
-For climate change we only examined 18 misleading videos and we found 72\% of them didn’t have a panel. Lastly , for the general health category, we included the videos that weren’t related to COVID but had misinformation in topics like fake cures for cancer, abortion,  and viruses; there was no information panel in all these videos. Therefore, we suspect that youtube just add information panels to  the most controversial topics that can have misleading information like the climate change, COVID19, flat earth and  vaccine. 
+We classified the list of Youtube videos by topic based on its content as shown in table \ref{tab2}. We recorded the number of videos containing an information panel within each category. For COVID19 and vaccine related videos more than half of the videos contained an information panel. {\color{pink} Nevertheless, we noticed that some videos get uploaded multiple times by different channels under different video titles but others didn’t even though the video was the same.} In addition, we noticed for COVID19 related videos, when the video title did not include keywords like (Testing, Pandemic, COVID, coronavirus), the video might not contain a panel associated with it, and in some cases when the video title contains variations of word COVID like (C.O.V.I.D or Cv19) it wouldn’t include a panel either. Therefore, we suspect that youtube is automatically adding panels to the videos based on the video title and not the content of the video since many of the videos that didn’t have a panel had the word COVID or coronavirus or vaccine mentioned in the video itself. 
 
+\smallskip
 
-
+For climate change we only examined $18$ misleading videos and we found that $72\%$ did not display an information panel. Lastly , for the general health category, we included the videos that were not related to COVID19 but contained misinformation concerning cures for cancer, abortion,  and viruses; no information panels were displayed for that set of Youtube videos. Therefore, it is likely that Youtube add information panels below videos conecrning controversial topics that can have misleading information like the climate change, COVID19, flat earth and  vaccine. 
 
 \begin{table}[] 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-Category       & \begin{tabular}[c]{@{}c@{}}With information \\ panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Without Information \\ panel\end{tabular} & Total & \begin{tabular}[c]{@{}c@{}}IP\\ percentage\end{tabular} \\ \hline
-General Health & 0                                                                 & 11                                                                   & 11    & 0                                                       \\ \hline
+Category       & \begin{tabular}[c]{@{}c@{}}With \\ information \\ panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Without  \\\ information \\ panel\end{tabular} & Total & \begin{tabular}[c]{@{}c@{}}IP \% \end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}} General \\ Health \end{tabular} & 0                                                                 & 11                                                                   & 11    & 0                                                       \\ \hline
 Vaccine        & 21                                                                & 7                                                                    & 28    & 75                                                      \\ \hline
-COVID          & 73                                                                & 43                                                                   & 116   & 63                                                      \\ \hline
-Climate change & 5                                                                 & 13                                                                   & 18    & 28                                                      \\ \hline
+COVID19          & 73                                                                & 43                                                                   & 116   & 63                                                      \\ \hline
+\begin{tabular}[c]{@{}c@{}}  Climate \\ change \end{tabular} & 5                                                                 & 13                                                                   & 18    & 28                                                      \\ \hline
 \end{tabular}
 \caption{}
 \label{tab2}
 \end{table}
 
-
 \section{Discussion}
 
 
 { \color{pink} 
+Sporadic points for the discussion, no structure yet. 
+
 \begin{itemize}
 
 	\item For a previous research project\footnote{reference?}, we searched on CrowdTangle for public accounts sharing specific content associated with misinformation in November $2020$, and selected $94$ Facebook pages corresponding to our criteria. We then tried to collect these pages' posts in January $2021$, and discovered that $11$ pages could not be found anymore. This highlights an important issue when studying misinformation trends on Facebook: some data disappears from the CrowdTangle API as accounts are deleted or changed to {\it private}. 
 
-
-
 	\item To facilitate the verification in the policy applications, we would generally recommend for the platforms to be more transparent. But too much transparency on how the regulation policies are exactly implemented can actually backfire. For example YouTube is certainly applying an 'information' banner on all videos mentioning Covid and related terms in their title. Misinformation accounts are trying to avoid the official banners by using terms as 'C.O.V.I.D' or 'C O V I D'. If YouTube was totally transparent on that matter and published the list of 'dangerous' words that leads to an information banner, this list would of course help us to understand YouTube's policies but it would also help the misinformation actors to escape the regulation. There is thus a balance between communicating enough so the public can know precisely how the platforms are regulating their content, but without giving too much information that would allow the policies to be bypassed.
 
-	\item There are other ways to collect data from platforms, and besides Buzzsumo, other API are also aggregating data from multiple social platforms. For example Newsguard, blablabla... In this tweet, we can see the interface of XXX being used in this study from a data journalist: https://twitter.com/Shayan86/status/1394742784683298818/photo/2 
+	\item There are other ways to collect data from platforms, and besides Buzzsumo, other API are also aggregating data from multiple social platforms. For example Newsguard, blablabla... In this tweet, we can see the interface of XXX being used in this study from a data journalist: \href{https://twitter.com/Shayan86/status/1394742784683298818/photo/2}{ex}
 
 	\item Recommendation: inform about sources, example inform users that this user shared x failed fact-checks. 
 
@@ -457,15 +469,61 @@ Climate change & 5                                                              
 	\item After a channel gets suspended or a video is deleted the data related to them is removed from the youtube API. This is a problem that affected the study to investigate the suspension reasons or the removal. For instance, the original list of videos from table 1 had more than 200 videos available in March 2021, however, by June 2021 30 videos got deleted from youtube because they contain content that is against the youtube guidelines and their data got removed from the API. 
 	
 	\item User side: psychological effects (Pennycook, etc.), multi-platforms, indirect effects, strategies... 
+	
 	\item business model 
 	
-\end{itemize}}
-\newpage 
+	\item Pas accès au ``reach" !  ranking not available. Fb nous a donné certaines données (les données Condor) et dedans on a le nombre de clicks par exemple
+	
+	\item ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this." \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{Newsroom}.
+	\item Researchers should be able to access the data of deleted accounts on the main platforms.
+
+	\item Currently the flag or notice banners data is not present in the platforms’ API datasource, and this prevents researchers and journalists from easily investigating that matter. They have to use or build a scraper to access the data.
+
+	\item Lack of transparency in the platforms’ communication that makes their policies harder to verify.
+
+	\item Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible. 
+\end{itemize}
+}
+
+
+ 
 
 \bibliography{proj1}{}
 \bibliographystyle{plain}
 
+\newpage 
+
 \section{Appendix}
+
+
+
+\begin{table*}[h]
+\begin{tabular}{|c|c|c|}
+\hline
+\multirow{3}{*}{Rules}                     & \includegraphics[scale=0.05]{./img/fb_logo.png} & \href{https://www.facebook.com/communitystandards/recentupdates/}{facebook.com/communitystandards/recentupdates/}                         \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{help.twitter.com/en/rules-and-policies/twitter-rules}                       \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/policies/community-guidelines/}{youtube.com/intl/en\_us/howyoutubeworks/policies/community-guidelines/} \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Rules \\ enforcement \end{tabular}}         & \includegraphics[scale=0.05]{./img/fb_logo.png}  & \href{https://transparency.fb.com/data/community-standards-enforcement/}{transparency.fb.com/data/community-standards-enforcement/}                 \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://transparency.twitter.com/en/reports/rules-enforcement.html}{transparency.twitter.com/en/reports/rules-enforcement.html}                \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://transparencyreport.google.com/youtube-policy/}{transparencyreport.google.com/youtube-policy/}                              \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Transparency \\ center \end{tabular}}       & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://transparency.fb.com/data/                                                  \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://transparency.twitter.com/en/reports.html}{transparency.twitter.com/en/reports.html}                                  \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://transparencyreport.google.com/?hl=en}{transparencyreport.google.com/?hl=en}                                      \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Policy regarding \\  Covid-19 \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://www.facebook.com/help/230764881494641/                                     \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://help.twitter.com/en/rules-and-policies/medical-misinformation-policy}{help.twitter.com/en/rules-and-policies/medical-misinformation-policy}       \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://support.google.com/youtube/answer/9891785}{support.google.com/youtube/answer/9891785}                                 \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Fact-checking \\ policy \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & \href{https://www.facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}{facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}                                    \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & x       \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://support.google.com/youtube/answer/9229632}{support.google.com/youtube/answer/9229632}                                  \\ \hline
+                                           
+                                           
+                                           
+                                           
+\end{tabular}
+\caption{Summary of ressources, last accessed on July 5, 2021. }
+\label{summary}
+\end{table*}
+
 
 
 \end{document}
