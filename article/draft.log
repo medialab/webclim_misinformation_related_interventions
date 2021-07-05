@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  30 JUN 2021 16:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.1)  4 JUL 2021 19:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -594,27 +594,97 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@box=\box58
 \xmathstrut@dim=\dimen265
 )
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count288
+\mult@box=\box59
+\multicol@leftmargin=\dimen266
+\c@unbalance=\count289
+\c@collectmore=\count290
+\doublecol@number=\count291
+\multicoltolerance=\count292
+\multicolpretolerance=\count293
+\full@width=\dimen267
+\page@free=\dimen268
+\premulticols=\dimen269
+\postmulticols=\dimen270
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box60
+\last@line=\box61
+\maxbalancingoverflow=\dimen271
+\mult@rightbox=\box62
+\mult@grightbox=\box63
+\mult@gfirstbox=\box64
+\mult@firstbox=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\c@minrows=\count294
+\c@columnbadness=\count295
+\c@finalcolumnbadness=\count296
+\last@try=\dimen272
+\multicolovershoot=\dimen273
+\multicolundershoot=\dimen274
+\mult@nat@firstbox=\box103
+\colbreak@box=\box104
+\mc@col@check@num=\count297
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/empheq.sty
 Package: empheq 2017/03/31 v2.15 Emphasizing equations
-\l_EQ_equationtype_int=\count288
-\l_EQ_alignmentmode_int=\count289
-\l_EQ_totalwidth_dim=\dimen266
-\l_EQ_displaywidth_dim=\dimen267
-\l_EQ_temp_linewidth_dim=\dimen268
-\l_EQ_linewidth_dim=\dimen269
-\EmphEqdelimitershortfall=\dimen270
-\EmphEqdelimiterfactor=\count290
-\g_EQ_toptag_height_dim=\dimen271
-\g_EQ_bottomtag_depth_dim=\dimen272
-\g_EQ_toprow_height_dim=\dimen273
-\g_EQ_bottomrow_depth_dim=\dimen274
-\g_EQ_widesttag_dim=\dimen275
-\EQ_mathdisplay_box=\box59
-\EQ_tag_box=\box60
-\g_EQ_temprow_int=\count291
+\l_EQ_equationtype_int=\count298
+\l_EQ_alignmentmode_int=\count299
+\l_EQ_totalwidth_dim=\dimen275
+\l_EQ_displaywidth_dim=\dimen276
+\l_EQ_temp_linewidth_dim=\dimen277
+\l_EQ_linewidth_dim=\dimen278
+\EmphEqdelimitershortfall=\dimen279
+\EmphEqdelimiterfactor=\count300
+\g_EQ_toptag_height_dim=\dimen280
+\g_EQ_bottomtag_depth_dim=\dimen281
+\g_EQ_toprow_height_dim=\dimen282
+\g_EQ_bottomrow_depth_dim=\dimen283
+\g_EQ_widesttag_dim=\dimen284
+\EQ_mathdisplay_box=\box105
+\EQ_tag_box=\box106
+\g_EQ_temprow_int=\count301
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
@@ -632,33 +702,33 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count292
-\Gm@cntv=\count293
-\c@Gm@tempcnt=\count294
-\Gm@bindingoffset=\dimen276
-\Gm@wd@mp=\dimen277
-\Gm@odd@mp=\dimen278
-\Gm@even@mp=\dimen279
-\Gm@layoutwidth=\dimen280
-\Gm@layoutheight=\dimen281
-\Gm@layouthoffset=\dimen282
-\Gm@layoutvoffset=\dimen283
+\Gm@cnth=\count302
+\Gm@cntv=\count303
+\c@Gm@tempcnt=\count304
+\Gm@bindingoffset=\dimen285
+\Gm@wd@mp=\dimen286
+\Gm@odd@mp=\dimen287
+\Gm@even@mp=\dimen288
+\Gm@layoutwidth=\dimen289
+\Gm@layoutheight=\dimen290
+\Gm@layouthoffset=\dimen291
+\Gm@layoutvoffset=\dimen292
 \Gm@dimlist=\toks33
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip57
-\enit@outerparindent=\dimen284
+\labelindent=\skip59
+\enit@outerparindent=\dimen293
 \enit@toks=\toks34
-\enit@inbox=\box61
-\enit@count@id=\count295
-\enitdp@description=\count296
+\enit@inbox=\box107
+\enit@count@id=\count305
+\enitdp@description=\count306
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks35
-\footnotemargin=\dimen285
-\c@pp@next@reset=\count297
+\footnotemargin=\dimen294
+\c@pp@next@reset=\count307
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -675,7 +745,7 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen286
+\arrowsize=\dimen295
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
@@ -696,19 +766,19 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count298
+\etb@tempcnta=\count308
 )
-\tcb@titlebox=\box62
-\tcb@upperbox=\box63
-\tcb@lowerbox=\box64
-\tcb@phantombox=\box65
-\c@tcbbreakpart=\count299
-\c@tcblayer=\count300
-\tcolorbox@number=\count301
-\tcb@temp=\box66
-\tcb@temp=\box67
-\tcb@temp=\box68
-\tcb@temp=\box69
+\tcb@titlebox=\box108
+\tcb@upperbox=\box109
+\tcb@lowerbox=\box110
+\tcb@phantombox=\box111
+\c@tcbbreakpart=\count309
+\c@tcblayer=\count310
+\tcolorbox@number=\count311
+\tcb@temp=\box112
+\tcb@temp=\box113
+\tcb@temp=\box114
+\tcb@temp=\box115
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
@@ -718,41 +788,41 @@ Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen287
-\captionmargin@=\dimen288
-\captionwidth=\dimen289
-\caption@tempdima=\dimen290
-\caption@indent=\dimen291
-\caption@parindent=\dimen292
-\caption@hangindent=\dimen293
+\captionmargin=\dimen296
+\captionmargin@=\dimen297
+\captionwidth=\dimen298
+\caption@tempdima=\dimen299
+\caption@indent=\dimen300
+\caption@parindent=\dimen301
+\caption@hangindent=\dimen302
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count302
-\c@continuedfloat=\count303
+\c@caption@flags=\count312
+\c@continuedfloat=\count313
 Package caption Info: hyperref package is loaded.
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count304
-\sf@farskip=\skip58
-\sf@captopadj=\dimen294
-\sf@capskip=\skip59
-\sf@nearskip=\skip60
-\c@subfigure=\count305
-\c@subfigure@save=\count306
-\c@lofdepth=\count307
-\c@subtable=\count308
-\c@subtable@save=\count309
-\c@lotdepth=\count310
-\sf@top=\skip61
-\sf@bottom=\skip62
+\c@KVtest=\count314
+\sf@farskip=\skip60
+\sf@captopadj=\dimen303
+\sf@capskip=\skip61
+\sf@nearskip=\skip62
+\c@subfigure=\count315
+\c@subfigure@save=\count316
+\c@lofdepth=\count317
+\c@subtable=\count318
+\c@subtable@save=\count319
+\c@lotdepth=\count320
+\sf@top=\skip63
+\sf@bottom=\skip64
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip63
-\multirow@cntb=\count311
-\multirow@dima=\skip64
-\bigstrutjot=\dimen295
+\multirow@colwidth=\skip65
+\multirow@cntb=\count321
+\multirow@dima=\skip66
+\bigstrutjot=\dimen304
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
@@ -801,26 +871,26 @@ File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodepartlowerbox=\box70
-\pgfnodeparttwobox=\box71
-\pgfnodepartthreebox=\box72
-\pgfnodepartfourbox=\box73
-\pgfnodeparttwentybox=\box74
-\pgfnodepartnineteenbox=\box75
-\pgfnodeparteighteenbox=\box76
-\pgfnodepartseventeenbox=\box77
-\pgfnodepartsixteenbox=\box78
-\pgfnodepartfifteenbox=\box79
-\pgfnodepartfourteenbox=\box80
-\pgfnodepartthirteenbox=\box81
-\pgfnodeparttwelvebox=\box82
-\pgfnodepartelevenbox=\box83
-\pgfnodeparttenbox=\box84
-\pgfnodepartninebox=\box85
-\pgfnodeparteightbox=\box86
-\pgfnodepartsevenbox=\box87
-\pgfnodepartsixbox=\box88
-\pgfnodepartfivebox=\box89
+\pgfnodepartlowerbox=\box116
+\pgfnodeparttwobox=\box117
+\pgfnodepartthreebox=\box118
+\pgfnodepartfourbox=\box119
+\pgfnodeparttwentybox=\box120
+\pgfnodepartnineteenbox=\box121
+\pgfnodeparteighteenbox=\box122
+\pgfnodepartseventeenbox=\box123
+\pgfnodepartsixteenbox=\box124
+\pgfnodepartfifteenbox=\box125
+\pgfnodepartfourteenbox=\box126
+\pgfnodepartthirteenbox=\box127
+\pgfnodeparttwelvebox=\box128
+\pgfnodepartelevenbox=\box129
+\pgfnodeparttenbox=\box130
+\pgfnodepartninebox=\box131
+\pgfnodeparteightbox=\box132
+\pgfnodepartsevenbox=\box133
+\pgfnodepartsixbox=\box134
+\pgfnodepartfivebox=\box135
 )))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarysnakes.code.tex
@@ -837,16 +907,16 @@ s/tikzlibrarydecorations.pathmorphing.code.tex
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen296
-\pgfdecoratedremainingdistance=\dimen297
-\pgfdecoratedinputsegmentcompleteddistance=\dimen298
-\pgfdecoratedinputsegmentremainingdistance=\dimen299
-\pgf@decorate@distancetomove=\dimen300
-\pgf@decorate@repeatstate=\count312
-\pgfdecorationsegmentamplitude=\dimen301
-\pgfdecorationsegmentlength=\dimen302
+\pgfdecoratedcompleteddistance=\dimen305
+\pgfdecoratedremainingdistance=\dimen306
+\pgfdecoratedinputsegmentcompleteddistance=\dimen307
+\pgfdecoratedinputsegmentremainingdistance=\dimen308
+\pgf@decorate@distancetomove=\dimen309
+\pgf@decorate@repeatstate=\count322
+\pgfdecorationsegmentamplitude=\dimen310
+\pgfdecorationsegmentlength=\dimen311
 )
-\tikz@lib@dec@box=\box90
+\tikz@lib@dec@box=\box136
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathmorphing.code.tex))
@@ -860,69 +930,69 @@ s/tikzlibrarydecorations.shapes.code.tex
 brarydecorations.shapes.code.tex)))
 (/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box91
-\beforetitleunit=\skip65
-\aftertitleunit=\skip66
-\ttl@plus=\dimen303
-\ttl@minus=\dimen304
+\ttl@box=\box137
+\beforetitleunit=\skip67
+\aftertitleunit=\skip68
+\ttl@plus=\dimen312
+\ttl@minus=\dimen313
 \ttl@toksa=\toks38
-\titlewidth=\dimen305
-\titlewidthlast=\dimen306
-\titlewidthfirst=\dimen307
+\titlewidth=\dimen314
+\titlewidthlast=\dimen315
+\titlewidthfirst=\dimen316
 )
-\c@definition=\count313
+\c@definition=\count323
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-\c@example=\count314
-\c@theorem=\count315
-\c@claim=\count316
-\c@corollary=\count317
-\c@assumption=\count318
-\c@lemma=\count319
-\c@observation=\count320
-\c@proposition=\count321
-\c@remark=\count322
+\c@example=\count324
+\c@theorem=\count325
+\c@claim=\count326
+\c@corollary=\count327
+\c@assumption=\count328
+\c@lemma=\count329
+\c@observation=\count330
+\c@proposition=\count331
+\c@remark=\count332
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count323
-\l__pdf_internal_box=\box92
+\l__kernel_color_stack_int=\count333
+\l__pdf_internal_box=\box138
 )
 (./draft.aux)
 \openout1 = `draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen308
-\scratchbox=\box93
-\nofMPsegments=\count325
-\nofMParguments=\count326
+\scratchcounter=\count334
+\scratchdimen=\dimen317
+\scratchbox=\box139
+\nofMPsegments=\count335
+\nofMParguments=\count336
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen309
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
+\MPscratchCnt=\count337
+\MPscratchDim=\dimen318
+\MPnumerator=\count338
+\makeMPintoPDFobject=\count339
 \everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -933,8 +1003,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box94
-Package hyperref Info: Link coloring OFF on input line 79.
+\AtBeginShipoutBox=\box140
+Package hyperref Info: Link coloring OFF on input line 80.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -946,11 +1016,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count340
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
  (./draft.out) (./draft.out)
 \@outlinefile=\write6
 \openout6 = `draft.out'.
@@ -993,12 +1063,12 @@ LaTeX Info: Redefining \nameref on input line 79.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1008,19 +1078,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: No \author given.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
 [][]\OT1/cmr/m/n/8 See Face-book Trans-parency Cen-ter, Con-tent re-stric-tions
  based on Lo-cal Law:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
 [][]\OT1/cmr/m/n/8 See Google's Trans-parency re-port, gov-ern-ment re-quests t
 o re-move con-tent:
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 89--89
+Underfull \hbox (badness 5050) in paragraph at lines 92--92
 [][]\OT1/cmr/m/n/8 See Twit-ter Trans-parency web-site, Re-moval re-quests: []t
 ransparency.twitter.com/en/reports/removal-
  []
@@ -1028,174 +1098,386 @@ ransparency.twitter.com/en/reports/removal-
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 2293) in paragraph at lines 105--105
+Underfull \hbox (badness 2293) in paragraph at lines 108--108
 [][]\OT1/cmr/m/n/8 See for ex-am-ple the rank-ing of the most pop-u-lar so-cial
  net-works as of April 2021 on Statista:
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 118.
+               Default added (so using `tbp') on input line 120.
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 151--151
+Underfull \hbox (badness 5622) in paragraph at lines 149--149
 [][]\OT1/cmr/m/n/8 A list of no-table Twit-ter tem-po-rary and per-ma-nent sus-
 pen-sions can be found on wikipedia:
  []
 
 [2]
-Underfull \hbox (badness 1052) in paragraph at lines 166--166
+Underfull \hbox (badness 1052) in paragraph at lines 155--155
 [][]\OT1/cmr/m/n/8 See the April 2021 re-port for an ex-am-ple: []https://about
 .fb.com/news/2021/05/april-2021-coordinated-
  []
 
-<./img/fb/fig1_fb.png, id=141, 1016.79875pt x 384.43625pt>
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 162.
+
+<./img/fb/fig1_fb.png, id=155, 1016.79875pt x 384.43625pt>
 File: ./img/fb/fig1_fb.png Graphic file (type png)
 <use ./img/fb/fig1_fb.png>
-Package pdftex.def Info: ./img/fb/fig1_fb.png  used on input line 173.
-(pdftex.def)             Requested size: 355.8849pt x 134.55469pt.
+Package pdftex.def Info: ./img/fb/fig1_fb.png  used on input line 163.
+(pdftex.def)             Requested size: 203.35614pt x 76.88588pt.
 [3]
-<./img/lifesite.jpg, id=156, 594.22pt x 376.40625pt>
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 174.
+
+<./img/lifesite.jpg, id=171, 594.22pt x 376.40625pt>
 File: ./img/lifesite.jpg Graphic file (type jpg)
 <use ./img/lifesite.jpg>
-Package pdftex.def Info: ./img/lifesite.jpg  used on input line 183.
-(pdftex.def)             Requested size: 207.98012pt x 131.74416pt.
-<./img/lifesite_rolling_7_lifesite.jpg, id=157, 606.265pt x 373.395pt>
+Package pdftex.def Info: ./img/lifesite.jpg  used on input line 175.
+(pdftex.def)             Requested size: 178.26736pt x 112.92273pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 177.
+
+<./img/lifesite_rolling_7_lifesite.jpg, id=172, 606.265pt x 373.395pt>
 File: ./img/lifesite_rolling_7_lifesite.jpg Graphic file (type jpg)
 <use ./img/lifesite_rolling_7_lifesite.jpg>
 Package pdftex.def Info: ./img/lifesite_rolling_7_lifesite.jpg  used on input l
-ine 184.
-(pdftex.def)             Requested size: 212.19592pt x 130.6902pt.
+ine 178.
+(pdftex.def)             Requested size: 181.8809pt x 112.01936pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+[][]\OT1/cmr/m/n/8 See []help.twitter.com/en/rules-and-policies/medical-misinfo
+rmation-policy[] and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
 [][]\OT1/cmr/m/n/8 See the of-fi-cial doc-u-men-ta-tion on the Twit-ter's Help 
 Cen-ter re-gard-ing ac-count sus-pen-sion:
  []
 
-[4 <./img/fb/fig1_fb.png> <./img/lifesite.jpg> <./img/lifesite_rolling_7_lifesi
-te.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+[4 <./img/fb/fig1_fb.png>] [5 <./img/lifesite.jpg> <./img/lifesite_rolling_7_li
+fesite.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
 [][]\OT1/cmr/m/n/8 See the ``Com-mu-nity Guide-lines strike ba-sics''. Youtube 
 help, Google De-vel-op-ers,
  []
 
-<./img/oann/fig1_oann.png, id=185, 799.98875pt x 370.38374pt>
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 201.
+
+<./img/oann/fig1_oann.png, id=214, 799.98875pt x 370.38374pt>
 File: ./img/oann/fig1_oann.png Graphic file (type png)
 <use ./img/oann/fig1_oann.png>
-Package pdftex.def Info: ./img/oann/fig1_oann.png  used on input line 207.
+Package pdftex.def Info: ./img/oann/fig1_oann.png  used on input line 202.
 (pdftex.def)             Requested size: 199.99669pt x 92.5957pt.
-<./img/oann/fig2_oann.png, id=186, 764.8575pt x 381.425pt>
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 204.
+
+<./img/oann/fig2_oann.png, id=215, 764.8575pt x 381.425pt>
 File: ./img/oann/fig2_oann.png Graphic file (type png)
 <use ./img/oann/fig2_oann.png>
-Package pdftex.def Info: ./img/oann/fig2_oann.png  used on input line 208.
+Package pdftex.def Info: ./img/oann/fig2_oann.png  used on input line 205.
 (pdftex.def)             Requested size: 191.2139pt x 95.356pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 [][]\OT1/cmr/m/n/8 See the Google doc-u-men-ta-tion []https://developers.google
 .com/youtube/v3/docs/videos/list[] and
  []
 
+[6 <./img/oann/fig1_oann.png> <./img/oann/fig2_oann.png>]
 
-Overfull \hbox (1.16281pt too wide) in paragraph at lines 219--220
-[]\OT1/cmr/m/n/10 In ad-di-tion, as shown in fig-ure []3[] when com-par-ing the
- week be-fore the sus-pen-sion from 2020/11/17
- []
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 219.
 
-[5]
-<./img/oann/fig3_oann.png, id=205, 606.265pt x 560.0925pt>
+<./img/oann/fig3_oann.png, id=230, 606.265pt x 560.0925pt>
 File: ./img/oann/fig3_oann.png Graphic file (type png)
 <use ./img/oann/fig3_oann.png>
-Package pdftex.def Info: ./img/oann/fig3_oann.png  used on input line 223.
+Package pdftex.def Info: ./img/oann/fig3_oann.png  used on input line 220.
 (pdftex.def)             Requested size: 121.25084pt x 112.01651pt.
-<./img/tony/fig3_tony.png, id=206, 606.265pt x 373.395pt>
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 223.
+
+<./img/tony/fig3_tony.png, id=231, 606.265pt x 373.395pt>
 File: ./img/tony/fig3_tony.png Graphic file (type png)
 <use ./img/tony/fig3_tony.png>
 Package pdftex.def Info: ./img/tony/fig3_tony.png  used on input line 224.
 (pdftex.def)             Requested size: 181.8809pt x 112.01936pt.
-<./img/tony/fig1_tony.png, id=213, 587.19376pt x 281.05pt>
+[7 <./img/oann/fig3_oann.png> <./img/tony/fig3_tony.png>]
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 240.
+
+<./img/tony/fig1_tony.png, id=248, 587.19376pt x 281.05pt>
 File: ./img/tony/fig1_tony.png Graphic file (type png)
 <use ./img/tony/fig1_tony.png>
-Package pdftex.def Info: ./img/tony/fig1_tony.png  used on input line 236.
+Package pdftex.def Info: ./img/tony/fig1_tony.png  used on input line 241.
 (pdftex.def)             Requested size: 176.15948pt x 84.31564pt.
-<./img/tony/fig2_tony.png, id=214, 584.1825pt x 289.08pt>
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 244.
+
+<./img/tony/fig2_tony.png, id=249, 584.1825pt x 289.08pt>
 File: ./img/tony/fig2_tony.png Graphic file (type png)
 <use ./img/tony/fig2_tony.png>
-Package pdftex.def Info: ./img/tony/fig2_tony.png  used on input line 237.
+Package pdftex.def Info: ./img/tony/fig2_tony.png  used on input line 245.
 (pdftex.def)             Requested size: 175.25609pt x 86.72466pt.
- [6 <./img/oann/fig1_oann.png> <./img/oann/fig2_oann.png> <./img/oann/fig3_oann
-.png> <./img/tony/fig3_tony.png>] [7 <./img/tony/fig1_tony.png> <./img/tony/fig
-2_tony.png>]
-<./img/globalresearch_2021-06-14.png, id=235, 603.25375pt x 305.14pt>
+[8 <./img/tony/fig1_tony.png> <./img/tony/fig2_tony.png>]
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 277.
+
+<./img/infowars/fb_infowars_1.png, id=274, 605.26125pt x 244.915pt>
+File: ./img/infowars/fb_infowars_1.png Graphic file (type png)
+<use ./img/infowars/fb_infowars_1.png>
+Package pdftex.def Info: ./img/infowars/fb_infowars_1.png  used on input line 2
+78.
+(pdftex.def)             Requested size: 181.57976pt x 73.47505pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 281.
+
+<./img/infowars/fb_infowars_2.png, id=275, 601.24625pt x 229.85875pt>
+File: ./img/infowars/fb_infowars_2.png Graphic file (type png)
+<use ./img/infowars/fb_infowars_2.png>
+Package pdftex.def Info: ./img/infowars/fb_infowars_2.png  used on input line 2
+82.
+(pdftex.def)             Requested size: 180.37526pt x 68.95815pt.
+[9]
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 301.
+
+<./img/globalresearch_2021-06-14.png, id=288, 603.25375pt x 305.14pt>
 File: ./img/globalresearch_2021-06-14.png Graphic file (type png)
 <use ./img/globalresearch_2021-06-14.png>
 Package pdftex.def Info: ./img/globalresearch_2021-06-14.png  used on input lin
-e 282.
+e 302.
 (pdftex.def)             Requested size: 180.97751pt x 91.5427pt.
-<./img/globalresearch_14_06_2021_16pm_UTC.png, id=236, 601.24625pt x 304.13625p
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 305.
+
+<./img/globalresearch_14_06_2021_16pm_UTC.png, id=289, 601.24625pt x 304.13625p
 t>
 File: ./img/globalresearch_14_06_2021_16pm_UTC.png Graphic file (type png)
 <use ./img/globalresearch_14_06_2021_16pm_UTC.png>
 Package pdftex.def Info: ./img/globalresearch_14_06_2021_16pm_UTC.png  used on 
-input line 283.
+input line 306.
 (pdftex.def)             Requested size: 180.37526pt x 91.24158pt.
- [8 <./img/globalresearch_2021-06-14.png> <./img/globalresearch_14_06_2021_16pm
-_UTC.png>]
-<./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=260, 600.2425pt x 
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 320.
+
+<./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=295, 600.2425pt x 
 343.2825pt>
 File: ./img/globalresearch/sum_globalresearch.ca_6_months.jpg Graphic file (typ
 e jpg)
 <use ./img/globalresearch/sum_globalresearch.ca_6_months.jpg>
 Package pdftex.def Info: ./img/globalresearch/sum_globalresearch.ca_6_months.jp
-g  used on input line 300.
-(pdftex.def)             Requested size: 180.07413pt x 102.98553pt.
-<./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=261, 6
+g  used on input line 321.
+(pdftex.def)             Requested size: 120.04637pt x 68.65527pt.
+<./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=296, 6
 19.31375pt x 343.2825pt>
 File: ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg Graph
 ic file (type jpg)
 <use ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg>
 Package pdftex.def Info: ./img/globalresearch/engagement_sum_rolling_1_globalre
-search.ca.jpg  used on input line 301.
-(pdftex.def)             Requested size: 185.79555pt x 102.98553pt.
-<./img/globalresearch/tweet.png, id=262, 608.2725pt x 341.275pt>
+search.ca.jpg  used on input line 322.
+(pdftex.def)             Requested size: 123.86055pt x 68.65527pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 325.
+
+<./img/globalresearch/tweet.png, id=297, 608.2725pt x 341.275pt>
 File: ./img/globalresearch/tweet.png Graphic file (type png)
 <use ./img/globalresearch/tweet.png>
-Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 302
+Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 326
 .
-(pdftex.def)             Requested size: 182.48315pt x 102.38329pt.
-<./img/globalresearch/warning.png, id=263, 602.25pt x 425.59pt>
+(pdftex.def)             Requested size: 121.65234pt x 68.25378pt.
+<./img/globalresearch/warning.png, id=298, 602.25pt x 425.59pt>
 File: ./img/globalresearch/warning.png Graphic file (type png)
 <use ./img/globalresearch/warning.png>
 Package pdftex.def Info: ./img/globalresearch/warning.png  used on input line 3
-03.
-(pdftex.def)             Requested size: 180.67639pt x 127.67798pt.
- [9 <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img/globalrese
-arch/engagement_sum_rolling_1_globalresearch.ca.jpg> <./img/globalresearch/twee
-t.png> <./img/globalresearch/warning.png>]
-Overfull \hbox (13.05183pt too wide) in paragraph at lines 355--356
-[][]\OT1/cmr/m/n/10 https://misinforeview.hks.harvard.edu/article/tackling-misi
-nformation-what-researchers-could-do-
+27.
+(pdftex.def)             Requested size: 120.44786pt x 85.11649pt.
+[10 <./img/infowars/fb_infowars_1.png> <./img/infowars/fb_infowars_2.png>]
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 361.
+
+<./img/tweets/Capture_2021-06-30_2.png, id=319, 605.26125pt x 405.515pt>
+File: ./img/tweets/Capture_2021-06-30_2.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-06-30_2.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-06-30_2.png  used on input l
+ine 362.
+(pdftex.def)             Requested size: 151.31493pt x 101.3785pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 364.
+
+<./img/tweets/Capture_2021-06-30.png, id=320, 601.24625pt x 462.72874pt>
+File: ./img/tweets/Capture_2021-06-30.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-06-30.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-06-30.png  used on input lin
+e 365.
+(pdftex.def)             Requested size: 150.31119pt x 115.6819pt.
+[11 <./img/globalresearch_2021-06-14.png> <./img/globalresearch_14_06_2021_16pm
+_UTC.png>] [12 <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img
+/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg> <./img/globalre
+search/tweet.png> <./img/globalresearch/warning.png>] [13 <./img/tweets/Capture
+_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.png>]
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 383.
+
+<./img/tweets/Capture_2021-07-01.png, id=354, 605.26125pt x 462.72874pt>
+File: ./img/tweets/Capture_2021-07-01.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-07-01.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-07-01.png  used on input lin
+e 384.
+(pdftex.def)             Requested size: 151.31493pt x 115.6819pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 386.
+
+<./img/tweets/Capture_2021-07-01_2.png, id=355, 604.2575pt x 392.46625pt>
+File: ./img/tweets/Capture_2021-07-01_2.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-07-01_2.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-07-01_2.png  used on input l
+ine 387.
+(pdftex.def)             Requested size: 151.064pt x 98.11632pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 397.
+
+<./img/youtube_panels/yt_1.png, id=358, 1040.88875pt x 125.46875pt>
+File: ./img/youtube_panels/yt_1.png Graphic file (type png)
+<use ./img/youtube_panels/yt_1.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 398.
+
+(pdftex.def)             Requested size: 208.17406pt x 25.09329pt.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 400.
+
+<./img/youtube_panels/yt_2.png, id=359, 1165.35374pt x 112.42pt>
+File: ./img/youtube_panels/yt_2.png Graphic file (type png)
+<use ./img/youtube_panels/yt_2.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 401.
+
+(pdftex.def)             Requested size: 233.06662pt x 22.4836pt.
+
+Overfull \hbox (23.06432pt too wide) in paragraph at lines 401--402
+ [][] 
  []
 
-[10] (./draft.bbl) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 403.
+
+<./img/youtube_panels/yt_3.png, id=360, 1169.36874pt x 103.38625pt>
+File: ./img/youtube_panels/yt_3.png Graphic file (type png)
+<use ./img/youtube_panels/yt_3.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 404.
+
+(pdftex.def)             Requested size: 233.8696pt x 20.67688pt.
+
+Overfull \hbox (23.8673pt too wide) in paragraph at lines 404--405
+ [][] 
+ []
+
+
+Package multicol Warning: Using `1' columns doesn't seem a good idea.
+ I therefore use two columns instead on input line 406.
+
+<./img/youtube_panels/yt_4.png, id=361, 1178.4025pt x 70.2625pt>
+File: ./img/youtube_panels/yt_4.png Graphic file (type png)
+<use ./img/youtube_panels/yt_4.png>
+Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 407.
+
+(pdftex.def)             Requested size: 235.67632pt x 14.05225pt.
+
+Overfull \hbox (25.67401pt too wide) in paragraph at lines 407--408
+ [][] 
+ []
+
+[14] [15 <./img/tweets/Capture_2021-07-01.png> <./img/tweets/Capture_2021-07-01
+_2.png> <./img/youtube_panels/yt_1.png> <./img/youtube_panels/yt_2.png> <./img/
+youtube_panels/yt_3.png> <./img/youtube_panels/yt_4.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 420.
+
+[16]
+Overfull \hbox (9.16295pt too wide) in paragraph at lines 454--455
+[][]\OT1/cmr/m/n/10 https://misinforeview.hks.harvard.edu/article/tackling-misi
+nformation-what-researchers-could-
+ []
+
+(./draft.bbl [17]) [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
  (./draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
 Package rerunfilecheck Info: File `draft.out' has not changed.
-(rerunfilecheck)             Checksum: 850FB8BE8753140995183AF2262EAF80;967.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
+(rerunfilecheck)             Checksum: 5CFC85375CB2B50637CF81DE7BD1DE2E;1154.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
  ) 
 Here is how much of TeX's memory you used:
- 25356 strings out of 480608
- 516525 string characters out of 5903631
- 787194 words of memory out of 5000000
- 40657 multiletter control sequences out of 15000+600000
+ 25576 strings out of 480608
+ 520813 string characters out of 5903631
+ 794083 words of memory out of 5000000
+ 40834 multiletter control sequences out of 15000+600000
  545810 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,14n,76p,1996b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not ex
+ 60i,14n,76p,2193b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.38} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.37} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.36} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.35} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.34} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.33} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.32} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.31} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.30} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.29} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.27} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1285,10 +1567,10 @@ ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on draft.pdf (11 pages, 3040672 bytes).
+Output written on draft.pdf (18 pages, 3710914 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 208 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 470 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 
