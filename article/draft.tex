@@ -80,11 +80,11 @@
 
 \begin{document}
 
-\title{Very Preliminary Draft}
+\title{Big Tech is censoring me: \\ Using social media data to verify the platforms' regulation policies regarding ``misinformation''}
 
 \maketitle
 
-Using social media data to verify the platforms' regulation policies regarding ``misinformation''
+'Big Tech is censoring me': Using social media data to verify the platforms' regulation policies regarding ``misinformation''
 
 \section{Introduction}
 
@@ -128,7 +128,7 @@ In the present article, we will explain how to verify with data mining MSMP's ac
 
 \hline
 &  \begin{tabular}[c]{@{}l@{}} Application Programming \\ Interface (API)  \end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                            &    \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}} Web \\ Scraping \end{tabular}}                                                                                                                                                                 \\ \hline
- \includegraphics[scale=0.05]{./img/fb_logo.png} & \begin{tabular}[c]{@{}l@{}}\href{https://www.crowdtangle.com}{CrowdTangle API} \\ \href{https://buzzsumo.com}{Buzzsumo}   \end{tabular}                                                                                                                                                                                                               &      \multicolumn{1}{l|}{}    
+ \includegraphics[scale=0.05]{./img/fb_logo.png} & \begin{tabular}[c]{@{}l@{}}\href{https://www.crowdtangle.com}{CrowdTangle API} \\ \href{https://buzzsumo.com}{Buzzsumo API}   \end{tabular}                                                                                                                                                                                                               &      \multicolumn{1}{l|}{}    
 \\ \hline
  \includegraphics[scale=0.007]{./img/tw_logo.png}  &  \href{https://developer.twitter.com/en/docs/twitter-api/early-access}{Twitter API V2} & \multicolumn{1}{l|}{\href{https://github.com/medialab/minet/blob/master/docs/cli.md\#twitter-scrape}{Minet tw scrape}}                                                                                                                                                                           \\ \hline
  \includegraphics[scale=0.03]{./img/yt_logo.png}  &  \href{https://developers.google.com/youtube/v3}{Youtube API V3}      &                                                                                                                            \multicolumn{1}{l|}{}                                                                                                                                                                           \\ \hline
@@ -213,7 +213,7 @@ In this section, we turn to the channel's temporary or permanent suspension poli
 	\label{fig1_oann}
 \end{figure}
 
-First, we investigate the temporary suspension case of the Youtube Channel of {\it One America News channel}. This channel received a first strike on November 24, 2020 for the promotion of  a false cure for COVID19.\footnote{See nbcnews,  ``YouTube suspends OANN for violating its Covid-19 policy''. nbcnews, Ahiza García-Hodges, 24 11 2020.} We collected the activity of the channel OANN (video counts, view counts) using  the Youtube API v3, between November 2020 and January 2021. For the video counts, we used the playlist endpoint to retrieve the videos uploaded with their publishing date and for the view count we used the IDs of the videos we had from the playlists and via the videos endpoint we retrieved the view counts on June 2021.\footnote{See the Google documentation  \href{https://developers.google.com/youtube/v3/docs/videos/list}{https://developers.google.com/youtube/v3/docs/videos/list} and \href{https://developers.google.com/youtube/v3/docs/playlists/list}{https://developers.google.com/youtube/v3/docs/playlists/list}} 
+First, we investigate the temporary suspension case of the Youtube Channel of {\it One America News channel}. This channel received a first strike on November 24, 2020 for the promotion of  a false cure for COVID19.\footnote{See nbcnews,  \href{https://www.nbcnews.com/news/all/youtube-suspends-oann-violating-its-covid-19-policy-n1248845}{YouTube suspends OANN for violating its Covid-19 policy} nbcnews, Ahiza García-Hodges, 24 11 2020.} We collected the activity of the channel OANN (video counts, view counts) using  the Youtube API v3, between November 2020 and January 2021. For the video counts, we used the playlist endpoint to retrieve the videos uploaded with their publishing date and for the view count we used the IDs of the videos we had from the playlists and via the videos endpoint we retrieved the view counts on June 2021.\footnote{See the Google documentation  \href{https://developers.google.com/youtube/v3/docs/videos/list}{https://developers.google.com/youtube/v3/docs/videos/list} and \href{https://developers.google.com/youtube/v3/docs/playlists/list}{https://developers.google.com/youtube/v3/docs/playlists/list}} 
 
 \smallskip
 
@@ -279,11 +279,11 @@ Nevertheless, for the case of the Beauty of Life, both misinformation and coordi
 
 To verify Facebook’s ban of The BL domain name, we first tested whether we could post a Facebook message containing a url from thebl.com. This turned out to be impossible. But such manual verification cannot inform us whether the ban applies indeed to all Facebook users and accounts (as we used only our own personal accounts), nor when it has started. To further investigate this policy, we collected data from Buzzsumo.\footnote{BuzzSumo is a commercial content database that tracks the volume of user interactions with internet content on Facebook, Twitter, and other social media platforms.} We used the ``/search/articles'' endpoint of the Buzzsumo API, to collect the engagement metrics $13$ $634$ articles crawled from the $thebl.com$ website between January $1$, $2019$ and June $15$, $2021$.\footnote{The command can be found in the following Github repository: \href{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_thebl\_data.py}{https://github.com/medialab/truth-and-trust-online-2021/blob/master/code/collect\_facebook\_buzzsumo\_thebl\_data.py}.}
 
-The number of Facebook reactions, shares and comments dropped to zero for TheBL’s articles published after December $1$, $2019$ (see figure \ref{fb_bl} top panel), indicating the start of the ban. We can note that although the ban was communicated in an article published\footnote{See \href{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}.} on December $20$, $2019$, it seems to have actually started on December $1$, $2019$. The number of articles published per day was around $50$ until December $20$, $2019$. The this number decreased drastically to reach a {\color{pink} plateau} around $5$ to $10$ articles published per day (see figure \ref{fb_bl} bottom panel). The communication around the ban may have discouraged The Beauty of Life to proceed with their activity. Using Buzzsumo data, a global ban over sharing a thebl.com URL link on Facebook was ascertained. It started on December $1$, $2019$, and was still enforced in June 2021.
+The number of Facebook reactions, shares and comments dropped to zero for TheBL’s articles published after December $1$, $2019$ (see figure \ref{fb_bl} top panel), indicating the start of the ban. We can note that although the ban was communicated in an article published\footnote{See \href{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us}.} on December $20$, $2019$, it seems to have actually started on December $1$, $2019$. The number of articles published per day was around $50$ until December $20$, $2019$. This number decreased drastically to reach around $5$ to $10$ articles published per day (see figure \ref{fb_bl} bottom panel). The communication around the ban may have discouraged The Beauty of Life to proceed with their activity. Using Buzzsumo data, a global ban over sharing a thebl.com URL link on Facebook was ascertained. It started on December $1$, $2019$, and was still enforced in June 2021.
 
+\subsubsection{Twitter}
 
-
-
+\href{https://help.twitter.com/en/safety-and-security/phishing-spam-and-malware-links}{link}
 \subsection{Reducing the visibility}
 
 Mainstream Social Media platforms can reduce the visibility of the content created or shared by specific users, whenever they violate the platforms' rules. The implementation of this policy varies across platforms and is not easy to verify ex-post. In what follows we provide means to verify this policy on Twitter and Facebook.  
@@ -412,7 +412,11 @@ The website $globalresearch.ca$ is linked to the Twitter account {$@CRG\_CRM$}; 
 	\label{fig8}
 \end{figure}
 
-Alongside other social networking platforms, when the content of a tweet violates the Twitter rules, a notice can be added to provide more context according to Twitter's Help Center.\footnote{See Notices on Twitter and what they mean: \href{https://help.twitter.com/en/rules-and-policies/notices-on-twitter}{https://help.twitter.com/en/rules-and-policies/notices-on-twitter}.} At the tweet level, notices take the form of a label or an interstitial. Labels are context specific (e.g. COVID19 or presidential elections) and  redirect users to a URL link to get more context. Interstitials are presented as a greyed box on top of a tweet, which indicate sensitive content, violations of Twitter rules, withheld tweets for violation of local laws or even tweets from suspended accounts. At the account level, notices can indicate whether an account has been temporarily or permanently suspended. 
+Alongside other social networking platforms, when the content of a tweet violates the Twitter rules, a notice can be added to provide more context according to Twitter's Help Center.\footnote{See Notices on Twitter and what they mean: \href{https://help.twitter.com/en/rules-and-policies/notices-on-twitter}{https://help.twitter.com/en/rules-and-policies/notices-on-twitter}.} At the tweet level, notices take the form of a label or an interstitial. Labels are context specific (e.g. COVID19 or presidential elections) and  redirect users to a URL link to get more context (see figure \ref{fig8} for an example). Interstitials are presented as a greyed box on top of a tweet, which indicate sensitive content, violations of Twitter rules, withheld tweets for violation of local laws or even tweets from suspended accounts (see figure \ref{fig_notice} for an example). At the account level, notices can indicate whether an account has been temporarily or permanently suspended. 
+
+\smallskip 
+
+{\color{red} To the best of our knowledge, when using the Twitter API v2, there is no field which indicates whether a tweet is labeled or not; while the interstitial ``possibly sensitive'' and ``withheld" are both Tweet fields that can be recovered\footnote{See \href{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}.} from the API.  ............... so say minet tw scrape, scraper was enriched to get information about labels!}
 
 \smallskip
 
@@ -420,17 +424,20 @@ In this section, we take a deeper look at how labels and notices are introduced 
 
 We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $2.97\%$ out of $323$ $938$ tweets containing a URL marked as False, have an interstitial ``potentially sensitive content''. In particular, many speak about COVID19 and do not contain a label to provide users with more context from authoritative sources. Figure \ref{fig_notice} provides an example of a tweet sharing a URL marked as False by a Fact-checker and which contains an interstitial ``potentially sensitive content''. We find 32 other Tweets, among our set of collected tweets, who share the exact same URL link as in the previous example. Among those 32 Tweets, only 5 tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of the interstitials placement. 
 
-Finally, to the best of our knowledge, when using the Twitter API v2, there is no field which indicates whether a tweet is labeled or not; while the interstitial ``possibly sensitive'' and ``withheld" are both Tweet fields that can be recovered\footnote{See \href{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}.} from the API. 
+The Twitter Safety announced in a Tweet that 
+%https://twitter.com/TwitterSafety/status/1379515615954620418 
+
+
 
 \begin{figure}
 	\centering
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-07-01.png} 
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-07-01_2.png} 
 	%\end{multicols}
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-07-01_2.png}
+		\includegraphics[scale=0.35]{./img/tweets/Capture_2021-07-01.png}
 	%\end{multicols}
-	\caption{Tweet ID \href{https://twitter.com/mohsinmalvi19/status/1285866521533861888}{1285866521533861888}. Screenshots taken on July 1, 2021. }
+	\caption{Panel (a): Tweet containing a URL link hidden behind an interstitial. Panel (b): when clicking on $view$, to view the content hidden behind the interstitial. Tweet ID \href{https://twitter.com/mohsinmalvi19/status/1285866521533861888}{1285866521533861888}. Screenshots taken on July 1, 2021. }
 	\label{fig_notice}
 \end{figure}
 
@@ -439,16 +446,16 @@ Finally, to the best of our knowledge, when using the Twitter API v2, there is n
 \begin{figure}
 	\centering
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/yt_1.png} 
+		\includegraphics[scale=0.3]{./img/youtube_panels/yt_1.png} 
 	%\end{multicols}
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/yt_2.png} 
+		\includegraphics[scale=0.3]{./img/youtube_panels/yt_2.png} 
 	%\end{multicols}
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/yt_3.png}
+		\includegraphics[scale=0.3]{./img/youtube_panels/yt_3.png}
 	%\end{multicols}
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/yt_4.png} 
+		\includegraphics[scale=0.3]{./img/youtube_panels/yt_4.png} 
 	%\end{multicols}
 	\caption{Top to buttom respectively: information panel displayed under some videos related to climate change, COVID19 vaccine, COVID19 and elections.}
 	\label{fig9}
@@ -458,20 +465,21 @@ Youtube may provide an information panel for videos with topics that are prone t
 
 To further study the assignment of information panels to videos, we implemented the following exercice. We compiled a list of $171$ Youtube videos, checked by independent fact-checkers\footnote{Is it science Feedback ? if so add.} and marked as containing false or inaccurate information. We collected the information panels, when present, in each video by scrapping the content of the web and connecting to a US server. Four types of information panels were found in the list of visited videos as shown in figure\ref{fig9}:  information about COVID19, Vaccines, Climate change and US elections.
 
-We classified the list of Youtube videos by topic based on its content as shown in table \ref{tab2}. We recorded the number of videos containing an information panel within each category. For COVID19 and vaccine related videos more than half of the videos contained an information panel. {\color{pink} Nevertheless, we noticed that some videos get uploaded multiple times by different channels under different video titles but others didn’t even though the video was the same.} In addition, we noticed for COVID19 related videos, when the video title did not include keywords like (Testing, Pandemic, COVID, coronavirus), the video might not contain a panel associated with it, and in some cases when the video title contains variations of word COVID like (C.O.V.I.D or Cv19) it wouldn’t include a panel either. Therefore, we suspect that youtube is automatically adding panels to the videos based on the video title and not the content of the video since many of the videos that didn’t have a panel had the word COVID or coronavirus or vaccine mentioned in the video itself. 
+We classified the list of Youtube videos by topic based on its content as shown in table \ref{tab2}. We recorded the number of videos containing an information panel within each category. For COVID19 and vaccine related videos more than half of the videos contained an information panel. Nevertheless, we noticed that duplicates of the same Youtube video can get uploaded under different video titles and that the information panel appears under the some duplicates, but not for all. In addition, we noticed for COVID19 related videos, when the video title did not include keywords like (Testing, Pandemic, COVID, coronavirus), the video might not contain a panel associated with it, and in some cases when the video title contains variations of word COVID like (C.O.V.I.D or Cv19) it wouldn’t include a panel either. Therefore, we suspect that youtube is automatically adding panels to the videos based on the video title and not the content of the video since many of the videos that didn’t have a panel had the word COVID or coronavirus or vaccine mentioned in the video itself. 
 
 \smallskip
 
-For climate change we only examined $18$ misleading videos and we found that $72\%$ did not display an information panel. Lastly , for the general health category, we included the videos that were not related to COVID19 but contained misinformation concerning cures for cancer, abortion,  and viruses; no information panels were displayed for that set of Youtube videos. Therefore, it is likely that Youtube add information panels below videos conecrning controversial topics that can have misleading information like the climate change, COVID19, flat earth and  vaccine. 
-
+For climate change we only examined $18$ misleading videos and we found that $28\%$ did not display an information panel. Lastly , for the general health category, we included the videos that were not related to COVID19 but contained misinformation concerning cures for cancer, abortion,  and viruses; no information panels were displayed for that set of Youtube videos. Therefore, it is likely that Youtube add information panels below videos concerning controversial topics that can have misleading information like the climate change, COVID19, flat earth and  vaccine. 
+%drop last colum
+%add % in a second line
 \begin{table}[] 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-Category       & \begin{tabular}[c]{@{}c@{}}With \\ information \\ panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Without  \\\ information \\ panel\end{tabular} & Total & \begin{tabular}[c]{@{}c@{}}IP \% \end{tabular} \\ \hline
-\begin{tabular}[c]{@{}c@{}} General \\ Health \end{tabular} & 0                                                                 & 11                                                                   & 11    & 0                                                       \\ \hline
-Vaccine        & 21                                                                & 7                                                                    & 28    & 75                                                      \\ \hline
-COVID19          & 73                                                                & 43                                                                   & 116   & 63                                                      \\ \hline
-\begin{tabular}[c]{@{}c@{}}  Climate \\ change \end{tabular} & 5                                                                 & 13                                                                   & 18    & 28                                                      \\ \hline
+Category       & \begin{tabular}[c]{@{}c@{}}Number of Youtube \\ videos with \\ an information panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of Youtube \\ videos without \\ an information panel\end{tabular}    \\ \hline
+\begin{tabular}[c]{@{}c@{}} General \\ Health \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0  \\ (0\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 11 \\ (100\%) \end{tabular}         \\ \hline
+Vaccine        & \begin{tabular}[c]{@{}c@{}} 21     \\ (75\%) \end{tabular}   & \begin{tabular}[c]{@{}c@{}}  7 \\ (25\%)  \end{tabular}     \\ \hline
+COVID19     & \begin{tabular}[c]{@{}c@{}} 73 \\ (63\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 43  \\ (37\%) \end{tabular}     \\ \hline
+\begin{tabular}[c]{@{}c@{}}  Climate \\ change \end{tabular} & \begin{tabular}[c]{@{}c@{}} 5 \\ (28\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 13 \\ (72\%) \end{tabular}   \\ \hline
 \end{tabular}
 \caption{}
 \label{tab2}
@@ -538,23 +546,22 @@ Sporadic points for the discussion, no structure yet.
 \multirow{3}{*}{Rules}                     & \includegraphics[scale=0.05]{./img/fb_logo.png} & \href{https://www.facebook.com/communitystandards/recentupdates/}{facebook.com/communitystandards/recentupdates/}                         \\ \cline{2-3} 
                                            & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://help.twitter.com/en/rules-and-policies/twitter-rules}{help.twitter.com/en/rules-and-policies/twitter-rules}                       \\ \cline{2-3} 
                                            & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/policies/community-guidelines/}{youtube.com/intl/en\_us/howyoutubeworks/policies/community-guidelines/} \\ \hline
-\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Rules \\ enforcement \end{tabular}}         & \includegraphics[scale=0.05]{./img/fb_logo.png}  & \href{https://transparency.fb.com/data/community-standards-enforcement/}{transparency.fb.com/data/community-standards-enforcement/}                 \\ \cline{2-3} 
+\multirow{3}{*}{\begin{tabular}[c]{@{}cl@{}}  Rules \\ enforcement \end{tabular}}         & \includegraphics[scale=0.05]{./img/fb_logo.png}  & \href{https://transparency.fb.com/data/community-standards-enforcement/}{transparency.fb.com/data/community-standards-enforcement/}                 \\ \cline{2-3} 
                                            & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://transparency.twitter.com/en/reports/rules-enforcement.html}{transparency.twitter.com/en/reports/rules-enforcement.html}                \\ \cline{2-3} 
                                            & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://transparencyreport.google.com/youtube-policy/}{transparencyreport.google.com/youtube-policy/}                              \\ \hline
-\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Transparency \\ center \end{tabular}}       & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://transparency.fb.com/data/                                                  \\ \cline{2-3} 
+\multirow{3}{*}{\begin{tabular}[c]{@{}cl@{}}  Transparency \\ center \end{tabular}}       & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://transparency.fb.com/data/                                                  \\ \cline{2-3} 
                                            & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://transparency.twitter.com/en/reports.html}{transparency.twitter.com/en/reports.html}                                  \\ \cline{2-3} 
                                            & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://transparencyreport.google.com/?hl=en}{transparencyreport.google.com/?hl=en}                                      \\ \hline
-\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Policy regarding \\  Covid-19 \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://www.facebook.com/help/230764881494641/                                     \\ \cline{2-3} 
-                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \href{https://help.twitter.com/en/rules-and-policies/medical-misinformation-policy}{help.twitter.com/en/rules-and-policies/medical-misinformation-policy}       \\ \cline{2-3} 
+\multirow{3}{*}{\begin{tabular}[c]{@{}cl@{}}  Policy \\ regarding \\  Covid-19 \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & https://www.facebook.com/help/230764881494641/                                     \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   & \begin{tabular}[c]{@{}cl@{}} \href{https://help.twitter.com/en/rules-and-policies/medical-misinformation-policy}{help.twitter.com/en/rules-and-policies/medical-misinformation-policy} \\  \href{https://blog.twitter.com/en\_us/topics/company/2021/updates-to-our-work-on-covid-19-vaccine-misinformation}{blog.twitter.com/en\_us/topics/company/2021/updates-to-our-work-on-covid-19-vaccine-misinformation} \\  \href{https://blog.twitter.com/en\_us/topics/company/2020/covid-19}{blog.twitter.com/en\_us/topics/company/2020/covid-19}\end{tabular}      \\ \cline{2-3} 
                                            & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://support.google.com/youtube/answer/9891785}{support.google.com/youtube/answer/9891785}                                 \\ \hline
-\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}  Fact-checking \\ policy \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & \href{https://www.facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}{facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}                                    \\ \cline{2-3} 
+\multirow{3}{*}{\begin{tabular}[c]{@{}cl@{}}  Fact-checking \\ policy \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & \href{https://www.facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}{facebook.com/journalismproject/programs/third-party-fact-checking/how-it-works}                                    \\ \cline{2-3} 
                                            & \includegraphics[scale=0.007]{./img/tw_logo.png}   & x       \\ \cline{2-3} 
                                            & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://support.google.com/youtube/answer/9229632}{support.google.com/youtube/answer/9229632}                                  \\ \hline
-                                           
-                                           
-                                           
-                                           
-\end{tabular}
+\multirow{3}{*}{\begin{tabular}[c]{@{}cl@{}}  Fighting \\ misinformation \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & \begin{tabular}[c]{@{}cl@{}} \href{https://www.facebook.com/formedia/blog/working-to-stop-misinformation-and-false-news}{facebook.com/formedia/blog/working-to-stop-misinformation-and-false-news}     \\ \href{https://about.fb.com/news/2018/05/hard-questions-false-news/}{about.fb.com/news/2018/05/hard-questions-false-news/}   \end{tabular}                            \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.007]{./img/tw_logo.png}   &        \\ \cline{2-3} 
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}{youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}                                  \\ \hline 
+ \end{tabular}
 \caption{Summary of ressources, last accessed on July 5, 2021. }
 \label{summary}
 \end{table*}
