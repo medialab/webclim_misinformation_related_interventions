@@ -1,9 +1,11 @@
-from googleapiclient.discovery import build
 from datetime import datetime, timedelta
+import re
+import os
+
 import pandas as pd
 import numpy as np
-import re
-import sys
+from googleapiclient.discovery import build
+from dotenv import load_dotenv
 
 
 def get_channel_videos(channel_id, youtube):
@@ -51,15 +53,26 @@ def collect_data(API_key, channel_id):
     videos_df = pd.DataFrame({'Upload_date':publish_timestamps,'video_titles':titles,'video_id':video_ids})
     videos_df = videos_df[videos_df['Upload_date']>'2019-01-01']
     videos_ids_filtered = list(videos_df['video_id'])
-    data = pd.DataFrame([], columns=['video_title', 'view_counts', 'likes', 'dislikes', 'comments', 'video_id',
-                                       'channel_name', 'channel_id', 'published_at', 'duration'])
-    for i in videos_ids_filtered:
-        video_data = get_data_video(i, youtube)
-        r_series = pd.Series(video_data, index=data.columns)
-        data = data.append(r_series, ignore_index=True)
-    channel_name = data['channel_name'].iloc[0]
-    path = 'data/' + channel_name + '_youtube_data.csv'
-    data.to_csv(path)
+
+
+    for i in range(0,len(videos_ids_filtered)):
+        data_header = pd.DataFrame([],
+                                   columns=['video_title', 'view_counts', 'likes', 'dislikes', 'comments', 'video_id',
+                                            'channel_name', 'channel_id', 'published_at', 'duration'])
+        video_data = get_data_video(videos_ids_filtered[i], youtube)
+        r_series = pd.Series(video_data, index=data_header.columns)
+        channel_name = r_series['channel_name']
+        path = 'data/' + channel_name + '_youtube_data.csv'
+        if (i==0):
+            data_header.to_csv(path,index=False)
+        data_header = data_header.append(r_series, ignore_index=True)
+        data_header.to_csv(path, mode='a', header=False,index=False)
+
+
+
+
+    #path = 'data/' + channel_name + '_youtube_data.csv'
+    #data.to_csv(path)
 
 
 def get_data_video(vid_id, youtube):
@@ -104,7 +117,8 @@ def get_data_video(vid_id, youtube):
         return data
 
 if __name__=="__main__":
+    load_dotenv()
     # the list_is correspond to the id of channels [OANN, Tony Heller]
-    list_id = ['UCNbIDJNNgaRrXOD7VllIMRQ', 'UCprclkVrNPls7PR-nHhf1Ow']
+    list_id = ['UCprclkVrNPls7PR-nHhf1Ow','UCNbIDJNNgaRrXOD7VllIMRQ']
     for i in list_id:
-        collect_data(sys.argv[1],i)
+        collect_data(os.getenv('YOUTUBE_TOKEN'),i)
