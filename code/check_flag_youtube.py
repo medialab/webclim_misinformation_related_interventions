@@ -2,8 +2,6 @@ import sys
 import time
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 
 
@@ -23,7 +21,6 @@ def information_panel(video_id):
             driver.get(web)
             time.sleep(5)
             exist = check_exists_by_xpath('//*[@id="clarify-box"]',driver)
-            print(exist)
             if (exist ==True):
                 content = driver.find_element_by_xpath('//*[@id="clarify-box"]').text
             else:
