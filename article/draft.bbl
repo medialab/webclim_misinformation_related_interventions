@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bayer}
+Judith Bayer.
+\newblock Between anarchy and censorship public discourse and the duties of
+  social media.
+\newblock {\em CEPS Paper in Liberty and Security in Europe}, (2019-03), May
+  2019.
+
 \bibitem{broniatowski}
 David~A. Broniatowski, Daniel Kerchner, Fouzia Farooq, Xiaolei Huang, Amelia~M.
   Jamison, Mark Dredze, and Sandra~Crouse Quinn.
@@ -32,5 +39,13 @@ Guillaume Plique, Pauline Breteau, Jules Farjas, H{\'e}lo{\"\i}se Th{\'e}ro,
 \newblock Minet, a webmining cli tool and library for python zenodo.
   http://doi.org/10.5281/zenodo.4564399.
 \newblock 2019.
+
+\bibitem{niemanlab}
+Emily Saltz and Claire Leibowicz.
+\newblock Shadow bans, fact-checks, info hubs: The big guide to how platforms
+  are handling misinformation in 2021.
+\newblock {\em NiemanLab
+  https://www.niemanlab.org/2021/06/shadow-bans-fact-checks-info-hubs-the-big-guide-to-how-platforms-are-handling-misinformation-in-2021/},
+  June 2021.
 
 \end{thebibliography}
