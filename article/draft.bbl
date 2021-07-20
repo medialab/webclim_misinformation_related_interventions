@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Bayer}
 Judith Bayer.
@@ -13,6 +13,14 @@ David~A. Broniatowski, Daniel Kerchner, Fouzia Farooq, Xiaolei Huang, Amelia~M.
 \newblock Debunking the misinfodemic: Coronavirus social media contains more,
   not less, credible content.
 \newblock {\em mimeo}, 2020.
+
+\bibitem{newsroom1}
+Nathaniel Gleicher.
+\newblock Removing coordinated inauthentic behavior from georgia, vietnam and
+  the us.
+\newblock {\em Facebook Newsroom
+  https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/},
+  December 2019.
 
 \bibitem{grinberg}
 Nir Grinberg, Kenneth Joseph, Lisa Friedland, Briony Swire-Thompson, and David
@@ -32,6 +40,20 @@ David Lazer, Matthew Baum, Yochai Benkler, Adam Berinsky, Kelly Greenhill,
   Duncan Watts, and Jonathan Zittrain.
 \newblock The science of fake news.
 \newblock {\em Science}, 359(6380), 2018.
+
+\bibitem{newsroom2}
+Tessa Lyons.
+\newblock The three-part recipe for cleaning up your news feed.
+\newblock {\em Facebook Newsroom
+  https://about.fb.com/news/2018/05/inside-feed-reduce-remove-inform/}, May
+  2018.
+
+\bibitem{wiredalexjones}
+Paris Martineau.
+\newblock Facebook bans alex jones, other extremists - but not as planned.
+\newblock {\em Wired
+  https://www.wired.com/story/facebook-bans-alex-jones-extremists/}, February
+  2019.
 
 \bibitem{minet}
 Guillaume Plique, Pauline Breteau, Jules Farjas, H{\'e}lo{\"\i}se Th{\'e}ro,
