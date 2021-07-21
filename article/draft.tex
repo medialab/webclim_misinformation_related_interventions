@@ -358,9 +358,12 @@ Finally, the number of tweets containing the interstitial {\it potentially sensi
 
 \subsection{YouTube}
 
-YouTube may provide an information panel for videos with topics that are prone to misinformation like COVID-19, moon landing, and climate change. Information panels provide ressources concerning a potentially controversial topic from independent third party partners or authoritative ressources. YouTube states that these panels exist regardless of the point of view expressed in a given video. In addition, these panels are not yet available in all languages and countries. %(“Information panel giving topical context”)
+YouTube may provide an information panel for videos with topics that are prone to misinformation like COVID-19, moon landing, and climate change. Information panels provide ressources concerning a potentially controversial topic from independent third parties or authoritative ressources. YouTube states that these panels exist regardless of the point of view expressed in a given video. In addition, these panels are not yet available in all languages and countries. %(“Information panel giving topical context”)
 
-To further study the assignment of information panels to videos, we compiled a list of $171$ YouTube videos, fact-checked by Science Feedback between April $2019$ and March $2021$ and marked as containing false or inaccurate information. We collected the information panels, when present, in each video by connecting to a US server and scraping the content of the web page. Four types of information panels were found in the list of visited videos as shown in figure \ref{fig9}:  information about COVID-19, Vaccines, Climate change and US elections.
+\smallskip
+
+To further study the assignment of information panels to videos, we compiled a list of $171$ YouTube videos, fact-checked by Science Feedback between April $2019$ and March $2021$ and marked as containing false or inaccurate information. We collected the information panels, when present, in each video by connecting to a US server and scraping the content of the web page. Four types of information panels were found in the list of visited videos as shown in figure \ref{fig9}:  information about Climate change, COVID-19 Vaccine, COVID-19 and US elections.\footnote{See: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{youtube.com/watch?v=OwqIy8Ikv-c}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{youtube.com/watch?v=9sW0OmzcmL0}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{youtube.com/watch?v=usyQgPU-VrI} and \href{https://www.youtube.com/watch?v=8PAwc8nlE\_Q}{youtube.com/watch?v=8PAwc8nlE\_Q}. Last accessed on  21/07/2021.  }
+%\footnote{The links of the YouTube videos where the information panel appeared are the following: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{youtube.com/watch?v=OwqIy8Ikv-c}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{youtube.com/watch?v=9sW0OmzcmL0}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{youtube.com/watch?v=usyQgPU-VrI} and \href{https://www.youtube.com/watch?v=8PAwc8nlE_Q}{youtube.com/watch?v=8PAwc8nlE_Q}.  }
 
 \begin{figure}[h]
 	\centering
@@ -368,33 +371,58 @@ To further study the assignment of information panels to videos, we compiled a l
 		\includegraphics[scale=0.3]{./img/youtube_panels/yt_1.png} 
 	%\end{multicols}
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.3]{./img/youtube_panels/yt_2.png} 
+		\includegraphics[scale=0.29]{./img/youtube_panels/yt_2.png} 
 	%\end{multicols}
 	%\begin{multicols}{1}
-		\includegraphics[scale=0.3]{./img/youtube_panels/yt_3.png}
+		\includegraphics[scale=0.294]{./img/youtube_panels/yt_3.png}
 	%\end{multicols}
 	%\begin{multicols}{1}
 		\includegraphics[scale=0.3]{./img/youtube_panels/yt_4.png} 
 	%\end{multicols}
-	\caption{Examples of YouTube information panels displayed under some videos.}
+	\caption{Examples of YouTube information panels displayed under Youtube videos respectively about: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{Climate change}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{COVID-19 Vaccine}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{COVID-19} and \href{https://www.youtube.com/watch?v=8PAwc8nlE\_Q}{US elections}. }
 	\label{fig9}
 \end{figure}
+%Nevertheless, we noticed that duplicates of the same YouTube video can get uploaded under different video titles and that the information panel appears under the some duplicates, but not for all.
 
-We classified the list of YouTube videos by topic based on its content as shown in table \ref{tab2}. We recorded the number of videos containing an information panel within each category. For COVID-19 and vaccine related videos more than half of the videos contained an information panel. Nevertheless, we noticed that duplicates of the same YouTube video can get uploaded under different video titles and that the information panel appears under the some duplicates, but not for all. In addition, we noticed for COVID-19 related videos, when the video title did not include keywords like (Testing, Pandemic, COVID-19, coronavirus), the video might not contain a panel associated with it, and in some cases when the video title contains variations of word COVID like (C.O.V.I.D or Cv19) it wouldn’t include a panel either. Therefore, we suspect that YouTube is automatically adding panels to the videos based on the video title and not the content of the video.
+We classified the list of $171$ YouTube videos by topic based on its content as shown in table \ref{tab2}. We recorded the number of videos containing an information panel within each category. For COVID-19 and COVID-19 vaccine related videos, more than half of the videos contained an information panel. Nevertheless we noticed that among a set of duplicates of the exact same YouTube video uploaded with different video titles, some contained an information panel while others did not (see figure \ref{duplicates_yt}).  
+In addition, we noticed for COVID-19 related videos, when the video title did not include keywords like (Testing, Pandemic, COVID-19, coronavirus), the video might not contain a panel associated with it, and in some cases when the video title contains variations of word COVID like (C O V I D 19 or Cv19) it wouldn’t include a panel either. Therefore, we suspect that YouTube is automatically adding panels to the videos based on the video title and not the content of the video.
+
+\begin{figure}[h]
+	\centering
+	%\begin{multicols}{1}
+		\includegraphics[scale=0.2]{./img/youtube_panels/graph_no_banner.png} 
+	%\end{multicols}
+	%\begin{multicols}{1}
+		\includegraphics[scale=0.2]{./img/youtube_panels/news_without_banner_2.png} 
+	%\end{multicols}
+	%\begin{multicols}{1}
+		\includegraphics[scale=0.2]{./img/youtube_panels/graph_with_banner.png}
+	%\end{multicols}
+	%\begin{multicols}{1}
+		\includegraphics[scale=0.2]{./img/youtube_panels/news_with_banner.png} 
+	%\end{multicols}
+	\caption{Screenshots taken on July 21, 2021. The screenshots show two duplicates of the same YouTube video uploaded under different titles. Left panel: contains no information panel. Right panel: contains an information panel. }
+	\label{duplicates_yt}
+\end{figure}
 
 \smallskip
 
 For climate change we found that most of the videos (13 out of 18) did not display an information panel. Lastly, no information panels were found in the general health category set, that included videos that were not related to COVID-19 but contained misinformation concerning cures for cancer, abortion, and viruses. Therefore, it is likely that YouTube add information panels below videos concerning controversial topics that can have misleading information like the climate change, COVID-19, flat earth and vaccine. 
+
 %drop last colum
 %add % in a second line
 \begin{table}[] 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 Category       & \begin{tabular}[c]{@{}c@{}}Number of YouTube videos {\bf with} an \\ information panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of YouTube videos {\bf without} an \\ information panel\end{tabular}    \\ \hline
-\begin{tabular}[c]{@{}c@{}} General Health \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0  \\ (0\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 11 \\ (100\%) \end{tabular}         \\ \hline
-Vaccine        & \begin{tabular}[c]{@{}c@{}} 21     \\ (75\%) \end{tabular}   & \begin{tabular}[c]{@{}c@{}}  7 \\ (25\%)  \end{tabular}     \\ \hline
-COVID-19     & \begin{tabular}[c]{@{}c@{}} 73 \\ (63\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 43  \\ (37\%) \end{tabular}     \\ \hline
+
 \begin{tabular}[c]{@{}c@{}}  Climate change \end{tabular} & \begin{tabular}[c]{@{}c@{}} 5 \\ (28\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 13 \\ (72\%) \end{tabular}   \\ \hline
+%
+COVID-19 Vaccine        & \begin{tabular}[c]{@{}c@{}} 21     \\ (75\%) \end{tabular}   & \begin{tabular}[c]{@{}c@{}}  7 \\ (25\%)  \end{tabular}     \\ \hline
+%
+COVID-19     & \begin{tabular}[c]{@{}c@{}} 73 \\ (63\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 43  \\ (37\%) \end{tabular}     \\ \hline
+%
+\begin{tabular}[c]{@{}c@{}} General Health \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0  \\ (0\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 11 \\ (100\%) \end{tabular}         \\ \hline
 \end{tabular}
 \caption{}
 \label{tab2}
