@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.9)  21 JUL 2021 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.9)  21 JUL 2021 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1109,332 +1109,331 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--97
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 2293) in paragraph at lines 122--122
+Underfull \hbox (badness 2293) in paragraph at lines 124--124
 [][]\OT1/cmr/m/n/8 See for ex-am-ple the rank-ing of the most pop-u-lar so-cial
  net-works as of April 2021 on Statista:
  []
 
-[3]
-<./img/fb_logo.png, id=162, 225.84375pt x 225.84375pt>
+<./img/fb_logo.png, id=150, 225.84375pt x 225.84375pt>
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 130.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 132.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
-<./img/tw_logo.png, id=165, 1204.5pt x 979.66pt>
+<./img/tw_logo.png, id=153, 1204.5pt x 979.66pt>
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 132.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 134.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
-<./img/yt_logo.png, id=169, 351.3125pt x 244.915pt>
+<./img/yt_logo.png, id=157, 351.3125pt x 244.915pt>
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 133.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 135.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
-<./img/fb/fig1_fb.png, id=176, 1016.79875pt x 384.43625pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3]
+<./img/fb/fig1_fb.png, id=175, 1016.79875pt x 384.43625pt>
 File: ./img/fb/fig1_fb.png Graphic file (type png)
 <use ./img/fb/fig1_fb.png>
-Package pdftex.def Info: ./img/fb/fig1_fb.png  used on input line 180.
+Package pdftex.def Info: ./img/fb/fig1_fb.png  used on input line 182.
 (pdftex.def)             Requested size: 305.04198pt x 115.33176pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./img/fb_logo.png> <./img/tw_logo.png> <./img/yt_logo.png>]
-<./img/lifesite.jpg, id=205, 594.22pt x 376.40625pt>
+<./img/lifesite.jpg, id=204, 594.22pt x 376.40625pt>
 File: ./img/lifesite.jpg Graphic file (type jpg)
 <use ./img/lifesite.jpg>
-Package pdftex.def Info: ./img/lifesite.jpg  used on input line 198.
+Package pdftex.def Info: ./img/lifesite.jpg  used on input line 200.
 (pdftex.def)             Requested size: 207.98012pt x 131.74416pt.
-<./img/lifesite_rolling_7_lifesite.jpg, id=206, 606.265pt x 373.395pt>
+<./img/lifesite_rolling_7_lifesite.jpg, id=205, 606.265pt x 373.395pt>
 File: ./img/lifesite_rolling_7_lifesite.jpg Graphic file (type jpg)
 <use ./img/lifesite_rolling_7_lifesite.jpg>
 Package pdftex.def Info: ./img/lifesite_rolling_7_lifesite.jpg  used on input l
-ine 201.
+ine 203.
 (pdftex.def)             Requested size: 212.19592pt x 130.6902pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5 <./img/fb/fig1_fb.png>]
-<./img/oann/fig3_oann.png, id=225, 606.265pt x 560.0925pt>
+<./img/oann/fig3_oann.png, id=221, 606.265pt x 560.0925pt>
 File: ./img/oann/fig3_oann.png Graphic file (type png)
 <use ./img/oann/fig3_oann.png>
-Package pdftex.def Info: ./img/oann/fig3_oann.png  used on input line 216.
+Package pdftex.def Info: ./img/oann/fig3_oann.png  used on input line 218.
 (pdftex.def)             Requested size: 127.3194pt x 117.6229pt.
-<./img/tony/fig3_tony.png, id=226, 606.265pt x 373.395pt>
+<./img/tony/fig3_tony.png, id=222, 606.265pt x 373.395pt>
 File: ./img/tony/fig3_tony.png Graphic file (type png)
 <use ./img/tony/fig3_tony.png>
-Package pdftex.def Info: ./img/tony/fig3_tony.png  used on input line 219.
+Package pdftex.def Info: ./img/tony/fig3_tony.png  used on input line 221.
 (pdftex.def)             Requested size: 187.9402pt x 115.75125pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./img/oann/fig1_oann.png, id=233, 799.98875pt x 370.38374pt>
+ [6 <./img/lifesite.jpg> <./img/lifesite_rolling_7_lifesite.jpg> <./img/oann/fi
+g3_oann.png> <./img/tony/fig3_tony.png>]
+<./img/oann/fig1_oann.png, id=236, 799.98875pt x 370.38374pt>
 File: ./img/oann/fig1_oann.png Graphic file (type png)
 <use ./img/oann/fig1_oann.png>
-Package pdftex.def Info: ./img/oann/fig1_oann.png  used on input line 233.
+Package pdftex.def Info: ./img/oann/fig1_oann.png  used on input line 235.
 (pdftex.def)             Requested size: 215.99985pt x 100.00494pt.
-<./img/oann/fig2_oann.png, id=234, 764.8575pt x 381.425pt>
+<./img/oann/fig2_oann.png, id=237, 764.8575pt x 381.425pt>
 File: ./img/oann/fig2_oann.png Graphic file (type png)
 <use ./img/oann/fig2_oann.png>
-Package pdftex.def Info: ./img/oann/fig2_oann.png  used on input line 236.
+Package pdftex.def Info: ./img/oann/fig2_oann.png  used on input line 238.
 (pdftex.def)             Requested size: 198.85825pt x 99.16815pt.
-[6 <./img/lifesite.jpg> <./img/lifesite_rolling_7_lifesite.jpg>]
-<./img/tony/fig1_tony.png, id=242, 587.19376pt x 281.05pt>
+<./img/tony/fig1_tony.png, id=240, 587.19376pt x 281.05pt>
 File: ./img/tony/fig1_tony.png Graphic file (type png)
 <use ./img/tony/fig1_tony.png>
-Package pdftex.def Info: ./img/tony/fig1_tony.png  used on input line 249.
+Package pdftex.def Info: ./img/tony/fig1_tony.png  used on input line 251.
 (pdftex.def)             Requested size: 205.52089pt x 98.36896pt.
-<./img/tony/fig2_tony.png, id=243, 584.1825pt x 289.08pt>
+<./img/tony/fig2_tony.png, id=241, 584.1825pt x 289.08pt>
 File: ./img/tony/fig2_tony.png Graphic file (type png)
 <use ./img/tony/fig2_tony.png>
-Package pdftex.def Info: ./img/tony/fig2_tony.png  used on input line 252.
+Package pdftex.def Info: ./img/tony/fig2_tony.png  used on input line 254.
 (pdftex.def)             Requested size: 198.61942pt x 98.28589pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <./img/oann/fig3_oann.png> <./img/tony/fig3_tony.png> <./img/oann/fig1_oann.
-png> <./img/oann/fig2_oann.png>]
-<./img/fb_flags/fb_flag_1.png, id=259, 292.09125pt x 188.705pt>
+ [7 <./img/oann/fig1_oann.png> <./img/oann/fig2_oann.png> <./img/tony/fig1_tony
+.png> <./img/tony/fig2_tony.png>]
+<./img/fb_flags/fb_flag_1.png, id=257, 292.09125pt x 188.705pt>
 File: ./img/fb_flags/fb_flag_1.png Graphic file (type png)
 <use ./img/fb_flags/fb_flag_1.png>
-Package pdftex.def Info: ./img/fb_flags/fb_flag_1.png  used on input line 274.
+Package pdftex.def Info: ./img/fb_flags/fb_flag_1.png  used on input line 276.
 (pdftex.def)             Requested size: 102.23346pt x 66.04773pt.
-<./img/fb_flags/fb_flag_2.png, id=260, 277.035pt x 189.70876pt>
+<./img/fb_flags/fb_flag_2.png, id=258, 277.035pt x 189.70876pt>
 File: ./img/fb_flags/fb_flag_2.png Graphic file (type png)
 <use ./img/fb_flags/fb_flag_2.png>
-Package pdftex.def Info: ./img/fb_flags/fb_flag_2.png  used on input line 275.
+Package pdftex.def Info: ./img/fb_flags/fb_flag_2.png  used on input line 277.
 (pdftex.def)             Requested size: 96.9637pt x 66.39905pt.
-<./img/fb_flags/fb_flag_3.png, id=261, 262.9825pt x 122.4575pt>
+<./img/fb_flags/fb_flag_3.png, id=259, 262.9825pt x 122.4575pt>
 File: ./img/fb_flags/fb_flag_3.png Graphic file (type png)
 <use ./img/fb_flags/fb_flag_3.png>
-Package pdftex.def Info: ./img/fb_flags/fb_flag_3.png  used on input line 276.
+Package pdftex.def Info: ./img/fb_flags/fb_flag_3.png  used on input line 278.
 (pdftex.def)             Requested size: 128.86253pt x 60.00468pt.
 
-Overfull \hbox (40.2077pt too wide) in paragraph at lines 277--277
+Overfull \hbox (40.2077pt too wide) in paragraph at lines 279--279
 \OT1/cmr/m/n/8 book.com/groups/473809623000471/permalink/1333200093728082[], []
 face-book.com/691911990845585/posts/3835629366473816[]).| 
  []
 
-[8 <./img/tony/fig1_tony.png> <./img/tony/fig2_tony.png> <./img/fb_flags/fb_fla
-g_1.png> <./img/fb_flags/fb_flag_2.png> <./img/fb_flags/fb_flag_3.png>]
-<./img/tweets/Capture_2021-06-30_2.png, id=292, 605.26125pt x 405.515pt>
-File: ./img/tweets/Capture_2021-06-30_2.png Graphic file (type png)
-<use ./img/tweets/Capture_2021-06-30_2.png>
-Package pdftex.def Info: ./img/tweets/Capture_2021-06-30_2.png  used on input l
-ine 311.
-(pdftex.def)             Requested size: 211.8446pt x 141.93236pt.
-<./img/tweets/Capture_2021-06-30.png, id=293, 601.24625pt x 462.72874pt>
-File: ./img/tweets/Capture_2021-06-30.png Graphic file (type png)
-<use ./img/tweets/Capture_2021-06-30.png>
-Package pdftex.def Info: ./img/tweets/Capture_2021-06-30.png  used on input lin
-e 314.
-(pdftex.def)             Requested size: 192.40273pt x 148.07622pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9]
-<./img/tweets/Capture_2021-07-01_2.png, id=310, 604.2575pt x 392.46625pt>
+[8 <./img/fb_flags/fb_flag_1.png> <./img/fb_flags/fb_flag_2.png> <./img/fb_flag
+s/fb_flag_3.png>]
+<./img/tweets/Capture_2021-06-30_2.png, id=289, 605.26125pt x 405.515pt>
+File: ./img/tweets/Capture_2021-06-30_2.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-06-30_2.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-06-30_2.png  used on input l
+ine 313.
+(pdftex.def)             Requested size: 211.8446pt x 141.93236pt.
+<./img/tweets/Capture_2021-06-30.png, id=290, 601.24625pt x 462.72874pt>
+File: ./img/tweets/Capture_2021-06-30.png Graphic file (type png)
+<use ./img/tweets/Capture_2021-06-30.png>
+Package pdftex.def Info: ./img/tweets/Capture_2021-06-30.png  used on input lin
+e 316.
+(pdftex.def)             Requested size: 192.40273pt x 148.07622pt.
+ [9 <./img/tweets/Capture_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.pn
+g>]
+<./img/tweets/Capture_2021-07-01_2.png, id=307, 604.2575pt x 392.46625pt>
 File: ./img/tweets/Capture_2021-07-01_2.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-07-01_2.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-07-01_2.png  used on input l
-ine 331.
+ine 333.
 (pdftex.def)             Requested size: 211.49329pt x 137.36523pt.
-<./img/tweets/Capture_2021-07-01.png, id=311, 605.26125pt x 462.72874pt>
+<./img/tweets/Capture_2021-07-01.png, id=308, 605.26125pt x 462.72874pt>
 File: ./img/tweets/Capture_2021-07-01.png Graphic file (type png)
 <use ./img/tweets/Capture_2021-07-01.png>
 Package pdftex.def Info: ./img/tweets/Capture_2021-07-01.png  used on input lin
-e 334.
+e 336.
 (pdftex.def)             Requested size: 211.8446pt x 161.95749pt.
- [10 <./img/tweets/Capture_2021-06-30_2.png> <./img/tweets/Capture_2021-06-30.p
-ng> <./img/tweets/Capture_2021-07-01_2.png> <./img/tweets/Capture_2021-07-01.pn
-g>] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+ [10 <./img/tweets/Capture_2021-07-01_2.png> <./img/tweets/Capture_2021-07-01.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
 [][]\OT1/cmr/m/n/8 See: []youtube.com/watch?v=OwqIy8Ikv-c[], []youtube.com/watc
 h?v=9sW0OmzcmL0[],
  []
 
-<./img/youtube_panels/yt_1.png, id=343, 1214.5375pt x 201.75375pt>
+[11]
+<./img/youtube_panels/yt_1.png, id=339, 1214.5375pt x 201.75375pt>
 File: ./img/youtube_panels/yt_1.png Graphic file (type png)
 <use ./img/youtube_panels/yt_1.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 372.
+Package pdftex.def Info: ./img/youtube_panels/yt_1.png  used on input line 374.
 
 (pdftex.def)             Requested size: 364.36406pt x 60.52658pt.
-<./img/youtube_panels/yt_2.png, id=344, 1244.65pt x 163.61125pt>
+<./img/youtube_panels/yt_2.png, id=340, 1244.65pt x 163.61125pt>
 File: ./img/youtube_panels/yt_2.png Graphic file (type png)
 <use ./img/youtube_panels/yt_2.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 375.
+Package pdftex.def Info: ./img/youtube_panels/yt_2.png  used on input line 377.
 
 (pdftex.def)             Requested size: 360.93925pt x 47.44604pt.
-<./img/youtube_panels/yt_3.png, id=345, 1230.5975pt x 164.615pt>
+<./img/youtube_panels/yt_3.png, id=341, 1230.5975pt x 164.615pt>
 File: ./img/youtube_panels/yt_3.png Graphic file (type png)
 <use ./img/youtube_panels/yt_3.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 378.
+Package pdftex.def Info: ./img/youtube_panels/yt_3.png  used on input line 380.
 
 (pdftex.def)             Requested size: 361.8026pt x 48.39772pt.
-<./img/youtube_panels/yt_4.png, id=346, 1178.4025pt x 70.2625pt>
+<./img/youtube_panels/yt_4.png, id=342, 1178.4025pt x 70.2625pt>
 File: ./img/youtube_panels/yt_4.png Graphic file (type png)
 <use ./img/youtube_panels/yt_4.png>
-Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 381.
+Package pdftex.def Info: ./img/youtube_panels/yt_4.png  used on input line 383.
 
 (pdftex.def)             Requested size: 353.52348pt x 21.0789pt.
-<./img/youtube_panels/graph_no_banner.png, id=357, 876.27374pt x 568.1225pt>
+<./img/youtube_panels/graph_no_banner.png, id=353, 876.27374pt x 568.1225pt>
 File: ./img/youtube_panels/graph_no_banner.png Graphic file (type png)
 <use ./img/youtube_panels/graph_no_banner.png>
 Package pdftex.def Info: ./img/youtube_panels/graph_no_banner.png  used on inpu
-t line 394.
+t line 396.
 (pdftex.def)             Requested size: 175.25163pt x 113.62248pt.
-<./img/youtube_panels/news_without_banner_2.png, id=358, 866.23625pt x 545.0362
+<./img/youtube_panels/news_without_banner_2.png, id=354, 866.23625pt x 545.0362
 5pt>
 File: ./img/youtube_panels/news_without_banner_2.png Graphic file (type png)
 <use ./img/youtube_panels/news_without_banner_2.png>
 Package pdftex.def Info: ./img/youtube_panels/news_without_banner_2.png  used o
-n input line 397.
+n input line 399.
 (pdftex.def)             Requested size: 173.24417pt x 109.00531pt.
-<./img/youtube_panels/graph_with_banner.png, id=359, 871.255pt x 650.43pt>
+<./img/youtube_panels/graph_with_banner.png, id=355, 871.255pt x 650.43pt>
 File: ./img/youtube_panels/graph_with_banner.png Graphic file (type png)
 <use ./img/youtube_panels/graph_with_banner.png>
 Package pdftex.def Info: ./img/youtube_panels/graph_with_banner.png  used on in
-put line 400.
+put line 402.
 (pdftex.def)             Requested size: 174.24791pt x 130.0837pt.
-<./img/youtube_panels/news_with_banner.png, id=360, 880.28876pt x 644.4075pt>
+<./img/youtube_panels/news_with_banner.png, id=356, 880.28876pt x 644.4075pt>
 File: ./img/youtube_panels/news_with_banner.png Graphic file (type png)
 <use ./img/youtube_panels/news_with_banner.png>
 Package pdftex.def Info: ./img/youtube_panels/news_with_banner.png  used on inp
-ut line 403.
+ut line 405.
 (pdftex.def)             Requested size: 176.05463pt x 128.87921pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 415.
+               Default added (so using `tbp') on input line 417.
 
 
-Overfull \hbox (24.85686pt too wide) in paragraph at lines 416--428
+Overfull \hbox (24.85686pt too wide) in paragraph at lines 418--430
 [][] 
  []
 
 [12 <./img/youtube_panels/yt_1.png> <./img/youtube_panels/yt_2.png> <./img/yout
 ube_panels/yt_3.png> <./img/youtube_panels/yt_4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 462--462
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
 [][]\OT1/cmr/m/n/8 See the Iffy.news page []https://mediabiasfactcheck.com/info
 wars-alex-jones/[] and Feed-back.org
  []
 
-[13 <./img/youtube_panels/graph_no_banner.png> <./img/youtube_panels/news_witho
-ut_banner_2.png> <./img/youtube_panels/graph_with_banner.png> <./img/youtube_pa
-nels/news_with_banner.png>]
-<./img/infowars/fb_infowars_1.png, id=390, 605.26125pt x 244.915pt>
+<./img/infowars/fb_infowars_1.png, id=376, 605.26125pt x 244.915pt>
 File: ./img/infowars/fb_infowars_1.png Graphic file (type png)
 <use ./img/infowars/fb_infowars_1.png>
 Package pdftex.def Info: ./img/infowars/fb_infowars_1.png  used on input line 4
-68.
+70.
 (pdftex.def)             Requested size: 181.57976pt x 73.47505pt.
-<./img/infowars/fb_infowars_2.png, id=391, 601.24625pt x 229.85875pt>
+<./img/infowars/fb_infowars_2.png, id=377, 601.24625pt x 229.85875pt>
 File: ./img/infowars/fb_infowars_2.png Graphic file (type png)
 <use ./img/infowars/fb_infowars_2.png>
 Package pdftex.def Info: ./img/infowars/fb_infowars_2.png  used on input line 4
-71.
+73.
 (pdftex.def)             Requested size: 180.37526pt x 68.95815pt.
- [14 <./img/infowars/fb_infowars_1.png> <./img/infowars/fb_infowars_2.png>]
-<./img/infowars/fb_infowars_3.png, id=414, 617.30624pt x 238.8925pt>
+[13 <./img/youtube_panels/graph_no_banner.png> <./img/youtube_panels/news_witho
+ut_banner_2.png> <./img/youtube_panels/graph_with_banner.png> <./img/youtube_pa
+nels/news_with_banner.png>] [14 <./img/infowars/fb_infowars_1.png> <./img/infow
+ars/fb_infowars_2.png>]
+<./img/infowars/fb_infowars_3.png, id=410, 617.30624pt x 238.8925pt>
 File: ./img/infowars/fb_infowars_3.png Graphic file (type png)
 <use ./img/infowars/fb_infowars_3.png>
 Package pdftex.def Info: ./img/infowars/fb_infowars_3.png  used on input line 4
-84.
+86.
 (pdftex.def)             Requested size: 216.06041pt x 83.61362pt.
 
-Underfull \hbox (badness 5245) in paragraph at lines 498--498
+Underfull \hbox (badness 5245) in paragraph at lines 500--500
 [][][]\OT1/cmr/m/n/8 https://www.snopes.com/news/2019/11/12/bl-fake-profiles/[]
 , []https://www.snopes.com/news/2019/11/12/bl-
  []
 
-<./img/beautyoflife/fb_bl_1.png, id=428, 608.2725pt x 253.94875pt>
+<./img/beautyoflife/fb_bl_1.png, id=424, 608.2725pt x 253.94875pt>
 File: ./img/beautyoflife/fb_bl_1.png Graphic file (type png)
 <use ./img/beautyoflife/fb_bl_1.png>
-Package pdftex.def Info: ./img/beautyoflife/fb_bl_1.png  used on input line 504
+Package pdftex.def Info: ./img/beautyoflife/fb_bl_1.png  used on input line 506
 .
 (pdftex.def)             Requested size: 182.48315pt x 76.1852pt.
-<./img/beautyoflife/fb_bl_2.png, id=429, 594.22pt x 233.87375pt>
+<./img/beautyoflife/fb_bl_2.png, id=425, 594.22pt x 233.87375pt>
 File: ./img/beautyoflife/fb_bl_2.png Graphic file (type png)
 <use ./img/beautyoflife/fb_bl_2.png>
-Package pdftex.def Info: ./img/beautyoflife/fb_bl_2.png  used on input line 507
+Package pdftex.def Info: ./img/beautyoflife/fb_bl_2.png  used on input line 509
 .
 (pdftex.def)             Requested size: 178.26736pt x 70.16266pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [15 <./img/infowars/fb_infowars_3.png>]
-Underfull \hbox (badness 4805) in paragraph at lines 523--523
+Underfull \hbox (badness 4805) in paragraph at lines 525--525
 [][]\OT1/cmr/m/n/8 For $\OML/cmm/m/it/8 globalresearch:ca$ \OT1/cmr/m/n/8 see [
 ]open.feedback.org/media/AEKA[] and []https://mediabiasfactcheck.com/global-
  []
 
-<./img/globalresearch_14_06_2021_16pm_UTC.png, id=452, 601.24625pt x 304.13625p
+<./img/globalresearch_14_06_2021_16pm_UTC.png, id=450, 601.24625pt x 304.13625p
 t>
 File: ./img/globalresearch_14_06_2021_16pm_UTC.png Graphic file (type png)
 <use ./img/globalresearch_14_06_2021_16pm_UTC.png>
 Package pdftex.def Info: ./img/globalresearch_14_06_2021_16pm_UTC.png  used on 
-input line 531.
+input line 533.
 (pdftex.def)             Requested size: 210.43933pt x 106.44928pt.
-<./img/globalresearch/tweet.png, id=453, 608.2725pt x 341.275pt>
+<./img/globalresearch/tweet.png, id=451, 608.2725pt x 341.275pt>
 File: ./img/globalresearch/tweet.png Graphic file (type png)
 <use ./img/globalresearch/tweet.png>
-Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 534
+Package pdftex.def Info: ./img/globalresearch/tweet.png  used on input line 536
 .
 (pdftex.def)             Requested size: 194.65117pt x 109.21022pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16 <./img/beautyoflife/fb_bl_1.png> <./img/beautyoflife/fb_bl_2.png>]
-<./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=472, 600.2425pt x 
+<./img/globalresearch/sum_globalresearch.ca_6_months.jpg, id=469, 600.2425pt x 
 343.2825pt>
 File: ./img/globalresearch/sum_globalresearch.ca_6_months.jpg Graphic file (typ
 e jpg)
 <use ./img/globalresearch/sum_globalresearch.ca_6_months.jpg>
 Package pdftex.def Info: ./img/globalresearch/sum_globalresearch.ca_6_months.jp
-g  used on input line 547.
+g  used on input line 549.
 (pdftex.def)             Requested size: 210.08801pt x 120.15067pt.
-<./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=473, 6
+<./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg, id=470, 6
 19.31375pt x 343.2825pt>
 File: ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg Graph
 ic file (type jpg)
 <use ./img/globalresearch/engagement_sum_rolling_1_globalresearch.ca.jpg>
 Package pdftex.def Info: ./img/globalresearch/engagement_sum_rolling_1_globalre
-search.ca.jpg  used on input line 550.
+search.ca.jpg  used on input line 552.
 (pdftex.def)             Requested size: 216.76306pt x 120.15067pt.
- [17 <./img/globalresearch_14_06_2021_16pm_UTC.png> <./img/globalresearch/tweet
-.png> <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img/globalre
-search/engagement_sum_rolling_1_globalresearch.ca.jpg>]
-<./img/globalresearch/warning.png, id=485, 602.25pt x 425.59pt>
+<./img/globalresearch/warning.png, id=473, 602.25pt x 425.59pt>
 File: ./img/globalresearch/warning.png Graphic file (type png)
 <use ./img/globalresearch/warning.png>
 Package pdftex.def Info: ./img/globalresearch/warning.png  used on input line 5
-65.
+67.
 (pdftex.def)             Requested size: 120.78787pt x 85.35826pt.
-<./img/globalresearch/globalresearch_2021-06-14.png, id=486, 603.25375pt x 305.
+<./img/globalresearch/globalresearch_2021-06-14.png, id=474, 603.25375pt x 305.
 14pt>
 File: ./img/globalresearch/globalresearch_2021-06-14.png Graphic file (type png
 )
 <use ./img/globalresearch/globalresearch_2021-06-14.png>
 Package pdftex.def Info: ./img/globalresearch/globalresearch_2021-06-14.png  us
-ed on input line 565.
+ed on input line 567.
 (pdftex.def)             Requested size: 168.7534pt x 85.35826pt.
- [18 <./img/globalresearch/warning.png> <./img/globalresearch/globalresearch_20
-21-06-14.png>]
-Overfull \hbox (9.16295pt too wide) in paragraph at lines 613--614
+ [17 <./img/globalresearch_14_06_2021_16pm_UTC.png> <./img/globalresearch/tweet
+.png> <./img/globalresearch/sum_globalresearch.ca_6_months.jpg> <./img/globalre
+search/engagement_sum_rolling_1_globalresearch.ca.jpg>] [18 <./img/globalresear
+ch/warning.png> <./img/globalresearch/globalresearch_2021-06-14.png>]
+Overfull \hbox (9.16295pt too wide) in paragraph at lines 615--616
 [][]\OT1/cmr/m/n/10 https://misinforeview.hks.harvard.edu/article/tackling-misi
 nformation-what-researchers-could-
  []
 
 [19]
-Overfull \hbox (4.02402pt too wide) in paragraph at lines 632--633
+Overfull \hbox (4.02402pt too wide) in paragraph at lines 634--635
 \OT1/cmr/m/n/10 https://github.com/medialab/truth-and-trust-online-2021/, so th
 at other re-searchers and jour-
  []
 
-(./draft.bbl [20]
+(./draft.bbl
 Underfull \hbox (badness 3724) in paragraph at lines 66--72
 []\OT1/cmr/m/n/10 Emily Saltz and Claire Lei-bow-icz.  Shadow bans, fact-checks
 , info hubs: The
@@ -1452,145 +1451,145 @@ Underfull \hbox (badness 2762) in paragraph at lines 66--72
 info-hubs-the-big-guide-to-
  []
 
-) [21] [22]
+[20]) [21] [22]
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 656.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 658.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 657.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 659.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 658.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 660.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 659.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 661.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 660.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 662.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 661.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 663.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 662.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 664.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 663.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 665.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 664.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 666.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 665.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 667.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 666.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 668.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 667.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 669.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 668.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 670.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 669.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 671.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 670.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 672.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 671.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 673.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 672.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 674.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 673.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 675.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 677.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 679.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 678.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 680.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 679.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 681.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 683.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 685.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 684.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 686.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 685.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 687.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 File: ./img/fb_logo.png Graphic file (type png)
 <use ./img/fb_logo.png>
-Package pdftex.def Info: ./img/fb_logo.png  used on input line 689.
+Package pdftex.def Info: ./img/fb_logo.png  used on input line 691.
 (pdftex.def)             Requested size: 11.29285pt x 11.29285pt.
 File: ./img/tw_logo.png Graphic file (type png)
 <use ./img/tw_logo.png>
-Package pdftex.def Info: ./img/tw_logo.png  used on input line 690.
+Package pdftex.def Info: ./img/tw_logo.png  used on input line 692.
 (pdftex.def)             Requested size: 8.43604pt x 6.8613pt.
 File: ./img/yt_logo.png Graphic file (type png)
 <use ./img/yt_logo.png>
-Package pdftex.def Info: ./img/yt_logo.png  used on input line 691.
+Package pdftex.def Info: ./img/yt_logo.png  used on input line 693.
 (pdftex.def)             Requested size: 10.53891pt x 7.34712pt.
 
-Overfull \hbox (23.58426pt too wide) in paragraph at lines 654--694
+Overfull \hbox (23.58426pt too wide) in paragraph at lines 656--696
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 43.25275pt on input line 696.
+LaTeX Warning: Float too large for page by 43.25275pt on input line 698.
 
 [23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 700.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 700.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 702.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 702.
  (./draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 700.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 700.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 702.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 702.
 Package rerunfilecheck Info: File `draft.out' has not changed.
 (rerunfilecheck)             Checksum: 6656071A8E916DEA3853BD126DC4C2C9;1003.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 700.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 702.
  ) 
 Here is how much of TeX's memory you used:
  26356 strings out of 481239
  533872 string characters out of 5920378
- 828216 words of memory out of 5000000
+ 827216 words of memory out of 5000000
  40938 multiletter control sequences out of 15000+600000
  545810 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,16n,96p,2943b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,96p,2710b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.32} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -1701,10 +1700,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on draft.pdf (23 pages, 6903096 bytes).
+Output written on draft.pdf (23 pages, 6902741 bytes).
 PDF statistics:
- 622 PDF objects out of 1000 (max. 8388607)
- 493 compressed objects within 5 object streams
+ 618 PDF objects out of 1000 (max. 8388607)
+ 489 compressed objects within 5 object streams
  104 named destinations out of 1000 (max. 500000)
  339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

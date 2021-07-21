@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {3.1}Facebook}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Twitter}{9}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}YouTube}{11}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Reducing the visibility}{13}{section.4}%
+\contentsline {section}{\numberline {4}Reducing the visibility}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Facebook}{13}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Facebook}{15}{subsubsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.2}Twitter}{16}{subsection.4.2}%
