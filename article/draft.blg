@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: proj1.bib
 Warning--there's a number but no volume in Bayer
 Warning--empty journal in minet
-You've used 10 entries,
+You've used 11 entries,
             2118 wiz_defined-function locations,
-            545 strings with 6042 characters,
-and the built_in function-call counts, 3095 in all, are:
-= -- 270
-> -- 231
+            549 strings with 6230 characters,
+and the built_in function-call counts, 3301 in all, are:
+= -- 290
+> -- 238
 < -- 0
-+ -- 94
-- -- 82
-* -- 233
-:= -- 589
-add.period$ -- 30
-call.type$ -- 10
-change.case$ -- 71
++ -- 97
+- -- 84
+* -- 243
+:= -- 628
+add.period$ -- 33
+call.type$ -- 11
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 100
-empty$ -- 174
-format.name$ -- 82
-if$ -- 583
+cite$ -- 13
+duplicate$ -- 110
+empty$ -- 191
+format.name$ -- 84
+if$ -- 624
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 10
-newline$ -- 53
-num.names$ -- 20
-pop$ -- 68
+int.to.str$ -- 11
+missing$ -- 11
+newline$ -- 58
+num.names$ -- 22
+pop$ -- 72
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 64
 quote$ -- 0
-skip$ -- 72
+skip$ -- 79
 stack$ -- 0
-substring$ -- 52
-swap$ -- 9
+substring$ -- 57
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 44
 warning$ -- 2
-while$ -- 20
-width$ -- 12
-write$ -- 104
+while$ -- 22
+width$ -- 13
+write$ -- 114
 (There were 2 warnings)
