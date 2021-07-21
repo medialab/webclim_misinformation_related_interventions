@@ -6,12 +6,12 @@
 \contentsline {section}{\numberline {3}Flags, Notices and labels}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Facebook}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Twitter}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}YouTube}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}YouTube}{11}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Reducing the visibility}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Facebook}{13}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Facebook}{15}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Twitter}{16}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}YouTube}{17}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.1.1}Facebook}{16}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Twitter}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}YouTube}{18}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Discussion}{18}{section.5}%
 \contentsline {section}{\numberline {6}Appendix}{22}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Quick access to community guidelines and policies}{22}{subsection.6.1}%
