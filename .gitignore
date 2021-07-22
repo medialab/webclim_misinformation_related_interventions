@@ -18,3 +18,8 @@ __pycache__
 *.log
 *.out
 *.blg
+*.bbl
+
+test.pdf
+test.tex
+tto2019.sty
