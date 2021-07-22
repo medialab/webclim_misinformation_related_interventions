@@ -49,7 +49,7 @@ To collect the Infowars Facebook data from Buzzsumo, run (~4 min):
 python code/collect_facebook_buzzsumo_infowars_data.py
 ```
 
-### Twitter
+### Twitter:
 
 To collect the Lifesitenews data from Twitter API v2, run (~5 min):
 ```
