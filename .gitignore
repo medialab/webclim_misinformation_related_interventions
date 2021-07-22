@@ -11,3 +11,10 @@
 __pycache__
 
 .DS_Store
+
+*.gz
+*.aux
+*.toc
+*.log
+*.out
+*.blg
