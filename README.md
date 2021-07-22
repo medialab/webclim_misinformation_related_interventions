@@ -49,6 +49,13 @@ To collect the Infowars Facebook data from Buzzsumo, run (~4 min):
 python code/collect_facebook_buzzsumo_infowars_data.py
 ```
 
+### Twitter
+
+To collect the Lifesitenews data from Twitter API v2, run (~5 min):
+```
+python code/collect_twitter_lifesitenews_data.py
+```
+
 ## Plot the figures
 
 Once the collected data is in CSV files in the `data` folder, you can plot it using:
