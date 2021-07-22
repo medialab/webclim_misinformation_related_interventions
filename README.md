@@ -53,7 +53,7 @@ python code/collect_facebook_buzzsumo_infowars_data.py
 
 To collect the Lifesitenews data from Twitter API v2, run (~5 min):
 ```
-python code/collect_twitter_lifesitenews_data.py
+python3 ./code/collect_twitter_lifesitenews_data.py
 ```
 
 ## Plot the figures
