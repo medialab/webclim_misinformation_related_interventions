@@ -3,7 +3,7 @@ from datetime import date
 
 from dotenv import load_dotenv
 
-from utils import collect_buzzsumo_data_for_one_domain
+from utils_buzzsumo import collect_buzzsumo_data_for_one_domain
 
 
 if __name__=="__main__":
