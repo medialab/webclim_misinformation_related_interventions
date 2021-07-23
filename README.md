@@ -56,7 +56,7 @@ To collect the tweets of the Twitter account @LifeSite (Lifesitenews.com) from T
 python3 ./code/collect_twitter_lifesitenews_data.py
 ```
 
-To collect the tweets containing the domain nale Lifesitenews.com from Twitter API v2, run (~x min):
+To collect the tweets containing the domain name Lifesitenews.com from Twitter API v2, run (~x min):
 ```
 python3 ./code/collect_twitter_lifesitenews_domain_data.py
 ```
