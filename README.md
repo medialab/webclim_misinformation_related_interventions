@@ -61,6 +61,11 @@ To collect the tweets containing the domain name Lifesitenews.com from Twitter A
 python3 ./code/collect_twitter_lifesitenews_domain_data.py
 ```
 
+To collect the tweets containing the domain name globalresearch.ca from Twitter API v2, run (~x min):
+```
+python3 .code/collect_twitter_globalresearch_domain_data.py 
+```
+
 ## Plot the figures
 
 Once the collected data is in CSV files in the `data` folder, you can plot it using:
