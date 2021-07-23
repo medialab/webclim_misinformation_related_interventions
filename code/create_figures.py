@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, date
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches #new addition to create the boxes in the legend for the shaded areas
 import ural
 
 
@@ -12,6 +13,9 @@ def import_data(file_name):
     df = pd.read_csv(data_path, low_memory=False)
     return df
 
+#note by shaden for Héloïse: I suggest for this function to use:
+# df = pd.concat([pd.read_csv(f) for f in glob.glob('./somefilename_*.csv')], ignore_index = True)
+# because when we recollect the dates will change, like this in our function we can put lifesite_*.csv for example
 
 def save_figure(figure_name):
     figure_path = os.path.join('.', 'figure', figure_name)
@@ -32,7 +36,7 @@ def arrange_plot(ax, df):
         ['2019', '2020', '2021'], fontsize='large'
     )
     ax.xaxis.set_tick_params(length=0)
-    plt.axvspan(np.datetime64('2020-01-01'), np.datetime64('2020-12-31'), 
+    plt.axvspan(np.datetime64('2020-01-01'), np.datetime64('2020-12-31'),
                 ymin=0, ymax=200000, facecolor='k', alpha=0.05)
     plt.xlim(np.min(df['date']), np.max(df['date']))
 
@@ -46,7 +50,7 @@ def create_facebook_trump_figure():
     df['date'] = pd.to_datetime(df['date'])
     serie_to_plot = df.resample('D', on='date')['date'].agg('count')
     serie_to_plot = serie_to_plot.append(pd.Series(
-        [0, 0], 
+        [0, 0],
         index=[pd.Timestamp(2021, 1, 7), pd.Timestamp(2021, 6, 15)]
     ))
 
@@ -58,7 +62,7 @@ def create_facebook_trump_figure():
     arrange_plot(ax, df)
     plt.axvline(np.datetime64("2021-01-07"), color='C3', linestyle='--')
     plt.xlim(
-        np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')), 
+        np.datetime64(datetime.strptime('2019-12-31', '%Y-%m-%d')),
         np.datetime64(datetime.strptime('2021-06-15', '%Y-%m-%d'))
     )
     plt.ylim(-.3, 55)
@@ -146,7 +150,7 @@ def create_facebook_crowdtangle_infowars_figure():
     print_the_percentage_changes(df, columns=['reaction', 'share', 'comment'])
 
     plt.figure(figsize=(10, 8))
-    
+
     ax = plt.subplot(211)
     plt.title('Facebook public posts sharing an Infowars link (data from CrowdTangle)')
 
@@ -182,10 +186,10 @@ def clean_buzzsumo_data(df):
 
 
 def filter(df, column):
-    
+
     s0 = df.resample('D', on='date')['date'].agg('count')
     dates_to_filter = s0[s0 < 5].index
-    
+
     s = df.resample('D', on='date')[column].mean()
     s[s.index.isin(dates_to_filter)] = np.nan
 
@@ -327,6 +331,93 @@ def create_youtube_graph():
     plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
                              date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png')
 
+def create_twitter_Lifesite_figure():
+
+    df = import_data('twitter_lifesitenews_2021-07-22.csv')
+    df = df.drop_duplicates()
+
+    df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
+    df['total_engagement'] = (df['retweet_count'] + df['like_count'] + df['reply_count'])
+    df['date'] = pd.to_datetime(df['created_at']).dt.date
+    df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
+
+    add_zeros = [{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},{'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, {'date': datetime.date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2021, 5, 15), 'type_of_tweet': 'created_content', 'size': 0}]
+    df_volume = df_volume.append( add_zeros , ignore_index = True)
+    df_volume = df_volume .sort_index().reset_index(drop = True)
+    df_volume = df_volume.sort_values(by = "date")
+
+    cc = df_volume[df_volume['type_of_tweet'] == 'created_content']
+    reply = df_volume[df_volume['type_of_tweet'] == 'replied_to']
+    quote = df_volume[df_volume['type_of_tweet'] == 'quoted']
+    retweeted = df_volume[df_volume['type_of_tweet'] == 'retweeted']
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    d = df[(df['date']> datetime.date(2019, 1, 1) ) & (df['date']<datetime.date(2021, 7, 1))]
+    total = d['id'].count()
+
+    ax.plot(reply['date'],
+        reply['size'],
+        color='lightblue',
+        label='Replied to')
+
+    ax.plot(quote['date'],
+        quote['size'],
+        color='lightgreen',
+        label='Quoted')
+
+    ax.plot(retweeted['date'],
+        retweeted['size'],
+        color='pink',
+        label='Retweeted')
+
+    ax.plot(cc['date'],
+        cc['size'],
+        color='deepskyblue',
+        label='Created content')
+
+    ax.set(
+       title = f"Total number of tweets per day of @LifeSite ({total} Tweets)")
+
+    ax.set_xlim([datetime.date(2019, 1, 1), datetime.date(2021, 5, 15)])
+
+    plt.axvspan(np.datetime64('2019-12-09'),
+                np.datetime64('2020-10-12'),
+                ymin=0, ymax=200000,
+                facecolor='r',
+                alpha=0.05)
+
+    plt.axvspan(np.datetime64('2021-01-25'),
+                np.datetime64('2021-05-15'),
+                ymin=0,
+                ymax=200000,
+                facecolor='r',
+                alpha=0.05)
+
+    #ax.text(np.datetime64('2020-02-09') , 50, 'suspension \n period', color='red')
+    #ax.text(np.datetime64('2021-02-09') , 50, 'suspension \n period', color='red')
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    plt.locator_params(axis='y', nbins=4)
+
+    ax.grid(axis='y')
+    handles, labels = ax.get_legend_handles_labels()
+    patch = mpatches.Patch(color='pink',
+                           label='Suspension Period')
+    handles.append(patch)
+
+    plt.legend(handles=handles)
+
+    plt.setp(ax.get_xticklabels(), rotation=45)
+
+    plt.tight_layout()
+
+    save_figure(figure_name='lifesite.jpg')
+    #plt.savefig('./lifesite.jpg', bbox_inches='tight')
+    #plt.show()
+
 
 if __name__=="__main__":
 
@@ -336,3 +427,5 @@ if __name__=="__main__":
     create_facebook_buzzsumo_infowars_figure()
 
     create_youtube_graph()
+
+    create_twitter_Lifesite_figure()
