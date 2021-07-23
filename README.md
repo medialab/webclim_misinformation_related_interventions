@@ -51,11 +51,15 @@ python code/collect_facebook_buzzsumo_infowars_data.py
 
 ### Twitter:
 
-To collect the Lifesitenews data from Twitter API v2, run (~5 min):
+To collect the tweets of the Twitter account @LifeSite (Lifesitenews.com) from Twitter API v2, run (~5 min):
 ```
 python3 ./code/collect_twitter_lifesitenews_data.py
-python3 ./code/collect_twitter_lifesitenews_domain_data.py
 ```
+
+To collect the tweets containing the domain nale Lifesitenews.com from Twitter API v2, run (~x min):
+```
+python3 ./code/collect_twitter_lifesitenews_domain_data.py
+
 
 ## Plot the figures
 
