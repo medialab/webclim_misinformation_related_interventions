@@ -1,6 +1,7 @@
 import os
 from datetime import datetime, timedelta, date
 
+import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -321,6 +322,7 @@ def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_grap
 
 
 def create_youtube_graph():
+
     oann, tony_heller = preprocess_youtube_data()
     plot_view_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
                             2680000,'OANN_views_yt.png')
@@ -331,9 +333,9 @@ def create_youtube_graph():
     plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
                              date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png')
 
-def create_twitter_Lifesite_figure():
+def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
 
-    df = import_data('twitter_lifesitenews_2021-07-22.csv')
+    df = import_data(filename)
     df = df.drop_duplicates()
 
     df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
@@ -341,10 +343,11 @@ def create_twitter_Lifesite_figure():
     df['date'] = pd.to_datetime(df['created_at']).dt.date
     df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
 
-    add_zeros = [{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},{'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, {'date': datetime.date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2021, 5, 15), 'type_of_tweet': 'created_content', 'size': 0}]
-    df_volume = df_volume.append( add_zeros , ignore_index = True)
-    df_volume = df_volume .sort_index().reset_index(drop = True)
-    df_volume = df_volume.sort_values(by = "date")
+    if zeros == 1 :
+        add_zeros = [{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},{'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, {'date': datetime.date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2021, 5, 15), 'type_of_tweet': 'created_content', 'size': 0}]
+        df_volume = df_volume.append(add_zeros , ignore_index = True)
+        df_volume = df_volume .sort_index().reset_index(drop = True)
+        df_volume = df_volume.sort_values(by = "date")
 
     cc = df_volume[df_volume['type_of_tweet'] == 'created_content']
     reply = df_volume[df_volume['type_of_tweet'] == 'replied_to']
@@ -377,7 +380,7 @@ def create_twitter_Lifesite_figure():
         label='Created content')
 
     ax.set(
-       title = f"Total number of tweets per day of @LifeSite ({total} Tweets)")
+       title = title )
 
     ax.set_xlim([datetime.date(2019, 1, 1), datetime.date(2021, 5, 15)])
 
@@ -414,10 +417,25 @@ def create_twitter_Lifesite_figure():
 
     plt.tight_layout()
 
-    save_figure(figure_name='lifesite.jpg')
+    save_figure(figure_name)
     #plt.savefig('./lifesite.jpg', bbox_inches='tight')
     #plt.show()
 
+def create_twitter_figures():
+
+    create_twitter_Lifesite_figure(
+    filename = 'twitter_lifesitenews_2021-07-22.csv',
+    figure_name = 'lifesite.jpg',
+    title = f"Total number of tweets per day of @LifeSite",
+    zeros = 1
+    )
+
+    create_twitter_Lifesite_figure(
+    filename = 'twitter_lifesitenews_domain_name_2021-07-22.csv',
+    figure_name = 'lifesite_domain.jpg',
+    title = f"Total number of tweets per day sharing a lifesitenews.com link)",
+    zeros = 0
+    )
 
 if __name__=="__main__":
 
@@ -428,4 +446,4 @@ if __name__=="__main__":
 
     create_youtube_graph()
 
-    create_twitter_Lifesite_figure()
+    create_twitter_figures()
