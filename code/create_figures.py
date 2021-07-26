@@ -15,8 +15,8 @@ def import_data(file_name):
     return df
 
 #note by shaden for Héloïse: I suggest for this function to use:
-# df = pd.concat([pd.read_csv(f) for f in glob.glob('./somefilename_*.csv')], ignore_index = True)
-# because when we recollect the dates will change, like this in our function we can put lifesite_*.csv for example
+# df = pd.concat([pd.read_csv(f) for f in glob.glob('./somefile_name_*.csv')], ignore_index = True)
+# because when we recollect the dates will change, like this in our function we can put facebook_crowdtangle_trump__*.csv for example
 
 def save_figure(figure_name):
     figure_path = os.path.join('.', 'figure', figure_name)

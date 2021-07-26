@@ -267,7 +267,7 @@ may  have  a  good  impact  on  reducing  the  audience interest or reach to the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Flags, Notices and labels}
+\section{Flags, Notices and labels} \label{flags}
 
 \subsection{Facebook}
 
@@ -363,7 +363,7 @@ Finally, the number of tweets containing the interstitial {\it potentially sensi
 \label{flags_tab}
 \end{table}
 
-\subsection{YouTube}
+\subsection{YouTube} \label{youtube_panels}
 
 YouTube may provide an information panel for videos with topics that are prone to misinformation like COVID-19, moon landing, and climate change. Information panels provide ressources concerning a potentially controversial topic from independent third parties or authoritative ressources. YouTube states that these panels exist regardless of the point of view expressed in a given video. In addition, these panels are not yet available in all languages and countries. %(“Information panel giving topical context”)
 
@@ -454,7 +454,7 @@ COVID-19     & \begin{tabular}[c]{@{}c@{}} 73 \\ (63\%) \end{tabular}  & \begin{
 Mainstream social media platforms can reduce the visibility of the content created or shared by specific users, whenever they violate the platforms' rules. The implementation of this policy varies across platforms and is not easy to verify ex-post. In what follows we provide means to verify this policy on Twitter and Facebook. 
  
 
-\subsection{Facebook}
+\subsection{Facebook} \label{reduce_fb}
 
 
 One of Facebook’s measures to regulate misinformation is to reduce the spread of misleading content through their ranking system. Facebook ranks each post and/or ad by assigning to it a relevancy score, where a high score leads to a high likelihood of the post and/or the ad to appear on a user's newsfeed. Doing so, Facebook can make a post or a whole account less visible by decreasing the relevancy score of its content; this is precisely the $reduce$ measure (see the article on Facebook Newsroom (2018)~\cite{newsroom2}). This measure can be verified by looking at the number of views (reach) of a post, but this metric is not available via the APIs used to access Facebook data: CrowdTangle or Buzzsumo. Hence we can indirectly investigate the $reduce$ measure by looking at the engagement metrics (likes, comments, shares) related to a given post; which are available on CrowdTangle and Buzzsumo. If a post reaches less users because it has a lower ranking, then it is less likely to receive likes, comments and shares, relative to a post with a higher ranking. 
@@ -519,7 +519,7 @@ The number of Facebook reactions, shares and comments dropped to zero for TheBL�
 
 Using Buzzsumo data, we ascertained that links from thebl.com were not shared on Facebook anymore. The ban started on December $1$, $2019$, and appeared to be still enforced in June 2021.
 
-\subsection{Twitter} 
+\subsection{Twitter}  \label{globalresearch}
 
 Twitter can take action against a tweet which violates the Twitter rules, by limiting its visibility\footnote{See the paragraph {\it Limiting Tweet visibility}: \href{https://help.twitter.com/en/rules-and-policies/enforcement-options}{https://help.twitter.com/en/rules-and-policies/enforcement-options}.} on users' timelines and in search results. To illustrate we provide an example for the website $globalresearch.ca$, which has several failed fact-checks according to \href{https://open.feedback.org/media/AEKA}{Feedback.org} and \href{https://iffy.news}{iffy.news} - two websites which provides databases of websites with low factual reporting levels.\footnote{For $globalresearch.ca$ see \href{https://open.feedback.org/media/AEKA}{open.feedback.org/media/AEKA} and \href{https://mediabiasfactcheck.com/global-research/}{https://mediabiasfactcheck.com/global-research/}.}
 
@@ -595,64 +595,155 @@ To examine this effect, we designed an experiment that simulates user behavior i
 
 \section{Discussion}
 
+In this article we have reviewed three broad categories of mainstream platforms' interventions to tackle misinformation: suspension of accounts, introduction of notices and flags and reducing the visibility of content. For a detailed list of interventions of multiple platforms, we invite the reader to navigate through the following \href{https://airtable.com/shrO0ooI9WSEfIUhb/tblAWQwFOiihKdQjm/viwZLAOzLK1NQ0c2n?blocks=hide}{airtable} compiled by Slatz and Leibowicz (2021)~\cite{niemanlab} and to read the related article. We have provided a methodology that can be useful for third-party monitoring, which aims to investigate platforms' interventions regarding content.  All the code needed to collect the data, create the figures and reproduce the study can be found on the following public GitHub repository: \href{https://github.com/medialab/truth-and-trust-online-2021/}{https://github.com/medialab/truth-and-trust-online-2021/}. Hence the academic community can easily implement and reproduce our methodology for the purposes of bringing to the society insights concerning the debate around misinformation. In the light of the present research, we discuss in this section data and policy related recommandations. 
+
+%\smallskip
+
+\subsection{Data related recommendations}
+
+Mainstream platforms such as Facebook, Twitter and Youtube are increasingly working towards higher data transparency (see links that redirect to the respective transparency centers in Appendix \ref{links}). Yet the present research sheds light on the lack and the splintering of data, which impede the academic community from studying successfully online misinformation and assessing the impact of platforms' interventions regarding this phenomenon. Hence, few comments are in order regarding the lack of data, the lack of transparency regarding misinformation related interventions and the splintering of data.  
+
+\smallskip
+
+{\bf Lack of data.} First, when Facebook, Twitter or YouTube intervene by suspending an account, a page or a channel, the data disappears. It can no longer be accessed via scrapping or via the available APIs for the purposes of scientific research. This hampers the investigation of how platforms moderate content. To further illustrate this point, in a related research project (see Thero and Vincent (2020)~\cite{therovincent}) we searched on CrowdTangle for public accounts sharing specific content associated with misinformation in November $2020$. We selected $94$ Facebook pages corresponding to our criteria. We then tried to collect the posts on these pages in January $2021$. But we discovered that $11$ pages could no longer be found and that the related data had disappeared from the CrowdTangle API. Similarly, when a YouTube channel gets suspended or a YouTube video is deleted the data related to them is removed from the YouTube API. For instance, the original list of YouTube videos from table \ref{tab2} with failed fact-checks, had over $200$ YouTube videos available in March $2021$. However, by June $2021$, thirty videos had disappeared both from YouTube and the YouTube API for policy violation. 
+
+\smallskip 
+
+Aside from the lack of data availability due to account or channel suspensions, some essential metrics for the study of misinformation are not accessible via main APIs. In particular, the $reach$ of posts on Facebook cannot be recovered from the CrowdTangle API and researchers can only build proxies for this metric from the available data (see section \ref{reduce_fb} for an example). Furthermore, to the best of our knowledge, fields related to flags, notices, interstitials and information panels are not available on the APIs linked to Facebook, Twitter and YouTube. For the purposes of the present research we had to scrape this information (see section \ref{flags}). Again, this disrupts the monitoring of platforms' interventions concerning misinformation and the assessment of their impact.
+
+\smallskip
+
+{\bf Lack of transparency.} Second, mainstream platforms generally lack transparency regarding their misinformation related interventions.  The broad lines of policies regarding misinformation are communicated via blog posts and are not typically part of the set of rules or community guidelines of mainstream platforms (see Appendix \ref{links}). For example, Facebook's strategy to tackle ``False News'' is three fold : Remove, Reduce, Inform. It is explained via a blog post on the facebook Newsroom. Similarly, Twitter communicates about actions related to misinformation via their \href{https://blog.twitter.com/en\_us/authors.TwitterSafety}{Twitter Safety} Blog/account. In a post on YouTube Official Blog, the platform explains its ``Four Rs of Responsibility" and how it raises authoritative content, reduces borderline content and harmful misinformation (see table \ref{summary} in Appendix \ref{links}). Nevertheless, when navigating through the categories of policy areas, to the best of our knowledge, misinformation is absent from the data available on the transparency centers of Facebook, Twitter and YouTube. To provide an example, the $2021$ $Q1$ {\it Community Standards Enforcement Report} of Facebook, provides the volume of actioned content only regarding the following policy areas: (1) Adult Nudity \& Sexual Activity, (2) Bullying \& Harassement, (3) Child Nudity \& Sexual Exploitation, (4) Dangerous Orgs: Organized Hate, (5) Dangerous Orgs: Terrorism, (6) Fake Accounts, (7) Hate Speech, (8) Regulated Good: Drugs, (9) Regulated Good: Firearms, Spam, (10) Suicide and Self-injury, (11) Violent \& Graphic Content. More precisely, the academic community can only be aware of interventions related to misinformation via monitoring social media accounts related to domain names with several failed fact-checks or via articles in News outlets. For example, while conducting the present research, it was brought to our attention that during our study, the Twitter account related to the domain name $globalresearch.ca$ was suspended, yet there was no official communication or blog post by Twitter Safety team regarding this intervention (see section \ref{globalresearch}). 
+
+Finally, we are aware that full transparency regarding how misinformation related interventions are operated, can backfire, as the prospective aimed users might find means to circumvent the partly automated interventions. To provide an example, it is very likely that YouTube is allocating an information panel on all YouTube videos mentioning COVID-19 and related terms in their title (see section \ref{youtube_panels}). Yet, we noticed during the present study, that some YouTube channels are trying to avoid the likely automated information panels, by using notational variants such as ``C.O.V.I.D'' or ``C O V I D''.  Hence, a balance is needed between fully transparent communication about misinformation related interventions so the users can know precisely, how the platforms are regulating their content, and not explicitly giving too much information which would allow the policies to be bypassed.
+		
+		%To facilitate the verification in the policy applications, we would generally recommend for the platforms to be more transparent. But too much transparency on how the regulation policies are exactly implemented can actually backfire. For example YouTube is certainly applying an 'information' banner on all videos mentioning COVID-19 and related terms in their title. Misinformation accounts are trying to avoid the official banners by using terms as 'C.O.V.I.D' or 'C O V I D'. If YouTube was totally transparent on that matter and published the list of 'dangerous' words that leads to an information banner, this list would of course help us to understand YouTube's policies but it would also help the misinformation actors to escape the regulation. There is thus a balance between communicating enough so the public can know precisely how the platforms are regulating their content, but without giving too much information that would allow the policies to be bypassed.
+
+\smallskip
+
+{\bf Scattered data.} Third, to study online misinformation, researchers, NGOs and data journalists turn to multiple APIs besides the official ones managed by the mainstream platforms themselves (e.g. BuzzSumo). They do so, because multiple data sources can be complementary and no specific API has complete data. {\color{red} [to be drafted by HT... and cite the article ~\cite{api} about APIs].}
+
+%There are other ways to collect data from platforms, and besides Buzzsumo, other API are also aggregating data from multiple social platforms. For example Newsguard, blablabla... In this tweet, we can see the interface of XXX being used in this study from a data journalist: \href{https://twitter.com/Shayan86/status/1394742784683298818/photo/2}{ex}
+			
+%Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible.
+
+\subsection{Policy recommendations}
+	
 
 { \color{pink} 
-Sporadic points for the discussion, no structure yet. 
+\bigskip 
+
+\noindent * Brouillon / esquisse / organisation des bullet points: (N.B. the bullet point ${\color{green}\surd}$ means that the item/idea was used in the above paragraphs)
 
 \begin{itemize}
 
-	\item We do not provide  an exhaustive list of methods on how to investigate the platforms’ policies, as other APIs and some databases could be useful for that matter. We rather provide a methodology to investigate key policies, that can be useful to researchers or journalists interested in implementing external monitoring. For a detailed list of interventions of multiple platforms we invite the reader to check the following \href{https://airtable.com/shrO0ooI9WSEfIUhb/tblAWQwFOiihKdQjm/viwZLAOzLK1NQ0c2n?blocks=hide}{airtable} compiled by Slatz and Leibowicz (2021)~\cite{niemanlab}.
-
-	\item For a previous research project (add reference to the article) we searched on CrowdTangle for public accounts sharing specific content associated with misinformation in November $2020$, and selected $94$ Facebook pages corresponding to our criteria. We then tried to collect these pages' posts in January $2021$, and discovered that $11$ pages could not be found anymore. This highlights an important issue when studying misinformation trends on Facebook: some data disappears from the CrowdTangle API as accounts are deleted or changed to {\it private}. 
-
-	\item To facilitate the verification in the policy applications, we would generally recommend for the platforms to be more transparent. But too much transparency on how the regulation policies are exactly implemented can actually backfire. For example YouTube is certainly applying an 'information' banner on all videos mentioning COVID-19 and related terms in their title. Misinformation accounts are trying to avoid the official banners by using terms as 'C.O.V.I.D' or 'C O V I D'. If YouTube was totally transparent on that matter and published the list of 'dangerous' words that leads to an information banner, this list would of course help us to understand YouTube's policies but it would also help the misinformation actors to escape the regulation. There is thus a balance between communicating enough so the public can know precisely how the platforms are regulating their content, but without giving too much information that would allow the policies to be bypassed.
-
-	\item There are other ways to collect data from platforms, and besides Buzzsumo, other API are also aggregating data from multiple social platforms. For example Newsguard, blablabla... In this tweet, we can see the interface of XXX being used in this study from a data journalist: \href{https://twitter.com/Shayan86/status/1394742784683298818/photo/2}{ex}
-
-	\item Recommendation: inform about sources, example inform users that this user shared x failed fact-checks. 
-
-	\item Make point about ``recycling" existing policies (e.g. to tackle terrorism) and apply it to misinformation+
-
-	\item Make point about the communication of platforms for their policy: 4R of YouTube, RRI of Facebook, 
-
-	\item Make point that platforms when they take actions regarding misinformation, they rarely cite misinformation as the reason. E.g. beauty of life, coordinated inauthentic behavior. 
-
-\href{https://misinforeview.hks.harvard.edu/article/tackling-misinformation-what-researchers-could-do-with-social-media-data/}{https://misinforeview.hks.harvard.edu/article/tackling-misinformation-what-researchers-could-do-with-social-media-data/}
-
-	\item After a channel gets suspended or a video is deleted the data related to them is removed from the YouTube API. This is a problem that affected the study to investigate the suspension reasons or the removal. For instance, the original list of videos from table 1 had more than 200 videos available in March 2021, however, by June 2021 30 videos got deleted from YouTube because they contain content that is against the YouTube guidelines and their data got removed from the API. 
+\item[Idea 1:] Not an exhaustive list of interventions + brief summary of what we do. 
 	
-	\item User side: psychological effects (Pennycook, etc.), multi-platforms, indirect effects, strategies... 
-	
-	\item business model 
-	
-	\item Pas accès au ``reach" !  ranking not available. Fb nous a donné certaines données (les données Condor) et dedans on a le nombre de clicks par exemple
-	
-	\item ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this." \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{Newsroom}.
-	\item Researchers should be able to access the data of deleted accounts on the main platforms.
+	\begin{itemize}
 
-	\item Currently the flag or notice banners data is not present in the platforms’ API datasource, and this prevents researchers and journalists from easily investigating that matter. They have to use or build a scraper to access the data.
+	\item[${\color{green}\surd}$] We do not provide  an exhaustive list of methods on how to investigate the platforms’ policies, as other APIs and some databases could be useful for that matter. We rather provide a methodology to investigate key policies, that can be useful to researchers or journalists interested in implementing external monitoring. For a detailed list of interventions of multiple platforms we invite the reader to check the following \href{https://airtable.com/shrO0ooI9WSEfIUhb/tblAWQwFOiihKdQjm/viwZLAOzLK1NQ0c2n?blocks=hide}{airtable} compiled by Slatz and Leibowicz (2021)~\cite{niemanlab}.
 
-	\item Lack of transparency in the platforms’ communication that makes their policies harder to verify.
-
-	\item Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible. 
+	\item[${\color{green}\surd}$] We hope this paper can illustrate how the platforms policies can be verified. All the code needed to collect the data, and create the figures can be found on a public GitHub repo: \href{https://github.com/medialab/truth-and-trust-online-2021/}{https://github.com/medialab/truth-and-trust-online-2021/}, so that other researchers and journalists can easily implement and reproduce our methodology for the purposes of bringing to the society insights concerning the debate around misinformation. 
 	
-	\item We hope this paper can illustrate how the platforms policies can be verified. All the code needed to collect the data, and create the figures can be found on a public GitHub repo: https://github.com/medialab/truth-and-trust-online-2021/, so that other researchers and journalists can easily reuse our methodology. 
+	\end{itemize}
+	
+\item[Idea 2:] Lack of data. Scattered data, indirect methods.  
+	
+	
+	\begin{itemize}
+	
+		\item[${\color{green}\surd}$] For a previous research project (add reference to the article) we searched on CrowdTangle for public accounts sharing specific content associated with misinformation in November $2020$, and selected $94$ Facebook pages corresponding to our criteria. We then tried to collect these pages' posts in January $2021$, and discovered that $11$ pages could not be found anymore. This highlights an important issue when studying misinformation trends on Facebook: some data disappears from the CrowdTangle API as accounts are deleted or changed to {\it private}. 
+		
+		\item[${\color{green}\surd}$] After a channel gets suspended or a video is deleted the data related to them is removed from the YouTube API. This is a problem that affected the study to investigate the suspension reasons or the removal. For instance, the original list of videos from table 1 had more than 200 videos available in March 2021, however, by June 2021 30 videos got deleted from YouTube because they contain content that is against the YouTube guidelines and their data got removed from the API. 
+		
+		\item[${\color{green}\surd}$] Pas accès au ``reach" !  ranking not available. Fb nous a donné certaines données (les données Condor) et dedans on a le nombre de clicks par exemple
+	
+		
+		\item[${\color{green}\surd}$] Researchers should be able to access the data of deleted accounts on the main platforms.
+		
+		\item[${\color{green}\surd}$] Currently the flag or notice banners data is not present in the platforms’ API datasource, and this prevents researchers and journalists from easily investigating that matter. They have to use or build a scraper to access the data.
+		
+		\item[${\color{green}\surd}$] Lack of transparency in the platforms’ communication that makes their policies harder to verify.
+		
+		\item[${\color{green}\surd}$] To facilitate the verification in the policy applications, we would generally recommend for the platforms to be more transparent. But too much transparency on how the regulation policies are exactly implemented can actually backfire. For example YouTube is certainly applying an 'information' banner on all videos mentioning COVID-19 and related terms in their title. Misinformation accounts are trying to avoid the official banners by using terms as 'C.O.V.I.D' or 'C O V I D'. If YouTube was totally transparent on that matter and published the list of 'dangerous' words that leads to an information banner, this list would of course help us to understand YouTube's policies but it would also help the misinformation actors to escape the regulation. There is thus a balance between communicating enough so the public can know precisely how the platforms are regulating their content, but without giving too much information that would allow the policies to be bypassed.
+		
+		\item[${\color{green}\surd}$] Make point about the communication of platforms for their policy: 4R of YouTube, RRI of Facebook. Facebook's strategy to tackle ``False News'' is three fold : Remove, Reduce, Inform. It is explained via a blog post on the facebook Newsroom. Similarly, Twitter communicates about actions related to misinformation via their \href{https://blog.twitter.com/en\_us/authors.TwitterSafety}{Twitter Safety} Blog/account. In a post on YouTube Official Blog, the platform explained its ``Four Rs of Responsibility" and how it raises authoritative content, reduces borderline content and harmful misinformation (see table \ref{summary} in Appendix \ref{links}). 
+		
+		\item There are other ways to collect data from platforms, and besides Buzzsumo, other API are also aggregating data from multiple social platforms. For example Newsguard, blablabla... In this tweet, we can see the interface of XXX being used in this study from a data journalist: \href{https://twitter.com/Shayan86/status/1394742784683298818/photo/2}{ex}
+			
+		\item Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible.
+	
+	\end{itemize}
+	
+\item[Idea 3:] Policies not specific to misinformation. New for smart design (recycling point) - New policy: coordination for informative notices, based on fact-checks.
+
+	\begin{itemize}
+	
+		\item Networked public square / private companies / regulations... 
+	
+		\item Recommendation: inform about sources, example inform users that this user shared x failed fact-checks. 
+		
+		\item Make point about ``recycling" existing policies (e.g. to tackle terrorism) and apply it to misinformation+ 
+		
+		\item Make point that platforms when they take actions regarding misinformation, they rarely cite misinformation as the reason. E.g. beauty of life, coordinated inauthentic behavior. \href{https://misinforeview.hks.harvard.edu/article/tackling-misinformation-what-researchers-could-do-with-social-media-data/}{https://misinforeview.hks.harvard.edu/article/tackling-misinformation-what-researchers-could-do-with-social-media-data/}
+		
+		\item ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this." \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{Newsroom}.
+		
+		\item User side: psychological effects (Pennycook, etc.), multi-platforms, indirect effects, strategies... business model 
+
+	\end{itemize}
+	
 \end{itemize}
 }
 
+%\begin{itemize}
 
- 
+	%\item We do not provide  an exhaustive list of methods on how to investigate the platforms’ policies, as other APIs and some databases could be useful for that matter. We rather provide a methodology to investigate key policies, that can be useful to researchers or journalists interested in implementing external monitoring. For a detailed list of interventions of multiple platforms we invite the reader to check the following \href{https://airtable.com/shrO0ooI9WSEfIUhb/tblAWQwFOiihKdQjm/viwZLAOzLK1NQ0c2n?blocks=hide}{airtable} compiled by Slatz and Leibowicz (2021)~\cite{niemanlab}.
+
+	%\item For a previous research project (add reference to the article) we searched on CrowdTangle for public accounts sharing specific content associated with misinformation in November $2020$, and selected $94$ Facebook pages corresponding to our criteria. We then tried to collect these pages' posts in January $2021$, and discovered that $11$ pages could not be found anymore. This highlights an important issue when studying misinformation trends on Facebook: some data disappears from the CrowdTangle API as accounts are deleted or changed to {\it private}. 
+
+	%\item To facilitate the verification in the policy applications, we would generally recommend for the platforms to be more transparent. But too much transparency on how the regulation policies are exactly implemented can actually backfire. For example YouTube is certainly applying an 'information' banner on all videos mentioning COVID-19 and related terms in their title. Misinformation accounts are trying to avoid the official banners by using terms as 'C.O.V.I.D' or 'C O V I D'. If YouTube was totally transparent on that matter and published the list of 'dangerous' words that leads to an information banner, this list would of course help us to understand YouTube's policies but it would also help the misinformation actors to escape the regulation. There is thus a balance between communicating enough so the public can know precisely how the platforms are regulating their content, but without giving too much information that would allow the policies to be bypassed.
+
+	%\item There are other ways to collect data from platforms, and besides Buzzsumo, other API are also aggregating data from multiple social platforms. For example Newsguard, blablabla... In this tweet, we can see the interface of XXX being used in this study from a data journalist: \href{https://twitter.com/Shayan86/status/1394742784683298818/photo/2}{ex}
+
+	%\item Recommendation: inform about sources, example inform users that this user shared x failed fact-checks. 
+
+	%\item Make point about ``recycling" existing policies (e.g. to tackle terrorism) and apply it to misinformation+
+
+	%\item Make point about the communication of platforms for their policy: 4R of YouTube, RRI of Facebook
+
+	%\item Make point that platforms when they take actions regarding misinformation, they rarely cite misinformation as the reason. E.g. beauty of life, coordinated inauthentic behavior. \href{https://misinforeview.hks.harvard.edu/article/tackling-misinformation-what-researchers-could-do-with-social-media-data/}{https://misinforeview.hks.harvard.edu/article/tackling-misinformation-what-researchers-could-do-with-social-media-data/}
+
+	%\item After a channel gets suspended or a video is deleted the data related to them is removed from the YouTube API. This is a problem that affected the study to investigate the suspension reasons or the removal. For instance, the original list of videos from table 1 had more than 200 videos available in March 2021, however, by June 2021 30 videos got deleted from YouTube because they contain content that is against the YouTube guidelines and their data got removed from the API. 
+	
+	%\item User side: psychological effects (Pennycook, etc.), multi-platforms, indirect effects, strategies... business model 
+	
+	%\item Pas accès au ``reach" !  ranking not available. Fb nous a donné certaines données (les données Condor) et dedans on a le nombre de clicks par exemple
+	
+	%\item ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this." \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{Newsroom}.
+	%\item Researchers should be able to access the data of deleted accounts on the main platforms.
+
+	%\item Currently the flag or notice banners data is not present in the platforms’ API datasource, and this prevents researchers and journalists from easily investigating that matter. They have to use or build a scraper to access the data.
+
+	%\item Lack of transparency in the platforms’ communication that makes their policies harder to verify.
+
+	%\item Finally, we found irregularities in the number of Infowars articles collected from Buzzsumo. While Infowars usually publishes $20$ to $30$ articles per day, only $53$ articles were collected in the $31$-day period between June $11$ to July $11$, 2020. A temporary crawling problem coming from Buzzsumo may have caused this lack of data. Because no database is perfect, we would like to highlight the importance of cross-checking information between different sources when possible. 
+	
+	%\item We hope this paper can illustrate how the platforms policies can be verified. All the code needed to collect the data, and create the figures can be found on a public GitHub repo: https://github.com/medialab/truth-and-trust-online-2021/, so that other researchers and journalists can easily reuse our methodology. 
+%\end{itemize}
 
 \bibliography{proj1}{}
 \bibliographystyle{plain}
 
-\newpage 
+%\newpage 
 
 \section{Appendix}
 
 \subsection{Quick access to community guidelines and policies} \label{links}
 
+
 \begin{landscape}
+
 \thispagestyle{empty}
 
 \begin{table}[p]
