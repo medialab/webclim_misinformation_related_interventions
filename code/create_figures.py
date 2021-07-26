@@ -14,10 +14,6 @@ def import_data(file_name):
     df = pd.read_csv(data_path, low_memory=False)
     return df
 
-#note by shaden for Héloïse: I suggest for this function to use:
-# df = pd.concat([pd.read_csv(f) for f in glob.glob('./somefile_name_*.csv')], ignore_index = True)
-# because when we recollect the dates will change, like this in our function we can put facebook_crowdtangle_trump__*.csv for example
-
 def save_figure(figure_name):
     figure_path = os.path.join('.', 'figure', figure_name)
     plt.savefig(figure_path)
@@ -341,48 +337,54 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
     df['total_engagement'] = (df['retweet_count'] + df['like_count'] + df['reply_count'])
     df['date'] = pd.to_datetime(df['created_at']).dt.date
-    df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
+    #df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
+    df_volume = df.groupby(['date'], as_index=False).size()
 
     if zeros == 1 :
-        add_zeros = [{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},{'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, {'date': datetime.date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2021, 5, 15), 'type_of_tweet': 'created_content', 'size': 0}]
+        add_zeros = [{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},{'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, {'date': datetime.date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2021, 6, 30), 'type_of_tweet': 'created_content', 'size': 0}]
         df_volume = df_volume.append(add_zeros , ignore_index = True)
         df_volume = df_volume .sort_index().reset_index(drop = True)
         df_volume = df_volume.sort_values(by = "date")
 
-    cc = df_volume[df_volume['type_of_tweet'] == 'created_content']
-    reply = df_volume[df_volume['type_of_tweet'] == 'replied_to']
-    quote = df_volume[df_volume['type_of_tweet'] == 'quoted']
-    retweeted = df_volume[df_volume['type_of_tweet'] == 'retweeted']
+    #cc = df_volume[df_volume['type_of_tweet'] == 'created_content']
+    #reply = df_volume[df_volume['type_of_tweet'] == 'replied_to']
+    #quote = df_volume[df_volume['type_of_tweet'] == 'quoted']
+    #retweeted = df_volume[df_volume['type_of_tweet'] == 'retweeted']
 
     fig, ax = plt.subplots(figsize=(10, 5))
 
     d = df[(df['date']> datetime.date(2019, 1, 1) ) & (df['date']<datetime.date(2021, 7, 1))]
     total = d['id'].count()
 
-    ax.plot(reply['date'],
-        reply['size'],
-        color='lightblue',
-        label='Replied to')
+#    ax.plot(reply['date'],
+#        reply['size'],
+#        color='lightblue',
+#        label='Replied to')
 
-    ax.plot(quote['date'],
-        quote['size'],
-        color='lightgreen',
-        label='Quoted')
+#    ax.plot(quote['date'],
+#        quote['size'],
+#        color='lightgreen',
+#        label='Quoted')
 
-    ax.plot(retweeted['date'],
-        retweeted['size'],
-        color='pink',
-        label='Retweeted')
+#    ax.plot(retweeted['date'],
+#        retweeted['size'],
+#        color='pink',
+#        label='Retweeted')
 
-    ax.plot(cc['date'],
-        cc['size'],
+#    ax.plot(cc['date'],
+#        cc['size'],
+#        color='deepskyblue',
+#        label='Created content')
+
+    ax.plot(df_volume['date'],
+        df_volume['size'],
         color='deepskyblue',
-        label='Created content')
+        label='Tweets')
 
     ax.set(
        title = title )
 
-    ax.set_xlim([datetime.date(2019, 1, 1), datetime.date(2021, 5, 15)])
+    ax.set_xlim([datetime.date(2019, 1, 1), datetime.date(2021, 6, 30)])
 
     plt.axvspan(np.datetime64('2019-12-09'),
                 np.datetime64('2020-10-12'),
@@ -391,7 +393,7 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
                 alpha=0.05)
 
     plt.axvspan(np.datetime64('2021-01-25'),
-                np.datetime64('2021-05-15'),
+                np.datetime64('2021-06-30'),
                 ymin=0,
                 ymax=200000,
                 facecolor='r',
@@ -420,6 +422,7 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     save_figure(figure_name)
     #plt.savefig('./lifesite.jpg', bbox_inches='tight')
     #plt.show()
+
 
 def create_twitter_figures():
 
