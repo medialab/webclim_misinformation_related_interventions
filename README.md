@@ -26,7 +26,7 @@ For collecting youtube data run
 
 For checking the existing and content of a flag, run 
 ```
-python3 code/collect_youtube_data.py 'video_id'
+python3 code/check_flag_youtube.py 'video_id'
 ```
 - A browser will be opened through a driver and when it finishes it will terminate. you can check the results in the command line.
 ### Facebook:
