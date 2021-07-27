@@ -3,6 +3,8 @@ import time
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 def check_exists_by_xpath(xpath, driver):
@@ -15,9 +17,7 @@ def check_exists_by_xpath(xpath, driver):
 
 def information_panel(video_id):
     try:
-        # replace with your driver path
-        chrome_path = '/usr/local/bin/chromedriver'
-        driver = webdriver.Chrome(chrome_path)
+        driver = webdriver.Chrome(ChromeDriverManager().install())
         web = 'https://www.youtube.com/watch?v='+video_id
         driver.get(web)
         time.sleep(5)

@@ -17,14 +17,18 @@ pip install -r requirements.txt
 All the collected data will be saved as CSV files in the `data` folder.
 
 ### YouTube:
-- For collecting youtube data run
+For collecting youtube data run
 ```
   python3 code/collect_youtube_data.py 
 ```
 - Two new csv files will be generated in the data file with the name of the channels, and they will contain the videos posted for the selected channels since 2019/01/01 with the date of publishing, likes, dislikes, comments count.
 - The study focused on two channels OANN and Tony Heller. The ids of these channels are included in the code. To add/remove channels, you can change the list ``` list_id ``` under ``` collect_youtube_data.py``` file.
 
-
+For checking the existing and content of a flag, run 
+```
+python3 code/collect_youtube_data.py 'video_id'
+```
+- A browser will be opened through a driver and when it finishes it will terminate. you can check the results in the command line.
 ### Facebook:
 
 To collect the Trump Facebook data from CrowdTangle, run (the collection takes around 2 minutes):
