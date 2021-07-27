@@ -155,10 +155,10 @@ def write_results(json_response, filename):
                             if "location" in user.keys():
                                 tweet['user_location'] = user['location']
 
-                            if "entities" in user.keys():
-                                if "url" in user['entities']:
-                                    if "urls" in user['entities']['url']:
-                                        tweet['user_expanded_url']=user['entities']['url']['urls'][0]['expanded_url']
+                            #if "entities" in user.keys():
+                            #    if "url" in user['entities']:
+                            #        if "urls" in user['entities']['url']:
+                            #            tweet['user_expanded_url']=user['entities']['url']['urls'][0]['expanded_url']
 
                 writer.writerow(tweet)
 
