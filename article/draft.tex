@@ -592,7 +592,13 @@ Youtube recommends content to the users based on the watch history and searchers
 
 \smallskip
 
+{\color{red} explain experiment + make it only about health and add exact number (e.g. 45 health videos, 10 545 recommendations) .}
+
 To examine this effect, we designed an experiment that simulates user behavior in youtube using selenium library and python. The experiment starts with one misleading video identified by fact checkers and a clean watch history. Then the system collects the recommendation for this video and clicks on the top 10 recommendations in sequential order and collects their recommendations. The experiment is repeated for 65 misleading videos. In addition, to copy the user behavior, the system watches the videos for a couple of minutes to half of it. After the data collection, a fact checker examined the top 80 recommended videos (Videos that have been recommended many times during the experiment). The results showed little misinformation (less than 10\%) in the top recommendations. Therefore, this can be the result of youtube reducing the visibility of videos with misinformation or there is little misinformation in youtube or the experiment setup didn’t influence the recommendation engine behavior since we start with only one misleading video every time. 
+
+\smallskip 
+
+{\color{red} Channel level ! }
 
 }
 
