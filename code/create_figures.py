@@ -379,7 +379,7 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     ax.plot(df_volume['date'],
         df_volume['size'],
         color='deepskyblue',
-        label='Tweets')
+        label='Number of Tweets per day')
 
     ax.set(
        title = title )
@@ -429,7 +429,7 @@ def create_twitter_figures():
     create_twitter_Lifesite_figure(
     filename = 'twitter_lifesitenews_2021-07-22.csv',
     figure_name = 'lifesite.jpg',
-    title = f"Total number of tweets per day of @LifeSite",
+    title = f"@LifeSite Twitter account",
     zeros = 1
     )
 
