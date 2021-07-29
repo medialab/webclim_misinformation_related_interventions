@@ -90,6 +90,8 @@ Title proposition 2: Illustrating Facebook, Twitter and YouTube regulation polic
 
 Title proposition 3: Misinformation Policies of Mainstream Social Media Platforms: third-party monitoring, methods and illustration.
 
+Title proposition 4: Misinformation related interventions by mainstream social media platforms: third-party monitoring, methods and illustration.
+
 \smallskip
 
 {\color{pink} \noindent N.B: we will redo all the figures (to harmonize the legend, etc.) and the table of contents will be deleted.} 
@@ -586,21 +588,25 @@ Finally, the above mentioned account was recently suspended from Twitter. We not
 
 \subsection{YouTube}
 
-{\color{pink} 
+%what about with search terms: most recommended channels? 
 
-Youtube recommends content to the users based on the watch history and searchers they do in google and youtube. It is possible for the user to change the recommendation based on his preferences by removing videos from his history or by pausing the watch history. This type of system can influence what a user gets recommended in a negative way especially if the user is constantly watching misleading videos or conspiracy theory type of videos.  Youtube says that they set out to prevent their systems from serving up content that could misinform users in a harmful way, particularly in domains that rely on veracity, such as science, medicine, news, or historical events.  The way that youtube determines misinformation is by using external human evaluators and experts to examine if the video is promoting misleading information or conspiracy theories. Then using the feedback of the evaluators, they use machine learning systems to develop models that generate recommendations. The models work on reviewing videos daily to reduce the spread of misinformation. 
+YouTube can reduce the visibility of some video content via its recommendation system, namely by recommending content from authoritative sources for topics related to science and health. This platform recommends content to the users based on the watch history and searched queries in google and YouTube; which can both be cleared via account settings. Moreover, a recommendation system based on preferences and history might have a down side, namely when a user repeatedly watches videos that might be misleading or that promote conspiracy theories. YouTube states that they set out to prevent their systems from serving up content that could misinform users in a harmful way, particularly in domains that rely on veracity, such as science, medicine, News, or historical events.  YouTube identifies misinformation by using external human evaluators and experts to examine if a given video is promoting misleading information or conspiracy theories. Then using the feedback of the evaluators, they use machine learning systems to develop models that generate recommendations. The models work on reviewing videos daily to reduce the spread of misinformation. 
 
 \smallskip
 
-{\color{red} explain experiment + make it only about health and add exact number (e.g. 45 health videos, 10 545 recommendations) .}
+To examine this effect, we designed an experiment that simulates a user's behavior on YouTube. We used a list of $45$ videos marked as {\it False} by Science Feedback and classified under the category ``health'' (see section \ref{youtube_panels} for the classification). The experiment starts with one video marked as ``False'' from our list of videos and a clean watch history. For each video, our automated program collects around $20$ recommendations and clicks on the top $10$ videos in sequential order. After that, for every video in set of top $10$ recommendations, it collects their top $20$ recommended videos. In addition, to simulate a user's behavior, the automated program watches each video for a few minutes\footnote{If the video duration is ten minutes or less, the automated program watches the whole video. If the video duration is strictly higher than ten minutes, then the automated program watches only five minutes.}. Doing so, we collected $10$ $549$ YouTube recommended video entries, among which only $3$ $895$ were unique. 
 
-To examine this effect, we designed an experiment that simulates user behavior in youtube using selenium library and python. The experiment starts with one misleading video identified by fact checkers and a clean watch history. Then the system collects the recommendation for this video and clicks on the top 10 recommendations in sequential order and collects their recommendations. The experiment is repeated for 65 misleading videos. In addition, to copy the user behavior, the system watches the videos for a couple of minutes to half of it. After the data collection, a fact checker examined the top 80 recommended videos (Videos that have been recommended many times during the experiment). The results showed little misinformation (less than 10\%) in the top recommendations. Therefore, this can be the result of youtube reducing the visibility of videos with misinformation or there is little misinformation in youtube or the experiment setup didn’t influence the recommendation engine behavior since we start with only one misleading video every time. 
+\smallskip
 
-\smallskip 
+To analyse the collected data, we ranked the recommended videos based on the number of times they got recommended. We then asked Science Feedback to fact-check the top 40 recommended videos, which amounts to $16\%$ of the data. Six videos (10.5\%) out of the top $40$ recommended videos were marked as misleading. This relatively small percentage points towards that idea that, YouTube is likely reducing the visibility of videos containing misinformation or alternatively maybe there is little misinformation on YouTube. Also it might be that the experiment setup did not influence the behavior of the recommendation engine, since we start with a single YouTube video marked as ``False'' every time. We further examined the top recommended channels in the collected data. We got $1$ $562$ different channels, and we counted the number of times every channel got recommended. Figure \ref{channels_yt} shows the top $10$ recommended channels, whose videos represent $30\%$ of the total set of recommended videos in our dataset. The top most recommended channel is Fox News, which has a ``mixed'' factual reporting level according to $iffy.news$ and has several failed fact-checks.\footnote{See \href{https://mediabiasfactcheck.com/fox-news-bias/}{https://mediabiasfactcheck.com/fox-news-bias/}.} Also in the top ten most recommended, there are two channels with a ``low'' factual reporting level: PrgerU and Sky news Australia. 
 
-{\color{red} Channel level ! }
-
-}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[scale=0.5]{./img/channel_youtube.png} 
+	\end{center}
+	\caption{Top ten recommended channels.}
+	\label{channels_yt}
+\end{figure}
 
 \section{Discussion}
 
