@@ -594,7 +594,7 @@ YouTube can reduce the visibility of some video content via its recommendation s
 
 \smallskip
 
-To examine this effect, we designed an experiment that simulates a user's behavior on YouTube. We used a list of $45$ videos marked as {\it False} by Science Feedback and classified under the category ``health'' (see section \ref{youtube_panels} for the classification). The experiment starts with one video marked as ``False'' from our list of videos and a clean watch history. For each video, our automated program collects around\footnote{...} $20$ recommendations and clicks on the top $10$ videos in sequential order. After that, for every video in the set of the top $10$ recommendations, we collect their top $20$ recommended videos. In addition, to simulate a user's behavior, the automated program watches each video for a few minutes\footnote{If the video duration is ten minutes or less, the automated program watches the whole video. If the video duration is strictly higher than ten minutes, then the automated program watches only five minutes.}. Doing so, we collected $10$ $549$ YouTube recommended video entries, among which only $3$ $895$ were unique. 
+To examine this effect, we designed an experiment that simulates a user's behavior on YouTube. We used a list of $45$ videos marked as {\it False} by Science Feedback and classified under the category ``health'' (see section \ref{youtube_panels} for the classification). The experiment starts with one video marked as ``False'' from our list of videos and a clean watch history. For each video, our automated program collects around\footnote{Notice that as we are simulating the behavior of a user, when we visit a video, we get a number of recommendations that vary between $18$ videos and $22$ videos.} $20$ recommendations and clicks on the top $10$ videos in sequential order. After that, for every video in the set of the top $10$ recommendations, we collect their top $20$ recommended videos. In addition, to simulate a user's behavior, the automated program watches each video for a few minutes\footnote{If the video duration is ten minutes or less, the automated program watches the whole video. If the video duration is strictly higher than ten minutes, then the automated program watches only five minutes.}. Doing so, we collected $10$ $549$ YouTube recommended video entries, among which only $3$ $895$ were unique. 
 To analyse the collected data, we look for misinformation: $(i)$ at the video level and $(ii)$ at the channel level. 
 
 \smallskip
@@ -608,11 +608,6 @@ Four other videos were marked as {\it hyper-partisan} and they were recommended 
 
 {\bf Channel Level.} We examined the top recommended channels in the collected data. We got $1$ $562$ different channels, and we counted the number of times every channel got recommended. Figure \ref{channels_yt} shows the top $10$ recommended channels, whose videos represent $30\%$ of the total set of recommended videos in our dataset. Among the top three most recommended channels, there is Fox News and Sky News Australia, which both have a ``mixed'' factual reporting level according to {\it iffy.news} and have several failed fact-checks.\footnote{See \href{https://mediabiasfactcheck.com/fox-news-bias/}{https://mediabiasfactcheck.com/fox-news-bias/} and \href{https://mediabiasfactcheck.com/sky-news-australia/}{https://mediabiasfactcheck.com/sky-news-australia/}.} Also in the top ten most recommended, we find PragerU, which has a ``low'' level of factual reporting according to {\it iffy.news}. 
 
-\smallskip 
-
-At the video level, we start at each round with a YouTube video marked as ``False'' and we expected to have a high proportion of misinformation videos. But only {$18.4\%$} of the recommendations corresponded to $misleading$ or {\it hyper-partisan} videos.
-This relatively small percentage hints towards that idea that YouTube is probably reducing the visibility of videos containing misinformation. However, when we investigated misinformation at the channel level, we found that videos belonging to channels that are not highly authoritative were being recommended. Finally, notice that the policy of reducing the visibility of misleading content is hard to prove on YouTube in general and even harder than on Facebook and Twitter.
-
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[scale=0.6]{./img/channel_youtube.png} 
@@ -620,6 +615,11 @@ This relatively small percentage hints towards that idea that YouTube is probabl
 	\caption{Top ten recommended channels among the $1$ $562$ different channels, that have posted the recommended videos in our dataset.}
 	\label{channels_yt}
 \end{figure}
+
+\smallskip 
+
+At the video level, we start at each round with a YouTube video marked as ``False'' and we expected to have a high proportion of misinformation videos. But only {$18.4\%$} of the recommendations corresponded to $misleading$ or {\it hyper-partisan} videos.
+This relatively small percentage hints towards that idea that YouTube is probably reducing the visibility of videos containing misinformation. However, when we investigated misinformation at the channel level, we found that videos belonging to channels that are not highly authoritative were being often recommended. {\color{pink} mettre cl pour channel level}. Notice that the policy of reducing the visibility of misleading content is hard to prove on YouTube in general and even harder than on Facebook and Twitter.
 
 \section{Discussion}
 
