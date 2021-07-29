@@ -261,21 +261,21 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     df_tlm_vol_rolling = df_tlm_vol.groupby(['published_at']).mean().rolling(window=window_num, win_type='triang',
                                                                              center=True).mean()
     df_tlm_vol_rolling['published_at'] = df_tlm_vol_rolling.index
-    fig, ax1 = plt.subplots(1, figsize=(15, 4))
+    fig, ax = plt.subplots(1, figsize=(15, 4))
     plt.locator_params(axis='y', nbins=4)
     plt.setp(ax1.get_xticklabels(), rotation=45)
 
-    ax1.xaxis.set_tick_params(length=0)
-    ax1.plot(df_tlm_vol_rolling_views['published_at'],
+    ax.xaxis.set_tick_params(length=0)
+    ax.plot(df_tlm_vol_rolling_views['published_at'],
              df_tlm_vol_rolling_views['view_counts'],
              color='red', label='view count')
-    ax1.set_xlim([date_begin_graph, date_end_graph])
+    ax.set_xlim([date_begin_graph, date_end_graph])
     plt.setp(ax1.get_xticklabels(), rotation=45)
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.grid(axis="y")
-    ax1.xaxis.set_tick_params(length=0)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.grid(axis="y")
+    ax.xaxis.set_tick_params(length=0)
 
     plt.axvspan(np.datetime64(date_begin_sus), np.datetime64(date_end_sus),
                 ymin=0, ymax=200000, facecolor='r', alpha=0.05)
