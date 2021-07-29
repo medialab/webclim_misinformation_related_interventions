@@ -65,7 +65,7 @@ To collect the tweets containing the domain name Lifesitenews.com from Twitter A
 python3 ./code/collect_twitter_lifesitenews_domain_data.py
 ```
 
-To collect the tweets containing the domain name globalresearch.ca from Twitter API v2, run (~x min):
+To collect the tweets containing the domain name globalresearch.ca from Twitter API v2, run (~30 min):
 ```
 python3 ./code/collect_twitter_globalresearch_domain_data.py 
 ```
