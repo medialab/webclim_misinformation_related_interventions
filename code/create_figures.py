@@ -19,6 +19,24 @@ def save_figure(figure_name):
     plt.savefig(figure_path)
     print("The '{}' figure is saved.".format(figure_name))
 
+def plot_format(ax, plt):
+
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    plt.locator_params(axis='y', nbins=4)
+    ax.xaxis.set_tick_params(length=0)
+
+    ax.grid(axis='y')
+    handles, labels = ax.get_legend_handles_labels()
+    patch = mpatches.Patch(color='pink',
+                           label='Suspension Period')
+    handles.append(patch)
+    plt.legend(handles=handles)
+
+    plt.setp(ax.get_xticklabels(), rotation=45)
+
+    plt.tight_layout()
 
 def arrange_plot(ax, df):
 
@@ -76,9 +94,11 @@ def create_buzzsumo_thebl_figure():
     df = clean_buzzsumo_data(df)
 
     fig = plt.figure(figsize=(10, 8))
+    #fig = plt.figure(figsize=(10, 4)) #
     fig.suptitle('The Beauty of Life (data from Buzzsumo)')
 
     ax = plt.subplot(211)
+    #ax = plt.subplot(111)#
     plt.plot(df.resample('D', on='date')['facebook_comments'].mean(),
         label="Facebook comments per article", color='lightskyblue')
     plt.plot(df.resample('D', on='date')['facebook_shares'].mean(),
@@ -89,7 +109,14 @@ def create_buzzsumo_thebl_figure():
     plt.axvline(np.datetime64("2019-12-01"), color='C3', linestyle='--')
     plt.ylim(-100, 10000)
 
+    #plt.tight_layout()#
+    #save_figure('facebook_buzzsumo_thebl_1.png')#
+
+    #fig = plt.figure(figsize=(10, 4)) #
+    #fig.suptitle('The Beauty of Life (data from Buzzsumo)')
+
     ax = plt.subplot(212)
+    #ax = plt.subplot(111) #
     plt.plot(df.resample('D', on='date')['date'].agg('count'),
             label='Number of articles published per day', color='grey')
     arrange_plot(ax, df)
@@ -97,6 +124,7 @@ def create_buzzsumo_thebl_figure():
     plt.ylim(0, 80)
 
     plt.tight_layout()
+    #save_figure('facebook_buzzsumo_thebl_2.png')#
     save_figure('facebook_buzzsumo_thebl.png')
 
 
@@ -144,11 +172,14 @@ def create_facebook_crowdtangle_infowars_figure():
     df = import_data('facebook_crowdtangle_infowars_2021-06-29.csv')
     df = clean_crowdtangle_data(df)
     print('There are {} posts after removing the indirect links in the CrowdTangle Infowars date.'.format(len(df)))
-    print_the_percentage_changes(df, columns=['reaction', 'share', 'comment'])
+    #print_the_percentage_changes(df, columns=['reaction', 'share', 'comment'])
 
-    plt.figure(figsize=(10, 8))
+    #plt.figure(figsize=(10, 8))
 
-    ax = plt.subplot(211)
+    plt.figure(figsize=(10, 4))#
+
+    #ax = plt.subplot(211)
+    ax = plt.subplot(111)#
     plt.title('Facebook public posts sharing an Infowars link (data from CrowdTangle)')
 
     plt.plot(df.resample('D', on='date')['date'].agg('count'),
@@ -157,7 +188,15 @@ def create_facebook_crowdtangle_infowars_figure():
     plt.axvline(np.datetime64("2019-05-02"), color='C3', linestyle='--')
     plt.ylim(0, 160)
 
-    ax = plt.subplot(212)
+    plt.tight_layout()#
+    save_figure(figure_name='facebook_crowdtangle_infowars_1.png')#
+
+    plt.figure(figsize=(10, 4))#
+    plt.title('Facebook public posts sharing an Infowars link (data from CrowdTangle)')#
+
+    #ax = plt.subplot(212)
+    ax = plt.subplot(111)#
+
     plt.plot(df.resample('D', on='date')['comment'].mean(),
         label="Comments per post", color='lightskyblue')
     plt.plot(df.resample('D', on='date')['share'].mean(),
@@ -169,7 +208,7 @@ def create_facebook_crowdtangle_infowars_figure():
     plt.ylim(0, 78)
 
     plt.tight_layout()
-    save_figure(figure_name='facebook_crowdtangle_infowars.png')
+    save_figure(figure_name='facebook_crowdtangle_infowars_2.png')#
 
 
 def clean_buzzsumo_data(df):
@@ -247,7 +286,7 @@ def preprocess_youtube_data():
     return oann,tony_heller
 
 
-def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name):
+def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name, title):
     window_num = 1
 
     df_tlm_views = data.groupby(['published_at'])['view_counts'].sum().to_frame('view_counts')
@@ -261,33 +300,30 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     df_tlm_vol_rolling = df_tlm_vol.groupby(['published_at']).mean().rolling(window=window_num, win_type='triang',
                                                                              center=True).mean()
     df_tlm_vol_rolling['published_at'] = df_tlm_vol_rolling.index
-    fig, ax = plt.subplots(1, figsize=(15, 4))
+
+    fig, ax = plt.subplots(1, figsize=(10, 4))
     plt.locator_params(axis='y', nbins=4)
-    plt.setp(ax1.get_xticklabels(), rotation=45)
+    plt.setp(ax.get_xticklabels(), rotation=45)
 
     ax.xaxis.set_tick_params(length=0)
     ax.plot(df_tlm_vol_rolling_views['published_at'],
              df_tlm_vol_rolling_views['view_counts'],
-             color='red', label='view count')
+             color='red', label='view count of YouTube videos') #
+
+    ax.set(
+       title = title ) #
+
     ax.set_xlim([date_begin_graph, date_end_graph])
-    plt.setp(ax1.get_xticklabels(), rotation=45)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['top'].set_visible(False)
-    ax.grid(axis="y")
-    ax.xaxis.set_tick_params(length=0)
 
     plt.axvspan(np.datetime64(date_begin_sus), np.datetime64(date_end_sus),
-                ymin=0, ymax=200000, facecolor='r', alpha=0.05)
-    ax1.text(np.datetime64(date_begin_sus), height_keyword, 'suspension', color='grey')
-    plt.ylabel('View count')
-    plt.xlabel('Date')
-    plt.legend()
-    plt.tight_layout()
+                    ymin=0, ymax=200000, facecolor='r', alpha=0.05)
+
+    plot_format(ax, plt)
+
     save_figure(figure_name=fig_name)
 
 
-def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name):
+def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph, date_end_graph, height_keyword, fig_name, title):
     window_num = 1
 
     df_tlm_vol = data.groupby(['published_at']).size().to_frame('size')
@@ -296,24 +332,20 @@ def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_grap
     df_tlm_vol_rolling = df_tlm_vol.groupby(['published_at']).mean().rolling(window=window_num, win_type='triang',
                                                                              center=True).mean()
     df_tlm_vol_rolling['published_at'] = df_tlm_vol_rolling.index
-    fig, ax1 = plt.subplots(1, figsize=(15, 4))
-    ax1.plot(df_tlm_vol['published_at'],
+    fig, ax = plt.subplots(1, figsize=(10, 4))
+    ax.plot(df_tlm_vol['published_at'],
              df_tlm_vol['size'],
-             color='red', label='Video Uploads')
+             color='red', label='Number of YouTube videos uploaded')
+    ax.set(
+       title = title )
 
-    ax1.set_xlim([date_begin_graph, date_end_graph])
-    plt.setp(ax1.get_xticklabels(), rotation=45)
-    ax1.spines['right'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['top'].set_visible(False)
-    ax1.grid(axis="y")
     plt.axvspan(np.datetime64(date_begin_sus), np.datetime64(date_end_sus),
                 ymin=0, ymax=200000, facecolor='r', alpha=0.05)
-    ax1.text(np.datetime64(date_begin_sus), height_keyword, 'suspension', color='grey')
-    plt.ylabel('Video count')
-    plt.xlabel('Date')
-    plt.legend()
-    plt.tight_layout()
+
+    ax.set_xlim([date_begin_graph, date_end_graph])
+
+    plot_format(ax, plt)
+
     save_figure(figure_name=fig_name)
 
 
@@ -321,13 +353,19 @@ def create_youtube_graph():
 
     oann, tony_heller = preprocess_youtube_data()
     plot_view_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
-                            2680000,'OANN_views_yt.png')
+                            2680000,'OANN_views_yt.png',
+                            title = 'View count of videos by the YouTube channel OANN')
     plot_view_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
-                            date(2020, 11, 15), 1500000,'Tony_Heller_views_yt.png')
+                            date(2020, 11, 15), 1500000,'Tony_Heller_views_yt.png',
+                            title = 'View count of videos by the YouTube channel Tony Heller')
+
     plot_video_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
-                             32,'OANN_videos_yt.png')
+                             32,'OANN_videos_yt.png',
+                            title = 'Video uploads by the YouTube channel OANN')
     plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
-                             date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png')
+                             date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png',
+                             title = 'Video uploads by the YouTube channel Tony Heller')
+
 
 def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
 
@@ -346,35 +384,10 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
         df_volume = df_volume .sort_index().reset_index(drop = True)
         df_volume = df_volume.sort_values(by = "date")
 
-    #cc = df_volume[df_volume['type_of_tweet'] == 'created_content']
-    #reply = df_volume[df_volume['type_of_tweet'] == 'replied_to']
-    #quote = df_volume[df_volume['type_of_tweet'] == 'quoted']
-    #retweeted = df_volume[df_volume['type_of_tweet'] == 'retweeted']
-
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(10, 4))
 
     d = df[(df['date']> datetime.date(2019, 1, 1) ) & (df['date']<datetime.date(2021, 7, 1))]
     total = d['id'].count()
-
-#    ax.plot(reply['date'],
-#        reply['size'],
-#        color='lightblue',
-#        label='Replied to')
-
-#    ax.plot(quote['date'],
-#        quote['size'],
-#        color='lightgreen',
-#        label='Quoted')
-
-#    ax.plot(retweeted['date'],
-#        retweeted['size'],
-#        color='pink',
-#        label='Retweeted')
-
-#    ax.plot(cc['date'],
-#        cc['size'],
-#        color='deepskyblue',
-#        label='Created content')
 
     ax.plot(df_volume['date'],
         df_volume['size'],
@@ -399,29 +412,67 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
                 facecolor='r',
                 alpha=0.05)
 
-    #ax.text(np.datetime64('2020-02-09') , 50, 'suspension \n period', color='red')
-    #ax.text(np.datetime64('2021-02-09') , 50, 'suspension \n period', color='red')
-
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['top'].set_visible(False)
-    plt.locator_params(axis='y', nbins=4)
-
-    ax.grid(axis='y')
-    handles, labels = ax.get_legend_handles_labels()
-    patch = mpatches.Patch(color='pink',
-                           label='Suspension Period')
-    handles.append(patch)
-
-    plt.legend(handles=handles)
-
-    plt.setp(ax.get_xticklabels(), rotation=45)
-
-    plt.tight_layout()
+    plot_format(ax, plt)
 
     save_figure(figure_name)
-    #plt.savefig('./lifesite.jpg', bbox_inches='tight')
     #plt.show()
+
+def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
+
+    df = import_data(filename)
+    df = df.drop_duplicates()
+
+    df['date'] = pd.to_datetime(df['created_at']).dt.date
+
+    d=df[(df['date']> datetime.date(2021,1,1) ) & (df['date'] < datetime.date(2021, 6, 30) )]
+    total=d['id'].count()
+
+    fig, ax = plt.subplots(figsize=(10, 4))
+
+    if zeros == 1:
+
+        df_tw_vol1=df.groupby(['date']).size().to_frame('size')
+        df_tw_vol_rolling1=df_tw_vol1.groupby(['date']).sum().rolling(window=1, win_type='triang', center=True).mean()
+        df_tw_vol_rolling1['date'] = df_tw_vol_rolling1.index
+
+        ax.plot(df_tw_vol_rolling1['date'],
+                df_tw_vol_rolling1['size'],
+                color='deepskyblue',
+                label='Number of Tweets per day')
+
+        ax.set_ylim([0, 600])
+
+    elif zeros == 0:
+
+        df_s=df.groupby(['date'],as_index=False)[['like_count','retweet_count','reply_count']].sum()
+        df_s_rolling=df_s.groupby(['date'])[['like_count','retweet_count','reply_count']].sum().rolling(window=1, win_type='triang', center=True).mean()
+        df_s_rolling['date'] = df_s_rolling.index
+
+        ax.plot(df_s_rolling['date'],
+                df_s_rolling['like_count'],
+                color='lightblue',label='Like Count')
+
+        ax.plot(df_s_rolling['date'],
+                df_s_rolling['reply_count'],
+                color='lightgreen',label='Reply Count')
+
+        ax.plot(df_s_rolling['date'],
+                df_s_rolling['retweet_count'],
+                color='pink',label='Retweet Count')
+
+        #ax.set_ylim([0, 800000])
+
+    ax.set(
+        title = title)
+
+    ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
+    plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-06-30'),
+            ymin=0, ymax=200000, facecolor='r', alpha=0.05)
+
+
+    plot_format(ax, plt)
+
+    save_figure(figure_name)
 
 
 def create_twitter_figures():
@@ -429,23 +480,37 @@ def create_twitter_figures():
     create_twitter_Lifesite_figure(
     filename = 'twitter_lifesitenews_2021-07-22.csv',
     figure_name = 'lifesite.jpg',
-    title = f"@LifeSite Twitter account",
+    title = f"Tweets by @LifeSite Twitter account",
     zeros = 1
     )
 
     create_twitter_Lifesite_figure(
-    filename = 'twitter_lifesitenews_domain_name_2021-07-22.csv',
+    filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
     figure_name = 'lifesite_domain.jpg',
-    title = f"Total number of tweets per day sharing a lifesitenews.com link)",
+    title = f"Tweets containing the domain name lifesitenews.com",
+    zeros = 0
+    )
+
+    create_twitter_globalresearch_figure(
+    filename = 'twitter_globalresearch_domain_name_2021-07-29.csv',
+    figure_name = 'globalresearch_domain.jpg',
+    title = f"Tweets containing the domain name globalresearch.ca",
+    zeros = 1
+    )
+
+    create_twitter_globalresearch_figure(
+    filename = 'twitter_globalresearch_domain_name_2021-07-29.csv',
+    figure_name = 'globalresearch_domain_engagement.jpg',
+    title = f"Tweets containing the domain name globalresearch.ca",
     zeros = 0
     )
 
 if __name__=="__main__":
 
-    create_facebook_trump_figure()
-    create_buzzsumo_thebl_figure()
+    #create_facebook_trump_figure()
+    #create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
-    create_facebook_buzzsumo_infowars_figure()
+    #create_facebook_buzzsumo_infowars_figure()
 
     create_youtube_graph()
 
