@@ -442,6 +442,8 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
         ax.set_ylim([0, 600])
 
+        ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
+
     elif zeros == 0:
 
         df_s=df.groupby(['date'],as_index=False)[['like_count','retweet_count','reply_count']].sum()
@@ -460,12 +462,13 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
                 df_s_rolling['retweet_count'],
                 color='pink',label='Retweet Count')
 
-        #ax.set_ylim([0, 800000])
+        ax.set_ylim([0, 1500])
+        ax.set_xlim([datetime.date(2021,6,14), datetime.date(2021, 6, 30)])
 
     ax.set(
         title = title)
 
-    ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
+    #ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
     plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-06-30'),
             ymin=0, ymax=200000, facecolor='r', alpha=0.05)
 
@@ -500,15 +503,15 @@ def create_twitter_figures():
 
     create_twitter_globalresearch_figure(
     filename = 'twitter_globalresearch_domain_name_2021-07-29.csv',
-    figure_name = 'globalresearch_domain_engagement.jpg',
+    figure_name = 'globalresearch_domain_engagement_2.jpg',
     title = f"Tweets containing the domain name globalresearch.ca",
     zeros = 0
     )
 
 if __name__=="__main__":
 
-    #create_facebook_trump_figure()
-    #create_buzzsumo_thebl_figure()
+    create_facebook_trump_figure()
+    create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
     #create_facebook_buzzsumo_infowars_figure()
 
