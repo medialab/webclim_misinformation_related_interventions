@@ -463,14 +463,14 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
         ax.set_ylim([0, 2000])
 
 
-    ax.set_xlim([datetime.date(2021, 4, 1), datetime.date(2021, 8, 1)])
+    ax.set_xlim([datetime.date(2021, 4, 1), datetime.date(2021, 8, 15)])
 
     ax.set(
         title = title)
 
     #ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
     plt.axvline(np.datetime64("2021-06-14"), color='C3', linestyle='--')
-    plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-08-01'),
+    plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-08-15'),
             ymin=0, ymax=200000, facecolor='r', alpha=0.05)
 
 
