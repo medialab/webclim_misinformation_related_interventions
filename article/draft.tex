@@ -669,7 +669,7 @@ To further illustrate this point, the original list of YouTube videos with faile
 However, by June $2021$, thirty videos had disappeared from the YouTube API for policy violation. 
 Similarly, in a related research project (see Thero and Vincent (2020)~\cite{therovincent}) we searched on CrowdTangle for $94$ public accounts sharing specific content associated with misinformation in November $2020$. 
 We tried to collect the posts from those $94$ pages in January $2021$, to only discover that $11$ pages had disappeared from the CrowdTangle API.
-It is of course not surprising that plaforms are regulating their content, sometimes by removing it, but we would argue that it could simplify the researchers' work if the deleted data could still be accessible in the APIs (Pasquetto, Swire-Thompson, Amazeen et al. (2020)~\cite{pasquetto}).
+It is of course not surprising that plaforms are regulating their content, sometimes by removing it, but we would argue that it could simplify the researchers' work if deleted data could still be accessible in the APIs.
 
 Although it is currently impossible to verify permanent deletions using social media data, their effects can be observed using an adapted methodology.
 Following the Capitol riots in January 2021, Twitter has announced the suspension of more than 70,000 accounts related to QAnon.
@@ -677,7 +677,7 @@ Following the Capitol riots in January 2021, Twitter has announced the suspensio
 A journalist has recently investigated the effects of this measure by counting the number of times some hashtags specific to the QAnon movement have been used over time, such as \#QAnon or \#WWG1WGA.
 A drastic reduction in hashtag use was found when comparing the first quarter of 2021 with the first quarter of 2021.
 \footnote{\url{https://twitter.com/Shayan86/status/1394742784683298818}}
-Thus, counting specific hashtag use over time allows to indirectly observe permanent suspensions on Twitter, and other similar methodologies can be found for the other platforms.
+Thus, counting specific hashtag use over time allows to indirectly observe permanent suspensions on Twitter, and there is a need for similar methodologies to be experimented on the other platforms' data.
 
 \smallskip 
 
@@ -690,17 +690,24 @@ Again, this disrupts the monitoring of the platforms' interventions and the asse
 
 \smallskip
 
-{\color{brown} A last concern concerns the increasing restrictions to access data via APIs.
-
-1/ Restrictions to the Open Graph API with the Cambridge Analytica scandal. 
-
-2/ Now CT exists but doubt were recently raised that this API will still be accessible for researchers and journalists.
-
-3/ Still access to the "official" APIs for Twitter and YouTube, although the access to Twitter API is very hard to justify if we say we are researchers.
-
-4/ Increasing volume restrictions on the Twitter API between V1 and V2.
-
-It should be noted that there are other ways to collect data than directly from the platforms' APIs. Indeed, other APIs are also aggregating data from multiple social platforms as there is a need for social marketing. CrowdTangle was actually first an independent social listening tool, before being bought and included within the Facebook organization. For example Newsguard, Buzzsumo, Linkfluence... Problem: often it is not clear how the data are collected, and at which frequency (more reliable to go to the "source", i.e. the official API).}
+A last concern regards the increasing restrictions to access APIs \cite{api}.
+In April 2018, likely as a response to the Cambridge Analytica scandal, Facebook severely limited access to their official APIs
+\footnote{https://about.fb.com/news/2018/04/restricting-data-access/}, 
+and CrowdTangle is today a reliable source for researchers to access Facebook data. 
+But CrowdTangle has recently been used by journalists to shown that Facebook is spreading biased information
+\footnote{\url{https://www.economist.com/graphic-detail/2020/09/10/facebook-offers-a-distorted-view-of-american-news}, \url{https://twitter.com/facebookstop10}. 
+The last link is a Twitter account showing each day the ten most shared link on Facebook, most of them coming from extreme right and misinformation sources. 
+Facebook has reacted to this here: \url{https://about.fb.com/news/2020/11/what-do-people-actually-see-on-facebook-in-the-us/}}
+, and a general suspicion is growing that journalists' researchers' access to the API might be shut down in a near future.
+\footnote{\url{https://www.nytimes.com/2021/07/14/technology/facebook-data.html}, \url{https://www.bloomberg.com/news/articles/2021-08-03/facebook-disables-accounts-tied-to-nyu-research-project}}
+Regarding Twitter and YouTube, it is still possible and relatively easy to access their official APIs, although in our personal experience we never managed to get access to the Twitter API when we described our intend to use the Twitter developer platform as `academic'.
+\footnote{The token was given only when we described a `hobbyist' intent.}
+It should also be noted that the number of Tweets you can retrieve has decreased between the Twitter API V1 and V2. 
+In the V2, there is a monthly cap of 10,000,000 Tweets for academic research projects
+\footnote{https://developer.twitter.com/en/docs/projects/overview},
+while there was no monthly limit in the V1, only a limit in the number of requests that could be made in a 15-minute window
+\footnote{https://developer.twitter.com/en/docs/twitter-api/v1/rate-limits}.
+We thus noticed that we could get around 10 times more Tweets per month with the V1 than the V2 for one specific collection.
 
 \smallskip
 
@@ -710,10 +717,11 @@ We are aware that full transparency regarding operational aspects of misinformat
 
 \smallskip
 
-{\bf A need for a global and coherent misinformation policy.} It is likely that most interventions related to misinformation correspond to interventions that were designed for other policy areas or aim violations that fall into other categories cited in the platforms' guidelines. To illustrate, YouTube explicitly states\footnote{See {\it What policies exist to fight misinformation on Youtube?} \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}{youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}.} that: {\it Several policies in our Community Guidelines are directly applicable to misinformation}; such as deceptive practices, impersonation and hate speech policy. Similarly, Facebook took down four pages related to InfoWars and cited as a reason the repeated violations of Community Standards and not false news.\footnote{An article published \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{on Facebook Newsroom (2018)} states that : ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this''.}
+{\bf A need for global and consistent policies.} It is likely that most interventions related to misinformation correspond to interventions that were designed for other policy areas or aim violations that fall into other categories cited in the platforms' guidelines. To illustrate, YouTube explicitly states\footnote{See {\it What policies exist to fight misinformation on Youtube?} \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}{youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}.} that: {\it Several policies in our Community Guidelines are directly applicable to misinformation}; such as deceptive practices, impersonation and hate speech policy. Similarly, Facebook took down four pages related to InfoWars and cited as a reason the repeated violations of Community Standards and not false news.\footnote{An article published \href{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}{on Facebook Newsroom (2018)} states that : ``All four Pages have been unpublished for repeated violations of Community Standards and accumulating too many strikes. While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address by demoting links marked wrong by fact checkers and suggesting additional content, none of the violations that spurred today’s removals were related to this''.}
 
 Naturally, the design of an intervention by a given online platform in order to moderate content should be adapted to the aimed policy area. Therefor, $classic$ interventions such as account suspension and content deletion, might be efficient for policy areas such as Adult Nudity \& Sexual Activity or Hate Speech. Nevertheless, tackling online misinformation is an active area of research and interventions specifically designed for this $new$ policy area, might be required to avoid undesired effects. Namely, account suspensions may have generated a movement of platform migration towards new alternative social media platforms, with little or no content moderation. We invite the reader to see Rogers (2020)~\cite{rogers2020} for an excellent overview about de-platforming and see Robins-Early (2019)~\cite{huffpost} for a news article about Alex Jones's account suspension on Facebook.
-{\color{pink} Make point / Recommendation: inform about sources, example inform users that this user/account/page/group/channel has shared x failed fact-checks over a x-months period.}
+
+{\color{brown} Make point / Recommendation: inform about sources, example inform users that this user / account / page / group / channel has shared x failed fact-checks over a x-months period.}
 %\smallskip
 
 % points to make ? argument ? en gros, interventions existaient dejà on les utilise pour la mesinformation, la mesinformation n'est pas officiellemtn
