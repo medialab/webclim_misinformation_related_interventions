@@ -682,7 +682,8 @@ Thus, counting specific hashtag use over time allows to indirectly observe perma
 \smallskip 
 
 Aside from the disappearance of data due to content moderation, some essential metrics for the study of misinformation are not accessible via main APIs. 
-In particular, the $reach$ of posts on Facebook, which is the number of people who actually see a given post, cannot be recovered from the CrowdTangle API (REF). 
+In particular, the $reach$ of posts on Facebook, which is the number of people who actually see a given post, cannot be recovered from the CrowdTangle API.
+\footnote{\url{https://help.crowdtangle.com/en/articles/4558716-understanding-and-citing-crowdtangle-data}} 
 Hence, researchers can only build proxies for this metric based on available data (see section \ref{reduce_fb} for an example). 
 Furthermore, to the best of our knowledge, fields related to flags, notices and information panels are not available on the official APIs, with the exception of the {\it withheld}  and {\it possibly sensitive content} interstitials in the Twitter API v2. 
 For the purposes of the present research we thus had to scrape this information from Facebook, Twitter and YouTube. 
@@ -692,7 +693,7 @@ Again, this disrupts the monitoring of the platforms' interventions and the asse
 
 A last concern regards the increasing restrictions to access APIs \cite{api}.
 In April 2018, likely as a response to the Cambridge Analytica scandal, Facebook severely limited access to their official APIs
-\footnote{https://about.fb.com/news/2018/04/restricting-data-access/}, 
+\footnote{\url{https://about.fb.com/news/2018/04/restricting-data-access/}, \url{http://thepoliticsofsystems.net/2018/08/facebooks-app-review-and-how-independent-research-just-got-a-lot-harder/}}, 
 and CrowdTangle is today a reliable source for researchers to access Facebook data. 
 But CrowdTangle has recently been used by journalists to shown that Facebook is spreading biased information
 \footnote{\url{https://www.economist.com/graphic-detail/2020/09/10/facebook-offers-a-distorted-view-of-american-news}, \url{https://twitter.com/facebookstop10}. 
