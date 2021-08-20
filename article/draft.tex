@@ -307,24 +307,28 @@ may  have  a  good  impact  on  reducing  the  audience interest or reach to the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Flags, Notices and labels} \label{flags}
+\section{Flags, Notices and information panels} \label{flags}
+
+Mainstream platforms such as Facebook, Twitter and YouTube can resort to providing more context to users regarding a specific post, Tweet or video. This type of intervention takes different formats according to the platform and also has different denominations. Facebook for example refers to this intervention by mentioning ``flags", while Twitter  refers to ``notices" and ``interstitials" and YouTube uses the term ``information panels". In this section, we explain the specifics of this intervention for each platform and illustrate with examples. 
 
 \subsection{Facebook}
 
-To the best of our knowledge, two types of flags can currently be seen on Facebook posts, videos and pictures: $(i)$ information banners that do not refute the message in the post but that give a link to an authoritative source, such as ``Visit the COVID-19 Information Centre for vaccine resources'' and $(ii)$ fact-check flags that provide a ``judgement'' on the text of the post or the link, shared, such as ``False information Checked by independent fact-checkers'' (see Figure \ref{fb_flags}). The fact-check flags can be of varied nature : `False', `Partly false', `Missing context', `False headline', `Altered media', `Opinion', `Satire', `Not eligible' and even `True'.
+To the best of our knowledge, two types of flags can currently be displayed on Facebook posts: 
+$(i)$ information banners which do not refute the message in the post and provide a link which redirects to an authoritative source, such as ``Visit the COVID-19 Information Centre for vaccine resources'' and $(ii)$ fact-check flags that assigns a ``rating" for a text or a link in a given post, such as ``False information Checked by independent fact-checkers'' (see Figure \ref{fb_flags}). The fact-check flags display the following ratings : ``False", ``Partly false", ``Missing context", ``False headline", ``Altered media", ``Opinion", ``Satire", ``Not eligible" and ``True".\footnote{See \href{https://www.facebook.com/business/help/341102040382165}{https://www.facebook.com/business/help/341102040382165}.}
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.35]{./img/fb_flags/fb_flag_1.png}
 \includegraphics[scale=0.35]{./img/fb_flags/fb_flag_2.png}
 \includegraphics[scale=0.49]{./img/fb_flags/fb_flag_3.png}
-\caption{Examples of Facebook posts having shared a link fact-checked as False by one of Facebook’s partners. Screenshots taken on July 8, 2021: \href{https://www.facebook.com/groups/1220117708132394/permalink/2386760061468147}{facebook.com/groups/1220117708132394/permalink/2386760061468147},  \href{https://www.facebook.com/groups/473809623000471/permalink/1333200093728082}{facebook.com/groups/473809623000471/permalink/1333200093728082}, \href{https://www.facebook.com/691911990845585/posts/3835629366473816}{facebook.com/691911990845585/posts/3835629366473816}).} 
+\caption{Examples of Facebook posts having shared a link fact-checked as False by one of Facebook’s partners. Screenshots taken on July 8, 2021: \href{https://www.facebook.com/groups/1220117708132394/permalink/2386760061468147}{facebook.com/groups/1220117708132394/permalink/2386760061468147},  \href{https://www.facebook.com/groups/473809623000471/permalink/1333200093728082}{facebook.com/groups/473809623000471/permalink/1333200093728082}, \href{https://www.facebook.com/691911990845585/posts/3835629366473816}{facebook.com/691911990845585/posts/} \href{https://www.facebook.com/691911990845585/posts/3835629366473816}{3835629366473816} .} 
 \label{fb_flags}
 \end{figure}
 
-No information regarding the flags can be found on Buzzsumo or CrowdTangle, the two APIs we use to access Facebook data. The only way to verify Facebook’s flag policy is thus to scrap Facebook. For this paper, we added a new feature in minet to scrape Facebook posts and automatically verify for the presence of the flags.
+No information or available fields regarding the Facebook flags can be found on Buzzsumo or CrowdTangle, the two APIs we use to access Facebook data. The only way to verify Facebook’s flagging policy is thus via scrapping publicly available content. To that end, we added a new feature in Minet~\cite{minet} which could automatically verify the presence or absence of flags.
 
-We first searched for all the Facebook posts having shared a link rated as ‘False’ by Science Feedback with the {\it search} endpoint in minet\footnote{ Click \href{https://beforeitsnews.com/eu/2021/04/stay-away-from-the-vaxxed-it-is-official-from-pfizers-own-documents-2671454.html}{here} to access the link and  \href{https://healthfeedback.org/claimreview/insufficient-evidence-to-claim-covid-19-vaccines-cause-menstrual-irregularities-in-vaccinated-women-vaccinated-people-arent-making-unvaccinated-people-ill/}{its fact-check by Health Feedback}.}. Twenty Facebook posts were collected this way, and the newly developed scraper was used to verify whether they were flagged with an information banner, a fact-check flag, both or none. Three posts were unavailable, and thus could not be categorized by the scraper. As Science Feedback has sent a False fact-check for this link to Facebook, we would expect all these posts to contain a fact-check flag, but we had no expectations for the information banner. 
+We first searched for all the Facebook posts having shared a specific link rated as ‘False’ by Science Feedback, a fact-checking organization which partners with Facebook. We used the {\it search} endpoint in Minet.\footnote{ Click \href{https://beforeitsnews.com/eu/2021/04/stay-away-from-the-vaxxed-it-is-official-from-pfizers-own-documents-2671454.html}{here} to access the link and  \href{https://healthfeedback.org/claimreview/insufficient-evidence-to-claim-covid-19-vaccines-cause-menstrual-irregularities-in-vaccinated-women-vaccinated-people-arent-making-unvaccinated-people-ill/}{its fact-check by Health Feedback}.} 
+Twenty Facebook posts were collected this way, and the newly developed scraper was used to verify whether they contained an information banner, a fact-check flag, both or none. Three posts were unavailable, and thus could not be categorized by the scraper. As Science Feedback has informed Facebook that they have assigned the rating ``False'' for this link, we expected that all these posts would contain a fact-check flag, but we had no expectations for the information banner. 
 
 \begin{table}[h]
 \begin{tabular}{|c|c|c|c|}
@@ -339,11 +343,11 @@ without a flag & with an information flag & with a fact-check flag & \begin{tabu
 
 \smallskip
 
-Surprisingly only $11$ posts out of the remaining $17$ had a ‘False information’ flag  (Table \ref{tab_flags_fb}, see left panel of Figure \ref{fb_flags} for an example). We observed that the flagged posts were also the ones in which the false link was expanded (i.e., a banner was visible with an image of the link and that can be clicked on, see the middle and right panels of Figure \ref{fb_flags} for examples). As the ‘False information’ flag is applied on the link banner, and not on the link itself, a user is thus able to share a False link on Facebook without the ‘False information’ banner if the link is not expanded.
+Surprisingly only $11$ posts out of the remaining $17$ had a ``False information'' flag  (Table \ref{tab_flags_fb}, see left panel of Figure \ref{fb_flags} for an example). We observed that the flagged posts were also the ones in which the false link was expanded (i.e., a banner was visible with an image of the link and that can be clicked on, see the middle and right panels of Figure \ref{fb_flags} for examples). As the ‘False information’ flag is applied on the link banner, and not on the link itself, a user is thus able to share a ``False'' link on Facebook without the ``False'' flag if the link is not expanded.
 
 \smallskip
 
-We also observed that most of the posts sharing this False link (13 out of 17, Table \ref{tab_flags_fb}) had an information banner saying ‘Visit the COVID-19 Information Centre for vaccine resources’ (see the first two examples of Figure \ref{fb_flags}). We could not identify why the banner was applied on some posts and not on others (we saw no clear difference in the post messages for example). It should be noted that some posts displayed both the information and the fact-check banners, as in the middle panel of Figure \ref{fb_flags}.
+We also observed that most of the posts sharing this ``False'' link (13 out of 17, Table \ref{tab_flags_fb}) had an information banner saying ``Visit the COVID-19 Information Centre for vaccine resources" (see the first two examples of Figure \ref{fb_flags}). We could not identify why the banner was applied on some posts and not on others (we saw no clear difference in the post messages for example). It should be noted that some posts displayed both the information and the fact-check banners, as in the middle panel of Figure \ref{fb_flags}.
 
 \subsection{Twitter}
 
