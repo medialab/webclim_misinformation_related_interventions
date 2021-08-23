@@ -1,7 +1,8 @@
 import os
+#from datetime import timedelta, date
 from datetime import datetime, timedelta, date
 
-import datetime
+#import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,7 +20,7 @@ def save_figure(figure_name):
     plt.savefig(figure_path)
     print("The '{}' figure is saved.".format(figure_name))
 
-def plot_format(ax, plt):
+def plot_format(ax, plt, suspension):
 
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
@@ -29,9 +30,12 @@ def plot_format(ax, plt):
 
     ax.grid(axis='y')
     handles, labels = ax.get_legend_handles_labels()
-    patch = mpatches.Patch(color='pink',
-                           label='Suspension Period')
-    handles.append(patch)
+
+    if suspension == 1 :
+        patch = mpatches.Patch(color='pink',
+                               label='Suspension Period')
+        handles.append(patch)
+
     plt.legend(handles=handles)
 
     plt.setp(ax.get_xticklabels(), rotation=45)
@@ -93,12 +97,12 @@ def create_buzzsumo_thebl_figure():
     df = import_data('facebook_buzzsumo_thebl_2021-07-01.csv')
     df = clean_buzzsumo_data(df)
 
-    fig = plt.figure(figsize=(10, 8))
-    #fig = plt.figure(figsize=(10, 4)) #
+    #fig = plt.figure(figsize=(10, 8))
+    fig = plt.figure(figsize=(10, 4)) #
     fig.suptitle('The Beauty of Life (data from Buzzsumo)')
 
-    ax = plt.subplot(211)
-    #ax = plt.subplot(111)#
+    #ax = plt.subplot(211)
+    ax = plt.subplot(111)#
     plt.plot(df.resample('D', on='date')['facebook_comments'].mean(),
         label="Facebook comments per article", color='lightskyblue')
     plt.plot(df.resample('D', on='date')['facebook_shares'].mean(),
@@ -109,14 +113,14 @@ def create_buzzsumo_thebl_figure():
     plt.axvline(np.datetime64("2019-12-01"), color='C3', linestyle='--')
     plt.ylim(-100, 10000)
 
-    #plt.tight_layout()#
-    #save_figure('facebook_buzzsumo_thebl_1.png')#
+    plt.tight_layout()#
+    save_figure('facebook_buzzsumo_thebl_1.png')#
 
-    #fig = plt.figure(figsize=(10, 4)) #
-    #fig.suptitle('The Beauty of Life (data from Buzzsumo)')
+    fig = plt.figure(figsize=(10, 4)) #
+    fig.suptitle('The Beauty of Life (data from Buzzsumo)')
 
-    ax = plt.subplot(212)
-    #ax = plt.subplot(111) #
+    #ax = plt.subplot(212)
+    ax = plt.subplot(111) #
     plt.plot(df.resample('D', on='date')['date'].agg('count'),
             label='Number of articles published per day', color='grey')
     arrange_plot(ax, df)
@@ -124,8 +128,8 @@ def create_buzzsumo_thebl_figure():
     plt.ylim(0, 80)
 
     plt.tight_layout()
-    #save_figure('facebook_buzzsumo_thebl_2.png')#
-    save_figure('facebook_buzzsumo_thebl.png')
+    save_figure('facebook_buzzsumo_thebl_2.png')#
+    #save_figure('facebook_buzzsumo_thebl.png')
 
 
 def clean_crowdtangle_data(df):
@@ -318,7 +322,7 @@ def plot_view_count_youtube(data, date_begin_sus, date_end_sus, date_begin_graph
     plt.axvspan(np.datetime64(date_begin_sus), np.datetime64(date_end_sus),
                     ymin=0, ymax=200000, facecolor='r', alpha=0.05)
 
-    plot_format(ax, plt)
+    plot_format(ax, plt, suspension = 1)
 
     save_figure(figure_name=fig_name)
 
@@ -344,7 +348,7 @@ def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_grap
 
     ax.set_xlim([date_begin_graph, date_end_graph])
 
-    plot_format(ax, plt)
+    plot_format(ax, plt, suspension = 1)
 
     save_figure(figure_name=fig_name)
 
@@ -412,7 +416,7 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
                 facecolor='r',
                 alpha=0.05)
 
-    plot_format(ax, plt)
+    plot_format(ax, plt, suspension = 1)
 
     save_figure(figure_name)
     #plt.show()
@@ -470,11 +474,11 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
     #ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
     plt.axvline(np.datetime64("2021-06-14"), color='C3', linestyle='--')
-    plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-08-15'),
-            ymin=0, ymax=200000, facecolor='r', alpha=0.05)
+    #plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-08-15'),
+    #        ymin=0, ymax=200000, facecolor='r', alpha=0.05)
 
 
-    plot_format(ax, plt)
+    plot_format(ax, plt, suspension = 0)
 
     save_figure(figure_name)
 
@@ -514,7 +518,7 @@ if __name__=="__main__":
     create_facebook_trump_figure()
     create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
-    create_facebook_buzzsumo_infowars_figure()
+    #create_facebook_buzzsumo_infowars_figure()
 
     create_youtube_graph()
 
