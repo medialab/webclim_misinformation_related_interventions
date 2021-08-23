@@ -2,7 +2,7 @@ import os
 #from datetime import timedelta, date
 from datetime import datetime, timedelta, date
 
-#import datetime
+import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -445,6 +445,7 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
                 label='Number of Tweets per day')
 
         ax.set_ylim([0, 600])
+        plt.text(np.datetime64("2021-06-15"), 420, "screenshot date", fontsize=10, color='C3')
 
     elif zeros == 0:
 
@@ -466,14 +467,17 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
         ax.set_ylim([0, 2000])
 
+        plt.text(np.datetime64("2021-06-15"), 1400, "screenshot date", fontsize=10, color='C3')
 
-    ax.set_xlim([datetime.date(2021, 4, 1), datetime.date(2021, 8, 15)])
+    ax.set_xlim([datetime.date(2021, 4, 15), datetime.date(2021, 8, 15)])
 
     ax.set(
         title = title)
 
     #ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
     plt.axvline(np.datetime64("2021-06-14"), color='C3', linestyle='--')
+
+
     #plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-08-15'),
     #        ymin=0, ymax=200000, facecolor='r', alpha=0.05)
 
@@ -518,7 +522,7 @@ if __name__=="__main__":
     create_facebook_trump_figure()
     create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
-    #create_facebook_buzzsumo_infowars_figure()
+    create_facebook_buzzsumo_infowars_figure()
 
     create_youtube_graph()
 
