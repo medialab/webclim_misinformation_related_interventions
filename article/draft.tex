@@ -656,7 +656,7 @@ This relatively small percentage hints towards that idea that YouTube is probabl
 
 \section{Discussion}
 
-In this article we have assessed three broad categories of interventions to tackle misinformation by Facebook, Twitter and YouTube: suspension of accounts, introduction of notices and flags and reducing the visibility of content.
+In this article we have assessed three broad categories of interventions to tackle misinformation by Facebook, Twitter and YouTube: $(i)$ suspension of accounts, $(ii)$ introduction of flags, labels and information panels and $(iii)$ reducing the visibility of content.
 \footnote{For a detailed list of interventions of multiple platforms, we invite the reader to navigate through the following \href{https://airtable.com/shrO0ooI9WSEfIUhb/tblAWQwFOiihKdQjm/viwZLAOzLK1NQ0c2n?blocks=hide}{airtable} compiled by Slatz and Leibowicz (2021)~\cite{niemanlab}.}
 Furthermore, we have provided a methodology that can be useful for third-party monitoring. 
 The code needed to collect the data and create the figures is available on the following public GitHub repository: \href{https://github.com/medialab/truth-and-trust-online-2021/}{https://github.com/medialab/truth-and-trust-online-2021/}, and we hope it can be a useful ressource for researchers, NGOs and journalists addressing online misinformation. 
@@ -679,10 +679,10 @@ We tried to collect the posts from those $94$ pages in January $2021$, to only d
 It is of course not surprising that plaforms are regulating their content, sometimes by removing it, but we would argue that it could simplify the researchers' work if deleted data could still be accessible in the APIs.
 
 Although it is currently impossible to verify permanent deletions using social media data, their effects can be observed using an adapted methodology.
-Following the Capitol riots in January 2021, Twitter has announced the suspension of more than 70,000 accounts related to QAnon.
+Following the Capitol riots in January 2021, Twitter has announced the suspension of more than $70$ $000$ accounts related to QAnon.
 \footnote{\url{https://blog.twitter.com/en_us/topics/company/2021/protecting--the-conversation-following-the-riots-in-washington--}} 
 A journalist has recently investigated the effects of this measure by counting the number of times some hashtags specific to the QAnon movement have been used over time, such as \#QAnon or \#WWG1WGA.
-A drastic reduction in hashtag use was found when comparing the first quarter of 2021 with the first quarter of 2021.
+A drastic reduction in hashtag use was found when comparing the first quarter of $2021$ with the first quarter of $2021$.
 \footnote{\url{https://twitter.com/Shayan86/status/1394742784683298818}}
 Thus, counting specific hashtag use over time allows to indirectly observe permanent suspensions on Twitter, and there is a need for similar methodologies to be experimented on the other platforms' data.
 
@@ -698,24 +698,23 @@ Again, this disrupts the monitoring of the platforms' interventions and the asse
 
 \smallskip
 
-A last concern regards the increasing restrictions to access APIs \cite{api}.
+A last concern regards the growing restrictions to access APIs \cite{api}.
 In April 2018, likely as a response to the Cambridge Analytica scandal, Facebook severely limited access to their official APIs
 \footnote{\url{https://about.fb.com/news/2018/04/restricting-data-access/}, \url{http://thepoliticsofsystems.net/2018/08/facebooks-app-review-and-how-independent-research-just-got-a-lot-harder/}}, 
 and CrowdTangle is today a reliable source for researchers to access Facebook data. 
-But CrowdTangle has recently been used by journalists to shown that Facebook is spreading biased information
+But CrowdTangle has recently been used by journalists to show that Facebook is spreading biased information
 \footnote{\url{https://www.economist.com/graphic-detail/2020/09/10/facebook-offers-a-distorted-view-of-american-news}, \url{https://twitter.com/facebookstop10}. 
 The last link is a Twitter account showing each day the ten most shared link on Facebook, most of them coming from extreme right and misinformation sources. 
 Facebook has reacted to this here: \url{https://about.fb.com/news/2020/11/what-do-people-actually-see-on-facebook-in-the-us/}}
-, and a general suspicion is growing that journalists' researchers' access to the API might be shut down in a near future.
+, and a general suspicion is growing that the access of journalists and researchers to the API might be shut down in a near future.
 \footnote{\url{https://www.nytimes.com/2021/07/14/technology/facebook-data.html}, \url{https://www.bloomberg.com/news/articles/2021-08-03/facebook-disables-accounts-tied-to-nyu-research-project}}
-Regarding Twitter and YouTube, it is still possible and relatively easy to access their official APIs, although in our personal experience we never managed to get access to the Twitter API when we described our intend to use the Twitter developer platform as `academic'.
-\footnote{The token was given only when we described a `hobbyist' intent.}
-It should also be noted that the number of Tweets you can retrieve has decreased between the Twitter API V1 and V2. 
-In the V2, there is a monthly cap of 10,000,000 Tweets for academic research projects
+Regarding Twitter and YouTube, it is still possible and relatively easy to access their official APIs.%, although in our personal experience we never managed to get access to the Twitter API when we described our intend to use the Twitter developer platform as `academic'.\footnote{The token was given only when we described a `hobbyist' intent.}
+It should also be noted that the number of Tweets that can be retrieved has decreased between the Twitter API v1 and v2. 
+In the v2, there is a monthly cap of 10,000,000 Tweets for the academic research track
 \footnote{https://developer.twitter.com/en/docs/projects/overview},
-while there was no monthly limit in the V1, only a limit in the number of requests that could be made in a 15-minute window
+while there was no monthly limit in the v1, only a limit in the number of requests that could be made in a 15-minute window
 \footnote{https://developer.twitter.com/en/docs/twitter-api/v1/rate-limits}.
-We thus noticed that we could get around 10 times more Tweets per month with the V1 than the V2 for one specific collection.
+We thus noticed that we could get around 10 times more Tweets per month with the v1 when compared to the v2 for one specific collection.
 
 \smallskip
 
@@ -738,25 +737,21 @@ Hence, a balance is needed between: $(i)$ fully transparent communication about 
 
 \smallskip
 
-In the examples shown in this paper, most of the platforms' interventions were actually motivated by other violations of the platforms' guidelines than misinformation.
-Although Donald Trump spread many misinformation during his governance
-\footnote{\url{http://allianceforscience.cornell.edu/blog/2020/10/what-drove-the-covid-misinformation-infodemic/}}, 
-the official reason for his Twitter suspension was not misinformation, but rather that his last Tweets encouraging the Capitol's riot were in violation of Twitter's Glorification of Violence Policy.
-\footnote{\url{https://blog.twitter.com/en_us/topics/company/2020/suspension}}
+%In the examples shown in this paper, most of the platforms' interventions were actually motivated by other violations of the platforms' guidelines than misinformation.
+Platform interventions that concern accounts related to domain names who repeatedly share inaccurate, false or misleading content according to fact-checking organizations, are usually not motivated by content moderation to limit misinformation but they  are rather motivated by other rule violations; such as coordinated inauthentic behavior or glorification of violence. In what follows, we cite few specific examples to illustrate this point.
+%Although Donald Trump spread many misinformation during his governance 
+The official reason for the suspension of the official Twitter account of Donald Trump was the violation of Twitter's Glorification of Violence Policy in his last tweets encouraging the Capitol's riot\footnote{\url{https://blog.twitter.com/en_us/topics/company/2020/suspension}} and not misinformation\footnote{Although Donald Trump spread many misinformation during his governance \url{http://allianceforscience.cornell.edu/blog/2020/10/what-drove-the-covid-misinformation-infodemic/}}. 
 Similarly, when Facebook removed four pages related to the InfoWars website, the cited reason was repeated violations of Community Standards.
-Facebook Newsroom clearly stated that : ``While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address [...], none of the violations that spurred today’s removals were related to this''.
-\footnote{\url{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}}
-For The Beauty of Life website, its ban was officially due to coordinated inauthentic behavior
-\footnote{\url{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/}}, 
+Facebook Newsroom clearly stated that : ``While much of the discussion around Infowars has been related to false news, which is a serious issue that we are working to address [...], none of the violations that spurred today’s removals were related to this''.\footnote{\url{https://about.fb.com/news/2018/08/enforcing-our-community-standards/}}
+For The Beauty of Life website, its ban was officially due to coordinated inauthentic behavior\footnote{\url{https://about.fb.com/news/2019/12/removing-coordinated-inauthentic-behavior-from-georgia-vietnam-and-the-us/}}, 
 which includes using fake accounts that misrepresent one's identity or using methods to artificially boost the popularity of content. 
 According to Facebook, coordinated inauthentic behavior is a distinct phenomenon from disinformation, as ``most of the content shared by coordinated manipulation campaigns isn’t probably false''.
 \footnote{See: \href{https://about.fb.com/news/2019/10/inauthentic-behavior-policy-update/}{https://about.fb.com/news/2019/10/inauthentic-behavior-policy-update/}.} 
-Nevertheless, for the case of the Beauty of Life, both misinformation and coordinated inauthentic behavior were attested and reported to Facebook.
-\footnote{\href{ https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, 
-\href{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, 
-\href{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}}
-In these examples, the compagnies' communication was very clear on the reason of the interventions, but often no communication can be found on an oberved intervention.
-Because misinformation is often associated with creating fake accounts to spead it, and incitation to violence, it is sometimes unclear to distinguish between interventions due to misinsformation and interventions due to other guideline violations, and more transparent communication on platforms' actions would help monitor the interventions specifically related to misinformation.
+Nevertheless, for the case of the Beauty of Life, both misinformation and coordinated inauthentic behavior were attested and reported to Facebook by the fact-checking organization Snopes.\footnote{\href{ https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}, 
+\href{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{https://www.snopes.com/news/2019/11/12/bl-} \href{https://www.snopes.com/news/2019/11/12/bl-fake-profiles/}{fake-profiles/} , 
+\href{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}{https://www.snopes.com/news/2019/12/13/facebook-bl-cib/}} 
+In the above ``known'' examples, the compagnies' communication was very clear on the reason of the interventions, but often no communication can be found for a specific intervention observed in collected data. 
+Because misinformation is often associated with creating fake accounts to speed its spread, and incitation to violence, it is sometimes unclear to distinguish between interventions due to misinformation and interventions due to other guideline violations, and more transparent communication on platforms' actions would help monitor the interventions specifically related to misinformation.
 
 \smallskip
 
