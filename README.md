@@ -33,7 +33,7 @@ python3 code/check_flag_youtube.py 'video_id'
 
 To collect the recommendations of a video for two levels, run:
 ```
-  python3 code/experiment_2.py "['video_id_1','video_id_2']"
+  python3 code/collect_youtube_recommendation_reduce.py "['video_id_1','video_id_2']"
 ```
 ### Facebook:
 
