@@ -29,6 +29,12 @@ For checking the existing and content of a flag, run
 python3 code/check_flag_youtube.py 'video_id'
 ```
 - A browser will be opened through a driver and when it finishes it will terminate. you can check the results in the command line.
+
+
+To collect the recommendations of a video for two levels, run:
+```
+  python3 code/experiment_2.py "['video_id_1','video_id_2']"
+```
 ### Facebook:
 
 To collect the Trump Facebook data from CrowdTangle, run (the collection takes around 2 minutes):
