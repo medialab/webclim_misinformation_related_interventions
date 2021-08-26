@@ -256,43 +256,54 @@ A third strike results in the termination of the channel. The strike count of a 
 	\label{fig2_oann}
 \end{figure}
 
-To illustrate the implementation of this policy we provide two examples for the temporary suspension of the following two YouTube channels: \href{https://www.youtube.com/channel/UCNbIDJNNgaRrXOD7VllIMRQ}{One America news Network} and \href{https://www.youtube.com/user/TonyHeller1}{Tony Heller}. The website of One America News Network has a ``low'' factual reporting score according to iffy.news and several inaccurate articles according to feedback.org.\footnote{See \href{https://mediabiasfactcheck.com/one-america-news-network/}{mediabiasfactcheck.com/one-america-news-network/} and \href{https://open.feedback.org/media/AE6Q}{https://open.feedback.org/media/AE6Q}.}  Tony Heller posts regularly blog posts on the website {\it realclimatescience.com}, which also has a ``low'' factual reporting score according to iffy.news.\footnote{See \href{https://mediabiasfactcheck.com/real-climate-science/}{mediabiasfactcheck.com/real-climate-science/}} Both are active on YouTube and both have communicated via their Twitter account about restrictions applied by YouTube over their content (see figure \ref{fig2_oann}).
+To illustrate the implementation of this policy we provide two examples for the temporary suspension of the following YouTube channels: \href{https://www.youtube.com/channel/UCNbIDJNNgaRrXOD7VllIMRQ}{One America news Network} and \href{https://www.youtube.com/user/TonyHeller1}{Tony Heller}. 
+The website of One America News Network has a ``low'' factual reporting score according to iffy.news and several inaccurate articles according to feedback.org.\footnote{See \href{https://mediabiasfactcheck.com/one-america-news-network/}{mediabiasfactcheck.com/one-america-news-network/} and \href{https://open.feedback.org/media/AE6Q}{https://open.feedback.org/media/AE6Q}.}  
+Tony Heller posts regularly blog posts on the website {\it realclimatescience.com}, which also has a ``low'' factual reporting score according to iffy.news.\footnote{See \href{https://mediabiasfactcheck.com/real-climate-science/}{mediabiasfactcheck.com/real-climate-science/}} 
+Both are active on YouTube and both have communicated via their Twitter account about restrictions applied by YouTube over their content (see figure \ref{fig2_oann}).
 
 \smallskip
 
-First, we investigate the temporary suspension of the YouTube channel of {\it One America News channel}. According to the News outlet NBCnews (2020)~\cite{nbcnews}, this YouTube channel received a first strike on November $24$, $2020$ for the promotion of a false cure for COVID-19.
-We collected the activity of the channel OANN (video counts and view counts) using  the YouTube API v3, between November $2020$ and January $2021$. For the video counts, we used the playlist endpoint to retrieve the videos uploaded with their publishing date and for the view count we used the IDs of the videos we had from the playlists, then via the videos endpoint we retrieved the view counts on June $2021$.%\footnote{See the Google documentation  \href{https://developers.google.com/youtube/v3/docs/videos/list}{https://developers.google.com/youtube/v3/docs/videos/list} and \href{https://developers.google.com/youtube/v3/docs/playlists/list}{https://developers.google.com/youtube/v3/docs/playlists/list}} 
+First, we investigate the temporary suspension of the YouTube channel of One America News Networks. According to the News outlet NBCnews (2020)~\cite{nbcnews}, this YouTube channel received a first strike on November $24$, $2020$ for the promotion of a false cure for COVID-19.
+We collected the activity of the channel OANN (video counts and view counts) using the YouTube API v3, between November $2020$ and January $2021$. For the video counts, we used the {\it playlists} endpoint to retrieve the videos uploaded with their publishing date and for the view count we used the IDs of the videos we had from the playlists, then via the {\it videos} endpoint we retrieved the view counts on June $2021$.%\footnote{See the Google documentation  \href{https://developers.google.com/youtube/v3/docs/videos/list}{https://developers.google.com/youtube/v3/docs/videos/list} and \href{https://developers.google.com/youtube/v3/docs/playlists/list}{https://developers.google.com/youtube/v3/docs/playlists/list}} 
+
+\smallskip
+
+Figure \ref{fig1_oann} shows the daily number of videos uploaded by the channel, and its number of views. 
+We can clearly see the suspension period in the data, as the number of published video is down to zero for one week after the strike on November $24$, $2020$. 
+Because no videos were published during this period, the number of views were also nul.
+When comparing one month before and after the suspension, the view count decreased by -73\%, indicating that the videos uploaded after the suspension were less popular. 
+Furthermore, the activity of the channel was close to zero after March 2021, and OANN's Twitter account has announced their migration from YouTube to Rumble on March 17, 2021.
 
 \begin{figure}[h]
 \hspace{-2em}
 	%\centering
-		\includegraphics[scale=0.32]{../figure/OANN_videos_yt.png}
-		\includegraphics[scale=0.32]{../figure/OANN_views_yt.png} 
-	\caption{Left Panel: Number of YouTube videos uploaded each day by the youtube channel {\it One America news Network} November 1, 2020 and January 1, 2021. Right Panel: accumulated view counts for videos. The metrics correspond to the videos’  publishing date and the data is retrieved from the youtube API with the {\it playlists} and  {\it videos} endpoints. }
+		\includegraphics[scale=0.32]{../figure/delete_youtube_1_oann.png}
+		\includegraphics[scale=0.32]{../figure/delete_youtube_2_oann.png} 
+	\caption{Left Panel: Number of YouTube videos uploaded each day by the youtube channel {\it One America news Network} November 1, 2020 and January 1, 2021. Right Panel: accumulated view counts for videos. The metrics correspond to the videos’  publishing date and the data is retrieved from the YouTube API with the {\it playlists} and  {\it videos} endpoints. }
 	\label{fig1_oann}
 \end{figure}
 
-
-The view count decreased by -73\% and the videos uploaded decreased by -55\% (see figure \ref{fig1_oann}), when comparing one month before the suspension from 2020/10/24 to 2020/11/24 and one month after from 2020/12/01 to 2021/01/01. Furthermore, the activity of the YouTube channel was close to zero, since the channel has announced via their Twitter account (see figure \ref{fig2_oann}) their migration to the alternative platform Rumble on March 17, 2021.
-
 \smallskip
 
-We now turn to a
-second example, the YouTube channel Tony Heller was also temporarily suspended. 
-This channel got its first strike after posting a video about an anti-covid-lockdown doctor getting arrested (see screenshot in figure \ref{fig2_oann}). The suspension period lasted one week from September $29$ until October $5$.
-We applied the same methods as in the previous example for the data collection. Figure \ref{fig1_tony} shows the daily number of videos uploaded by the channel. The suspension period can be observed clearly in the historical data of the channel.  
-Using view counts one month before the suspension starting from $2020/08/28$ to $2020/09/28$ and one month after the suspension from $2020/10/05$ to $2020/11/05$, the channel witnessed a drop of view counts by $-69.5\%$ and the videos published in the channel were less by $-29\%$. This drop in views can show that the  suspension  period
-may  have  a  good  impact  on  reducing  the  audience interest or reach to the channel.
+We now turn to a second example, the YouTube channel Tony Heller. 
+This channel got its first strike after posting a video about an anti-covid-lockdown doctor getting arrested (see screenshot in figure \ref{fig2_oann}). 
+The suspension period lasted one week from September $29$ until October $5$.
+We applied the same methods as in the previous example to collect data.
+Again the one-week suspension period can be observed clearly in the daily number of uploaded videos and of views.
+Comparing one month before and after the suspension, this channel also witnessed a drop of view counts by $-70\%$.
 
 \begin{figure}[h]
 \hspace{-2em}
 	%\centering
-			\includegraphics[scale=0.32]{../figure/Tony_Heller_videos_yt.png}
-			\includegraphics[scale=0.32]{../figure/Tony_Heller_views_yt.png}
+			\includegraphics[scale=0.32]{../figure/delete_youtube_3_tony_heller.png}
+			\includegraphics[scale=0.32]{../figure/delete_youtube_4_tony_heller.png}
 	\caption{Left Panel: Number of YouTube videos uploaded each day by the YouTube channel {\it Tony Heller} between September 1, 2020 and November 15, 2020. Right Panel: accumulated view counts for videos uploaded by the same YouTube channel. The date corresponds to the videos’  publishing date. 
 }
 	\label{fig1_tony}
 \end{figure}
+
+[CONCLUSION]
+This drop in views can show that the  suspension  period may  have  a  good impact on reducing  the  audience interest or reach to the channel.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -799,7 +810,7 @@ The methods presented in this paper can help to monitor not only the platforms' 
                                            & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \href{https://support.google.com/youtube/answer/9229632}{support.google.com/youtube/answer/9229632}                                  \\ \hline
 \multirow{3}{*}{\begin{tabular}[c]{@{}cl@{}}  Fighting \\ misinformation \end{tabular}} & \includegraphics[scale=0.05]{./img/fb_logo.png} & \begin{tabular}[c]{@{}cl@{}} \href{https://www.facebook.com/formedia/blog/working-to-stop-misinformation-and-false-news}{facebook.com/formedia/blog/working-to-stop-misinformation-and-false-news}     \\ \href{https://about.fb.com/news/2018/05/hard-questions-false-news/}{about.fb.com/news/2018/05/hard-questions-false-news/}   \end{tabular}                            \\ \cline{2-3} 
                                            & \includegraphics[scale=0.007]{./img/tw_logo.png}   &        \\ \cline{2-3} 
-                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \begin{tabular}[c]{@{}cl@{}}  \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}{youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}  \\ \href{https://blog.youtube/inside-youtube/the-four-rs-of-responsibility-raise-and-reduce/}{blog.youtube/inside-youtube/the-four-rs-of-responsibility-raise-and-reduce/} \\ \href{https://blog.youtube/inside-youtube/tackling-misinfo}{https://blog.youtube/inside-youtube/tackling-misinfo}    \end{tabular}                            \\ \hline
+                                           & \includegraphics[scale=0.03]{./img/yt_logo.png}  & \begin{tabular}[c]{@{}cl@{}}  \href{https://www.youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}{youtube.com/intl/en\_us/howyoutubeworks/our-commitments/fighting-misinformation/\#policies}  \\ \href{https://blog.youtube/inside-youtube/the-four-rs-of-responsibility-raise-and-reduce/}{blog.youtube/inside-youtube/the-four-rs-of-responsibility-raise-and-reduce/}    \end{tabular}                            \\ \hline
                                            
 % 
 

@@ -382,17 +382,17 @@ def create_youtube_graph():
 
     oann, tony_heller = preprocess_youtube_data()
     plot_view_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
-                            2680000,'OANN_views_yt.png',
+                            2680000,'delete_youtube_2_oann.png',
                             title = 'View count of videos by the YouTube channel OANN')
     plot_view_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
-                            date(2020, 11, 15), 1500000,'Tony_Heller_views_yt.png',
+                            date(2020, 11, 15), 1500000,'delete_youtube_4_tony_heller.png',
                             title = 'View count of videos by the YouTube channel Tony Heller')
 
     plot_video_count_youtube(oann, '2020-11-25', '2020-12-01', date(2020, 11, 1), date(2021, 1, 1),
-                             32,'OANN_videos_yt.png',
+                             32,'delete_youtube_1_oann.png',
                             title = 'Video uploads by the YouTube channel OANN')
     plot_video_count_youtube(tony_heller, '2020-09-29', '2020-10-05', date(2020, 9, 1),
-                             date(2020, 11, 15), 10,'Tony_Heller_videos_yt.png',
+                             date(2020, 11, 15), 10,'delete_youtube_3_tony_heller.png',
                              title = 'Video uploads by the YouTube channel Tony Heller')
 
 
@@ -549,6 +549,7 @@ if __name__=="__main__":
     create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
     create_facebook_buzzsumo_infowars_figure()
+    
     create_youtube_graph()
 
     create_twitter_figures()
