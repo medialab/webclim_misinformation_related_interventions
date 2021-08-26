@@ -353,6 +353,31 @@ def plot_video_count_youtube(data, date_begin_sus, date_end_sus, date_begin_grap
     save_figure(figure_name=fig_name)
 
 
+def create_plot_top_channel_youtube(path_to_data):
+    # the path to the data created from collect_youtube_recommendation
+    df = pd.read_csv(path_to_data)
+    channel_fre = df['channel_name'].value_counts().reset_index().iloc[0:10]
+    y_pos = np.arange(len(channel_fre['index']))
+    # Create horizontal bars
+    plt.rcdefaults()
+    fig, ax = plt.subplots()
+    plt.barh(y_pos, channel_fre['channel_name'], color='red', alpha=0.6)
+    plt.xticks(alpha=0.7)
+    # Create names on the x-axis
+    plt.yticks(y_pos, channel_fre['index'], alpha=0.7)
+    ax.set_xlabel('Number of videos recommended')
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.yaxis.set_label_position("right")
+    ax.yaxis.tick_right()
+    plt.gca().invert_yaxis()
+    fig_name = "channel_youtube_top_10"
+    figure_path = os.path.join('.', 'figure', fig_name)
+    plt.savefig(figure_path, bbox_inches="tight")
+
+
 def create_youtube_graph():
 
     oann, tony_heller = preprocess_youtube_data()
@@ -517,13 +542,13 @@ def create_twitter_figures():
     zeros = 0
     )
 
+
 if __name__=="__main__":
 
     create_facebook_trump_figure()
     create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
     create_facebook_buzzsumo_infowars_figure()
-
     create_youtube_graph()
 
     create_twitter_figures()
