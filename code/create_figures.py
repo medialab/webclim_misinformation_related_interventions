@@ -365,13 +365,13 @@ def create_plot_top_channel_youtube(path_to_data):
     plt.xticks(alpha=0.7)
     # Create names on the x-axis
     plt.yticks(y_pos, channel_fre['index'], alpha=0.7)
-    ax.set_xlabel('Number of videos recommended')
+    ax.set_xlabel('Number of video recommendations at the Channel level')
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
     ax.spines['top'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
     ax.yaxis.set_label_position("right")
-    ax.yaxis.tick_right()
+    #ax.yaxis.tick_right()
     plt.gca().invert_yaxis()
     fig_name = "channel_youtube_top_10"
     figure_path = os.path.join('.', 'figure', fig_name)
@@ -544,7 +544,7 @@ def create_twitter_figures():
 
 
 if __name__=="__main__":
-
+    '''
     create_facebook_trump_figure()
     create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
@@ -553,3 +553,5 @@ if __name__=="__main__":
     create_youtube_graph()
 
     create_twitter_figures()
+    '''
+    create_plot_top_channel_youtube('/home/dana/Desktop/WebclimProject/truth-and-trust-online-2021/data/02L_LUpSqeA_experiment_2.csv')
