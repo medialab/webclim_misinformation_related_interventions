@@ -235,48 +235,20 @@ articles published on lifesitenews.com were still being actively shared by other
 
 \subsection{YouTube}
 
-In this section, we turn to the channel's temporary or permanent suspension policy of YouTube. 
-When a YouTube channel violates the community guidelines, it can receive one or several strikes.
-%Whenever a channel publishes a video that violates the community guidelines for the first time they will  usually receive a warning and the content will be removed. For the second time the channel will start receiving strikes. 
-A first strike results in limiting the access of the YouTube channel for one week
-(e.g. video uploading). 
-Then a second strike is similar but the suspension lasts two weeks. 
-A third strike results in the termination of the channel. 
-The strike count of a channel lasts 90 days.  
-In the special case, where a video is in extreme violation of the guidelines, the publishing channel may get terminated without a warning. 
+In this section, we turn to the suspension policy of YouTube. 
+When a YouTube channel publishes a video that violates the community guidelines for the first time, it will usually receive a warning. 
+But for the second violation, the channel receives its first strike.
+A strike means that users are not allowed to post content on their YouTube channel for one week.
+A strike remains associated to a channel for 90 days, and if a second strike occurs in same 90-day period as the first strike, the suspension will then last for two weeks.
+A third strike results in the termination of the channel.\footnote{https://support.google.com/youtube/answer/2802032}
+To illustrate the implementation of this policy, we use the following YouTube channels as two examples of  one-week suspensions: \href{https://www.youtube.com/channel/UCNbIDJNNgaRrXOD7VllIMRQ}{One America news Network} and \href{https://www.youtube.com/user/TonyHeller1}{Tony Heller}.
 
 \smallskip
 
-\begin{figure}[h]
-	\centering
-	
-	%\begin{multicols}{1}
-		\includegraphics[scale=0.21]{./img/oann/fig3_oann.png}
-	%\end{multicols}
-	%\begin{multicols}{1}
-		\includegraphics[scale=0.31]{./img/tony/fig3_tony.png}
-	%\end{multicols}
-	\caption{Left Panel: Tweet announcing moving to Rumble by OANN (Twitter), Twitter ID \href{https://twitter.com/OANN/status/1372238828425998336}{1372238828425998336}. Right Panel: Tony Heller's tweet after getting suspended from YouTube, Twitter ID \href{https://twitter.com/Tony\_Heller/status/1310703852769796097}{1310703852769796097}.}
-	\label{fig2_oann}
-\end{figure}
-
-To illustrate the implementation of this policy we provide two examples for the temporary suspension of the following YouTube channels: \href{https://www.youtube.com/channel/UCNbIDJNNgaRrXOD7VllIMRQ}{One America news Network} and \href{https://www.youtube.com/user/TonyHeller1}{Tony Heller}. 
 The website of One America News Network has a ``low'' factual reporting score according to iffy.news and several inaccurate articles according to feedback.org.\footnote{See \href{https://mediabiasfactcheck.com/one-america-news-network/}{mediabiasfactcheck.com/one-america-news-network/} and \href{https://open.feedback.org/media/AE6Q}{https://open.feedback.org/media/AE6Q}.}  
-Tony Heller posts regularly blog posts on the website {\it realclimatescience.com}, which also has a ``low'' factual reporting score according to iffy.news.\footnote{See \href{https://mediabiasfactcheck.com/real-climate-science/}{mediabiasfactcheck.com/real-climate-science/}} 
-Both are active on YouTube and both have communicated via their Twitter account about restrictions applied by YouTube over their content (see figure \ref{fig2_oann}).
-
-\smallskip
-
-First, we investigate the temporary suspension of the YouTube channel of One America News Networks. According to the News outlet NBCnews (2020)~\cite{nbcnews}, this YouTube channel received a first strike on November $24$, $2020$ for the promotion of a false cure for COVID-19.
-We collected the activity of the channel OANN (video counts and view counts) using the YouTube API v3, between November $2020$ and January $2021$. For the video counts, we used the {\it playlists} endpoint to retrieve the videos uploaded with their publishing date and for the view count we used the IDs of the videos we had from the playlists, then via the {\it videos} endpoint we retrieved the view counts on June $2021$.%\footnote{See the Google documentation  \href{https://developers.google.com/youtube/v3/docs/videos/list}{https://developers.google.com/youtube/v3/docs/videos/list} and \href{https://developers.google.com/youtube/v3/docs/playlists/list}{https://developers.google.com/youtube/v3/docs/playlists/list}} 
-
-\smallskip
-
-Figure \ref{fig1_oann} shows the daily number of videos uploaded by the channel, and its number of views. 
-We can clearly see the suspension period in the data, as the number of published video is down to zero for one week after the strike on November $24$, $2020$. 
-Because no videos were published during this period, the number of views were also nul.
-When comparing one month before and after the suspension, the view count decreased by -73\%, indicating that the videos uploaded after the suspension were less popular. 
-Furthermore, the activity of the channel was close to zero after March 2021, and OANN's Twitter account has announced their migration from YouTube to Rumble on March 17, 2021.
+According to NBC news (2020)~\cite{nbcnews}, the YouTube channel received a first strike on November $24$, $2020$ for the promotion of a false cure for COVID-19.
+We collected the number of video uploaded and the number of view of this channel using the YouTube API v3, between November $2020$ and January $2021$. For the video counts, we used the {\it playlists} endpoint to retrieve the videos uploaded with their publishing date and for the view count we used the IDs of the videos we had from the playlists, then via the {\it videos} endpoint we retrieved the view counts on June $2021$.
+%\footnote{See the Google documentation  \href{https://developers.google.com/youtube/v3/docs/videos/list}{https://developers.google.com/youtube/v3/docs/videos/list} and \href{https://developers.google.com/youtube/v3/docs/playlists/list}{https://developers.google.com/youtube/v3/docs/playlists/list}}
 
 \begin{figure}[h]
 \hspace{-2em}
@@ -284,16 +256,31 @@ Furthermore, the activity of the channel was close to zero after March 2021, and
 		\includegraphics[scale=0.32]{../figure/delete_youtube_1_oann.png}
 		\includegraphics[scale=0.32]{../figure/delete_youtube_2_oann.png} 
 	\caption{Left Panel: Number of YouTube videos uploaded each day by the youtube channel {\it One America news Network} November 1, 2020 and January 1, 2021. Right Panel: accumulated view counts for videos. The metrics correspond to the videos’  publishing date and the data is retrieved from the YouTube API with the {\it playlists} and  {\it videos} endpoints. }
-	\label{fig1_oann}
+	\label{delete_youtube_oann}
 \end{figure}
 
 \smallskip
 
-We now turn to a second example, the YouTube channel Tony Heller. 
-This channel got its first strike after posting a video about an anti-covid-lockdown doctor getting arrested (see screenshot in figure \ref{fig2_oann}). 
-The suspension period lasted one week from September $29$ until October $5$.
+Figure \ref{delete_youtube_oann} shows the daily number of videos uploaded by the channel, and its number of views. 
+We can clearly see the suspension period in the data, as the number of published video is down to zero for one week after the strike on November $24$, $2020$. 
+Because no videos were published during this period, the number of views were also nul.
+When comparing one month before and after the suspension, the view count decreased by -73\%, indicating that the videos uploaded after the suspension were less popular. 
+Furthermore, the activity of the channel was close to zero after March 2021, and OANN's Twitter account has announced their migration from YouTube to Rumble on March 17, 2021 (see the left panel of Figure \ref{tweets_about_yt_suspensions}).
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.21]{./img/oann/fig3_oann.png}
+		\includegraphics[scale=0.31]{./img/tony/fig3_tony.png}
+	\caption{Left Panel: Tweet announcing OANN moving to Rumble, Twitter ID \href{https://twitter.com/OANN/status/1372238828425998336}{1372238828425998336}. Right Panel: Tony Heller's tweet after getting suspended from YouTube, Twitter ID \href{https://twitter.com/Tony\_Heller/status/1310703852769796097}{1310703852769796097}.}
+	\label{tweets_about_yt_suspensions}
+\end{figure}
+
+\smallskip
+
+Tony Heller writes regularly blog posts on the website {\it realclimatescience.com}, which also has a ``low'' factual reporting score according to iffy.news.\footnote{See \href{https://mediabiasfactcheck.com/real-climate-science/}{mediabiasfactcheck.com/real-climate-science/}}
+Tony Heller tweeted on September 29, 2020 about his YouTube channel being `shut down' because of a video about an anti-covid-lockdown doctor getting arrested (see the right panel of Figure \ref{tweets_about_yt_suspensions}).
 We applied the same methods as in the previous example to collect data.
-Again the one-week suspension period can be observed clearly in the daily number of uploaded videos and of views.
+Again a one-week suspension period from September $29$ until October $5$ can be observed clearly in the daily number of uploaded videos and of views (see Figure \ref{delete_youtube_tony}).
 Comparing one month before and after the suspension, this channel also witnessed a drop of view counts by $-70\%$.
 
 \begin{figure}[h]
@@ -303,8 +290,10 @@ Comparing one month before and after the suspension, this channel also witnessed
 			\includegraphics[scale=0.32]{../figure/delete_youtube_4_tony_heller.png}
 	\caption{Left Panel: Number of YouTube videos uploaded each day by the YouTube channel {\it Tony Heller} between September 1, 2020 and November 15, 2020. Right Panel: accumulated view counts for videos uploaded by the same YouTube channel. The date corresponds to the videos’  publishing date. 
 }
-	\label{fig1_tony}
+	\label{delete_youtube_tony}
 \end{figure}
+
+\smallskip
 
 As most YouTube channels upload videos on a weekly or even a monthly basis, a one-week suspension appears not very restrictive at first sight. 
 But we observed that the intervention was followed by a reduction in the number of view for the two channels investigated, with one channel even stopping its YouTube activity in the following months. 
