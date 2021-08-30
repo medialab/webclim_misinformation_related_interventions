@@ -2,6 +2,7 @@
 .minetrc
 
 *.csv
+*.csv#
 
 .ipynb_checkpoints/
 *.ipynb
