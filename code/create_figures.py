@@ -373,9 +373,10 @@ def create_plot_top_channel_youtube(path_to_data):
     ax.yaxis.set_label_position("right")
     #ax.yaxis.tick_right()
     plt.gca().invert_yaxis()
-    fig_name = "channel_youtube_top_10"
+    fig_name = "reduce_youtube"
     figure_path = os.path.join('.', 'figure', fig_name)
     plt.savefig(figure_path, bbox_inches="tight")
+    print("The '{}' figure is saved.".format(fig_name))
 
 
 def create_youtube_graph():
@@ -544,7 +545,7 @@ def create_twitter_figures():
 
 
 if __name__=="__main__":
-    '''
+
     create_facebook_trump_figure()
     create_buzzsumo_thebl_figure()
     create_facebook_crowdtangle_infowars_figure()
@@ -553,5 +554,5 @@ if __name__=="__main__":
     create_youtube_graph()
 
     create_twitter_figures()
-    '''
-    create_plot_top_channel_youtube('/home/dana/Desktop/WebclimProject/truth-and-trust-online-2021/data/02L_LUpSqeA_experiment_2.csv')
+    
+    create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
