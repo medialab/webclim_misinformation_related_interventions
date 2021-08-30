@@ -29,6 +29,7 @@
 \usepackage{multirow}
 \usepackage{cite}
 \usepackage{lscape}
+\usepackage{makecell}
 \usetikzlibrary{shapes,snakes}
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\diamond$}
@@ -402,7 +403,7 @@ Finally, the number of tweets containing the interstitial {\it ``potentially sen
 \hline
 \multicolumn{4}{|c|}{$323$ $938$ Tweets containing a link marked as False}                                                                                                                                                                                                                                                                                                                           \\ \hline
 \begin{tabular}[c]{@{}c@{}}with the interstitial\\ ``potentially sensitive \\ content'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag \\ ``Get the facts \\ about COVID-19'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag \\ ``Learn about US \\ 2020 election \\ security efforts'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag\\ ``This claim about \\ election fraud \\ is disputed''\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}c@{}}9344\\ ( 2.88450 \%)\end{tabular}                                  & \begin{tabular}[c]{@{}c@{}}28\\ (0.00864\%)\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}5\\ (0.00154\%)\end{tabular}                                                & \begin{tabular}[c]{@{}c@{}}1\\ (0.00030\%)\end{tabular}                                             \\ \hline
+\begin{tabular}[c]{@{}c@{}}9344\\ (2.88450 \%)\end{tabular}                                  & \begin{tabular}[c]{@{}c@{}}28\\ (0.00864 \%)\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}5\\ (0.00154 \%)\end{tabular}                                                & \begin{tabular}[c]{@{}c@{}}1\\ (0.00030 \%)\end{tabular}                                             \\ \hline
 \end{tabular}
 \caption{Summary of the number of tweets among the set of collected tweets containing a link marked as False by Science Feedback, which contain a flag or an interstitial.}
 \label{flags_tab}
@@ -410,12 +411,17 @@ Finally, the number of tweets containing the interstitial {\it ``potentially sen
 
 \subsection{YouTube} \label{youtube_panels}
 
-YouTube may provide an information panel for videos with topics that are prone to misinformation like COVID-19, moon landing, and climate change. Information panels provide ressources concerning a potentially controversial topic from independent third parties or authoritative ressources. YouTube states that these panels exist regardless of the point of view expressed in a given video. In addition, these panels are not yet available in all languages and countries. %(“Information panel giving topical context”)
+YouTube may provide an information panel for videos with topics that are prone to misinformation like COVID-19, moon landing, and climate change. 
+Information panels provide ressources concerning a potentially controversial topic from independent third parties or authoritative ressources {\color{red} [LIKE blablabla]}. 
+Importantly, YouTube states that these panels exist regardless of the point of view expressed in a given video. {\color{red} [REF??]}
+%It should be noted that these panels are not yet available in all languages and countries.
 
 \smallskip
 
-To further study the assignment of information panels to videos, we compiled a list of $171$ YouTube videos, fact-checked by Science Feedback between April $2019$ and March $2021$ and marked as containing false or inaccurate information. We collected the information panels, when present, in each video by connecting to a US server and scraping the content of the web page. Four types of information panels were found in the list of visited videos as shown in figure \ref{fig9}:  information about Climate change, COVID-19 Vaccine, COVID-19 and US elections.\footnote{See: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{youtube.com/watch?v=OwqIy8Ikv-c}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{youtube.com/watch?v=9sW0OmzcmL0}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{youtube.com/} \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{/watch?v=usyQgPU-VrI} and \href{https://www.youtube.com/watch?v=8PAwc8nlE\_Q}{youtube.com/watch?v=8PAwc8nlE\_Q}. Last accessed on  21/07/2021.  }
-%\footnote{The links of the YouTube videos where the information panel appeared are the following: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{youtube.com/watch?v=OwqIy8Ikv-c}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{youtube.com/watch?v=9sW0OmzcmL0}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{youtube.com/watch?v=usyQgPU-VrI} and \href{https://www.youtube.com/watch?v=8PAwc8nlE_Q}{youtube.com/watch?v=8PAwc8nlE_Q}.  }
+To further study the assignment of information panels to videos, we compiled a list of $170$ YouTube videos, fact-checked by Science Feedback between April $2019$ and March $2021$ and marked as containing false or inaccurate information. 
+We collected the information panels, when present, in each video by connecting to a US server and scraping the content of the web page. 
+Five types of information panels were found in the list of visited videos regarding climate change, COVID-19 Vaccine, COVID-19, vaccine hesitancy and US elections, as shown in figure \ref{youtube_panel_screenshots}.
+{\color{red} [ADD Vaccine hesitancy screenshot + REARRANGE SCREENSHOT IN FREQUENCY ORDER]}
 
 \begin{figure}[h]
 	\centering
@@ -431,65 +437,62 @@ To further study the assignment of information panels to videos, we compiled a l
 	%\begin{multicols}{1}
 		\includegraphics[scale=0.3]{./img/youtube_panels/yt_4.png} 
 	%\end{multicols}
-	\caption{Screenshots taken on July 21, 2021. Examples of YouTube information panels displayed under Youtube videos respectively about: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{Climate change}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{COVID-19 Vaccine}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{COVID-19} and \href{https://www.youtube.com/watch?v=8PAwc8nlE\_Q}{US elections}. }
-	\label{fig9}
-\end{figure}
-%Nevertheless, we noticed that duplicates of the same YouTube video can get uploaded under different video titles and that the information panel appears under the some duplicates, but not for all.
-
-We classified the list of $171$ YouTube videos by topic based on its content as shown in table \ref{tab2}. We recorded the number of videos containing an information panel within each category. For COVID-19 and COVID-19 vaccine related videos, more than half of the videos contained an information panel. Nevertheless we noticed that among a set of duplicates of the exact same YouTube video uploaded with different video titles, some contained an information panel while others did not (see figure \ref{duplicates_yt} for an example).  
-In addition, we noticed for COVID-19 related videos, when the video title did not include keywords like (Testing, Pandemic, COVID-19, coronavirus), the video might not contain a panel associated with it, and in some cases when the video title contains variations of word COVID like (C O V I D 19 or Cv19) it wouldn’t include a panel either. Therefore, we suspect that YouTube is automatically adding panels to the videos based on the video title and not the content of the video.
-
-\begin{figure}[h]
-	\centering
-	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/graph_with_banner.png} 
-	%\end{multicols}
-	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/news_with_banner.png}
-	%\end{multicols}
-	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/graph_no_banner.png} 
-	%\end{multicols}
-	%\begin{multicols}{1}
-		\includegraphics[scale=0.2]{./img/youtube_panels/news_without_banner.png} 
-	%\end{multicols}
-	\caption{Screenshots taken on July 21, 2021. The screenshots show two duplicates of the same YouTube video uploaded under different titles. Top panels: a YouTube video about COVID-19 which contains an information panel, see \href{https://www.youtube.com/watch?v=d9GbVZOcT18}{https://www.youtube.com/watch?v=d9GbVZOcT18}. Bottom panels: a duplicate of the YouTube video in the top panels uploaded under a different title and it does not contain an information panel, see \href{https://www.youtube.com/watch?v=A4RvrEKoNxc}{https://www.youtube.com/watch?v=A4RvrEKoNxc}. }
-	\label{duplicates_yt}
+	\caption{Examples of YouTube information panels displayed under Youtube videos respectively about: \href{https://www.youtube.com/watch?v=OwqIy8Ikv-c}{Climate change}, \href{https://www.youtube.com/watch?v=9sW0OmzcmL0}{COVID-19 Vaccine}, \href{https://www.youtube.com/watch?v=usyQgPU-VrI}{COVID-19} and \href{https://www.youtube.com/watch?v=8PAwc8nlE\_Q}{US elections}. The videos were accessed on July 21, 2021 from a US server.}
+	\label{youtube_panel_screenshots}
 \end{figure}
 
 \smallskip
 
-For climate change we found that most of the videos ($13$ out of $18$) did not display an information panel. Lastly, no information panels were found in the general health category set, that included videos that were not related to COVID-19 but contained misinformation concerning cures for cancer, abortion, and viruses. 
-Therefore, it is likely that YouTube adds information panels below videos including controversial topics and that can contain misleading information like climate change, COVID-19 and vaccines. 
-It seems that YouTube is focusing its efforts on current ``hot'' topics with a potentially wide public impact (e.g. elections, COVID-19), leaving room for misinformation related to other topics to spread.
+We found that almost half (44 \%) of the videos containing misinformation actually had no information panel (Table \ref{youtube_panel_proportions}).
+For the rest of videos, the most frequent information panels found concerned COVID-19 (42 \%) and COVID-19 vaccine (11 \%).
+It is possible that YouTube is currently focusing its efforts on the current `hot' controversial topics with a potentially wide public impact, leaving room for misinformation related to other topics to spread, but more research is needed to formally compare misinformation videos about COVID-19 and about other subjects.
 
-%drop last colum
-%add % in a second line
-\begin{table}[] 
-\begin{tabular}{|c|c|c|c|c|}
+\begin{table}[h] 
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-Category       & \begin{tabular}[c]{@{}c@{}}Number of YouTube videos {\bf with} an \\ information panel\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of YouTube videos {\bf without} an \\ information panel\end{tabular}    \\ \hline
-
-\begin{tabular}[c]{@{}c@{}}  Climate change \end{tabular} & \begin{tabular}[c]{@{}c@{}} 5 \\ (28\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 13 \\ (72\%) \end{tabular}   \\ \hline
-%
-COVID-19 Vaccine        & \begin{tabular}[c]{@{}c@{}} 21     \\ (75\%) \end{tabular}   & \begin{tabular}[c]{@{}c@{}}  7 \\ (25\%)  \end{tabular}     \\ \hline
-%
-COVID-19     & \begin{tabular}[c]{@{}c@{}} 73 \\ (63\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 43  \\ (37\%) \end{tabular}     \\ \hline
-%
-\begin{tabular}[c]{@{}c@{}} General Health \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0  \\ (0\%) \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 11 \\ (100\%) \end{tabular}         \\ \hline
+\multicolumn{6}{|c|}{$170$ YouTube videos marked as false or inaccurate}                                                                                                                                                                                                                                                                                                                           \\ \hline
+\makecell{Without \\ any \\ panel} & 
+\makecell{With a \\ `COVID-19' \\ panel} & 
+\makecell{With a \\ `COVID-19 vaccine' \\ panel} &
+\makecell{With a \\ `climate change' \\ panel} &
+\makecell{With a \\ `U.S. elections' \\ panel} &
+\makecell{With a \\ `vaccine hesitancy' \\ panel}  
+\\ \hline
+\makecell{74 \\ (44 \%)} &
+\makecell{71 \\ (42 \%)} &
+\makecell{19 \\ (11 \%)} &
+\makecell{4 \\ (2 \%)} &
+\makecell{1 \\ (0.5 \%)} &
+\makecell{1 \\ (0.5 \%)}
+\\ \hline
 \end{tabular}
-\caption{}
-\label{tab2}
+\caption{Summary of the number of YouTube videos wich contain a certain information panel, among the set of videos marked as false or inaccurate by Science Feedback.}
+\label{youtube_panel_proportions}
 \end{table}
 
+\smallskip
 
+In our list, we noticed that the same video was sometimes uploaded multiple times and thus appeared on different YouTube links. 
+One YouTube link might contain an information panel while its duplicates did not (see figure \ref{duplicates_yt} for an example).  
+In addition, we noticed that some keywords in the video titles were often associated with an information panel, such as `COVID-19', `coronavirus', `pandemic' and `testing', while some notational variants like `C O V I D 19' or `Cv19' were not associated with a panel.
+Therefore, we suspect that YouTube is automatically adding information panels based on the presence of certain keywords in the video title (and maybe in the video description), independently of the content of the video.
+Note that in figure \ref{duplicates_yt}, the video with `C.O.V.I.D.19' in its title had an information panel, hinting that YouTube might adapt its list of `suspect' keywords as new notational variants for COVID-19 appear.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.24]{./img/youtube_panels/graph_no_banner.png} 
+		\includegraphics[scale=0.24]{./img/youtube_panels/graph_with_banner.png} 
+		%\includegraphics[scale=0.2]{./img/youtube_panels/news_with_banner.png}
+		%\includegraphics[scale=0.2]{./img/youtube_panels/news_without_banner.png} 
+	\caption{Screenshots showing two duplicates of the same video, taken on July 21, 2021. 
+Left panel: a \href{https://www.youtube.com/watch?v=d9GbVZOcT18}{YouTube video} about COVID-19 without an information panel. 	
+Right panel: a \href{https://www.youtube.com/watch?v=A4RvrEKoNxc}{duplicate of the same video} uploaded under a different title and with a `COVID-19 vaccine' information panel.}
+	\label{duplicates_yt}
+\end{figure}
 
 
 
 %\subsection{Blocking links}
-
-%
-
 
 %\subsubsection{Twitter}
 
