@@ -1,8 +1,6 @@
 import os
-#from datetime import timedelta, date
 from datetime import datetime, timedelta, date
 
-import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -409,14 +407,25 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     df_volume = df.groupby(['date'], as_index=False).size()
 
     if zeros == 1 :
-        add_zeros = [{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},{'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},{'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, {'date': datetime.date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, {'date': datetime.date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, {'date': datetime.date(2021, 6, 30), 'type_of_tweet': 'created_content', 'size': 0}]
+        add_zeros = [
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, 
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, 
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, 
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, 
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, 
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, 
+            {'date': date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, 
+            {'date': date(2021, 6, 30), 'type_of_tweet': 'created_content', 'size': 0}
+        ]
         df_volume = df_volume.append(add_zeros , ignore_index = True)
         df_volume = df_volume .sort_index().reset_index(drop = True)
         df_volume = df_volume.sort_values(by = "date")
 
     fig, ax = plt.subplots(figsize=(10, 4))
 
-    d = df[(df['date']> datetime.date(2019, 1, 1) ) & (df['date']<datetime.date(2021, 7, 1))]
+    d = df[(df['date']> date(2019, 1, 1) ) & (df['date']<date(2021, 7, 1))]
     total = d['id'].count()
 
     ax.plot(df_volume['date'],
@@ -427,7 +436,7 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     ax.set(
        title = title )
 
-    ax.set_xlim([datetime.date(2019, 1, 1), datetime.date(2021, 6, 30)])
+    ax.set_xlim([date(2019, 1, 1), date(2021, 6, 30)])
 
     plt.axvspan(np.datetime64('2019-12-09'),
                 np.datetime64('2020-10-12'),
@@ -454,7 +463,7 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
     df['date'] = pd.to_datetime(df['created_at']).dt.date
 
-    d=df[(df['date']> datetime.date(2021,1,1) ) & (df['date'] < datetime.date(2021, 6, 30) )]
+    d=df[(df['date']> date(2021,1,1) ) & (df['date'] < date(2021, 6, 30) )]
     total=d['id'].count()
 
     fig, ax = plt.subplots(figsize=(10, 4))
@@ -495,12 +504,12 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
         plt.text(np.datetime64("2021-06-15"), 1400, "screenshot date", fontsize=10, color='C3')
 
-    ax.set_xlim([datetime.date(2021, 4, 15), datetime.date(2021, 8, 15)])
+    ax.set_xlim([date(2021, 4, 15), date(2021, 8, 15)])
 
     ax.set(
         title = title)
 
-    #ax.set_xlim([datetime.date(2021,1,1), datetime.date(2021, 6, 30)])
+    #ax.set_xlim([date(2021,1,1), date(2021, 6, 30)])
     plt.axvline(np.datetime64("2021-06-14"), color='C3', linestyle='--')
 
 
