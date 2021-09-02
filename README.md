@@ -24,9 +24,9 @@ For collecting youtube data run
 - Two new csv files will be generated in the data file with the name of the channels, and they will contain the videos posted for the selected channels since 2019/01/01 with the date of publishing, likes, dislikes, comments count.
 - The study focused on two channels OANN and Tony Heller. The ids of these channels are included in the code. To add/remove channels, you can change the list ``` list_id ``` under ``` collect_youtube_data.py``` file.
 
-For checking the existing and content of a flag, run 
+To get the information panels below the False YT videos, run:
 ```
-python3 code/check_flag_youtube.py 'video_id'
+python3 code/collect_youtube_panels.py
 ```
 - A browser will be opened through a driver and when it finishes it will terminate. you can check the results in the command line.
 
