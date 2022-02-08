@@ -408,15 +408,15 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
 
     if zeros == 1 :
         add_zeros = [
-            {'date': date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0}, 
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0},
             {'date': date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},
-            {'date': date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0}, 
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0},
             {'date': date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},
-            {'date': date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0}, 
-            {'date': date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0}, 
-            {'date': date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0}, 
-            {'date': date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0}, 
-            {'date': date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0}, 
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0},
+            {'date': date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0},
             {'date': date(2021, 6, 30), 'type_of_tweet': 'created_content', 'size': 0}
         ]
         df_volume = df_volume.append(add_zeros , ignore_index = True)
@@ -456,6 +456,84 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     save_figure(figure_name)
     #plt.show()
 
+def create_twitter_Lifesite_figure_engagement(filename, figure_name, title, zeros):
+
+    df = import_data(filename)
+    df = df.drop_duplicates()
+
+    df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
+    df['total_engagement'] = (df['retweet_count'] + df['like_count'] + df['reply_count'])
+    df['date'] = pd.to_datetime(df['created_at']).dt.date
+    #df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
+    #df_volume = df.groupby(['date'], as_index=False).size()
+
+    # df_s=df.groupby(['date'],as_index=False)[['like_count','retweet_count','reply_count']].sum()
+    # df_s_rolling=df_s.groupby(['date'])[['like_count','retweet_count','reply_count']].sum().rolling(window=1, win_type='triang', center=True).mean()
+    # df_s_rolling['date'] = df_s_rolling.index
+
+    df_s=df.groupby(['date'],as_index=False)[['total_engagement']].sum()
+    df_s_rolling=df_s.groupby(['date'])[['total_engagement']].sum().rolling(window=7, win_type='triang', center=True).mean()
+    df_s_rolling['date'] = df_s_rolling.index
+
+    if zeros == 1 :
+        add_zeros = [
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0},
+            {'date': date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2021, 6, 30), 'type_of_tweet': 'created_content', 'size': 0}
+        ]
+        df_volume = df_volume.append(add_zeros , ignore_index = True)
+        df_volume = df_volume .sort_index().reset_index(drop = True)
+        df_volume = df_volume.sort_values(by = "date")
+
+    fig, ax = plt.subplots(figsize=(10, 4))
+
+    d = df[(df['date']> date(2019, 1, 1) ) & (df['date']<date(2021, 7, 1))]
+    total = d['id'].count()
+
+    ax.plot(df_s_rolling['date'],
+            df_s_rolling['total_engagement'],
+            color='lightgreen',label='Like + Reply + Retweet Count')
+
+    # ax.plot(df_s_rolling['date'],
+    #         df_s_rolling['reply_count'],
+    #         color='lightgreen',label='Reply Count')
+    #
+    # ax.plot(df_s_rolling['date'],
+    #         df_s_rolling['retweet_count'],
+    #         color='pink',label='Retweet Count')
+
+    ax.set(
+       title = title )
+
+    ax.set_xlim([date(2019, 1, 1), date(2021, 6, 30)])
+
+    ax.set_ylim([0, 20000])
+
+    plt.axvspan(np.datetime64('2019-12-09'),
+                np.datetime64('2020-10-12'),
+                ymin=0, ymax=200000,
+                facecolor='r',
+                alpha=0.05)
+
+    plt.axvspan(np.datetime64('2021-01-25'),
+                np.datetime64('2021-06-30'),
+                ymin=0,
+                ymax=200000,
+                facecolor='r',
+                alpha=0.05)
+
+    plot_format(ax, plt, suspension = 1)
+
+    save_figure(figure_name)
+    #plt.show()
+
 def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
     df = import_data(filename)
@@ -466,7 +544,7 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
     d=df[(df['date']> date(2021,1,1) ) & (df['date'] < date(2021, 6, 30) )]
     total=d['id'].count()
 
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(6, 4))
 
     if zeros == 1:
 
@@ -480,7 +558,7 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
                 label='Number of Tweets per day')
 
         ax.set_ylim([0, 600])
-        plt.text(np.datetime64("2021-06-15"), 420, "screenshot date", fontsize=10, color='C3')
+        plt.text(np.datetime64("2021-06-15"), 360, "screenshot date", fontsize=10, color='C3')
 
     elif zeros == 0:
 
@@ -502,9 +580,10 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
         ax.set_ylim([0, 2000])
 
-        plt.text(np.datetime64("2021-06-15"), 1400, "screenshot date", fontsize=10, color='C3')
+        plt.text(np.datetime64("2021-06-15"), 900, "screenshot date", fontsize=10, color='C3')
+        ax.set_ylim([0, 1500])
 
-    ax.set_xlim([date(2021, 4, 15), date(2021, 8, 15)])
+    ax.set_xlim([date(2021, 5, 1), date(2021, 8, 1)])
 
     ax.set(
         title = title)
@@ -524,13 +603,13 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
 def create_twitter_figures():
 
-    create_twitter_Lifesite_figure(
-    filename = 'twitter_lifesitenews_2021-07-22.csv',
-    figure_name = 'lifesite.jpg',
-    title = f"Tweets by @LifeSite Twitter account",
-    zeros = 1
-    )
-
+    # create_twitter_Lifesite_figure(
+    # filename = 'twitter_lifesitenews_2021-07-22.csv',
+    # figure_name = 'lifesite.jpg',
+    # title = f"Tweets by @LifeSite Twitter account",
+    # zeros = 1
+    # )
+    #
     create_twitter_Lifesite_figure(
     filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
     figure_name = 'lifesite_domain.jpg',
@@ -538,30 +617,37 @@ def create_twitter_figures():
     zeros = 0
     )
 
-    create_twitter_globalresearch_figure(
-    filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
-    figure_name = 'globalresearch_domain_2021-08-17.jpg',
-    title = f"Tweets containing the domain name globalresearch.ca",
-    zeros = 1
-    )
-
-    create_twitter_globalresearch_figure(
-    filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
-    figure_name = 'globalresearch_domain_engagement_2021-08-17.jpg',
-    title = f"Tweets containing the domain name globalresearch.ca",
+    create_twitter_Lifesite_figure_engagement(
+    filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
+    figure_name = 'lifesite_domain_engagement.jpg',
+    title = f"Tweets containing the domain name lifesitenews.com",
     zeros = 0
     )
+
+    # create_twitter_globalresearch_figure(
+    # filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
+    # figure_name = 'globalresearch_domain_2021-08-17.jpg',
+    # title = f"Tweets containing the domain name globalresearch.ca",
+    # zeros = 1
+    # )
+    #
+    # create_twitter_globalresearch_figure(
+    # filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
+    # figure_name = 'globalresearch_domain_engagement_2021-08-17.jpg',
+    # title = f"Tweets containing the domain name globalresearch.ca",
+    # zeros = 0
+    # )
 
 
 if __name__=="__main__":
 
-    create_facebook_trump_figure()
-    create_buzzsumo_thebl_figure()
-    create_facebook_crowdtangle_infowars_figure()
-    create_facebook_buzzsumo_infowars_figure()
-    
-    create_youtube_graph()
+    # create_facebook_trump_figure()
+    # create_buzzsumo_thebl_figure()
+    # create_facebook_crowdtangle_infowars_figure()
+    # create_facebook_buzzsumo_infowars_figure()
+    #
+    # create_youtube_graph()
 
     create_twitter_figures()
-    
-    create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
+
+    # create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
