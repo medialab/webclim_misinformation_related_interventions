@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches #new addition to create the boxes in the legend for the shaded areas
 import ural
 
+from matplotlib_venn import venn2, venn2_circles, venn2_unweighted
+from matplotlib_venn import venn3
+
 
 def import_data(file_name):
     data_path = os.path.join(".", "data", file_name)
@@ -15,7 +18,7 @@ def import_data(file_name):
 
 def save_figure(figure_name):
     figure_path = os.path.join('.', 'figure', figure_name)
-    plt.savefig(figure_path)
+    plt.savefig(figure_path, bbox_inches='tight')
     print("The '{}' figure is saved.".format(figure_name))
 
 def plot_format(ax, plt, suspension):
@@ -638,6 +641,73 @@ def create_twitter_figures():
     # zeros = 0
     # )
 
+def create_pie_pp(figure_name):
+
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_axes([0,0,1,1])
+    ax.axis('equal')
+
+    labels= ['Without an Information Panel', 'With COVID-19\nPanel', "With COVID-19\nVaccine Panel", "With Climate\n Change Panel",]
+    categories = [78, 71, 15, 6]
+    #ax.set_title(title,
+    #        fontsize=60)
+
+    #cmap = plt.get_cmap('PiYG')
+    colors = ['red', "lightseagreen", "mediumturquoise", "azure"]
+
+    ax.pie(
+    categories,
+    labels = labels,
+    autopct='%.0f%%',
+    textprops={'fontsize': 29},
+    colors=colors,
+    rotatelabels = False)
+
+    save_figure(figure_name)
+
+def create_pie_pp_tw(figure_name):
+
+    fig = plt.figure(figsize=(12, 12))
+    ax = fig.add_axes([0,0,1,1])
+    ax.axis('equal')
+
+    labels= [ 'Without interstitial \nor label', 'With interstitial', "With label"]
+    categories = [314560, 9344, 34]
+
+    #ax.set_title(title,
+    #        fontsize=60)
+
+    #cmap = plt.get_cmap('PiYG')
+    colors = ["deepskyblue", 'red', "azure"]
+
+    ax.pie(
+    categories,
+    labels = labels,
+    autopct='%.2f%%',
+    textprops={'fontsize': 17},
+    labeldistance = 0.72,
+    colors=colors,
+    rotatelabels = False)
+
+    save_figure(figure_name)
+
+def create_pie_pp_fb(figure_name):
+
+    fig = plt.figure(figsize=(10, 10))
+
+    v=venn3(subsets = (11, 13, 7, 6, 0, 0, 0), set_labels = ('With rating:' + '\n' + 'False', 'With warning' + '\n' + 'banner', 'without' + '\n' + 'rating or warning' + '\n' +'banner'), alpha = 0.5)
+    v.get_patch_by_id('010').set_color('cyan')
+    v.get_patch_by_id('100').set_color('deepskyblue')
+    v.get_patch_by_id('110').set_color('royalblue')
+    v.get_patch_by_id('001').set_color('lightcoral')
+
+    save_figure(figure_name)
+
+def create_pie_figures():
+
+    create_pie_pp_fb('facebook_pie_flags')
+    create_pie_pp_tw('twitter_pie_flags')
+    create_pie_pp('youtube_pie_flags')
 
 if __name__=="__main__":
 
@@ -645,9 +715,6 @@ if __name__=="__main__":
     # create_buzzsumo_thebl_figure()
     # create_facebook_crowdtangle_infowars_figure()
     # create_facebook_buzzsumo_infowars_figure()
-    #
     # create_youtube_graph()
-
-    create_twitter_figures()
-
+    create_pie_figures()
     # create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
