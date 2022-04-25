@@ -82,7 +82,7 @@
 \begin{document}
 
 \title{Monitoring misinformation related interventions by Facebook, Twitter and YouTube: methods and illustration.}
-\author{Webclim team}
+\author{Dana Almanla, Shaden Shabayek\footnote{Corresponding author: shaden.shabayek@sciencespo.fr, M\'{e}dialab SciencesPo.}, H\'{e}lo\"{i}se Th\'{e}ro\footnote{heloise.thero@sciencespo.fr, M\'{e}dialab SciencesPo.}, Emmanuel Vincent\footnote{emmanuel.vincent@sciencespo.fr, M\'{e}dialab SciencesPo.}}
 \date{September 27, 2021}
 \maketitle
 
@@ -324,20 +324,27 @@ No information or available fields regarding the Facebook flags can be found on 
 We first searched for all the Facebook posts having shared a specific link rated as ‘False’ by Science Feedback, a fact-checking organization which partners with Facebook. We used the {\it search} endpoint in Minet.\footnote{ Click \href{https://beforeitsnews.com/eu/2021/04/stay-away-from-the-vaxxed-it-is-official-from-pfizers-own-documents-2671454.html}{here} to access the link and  \href{https://healthfeedback.org/claimreview/insufficient-evidence-to-claim-covid-19-vaccines-cause-menstrual-irregularities-in-vaccinated-women-vaccinated-people-arent-making-unvaccinated-people-ill/}{its fact-check by Health Feedback}.} 
 Twenty Facebook posts were collected this way, and the newly developed scraper was used to verify whether they contained an information banner, a fact-check flag, both or none. Three posts were unavailable, and thus could not be categorized by the scraper. As Science Feedback has informed Facebook that they have assigned the rating ``False'' for this link, we expected that all these posts would contain a fact-check flag, but we had no expectations for the information banner. 
 
-\begin{table}[h]
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multicolumn{4}{|c|}{Number of posts}                                                                                                                    \\ \hline
-without a flag & with an information flag & with a fact-check flag & \begin{tabular}[c]{@{}c@{}}with a fact-check and an \\  information flags\end{tabular} \\ \hline
-0            & 7                        & 4                      & 7                                                                                     \\ \hline
-\end{tabular}
-\caption{Count for the Facebook posts with the different types of flags having shared a link fact-checked False by one of Facebook’s partners}
+%\begin{table}[h]
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%\multicolumn{4}{|c|}{Number of posts}                                                                                                                    \\ \hline
+%without a flag & with an information flag & with a fact-check flag & \begin{tabular}[c]{@{}c@{}}with a fact-check and an \\  information flags\end{tabular} \\ \hline
+%0            & 7                        & 4                      & 7                                                                                     \\ \hline
+%\end{tabular}
+%\caption{Count for the Facebook posts with the different types of flags having shared a link fact-checked False by one of Facebook’s partners}
+%\label{tab_flags_fb}
+%\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{../figure/facebook_pie_flags.png}
+\caption{Count of different flags for 17 Facebook posts who have shared the exact same link, fact-checked False by one of Facebook’s partners. The claim fact checked as False appeared in the following article on beforeitsnews.com:  ``Stay Away From The Vaxxed, It Is Official, From Pfizer’s Own Documents". }
 \label{tab_flags_fb}
-\end{table}
+\end{figure}
 
 \smallskip
 
-Surprisingly only $11$ posts out of the remaining $17$ had a ``False information'' flag  (Table \ref{tab_flags_fb}, see left panel of Figure \ref{fb_flags} for an example). We observed that the flagged posts were also the ones in which the false link was expanded (i.e., a banner was visible with an image of the link and that can be clicked on, see the middle and right panels of Figure \ref{fb_flags} for examples). As the ‘False information’ flag is applied on the link banner, and not on the link itself, a user is thus able to share a ``False'' link on Facebook without the ``False'' flag if the link is not expanded.
+Surprisingly only $11$ posts out of the remaining $17$ had a ``False information'' flag  (see Figure \ref{tab_flags_fb} and left panel of Figure \ref{fb_flags} for an example). We observed that the flagged posts were also the ones in which the false link was expanded (i.e., a banner was visible with an image of the link and that can be clicked on, see the middle and right panels of Figure \ref{fb_flags} for examples). As the ‘False information’ flag is applied on the link banner, and not on the link itself, a user is thus able to share a ``False'' link on Facebook without the ``False'' flag if the link is not expanded.
 
 \smallskip
 
@@ -388,19 +395,26 @@ We further examine the placement of interstitials that indicate a possibly sensi
 
 \smallskip
 
-Finally, the number of tweets containing the interstitial {\it ``potentially sensitive content''} ($9$ $344$ tweets) widely outnumbers the tweets which contain a flag ($32$ tweets), among the set of $323$ $938$ tweets containing a link marked as ``False'' (see table \ref{flags_tab}). Furthermore, we noticed that among the tweets which contain the interstitial {\it ``potentially sensitive content''}, there are tweets which contain links redirecting to misleading articles about COVID-19 and yet they do not contain the label { \it ``Get the facts about COVID-19''}. We also noticed that the $9$ $344$ tweets which contain the interstitial {\it ``potentially sensitive content''} do not necessarily contain graphic violent content\footnote{The Twitter Help center explains the placement of interstitials of possibly sensitive content as follows: ``We may place some forms of sensitive media like adult content or graphic violence behind an interstitial advising viewers to be aware that they will see sensitive media if they click through''.} but rather links that redirect to articles marked as ``False'' by Science Feedback. When navigating through the Twitter Help Center, we found no explanation for this large discrepancy between using the interstitial {\it ``potentially sensitive content''} and labels which provide more context to users.\footnote{Twitter Safety account announced in a Tweet (see Tweet ID : \href{https://twitter.com/TwitterSafety/status/1379515615954620418}{1379515615954620418}) on April 6, 2021 that their team ``will begin deploying automated tools to build on (their) efforts to label tweets that may contain misleading information around COVID-19 vaccinations".}  
+Finally, the number of tweets containing the interstitial {\it ``potentially sensitive content''} ($9$ $344$ tweets) widely outnumbers the tweets which contain a flag ($32$ tweets), among the set of $323$ $938$ tweets containing a link marked as ``False'' (see Figure \ref{flags_tab}). Furthermore, we noticed that among the tweets which contain the interstitial {\it ``potentially sensitive content''}, there are tweets which contain links redirecting to misleading articles about COVID-19 and yet they do not contain the label { \it ``Get the facts about COVID-19''}. We also noticed that the $9$ $344$ tweets which contain the interstitial {\it ``potentially sensitive content''} do not necessarily contain graphic violent content\footnote{The Twitter Help center explains the placement of interstitials of possibly sensitive content as follows: ``We may place some forms of sensitive media like adult content or graphic violence behind an interstitial advising viewers to be aware that they will see sensitive media if they click through''.} but rather links that redirect to articles marked as ``False'' by Science Feedback. When navigating through the Twitter Help Center, we found no explanation for this large discrepancy between using the interstitial {\it ``potentially sensitive content''} and labels which provide more context to users.\footnote{Twitter Safety account announced in a Tweet (see Tweet ID : \href{https://twitter.com/TwitterSafety/status/1379515615954620418}{1379515615954620418}) on April 6, 2021 that their team ``will begin deploying automated tools to build on (their) efforts to label tweets that may contain misleading information around COVID-19 vaccinations".}  
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multicolumn{4}{|c|}{$323$ $938$ Tweets containing a link marked as False}                                                                                                                                                                                                                                                                                                                           \\ \hline
-\begin{tabular}[c]{@{}c@{}}with the interstitial\\ ``potentially sensitive \\ content'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag \\ ``Get the facts \\ about COVID-19'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag \\ ``Learn about US \\ 2020 election \\ security efforts'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag\\ ``This claim about \\ election fraud \\ is disputed''\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}c@{}}9344\\ (2.88450 \%)\end{tabular}                                  & \begin{tabular}[c]{@{}c@{}}28\\ (0.00864 \%)\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}5\\ (0.00154 \%)\end{tabular}                                                & \begin{tabular}[c]{@{}c@{}}1\\ (0.00030 \%)\end{tabular}                                             \\ \hline
-\end{tabular}
-\caption{Summary of the number of tweets among the set of collected tweets containing a link marked as False by Science Feedback, which contain a flag or an interstitial.}
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%\multicolumn{4}{|c|}{$323$ $938$ Tweets containing a link marked as False}                                                                                                                                                                                                                                                                                                                           \\ \hline
+%\begin{tabular}[c]{@{}c@{}}with the interstitial\\ ``potentially sensitive \\ content'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag \\ ``Get the facts \\ about COVID-19'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag \\ ``Learn about US \\ 2020 election \\ security efforts'' \end{tabular} & \begin{tabular}[c]{@{}c@{}}with the flag\\ ``This claim about \\ election fraud \\ is disputed''\end{tabular} \\ \hline
+%\begin{tabular}[c]{@{}c@{}}9344\\ (2.88450 \%)\end{tabular}                                  & \begin{tabular}[c]{@{}c@{}}28\\ (0.00864 \%)\end{tabular}                              & \begin{tabular}[c]{@{}c@{}}5\\ (0.00154 \%)\end{tabular}                                                & \begin{tabular}[c]{@{}c@{}}1\\ (0.00030 \%)\end{tabular}                                             \\ \hline
+%\end{tabular}
+%\caption{Summary of the number of tweets among the set of collected tweets containing a link marked as False by Science Feedback, which contain a flag or an interstitial.}
+%\label{flags_tab}
+%\end{table}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{../figure/twitter_pie_flags.png}
+	\caption{Summary of the number of tweets among the set of $323$ $938$ Tweets containing a link marked as False, by Science Feedback, which contain a flag or an interstitial or none.}
 \label{flags_tab}
-\end{table}
+\end{figure}
 
 \subsection{YouTube} \label{youtube_panels}
 
@@ -424,29 +438,36 @@ Three types of information panels were found regarding COVID-19, COVID-19 Vaccin
 	\label{youtube_panel_screenshots}
 \end{figure}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multicolumn{4}{|c|}{$170$ YouTube videos marked as false or inaccurate}                                                                                                                                                                                                                                                                                                                           \\ \hline
-\makecell{Without \\ any panel} & 
-\makecell{With a \\ `COVID-19' \\ panel} & 
-\makecell{With a \\ `COVID-19 vaccine' \\ panel} &
-\makecell{With a \\ `climate change' \\ panel}
-\\ \hline
-\makecell{78 \\ (46 \%)} &
-\makecell{71 \\ (42 \%)} &
-\makecell{15 \\ (9 \%)} &
-\makecell{6 \\ (3 \%)}
-\\ \hline
-\end{tabular}
-\caption{Summary of the number of YouTube videos wich contain a certain information panel, among the set of videos marked as false or inaccurate by Science Feedback.}
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%\multicolumn{4}{|c|}{$170$ YouTube videos marked as false or inaccurate}                                                                                                                                                                                                                                                                                                                           \\ \hline
+%\makecell{Without \\ any panel} & 
+%\makecell{With a \\ `COVID-19' \\ panel} & 
+%\makecell{With a \\ `COVID-19 vaccine' \\ panel} &
+%\makecell{With a \\ `climate change' \\ panel}
+%\\ \hline
+%\makecell{78 \\ (46 \%)} &
+%\makecell{71 \\ (42 \%)} &
+%\makecell{15 \\ (9 \%)} &
+%\makecell{6 \\ (3 \%)}
+%\\ \hline
+%\end{tabular}
+%\caption{Summary of the number of YouTube videos wich contain a certain information panel, among the set of videos marked as false or inaccurate by Science Feedback.}
+%\label{youtube_panel_proportions}
+%\end{table}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.3]{../figure/youtube_pie_flags.png}
+		\caption{Summary of the number of YouTube videos which contain an information panel, among the set of videos marked as false by Science Feedback.}
 \label{youtube_panel_proportions}
-\end{table}
+\end{figure}
 
 \smallskip
 
-Almost half (46 \%) of the videos containing misinformation were shown without any information panel (Table \ref{youtube_panel_proportions}).
+Almost half (46 \%) of the videos containing misinformation were shown without any information panel (Figure \ref{youtube_panel_proportions}).
 For the rest of videos, the most frequent information panel concerned COVID-19 (42 \%), followed by COVID-19 vaccine (9 \%).
 It is possible that YouTube is currently focusing its efforts on the current `hot' controversial topics with a potentially wide public impact, leaving room for misinformation related to other topics to spread, but more research is needed to formally compare misinformation videos about COVID-19 and about other subjects.
 
@@ -555,10 +576,10 @@ Twitter can take action against a tweet which violates the Twitter rules, by lim
 When a user searches via the twitter search-box for this domain name, no results appear as shown in the screenshot in the left panel of figure \ref{fig3}, taken on June $14$, $2021$. To further investigate the possible implementation of a reduced visibility measure, we searched via the Twitter API v2 for tweets, excluding retweets, containing the query {\it globalresearch.ca} from April $15$, $2021$ until August $15$, $2021$.  As shown in the left panel in figure \ref{fig4}, we find a strictly positive number of tweets containing the domain name {\it globalresearch.ca} after the date on which the screenshot was taken (left panel of figure \ref{fig3}). Hence, the visibility of tweets containing this domain name has been reduced because users can no longer access tweets containing the domain name {\it globalresearch.ca} via the search box. Nevertheless users are not restrained from posting tweets containing this domain name, as shown in the screenshot in panel $(b)$ of figure \ref{fig3}, found by taking the tweet ID of one of the collected tweets via the Twitter API. Furthermore, those collected Tweets have strictly positive engagement metrics as shown in panel $(b)$ of figure \ref{fig4}. Hence, the users who post tweets including articles from the {\it globalresearch.ca} website receive tweet level engagement from their own followers. 
 
 \begin{figure}[h]
-%\centering
+\centering
 \hspace{-2em}
-		\includegraphics[scale=0.32]{../figure/globalresearch_domain_2021-08-17.jpg} 
-		\includegraphics[scale=0.32]{../figure/globalresearch_domain_engagement_2021-08-17.jpg}
+		\includegraphics[scale=0.4]{../figure/globalresearch_domain_2021-08-17.jpg} 
+		\includegraphics[scale=0.4]{../figure/globalresearch_domain_engagement_2021-08-17.jpg}
 \caption{Left Panel: daily number of Tweets, excluding retweets, containing the query {\it globalresearch.ca} from January $1$, $2021$ until June $30$, $2021$. Right Panel: engagement metrics of Tweets containing the query {\it globalresearch.ca} from January $1$, $2021$ until June $30$, $2021$. Data collected via the Twitter API v2 on August $17$, 2021.   }
 \label{fig4}
 \end{figure}
@@ -659,7 +680,7 @@ Hence, few comments are in order regarding the limitations to access data, the l
 {\bf A need for more complete data.} 
 When Facebook, Twitter or YouTube intervene by suspending an account, the data can no longer be accessed via scraping or via the official APIs (Twitter, YouTube, CrowdTangle) for the purposes of scientific research. 
 This hampers the investigation of how platforms moderate content. 
-To further illustrate this point, the original list of YouTube videos with failed fact-checks (summarized in Table \ref{tab2}), had over $200$ YouTube videos available in March $2021$. 
+To further illustrate this point, the original list of YouTube videos with failed fact-checks (summarized in Figure \ref{youtube_panel_proportions}), had over $200$ YouTube videos available in March $2021$. 
 However, by June $2021$, thirty videos had disappeared from the YouTube API for policy violation. 
 Similarly, in a related research project (see Thero and Vincent (2020)~\cite{therovincent}) we searched on CrowdTangle for $94$ public accounts sharing specific content associated with misinformation in November $2020$. 
 We tried to collect the posts from those $94$ pages in January $2021$, to only discover that $11$ pages had disappeared from the CrowdTangle API.

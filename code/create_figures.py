@@ -667,25 +667,25 @@ def create_pie_pp(figure_name):
 
 def create_pie_pp_tw(figure_name):
 
-    fig = plt.figure(figsize=(12, 12))
+    fig = plt.figure(figsize=(7, 7))
     ax = fig.add_axes([0,0,1,1])
     ax.axis('equal')
 
-    labels= [ 'Without interstitial \nor label', 'With interstitial', "With label"]
+    labels= [ 'Without interstitial \nor notice', 'With interstitial', "With notice"]
     categories = [314560, 9344, 34]
 
     #ax.set_title(title,
     #        fontsize=60)
 
     #cmap = plt.get_cmap('PiYG')
-    colors = ["deepskyblue", 'red', "azure"]
+    colors = ["deepskyblue", 'lightcoral', "azure"]
 
     ax.pie(
     categories,
     labels = labels,
     autopct='%.2f%%',
-    textprops={'fontsize': 17},
-    labeldistance = 0.72,
+    textprops={'fontsize': 12},
+    #labeldistance = 0.92,
     colors=colors,
     rotatelabels = False)
 
@@ -705,9 +705,9 @@ def create_pie_pp_fb(figure_name):
 
 def create_pie_figures():
 
-    create_pie_pp_fb('facebook_pie_flags')
+    #create_pie_pp_fb('facebook_pie_flags')
     create_pie_pp_tw('twitter_pie_flags')
-    create_pie_pp('youtube_pie_flags')
+    #create_pie_pp('youtube_pie_flags')
 
 if __name__=="__main__":
 
