@@ -76,8 +76,33 @@
 \newtheorem{summary}[theorem]{Summary}
 \newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
 
+\usepackage{url}
+\usepackage{background}
+\usepackage{lastpage}
 
-
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=1,
+  angle=0,
+  position=current page.south,
+  vshift=60pt,
+  contents={%
+  \small\sffamily%
+  \begin{minipage}{.18\textwidth}
+  \includegraphics[width=\linewidth,height=70pt,keepaspectratio]{./img/logo.png}
+  \end{minipage}\hspace{.02\textwidth}%
+   \begin{minipage}{.8\textwidth}
+  %\parbox[b]{.6\textwidth}{%
+   % Page \thepage\ of   \pageref{LastPage}}
+   \hfill
+  \parbox[b]{.4\textwidth}{%
+    \raggedleft Working paper, $2022$-$1$, April $2022$}\\
+ % \textcolor{red}{\rule{\textwidth}{1.5pt}}\\
+  %\url{www.mycompany.com}
+  \end{minipage}
+  }
+}
 
 \begin{document}
 
