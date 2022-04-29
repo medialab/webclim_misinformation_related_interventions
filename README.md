@@ -10,7 +10,7 @@ To install the needed libraries, run in your terminal:
 pip install -r requirements.txt
 ```
 
-[Explain the .env file]
+To reproduce our data collection, you will need tokens or codes to access the CrowdTangle, BuzzSumo, Twitter and YouTube APIs. Tokens should be written in an .env or .minetrc file depending on the tools used to collect the data.
 
 ## Collect the data
 
