@@ -414,27 +414,27 @@ Alongside other social networking platforms, when the content of a Tweet violate
 
 \smallskip
 
-To the best of our knowledge, when using the Twitter API v2, there is no field which indicates whether a Tweet contains a label or not; while the interstitial ``possibly sensitive'' and ``withheld" are both Tweet fields that can be recovered\footnote{See \href{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}.} from the Twitter API v2. Hence, in order to investigate the presence of notices of all types, we resorted to scrape publicly available Tweets, using minet~\cite{minet}. This tool was recently enriched upon our request in order to capture whether a Tweet contains a notice or not, via the ``minet twitter scrape'' command.
+To the best of our knowledge, when using the Twitter API v2, there is no field which indicates whether a Tweet contains a notice or not; while the interstitial ``possibly sensitive'' and ``withheld" are both Tweet fields that can be recovered\footnote{See \href{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}{https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet}.} from the Twitter API v2. Hence, in order to investigate the presence of notices of all types, we resorted to scrape publicly available Tweets, using minet~\cite{minet}. This tool was recently enriched upon our request in order to capture whether a Tweet contains a notice or not, via the ``minet twitter scrape'' command.
 
 \smallskip
 
-In this section, we take a deeper look at how labels and interstitials are introduced by Twitter, to add context to potentially inaccurate or misleading content. To that end, we gathered a set of $3$ $094$ links redirecting to articles which were marked as ``False'' between April $2019$ and February $2021$ by Science Feedback, a fact-checking organization verifying the credibility of science-related viral information. 
-As a second step, we collected on June $30$, $2021$ all the Tweets that have shared at least one link out of the set of $3$ $094$ links marked as $False$. This data collection resulted in $323$ $938$ Tweets, excluding Retweets. Only $28$ Tweets contained the label { \it ``Get the facts about COVID-19''}, $5$ Tweets contained the label {\it ``Learn about US 2020 election security efforts''} and only $1$ had the following label {\it ``This claim about election fraud is disputed''}. Furthermore, we noticed that the labeling rule might not be applied uniformly on a given set of Tweets sharing the exact same link, among the set of collected Tweets. To give an example, $657$ Tweets had shared the exact same link redirecting to a video on Bitchute, entitled {\it Important information on coronavirus 5G Kung Flu}. Among those $657$ Tweets only $3$ contained the label {\it ``Get the facts about COVID-19''} (see Figure \ref{fig8}). This points towards the non-automation of the Tweet labelling process and that it might be that these $3$ Tweets were the only ones reported by other users. 
+In this section, we take a deeper look at how notices and interstitials are introduced by Twitter, to add context to potentially inaccurate or misleading content. To that end, we gathered a set of $3$ $094$ links redirecting to articles which were marked as ``False'' between April $2019$ and February $2021$ by Science Feedback, a fact-checking organization verifying the credibility of science-related viral information. 
+As a second step, we collected on June $30$, $2021$ all the Tweets that have shared at least one link out of the set of $3$ $094$ links marked as $False$. This data collection resulted in $323$ $938$ Tweets, excluding Retweets. Only $28$ Tweets contained the notice { \it ``Get the facts about COVID-19''}, $5$ Tweets contained the notice {\it ``Learn about US 2020 election security efforts''} and only $1$ had the following notice {\it ``This claim about election fraud is disputed''}. Furthermore, we noticed that the labeling rule might not be applied uniformly on a given set of Tweets sharing the exact same link, among the set of collected Tweets. To give an example, $657$ Tweets had shared the exact same link redirecting to a video on Bitchute, entitled {\it Important information on coronavirus 5G Kung Flu}. Among those $657$ Tweets only $3$ contained the notice {\it ``Get the facts about COVID-19''} (see Figure \ref{fig8}). This points towards the non-automation of the Tweet labelling process and that it might be that these $3$ Tweets were the only ones reported by other users. 
 
 \smallskip
 
-We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $9$ $344$ ($2.97\%$) Tweets out of $323$ $938$ containing a link marked as False, have an interstitial {\it ``potentially sensitive content''}. To check whether the interstitial {\it ``potentially sensitive content''} is automated or not, we pick out one Tweet having shared a link\footnote{The link marked as False redirects to the article {\it 5G Technology and induction of coronavirus in skin cells – US National Library of Medicine (what David Icke has been saying for months) } and can be found \href{https://davidicke.com/2020/07/22/5g-technology-and-induction-of-coronavirus-in-skin-cells-us-national-library-of-medicine-what-david-icke-has-been-saying-for-months/}{here}.} marked as ``False'', which also contains the interstitial {\it potentially sensitive content} (see Figure \ref{fig_notice}). Among the $32$ Tweets that have shared the exact same link, only $5$ tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of interstitials placement based on a specific URL. Furthermore, notice that the appearance of interstitials may depend on the settings of a user's account and country or language specific regulations. In particular, in the settings of Twitter account, one can deactivate the display of interstitials for {\it sensitive content}, by ticking the box {\it Display media that may contain sensitive content} in the section {\it content you see}. 
+We further examine the placement of interstitials that indicate a possibly sensitive content. We find that only $9$ $344$ ($2.97\%$) Tweets out of $323$ $938$ containing a link marked as False, have an interstitial {\it ``potentially sensitive content''}. To check whether the interstitial {\it ``potentially sensitive content''} is automated or not, we pick out one Tweet having shared a link\footnote{The link marked as False redirects to the article {\it 5G Technology and induction of coronavirus in skin cells – US National Library of Medicine (what David Icke has been saying for months) } and can be found \href{https://davidicke.com/2020/07/22/5g-technology-and-induction-of-coronavirus-in-skin-cells-us-national-library-of-medicine-what-david-icke-has-been-saying-for-months/}{here}.} marked as ``False'', which also contains the interstitial {\it potentially sensitive content} (see Figure \ref{fig_notice}). Among the $32$ Tweets that have shared the exact same link, only $5$ tweets had the interstitial ``potentially sensitive content''. Again this points towards the non-automation of interstitials placement based on a specific URL. To date, no data is available to verify whether some interstitials or notices were placed based on: Tweet reporting by other users, or Twitter moderators, or algorithmic rules. Furthermore, notice that the appearance of interstitials may depend on the settings of a user's account and country or language specific regulations. In particular, in the settings of Twitter account, one can deactivate the display of interstitials for {\it sensitive content}, by ticking the box {\it Display media that may contain sensitive content} in the section {\it content you see}. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{../figure/twitter_pie_flags_updated.png}
-	\caption{Summary of the number of Tweets among the set of $323$ $938$ Tweets containing a link marked as False, by Science Feedback, which contain a flag or an interstitial or none.}
+	\includegraphics[scale=0.5]{../figure/donut_twitter.png}
+	\caption{Summary of the number of Tweets among the set of $323$ $938$ Tweets containing a link marked as False, by Science Feedback, which contain a notice or a Possibly sensitive interstitial or none.}
 \label{flags_tab}
 \end{figure}
 
 \smallskip
 
-Finally, the $9$ $344$ Tweets containing the interstitial ``potentially sensitive content'' widely outnumber the $32$ tweets which contain a label (see Figure \ref{flags_tab}). Furthermore, we noticed that among the Tweets which contain the interstitial {\it ``potentially sensitive content''}, there are Tweets which contain links redirecting to misleading articles about COVID-19 and yet they do not contain the label { \it ``Get the facts about COVID-19''}. We also noticed that the $9$ $344$ Tweets which contain the interstitial {\it ``potentially sensitive content''} do not necessarily contain graphic violent content\footnote{The Twitter Help center explains the placement of interstitials of possibly sensitive content as follows: ``We may place some forms of sensitive media like adult content or graphic violence behind an interstitial advising viewers to be aware that they will see sensitive media if they click through''.} but rather links that redirect to articles marked as ``False'' by Science Feedback. When navigating through the Twitter Help Center, we found no explanation for this large discrepancy between using the interstitial {\it ``potentially sensitive content''} and labels which provide more context to users.\footnote{Twitter Safety account announced in a Tweet (see Tweet ID : \href{https://twitter.com/TwitterSafety/status/1379515615954620418}{1379515615954620418}) on April 6, 2021 that their team ``will begin deploying automated tools to build on (their) efforts to label Tweets that may contain misleading information around COVID-19 vaccinations".}  
+Finally, the $9$ $344$ Tweets containing the interstitial ``potentially sensitive content'' widely outnumber the $34$ tweets which contain a notice (see Figure \ref{flags_tab}). We noticed that among the Tweets which contain the interstitial {\it ``potentially sensitive content''}, there are Tweets which contain links redirecting to misleading articles about COVID-19 and yet they do not contain the label { \it ``Get the facts about COVID-19''}. We also noticed that the $9$ $344$ Tweets which contain the interstitial {\it ``potentially sensitive content''} do not necessarily contain graphic violent content\footnote{The Twitter Help center explains the placement of interstitials of possibly sensitive content as follows: ``We may place some forms of sensitive media like adult content or graphic violence behind an interstitial advising viewers to be aware that they will see sensitive media if they click through''.} but rather links that redirect to articles marked as ``False'' by Science Feedback. When navigating through the Twitter Help Center, we found no explanation for this large discrepancy between using the interstitial {\it ``potentially sensitive content''} and notices which provide more context to users.\footnote{Twitter Safety account announced in a Tweet (see Tweet ID : \href{https://twitter.com/TwitterSafety/status/1379515615954620418}{1379515615954620418}) on April 6, 2021 that their team ``will begin deploying automated tools to build on (their) efforts to label Tweets that may contain misleading information around COVID-19 vaccinations".}  
 
 \subsection{YouTube} \label{youtube_panels}
 
@@ -480,9 +480,21 @@ Three types of information panels were found regarding COVID-19, COVID-19 Vaccin
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[scale=0.3]{../figure/youtube_pie_flags.png}
+		\includegraphics[scale=0.2]{../figure/youtube_pie_flags.png}
 		\caption{Summary of the number of YouTube videos which contain an information panel, among the set of videos marked as false by Science Feedback.}
 \label{youtube_panel_proportions}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\begin{multicols}{1}
+		\includegraphics[scale=0.22]{./img/youtube_panels/graph_no_banner.png}
+		\includegraphics[scale=0.22]{./img/youtube_panels/graph_with_banner.png} 
+		\end{multicols}
+	\caption{Screenshots showing two duplicates of the same video, taken on July 21, 2021. 
+Left panel: a \href{https://www.youtube.com/watch?v=d9GbVZOcT18}{YouTube video} about COVID-19 without an information panel. 	
+Right panel: a \href{https://www.youtube.com/watch?v=A4RvrEKoNxc}{duplicate of the same video} uploaded under a different title and with a `COVID-19 vaccine' information panel.}
+	\label{duplicates_yt}
 \end{figure}
 
 \smallskip
@@ -490,7 +502,6 @@ Three types of information panels were found regarding COVID-19, COVID-19 Vaccin
 Almost half (46 \%) of the videos containing misinformation were shown without any information panel (Figure \ref{youtube_panel_proportions}).
 For the rest of videos, the most frequent information panel concerned COVID-19 (42 \%), followed by COVID-19 vaccine (9 \%).
 It is possible that YouTube is currently focusing its efforts on the current `hot' controversial topics with a potentially wide public impact, leaving room for misinformation related to other topics to spread, but more research is needed to formally compare misinformation videos about COVID-19 and about other subjects.
-
 \smallskip
 
 We noticed that the same video was sometimes uploaded multiple times and thus appeared on different YouTube links. 
@@ -499,27 +510,7 @@ In addition, we noticed that some keywords in the video titles were often associ
 Therefore, we suspect that YouTube is automatically adding information panels based on the presence of certain keywords in the video title (and maybe in the video description), independently of the content of the video.
 Note that in Figure \ref{duplicates_yt}, the video with `C.O.V.I.D.19' in its title had an information panel, hinting that YouTube might adapt its list of suspect keywords as new notational variants for COVID-19 appear, or that some information panels might be added manually (by content regulators or when a video is flagged by many users).
 
-\begin{figure}[h]
-	\centering
-		\begin{multicols}{1}
-		\includegraphics[scale=0.24]{./img/youtube_panels/graph_no_banner.png}
-		\includegraphics[scale=0.24]{./img/youtube_panels/graph_with_banner.png} 
-		\end{multicols}
-		%\includegraphics[scale=0.2]{./img/youtube_panels/news_with_banner.png}
-		%\includegraphics[scale=0.2]{./img/youtube_panels/news_without_banner.png} 
-	\caption{Screenshots showing two duplicates of the same video, taken on July 21, 2021. 
-Left panel: a \href{https://www.youtube.com/watch?v=d9GbVZOcT18}{YouTube video} about COVID-19 without an information panel. 	
-Right panel: a \href{https://www.youtube.com/watch?v=A4RvrEKoNxc}{duplicate of the same video} uploaded under a different title and with a `COVID-19 vaccine' information panel.}
-	\label{duplicates_yt}
-\end{figure}
 
-
-
-%\subsection{Blocking links}
-
-%\subsubsection{Twitter}
-
-%\href{https://help.twitter.com/en/safety-and-security/phishing-spam-and-malware-links}{link}
 
 
 \section{Reducing the visibility}

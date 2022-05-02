@@ -657,10 +657,6 @@ def create_pie_pp_tw(figure_name):
     labels= [ 'Without interstitial \nor notice', 'With interstitial \n Possibly Sensitive', "With notice"]
     categories = [314560, 9344, 34]
 
-    #ax.set_title(title,
-    #        fontsize=60)
-
-    #cmap = plt.get_cmap('PiYG')
     colors = ["deepskyblue", 'lightcoral', "azure"]
 
     ax.pie(
@@ -674,6 +670,38 @@ def create_pie_pp_tw(figure_name):
 
     save_figure(figure_name)
 
+def create_donut(figure_name):
+
+    fig, ax = plt.subplots(figsize=(6, 15), subplot_kw=dict(aspect="equal"))
+
+    ratings = ['Tweets without notices\nor Possibly Sensitive\n interstettial (314 560)', 'Tweets with a notice (34)', 'Tweets with the Possibly Sensitive interstitials (9 344)']
+    data = [314560, 34, 9344]
+
+    cmap = plt.get_cmap('coolwarm')
+    colors = ['deepskyblue', 'pink', 'lightcoral']
+
+    wedges, texts = ax.pie(data, wedgeprops=dict(width=0.4), startangle=210, colors = colors)
+
+    bbox_props = dict(boxstyle="square,pad=0.2", fc="w", ec="k", lw=0.72)
+
+    kw = dict(arrowprops=dict(arrowstyle="-"),
+              bbox=bbox_props, zorder=0, va="center")
+
+    plt.text(0, 0, "Tweets with links\nfact checked as\n false", ha='center', va='center', fontsize=14)
+
+    for i, p in enumerate(wedges):
+
+        ang = (p.theta2 - p.theta1)/2. + p.theta1
+        y = np.sin(np.deg2rad(ang))
+        x = np.cos(np.deg2rad(ang))
+        horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
+        connectionstyle = "angle,angleA=0,angleB={}".format(ang)
+        kw["arrowprops"].update({"connectionstyle": connectionstyle})
+        ax.annotate(ratings[i], xy=(x, y), xytext=(1.3*np.sign(x), 1.3*y),
+                    horizontalalignment=horizontalalignment, **kw)
+
+    save_figure(figure_name)
+
 def create_pie_pp_fb(figure_name):
 
     fig = plt.figure(figsize=(10, 6))
@@ -682,15 +710,15 @@ def create_pie_pp_fb(figure_name):
     v.get_patch_by_id('010').set_color('cyan')
     v.get_patch_by_id('100').set_color('deepskyblue')
     v.get_patch_by_id('110').set_color('royalblue')
-    #v.get_patch_by_id('001').set_color('lightcoral')
 
     save_figure(figure_name)
 
 def create_pie_figures():
 
     #create_pie_pp_fb('facebook_pie_flags_updated')
-    create_pie_pp_tw('twitter_pie_flags_updated')
+    #create_pie_pp_tw('twitter_pie_flags_updated')
     #create_pie_pp('youtube_pie_flags')
+    create_donut('donut_twitter')
 
 if __name__=="__main__":
 
