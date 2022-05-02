@@ -434,7 +434,7 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     ax.plot(df_volume['date'],
         df_volume['size'],
         color='deepskyblue',
-        label='Number of Tweets per day')
+        label='Number of Tweets (including Retweets, Replies, Quotes) per day')
 
     ax.set(
        title = title )
@@ -457,7 +457,6 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     plot_format(ax, plt, suspension = 1)
 
     save_figure(figure_name)
-    #plt.show()
 
 def create_twitter_Lifesite_figure_engagement(filename, figure_name, title, zeros):
 
@@ -467,12 +466,6 @@ def create_twitter_Lifesite_figure_engagement(filename, figure_name, title, zero
     df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
     df['total_engagement'] = (df['retweet_count'] + df['like_count'] + df['reply_count'])
     df['date'] = pd.to_datetime(df['created_at']).dt.date
-    #df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
-    #df_volume = df.groupby(['date'], as_index=False).size()
-
-    # df_s=df.groupby(['date'],as_index=False)[['like_count','retweet_count','reply_count']].sum()
-    # df_s_rolling=df_s.groupby(['date'])[['like_count','retweet_count','reply_count']].sum().rolling(window=1, win_type='triang', center=True).mean()
-    # df_s_rolling['date'] = df_s_rolling.index
 
     df_s=df.groupby(['date'],as_index=False)[['total_engagement']].sum()
     df_s_rolling=df_s.groupby(['date'])[['total_engagement']].sum().rolling(window=7, win_type='triang', center=True).mean()
@@ -504,14 +497,6 @@ def create_twitter_Lifesite_figure_engagement(filename, figure_name, title, zero
             df_s_rolling['total_engagement'],
             color='lightgreen',label='Like + Reply + Retweet Count')
 
-    # ax.plot(df_s_rolling['date'],
-    #         df_s_rolling['reply_count'],
-    #         color='lightgreen',label='Reply Count')
-    #
-    # ax.plot(df_s_rolling['date'],
-    #         df_s_rolling['retweet_count'],
-    #         color='pink',label='Retweet Count')
-
     ax.set(
        title = title )
 
@@ -535,7 +520,6 @@ def create_twitter_Lifesite_figure_engagement(filename, figure_name, title, zero
     plot_format(ax, plt, suspension = 1)
 
     save_figure(figure_name)
-    #plt.show()
 
 def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
@@ -603,29 +587,28 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
 
     save_figure(figure_name)
 
-
 def create_twitter_figures():
 
-    # create_twitter_Lifesite_figure(
-    # filename = 'twitter_lifesitenews_2021-07-22.csv',
-    # figure_name = 'lifesite.jpg',
-    # title = f"Tweets by @LifeSite Twitter account",
-    # zeros = 1
-    # )
-    #
     create_twitter_Lifesite_figure(
-    filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
-    figure_name = 'lifesite_domain.jpg',
-    title = f"Tweets containing the domain name lifesitenews.com",
-    zeros = 0
+    filename = 'twitter_lifesitenews_2021-07-22.csv',
+    figure_name = 'lifesite_updated_legend.jpg',
+    title = f"Tweets by @LifeSite Twitter account",
+    zeros = 1
     )
 
-    create_twitter_Lifesite_figure_engagement(
+    create_twitter_Lifesite_figure(
     filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
-    figure_name = 'lifesite_domain_engagement.jpg',
+    figure_name = 'lifesite_domain_updated_legend.jpg',
     title = f"Tweets containing the domain name lifesitenews.com",
     zeros = 0
     )
+    #
+    # create_twitter_Lifesite_figure_engagement(
+    # filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
+    # figure_name = 'lifesite_domain_engagement.jpg',
+    # title = f"Tweets containing the domain name lifesitenews.com",
+    # zeros = 0
+    # )
 
     # create_twitter_globalresearch_figure(
     # filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
@@ -671,7 +654,7 @@ def create_pie_pp_tw(figure_name):
     ax = fig.add_axes([0,0,1,1])
     ax.axis('equal')
 
-    labels= [ 'Without interstitial \nor notice', 'With interstitial', "With notice"]
+    labels= [ 'Without interstitial \nor notice', 'With interstitial \n Possibly Sensitive', "With notice"]
     categories = [314560, 9344, 34]
 
     #ax.set_title(title,
@@ -693,20 +676,20 @@ def create_pie_pp_tw(figure_name):
 
 def create_pie_pp_fb(figure_name):
 
-    fig = plt.figure(figsize=(10, 10))
+    fig = plt.figure(figsize=(10, 6))
 
-    v=venn3(subsets = (11, 13, 7, 6, 0, 0, 0), set_labels = ('With rating:' + '\n' + 'False', 'With warning' + '\n' + 'banner', 'without' + '\n' + 'rating or warning' + '\n' +'banner'), alpha = 0.5)
+    v=venn2(subsets = (4, 6, 7), set_labels = ('posts with'+ '\n' + 'a False fact-check flag', 'posts with an' + '\n' + 'information banner'), alpha = 0.5)
     v.get_patch_by_id('010').set_color('cyan')
     v.get_patch_by_id('100').set_color('deepskyblue')
     v.get_patch_by_id('110').set_color('royalblue')
-    v.get_patch_by_id('001').set_color('lightcoral')
+    #v.get_patch_by_id('001').set_color('lightcoral')
 
     save_figure(figure_name)
 
 def create_pie_figures():
 
-    #create_pie_pp_fb('facebook_pie_flags')
-    create_pie_pp_tw('twitter_pie_flags')
+    #create_pie_pp_fb('facebook_pie_flags_updated')
+    create_pie_pp_tw('twitter_pie_flags_updated')
     #create_pie_pp('youtube_pie_flags')
 
 if __name__=="__main__":
@@ -718,3 +701,4 @@ if __name__=="__main__":
     # create_youtube_graph()
     create_pie_figures()
     # create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
+    #create_twitter_figures()
