@@ -1,4 +1,3 @@
-## Truth and Trust online 2021
 
 ## General installation
 
