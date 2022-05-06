@@ -406,7 +406,6 @@ def create_twitter_Lifesite_figure(filename, figure_name, title, zeros):
     df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
     df['total_engagement'] = (df['retweet_count'] + df['like_count'] + df['reply_count'])
     df['date'] = pd.to_datetime(df['created_at']).dt.date
-    #df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
     df_volume = df.groupby(['date'], as_index=False).size()
 
     if zeros == 1 :
@@ -495,7 +494,7 @@ def create_twitter_Lifesite_figure_engagement(filename, figure_name, title, zero
 
     ax.plot(df_s_rolling['date'],
             df_s_rolling['total_engagement'],
-            color='lightgreen',label='Like + Reply + Retweet Count')
+            color='lightgreen', label='Like + Reply + Retweet Count')
 
     ax.set(
        title = title )
@@ -578,11 +577,6 @@ def create_twitter_globalresearch_figure(filename, figure_name, title, zeros):
     #ax.set_xlim([date(2021,1,1), date(2021, 6, 30)])
     plt.axvline(np.datetime64("2021-06-14"), color='C3', linestyle='--')
 
-
-    #plt.axvspan(np.datetime64('2021-05-25'), np.datetime64('2021-08-15'),
-    #        ymin=0, ymax=200000, facecolor='r', alpha=0.05)
-
-
     plot_format(ax, plt, suspension = 0)
 
     save_figure(figure_name)
@@ -602,27 +596,27 @@ def create_twitter_figures():
     title = f"Tweets containing the domain name lifesitenews.com",
     zeros = 0
     )
-    #
-    # create_twitter_Lifesite_figure_engagement(
-    # filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
-    # figure_name = 'lifesite_domain_engagement.jpg',
-    # title = f"Tweets containing the domain name lifesitenews.com",
-    # zeros = 0
-    # )
+    
+    create_twitter_Lifesite_figure_engagement(
+    filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
+    figure_name = 'lifesite_domain_engagement.jpg',
+    title = f"Tweets containing the domain name lifesitenews.com",
+    zeros = 0
+    )
 
-    # create_twitter_globalresearch_figure(
-    # filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
-    # figure_name = 'globalresearch_domain_2021-08-17.jpg',
-    # title = f"Tweets containing the domain name globalresearch.ca",
-    # zeros = 1
-    # )
-    #
-    # create_twitter_globalresearch_figure(
-    # filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
-    # figure_name = 'globalresearch_domain_engagement_2021-08-17.jpg',
-    # title = f"Tweets containing the domain name globalresearch.ca",
-    # zeros = 0
-    # )
+    create_twitter_globalresearch_figure(
+    filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
+    figure_name = 'globalresearch_domain_2021-08-17.jpg',
+    title = f"Tweets containing the domain name globalresearch.ca",
+    zeros = 1
+    )
+
+    create_twitter_globalresearch_figure(
+    filename = 'twitter_globalresearch_domain_name_2021-08-17.csv',
+    figure_name = 'globalresearch_domain_engagement_2021-08-17.jpg',
+    title = f"Tweets containing the domain name globalresearch.ca",
+    zeros = 0
+    )
 
 def create_pie_pp(figure_name):
 
