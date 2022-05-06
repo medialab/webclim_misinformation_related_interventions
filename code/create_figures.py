@@ -596,7 +596,7 @@ def create_twitter_figures():
     title = f"Tweets containing the domain name lifesitenews.com",
     zeros = 0
     )
-    
+
     create_twitter_Lifesite_figure_engagement(
     filename = 'twitter_lifesitenews_domain_name_2021-07-29.csv',
     figure_name = 'lifesite_domain_engagement.jpg',
@@ -709,18 +709,21 @@ def create_pie_pp_fb(figure_name):
 
 def create_pie_figures():
 
-    #create_pie_pp_fb('facebook_pie_flags_updated')
-    #create_pie_pp_tw('twitter_pie_flags_updated')
-    #create_pie_pp('youtube_pie_flags')
+    create_pie_pp_fb('facebook_pie_flags_updated')
+    create_pie_pp('youtube_pie_flags')
     create_donut('donut_twitter')
+
+def main():
+
+    create_facebook_trump_figure()
+    create_buzzsumo_thebl_figure()
+    create_facebook_crowdtangle_infowars_figure()
+    create_facebook_buzzsumo_infowars_figure()
+    create_youtube_graph()
+    create_pie_figures()
+    create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
+    create_twitter_figures()
 
 if __name__=="__main__":
 
-    # create_facebook_trump_figure()
-    # create_buzzsumo_thebl_figure()
-    # create_facebook_crowdtangle_infowars_figure()
-    # create_facebook_buzzsumo_infowars_figure()
-    # create_youtube_graph()
-    create_pie_figures()
-    # create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
-    #create_twitter_figures()
+    main()
