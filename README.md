@@ -1,7 +1,8 @@
+# Monitoring misinformation related interventions: methods and illustration.
 
 ## General installation
 
-The code was developped on Python 3.9.0.
+The code was developed on Python 3.9.0.
 
 To install the needed libraries, run in your terminal:
 
