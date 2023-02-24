@@ -668,7 +668,7 @@ def create_donut(figure_name):
 
     fig, ax = plt.subplots(figsize=(6, 15), subplot_kw=dict(aspect="equal"))
 
-    ratings = ['Tweets without notices\nor Possibly Sensitive\n interstettial (314 560)', 'Tweets with a notice (34)', 'Tweets with the Possibly Sensitive interstitials (9 344)']
+    ratings = ['Tweets without \n notices or \n Possibly Sensitive\n interstitial (314 560)', 'Tweets with a notice (34)\n \n', 'Tweets with the \n Possibly Sensitive \n interstitial (9 344)']
     data = [314560, 34, 9344]
 
     cmap = plt.get_cmap('coolwarm')
@@ -681,7 +681,7 @@ def create_donut(figure_name):
     kw = dict(arrowprops=dict(arrowstyle="-"),
               bbox=bbox_props, zorder=0, va="center")
 
-    plt.text(0, 0, "Tweets with links\nfact checked as\n false", ha='center', va='center', fontsize=14)
+    plt.text(0, 0, "Tweets containing \na link\nfact checked as\n false", ha='center', va='center', fontsize=14)
 
     for i, p in enumerate(wedges):
 
@@ -709,20 +709,125 @@ def create_pie_pp_fb(figure_name):
 
 def create_pie_figures():
 
-    create_pie_pp_fb('facebook_pie_flags_updated')
-    create_pie_pp('youtube_pie_flags')
-    create_donut('donut_twitter')
+    #create_pie_pp_fb('facebook_pie_flags_updated')
+    #create_pie_pp('youtube_pie_flags')
+    create_donut('donut_twitter_2022_01_04')
+
+def create_twitter_Lifesite_figure(filename, filename_2, figure_name, title, zeros):
+
+    df = import_data(filename)
+    df = df.drop_duplicates()
+
+    #df['type_of_tweet'] = df['type_of_tweet'].replace(np.nan, 'created_content')
+    df['total_engagement'] = (df['retweet_count'] + df['like_count'] + df['reply_count'])
+    df['date'] = pd.to_datetime(df['created_at']).dt.date
+    #df_volume = df.groupby(['date','type_of_tweet'], as_index=False).size()
+    df_volume = df.groupby(['date'], as_index=False).size()
+
+
+    df_tlm = import_data(filename_2)
+    df_tlm[df_tlm['date'].isnull()]
+    df_tlm = df_tlm[df_tlm['date'].notna()]
+    df_tlm['date'] = pd.to_datetime(df_tlm['date'],errors='coerce').dt.date
+
+    df_tlm = df_tlm[df_tlm['username'].notna()]
+    df_tlm_vol=df_tlm.groupby(['date'], as_index=False).size()
+
+    #print(df_tlm.head())
+
+    if zeros == 1 :
+        add_zeros = [
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'replied_to', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'quoted', 'size': 0},
+            {'date': date(2019, 12, 10), 'type_of_tweet': 'retweeted', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'replied_to', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'quoted', 'size': 0},
+            {'date': date(2020, 10, 11), 'type_of_tweet': 'retweeted', 'size': 0},
+            {'date': date(2021, 1, 25), 'type_of_tweet': 'created_content', 'size': 0},
+            {'date': date(2022, 10, 5), 'type_of_tweet': 'created_content', 'size': 0}
+            #{'date': date(2021, 8, 30), 'type_of_tweet': 'created_content', 'size': 0}
+
+        ]
+        df_volume = df_volume.append(add_zeros , ignore_index = True)
+        df_volume = df_volume .sort_index().reset_index(drop = True)
+        df_volume = df_volume.sort_values(by = "date")
+
+    fig, ax = plt.subplots(figsize=(10, 4))
+
+    #d = df[(df['date']> date(2019, 1, 1) ) & (df['date']<date(2021, 7, 1))]
+    d = df[df['date']> date(2019, 1, 1) ]
+    total = d['id'].count()
+
+    ax.plot(df_volume['date'],
+        df_volume['size'],
+        color='deepskyblue',
+        label='Number of Tweets per day')
+
+    ax.plot(df_tlm_vol['date'],
+        df_tlm_vol['size'],
+        color='blue',
+        label='Number of Telegrams per day',
+        alpha=0.7)
+
+    ax.set(
+       title = title )
+
+    #ax.set_xlim([date(2019, 1, 1), date(2021, 8, 30)])
+    ax.set_xlim([date(2019, 1, 1), date(2023, 1, 3)])
+
+    ax.set_ylim([-3, 80])
+
+    plt.axvline(np.datetime64("2021-01-09"), color='royalblue', linestyle='--')
+    plt.text(np.datetime64("2021-01-14"), 69, "Telegram channel", fontsize=7, color='cornflowerblue')
+    plt.text(np.datetime64("2021-01-14"), 66, "creation date", fontsize=7, color='cornflowerblue')
+
+    plt.axvline(np.datetime64("2021-05-01"), color='lightsteelblue', linestyle='--')
+    plt.text(np.datetime64("2021-05-03"), 54, "6.4k Telegram", fontsize=7, color='cornflowerblue')
+    plt.text(np.datetime64("2021-05-03"), 51, "subscribers", fontsize=7, color='cornflowerblue')
+    plt.text(np.datetime64("2021-05-03"), 47, "in May 2021", fontsize=7, color='cornflowerblue')
+
+    plt.axvline(np.datetime64("2022-10-06"), color='lightsteelblue', linestyle='--')
+    plt.text(np.datetime64("2022-10-06"), 54, "Twitter account", fontsize=7, color='cornflowerblue')
+    plt.text(np.datetime64("2022-10-06"), 51, "reactivated", fontsize=7, color='cornflowerblue')
+    plt.text(np.datetime64("2022-10-06"), 47, "in Oct 2022", fontsize=7, color='cornflowerblue')
+
+    plt.axvspan(np.datetime64('2019-12-09'),
+                np.datetime64('2020-10-12'),
+                ymin=0, ymax=200000,
+                facecolor='r',
+                alpha=0.05)
+
+    plt.axvspan(np.datetime64('2021-01-25'),
+                np.datetime64('2022-10-06'),
+                ymin=0,
+                ymax=200000,
+                facecolor='r',
+                alpha=0.05)
+
+    plot_format(ax, plt, suspension = 1)
+
+    save_figure(figure_name)
+    #plt.show()
 
 def main():
 
-    create_facebook_trump_figure()
-    create_buzzsumo_thebl_figure()
-    create_facebook_crowdtangle_infowars_figure()
-    create_facebook_buzzsumo_infowars_figure()
-    create_youtube_graph()
+    #create_facebook_trump_figure()
+    #create_buzzsumo_thebl_figure()
+    #create_facebook_crowdtangle_infowars_figure()
+    #create_facebook_buzzsumo_infowars_figure()
+    #create_youtube_graph()
     create_pie_figures()
-    create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
-    create_twitter_figures()
+    create_twitter_Lifesite_figure(
+      filename = 'twitter_lifesite_2023_01_04.csv',
+      filename_2 = './csv_telegram/telegram_LifeSiteNews.csv',
+      figure_name = 'lifesite_2022_01_04.jpg',
+      title = f"Tweets by @LifeSite Twitter account \n (55.8k twitter followers)",
+      zeros = 1
+      )
+    #create_plot_top_channel_youtube('./data/experiment2_health_full_data.csv')
+    #create_twitter_figures()
 
 if __name__=="__main__":
 
