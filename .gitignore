@@ -24,6 +24,7 @@ __pycache__
 *.cls
 *.json
 
+*.pdf 
 
 twitter_pie_flags_updated.png
 lifesite_domain.jpg
@@ -32,3 +33,4 @@ facebook_pie_flags.png
 
 article/img
 !article/draft_v_2_jan_2023.tex
+!article/draft.pdf
